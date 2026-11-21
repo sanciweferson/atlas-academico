@@ -1,0 +1,4465 @@
+[
+ {
+  "code": "C00",
+  "title": "Pensamento computacional e ferramentas",
+  "requirements": "Nenhum                   Evidência: Resolver cinco problemas inéditos em pseudocódigo, rastrear",
+  "modules": [
+   {
+    "title": "Fundamentos de Pensamento computacional e ferramentas",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C01",
+  "title": "Matemática discreta e demonstrações",
+  "requirements": "C00                      Evidência: Formalizar proposições e demonstrar resultados com casos e",
+  "modules": [
+   {
+    "title": "Fundamentos de Matemática discreta e demonstrações",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C02",
+  "title": "Teoria da computação e linguagens formais",
+  "requirements": "C01, M11                 Evidência: Construir autômato/gramática e justificar aceitação e limites.",
+  "modules": [
+   {
+    "title": "Fundamentos de Teoria da computação e linguagens formais",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C03",
+  "title": "Engenharia de requisitos",
+  "requirements": "M15                      Evidência: Produzir requisitos testáveis, casos de uso e modelo de",
+  "modules": [
+   {
+    "title": "Fundamentos de Engenharia de requisitos",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C04",
+  "title": "Ciclo de vida, colaboração",
+  "requirements": "M14, M15                 Evidência: Conduzir mudança rastreada com revisão, histórico e plano",
+  "modules": [
+   {
+    "title": "Fundamentos de Ciclo de vida, colaboração",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C05",
+  "title": "Paradigmas, compiladores",
+  "requirements": "M06, M12                 Evidência: Comparar paradigmas e explicar tradução/execução de",
+  "modules": [
+   {
+    "title": "Fundamentos de Paradigmas, compiladores",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C06",
+  "title": "Métodos científicos e",
+  "requirements": "M11                      Evidência: Formular hipótese, método reproduzível e relatório com",
+  "modules": [
+   {
+    "title": "Fundamentos de Métodos científicos e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C07",
+  "title": "Engenharia avançada de",
+  "requirements": "M09, M16, M18            Evidência: Auditar app web em acessibilidade, desempenho e resiliência",
+  "modules": [
+   {
+    "title": "Fundamentos de Engenharia avançada de",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C08",
+  "title": "Engenharia avançada de",
+  "requirements": "M21, M22, M16            Evidência: Refatorar serviço Node com testes, limites de carga e",
+  "modules": [
+   {
+    "title": "Fundamentos de Engenharia avançada de",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C09",
+  "title": "Sistemas reais e operação",
+  "requirements": "M22, M29, M37            Evidência: Operar serviço demonstrativo com runbook, incidentes e",
+  "modules": [
+   {
+    "title": "Fundamentos de Sistemas reais e operação",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C10",
+  "title": "Python e computação",
+  "requirements": "C00                      Evidência: Implementar scripts Python reproduzíveis, testes e",
+  "modules": [
+   {
+    "title": "Fundamentos de Python e computação",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C11",
+  "title": "Engenharia de dados",
+  "requirements": "C10, M23                 Evidência: Construir pipeline com validação, linhagem e recuperação de",
+  "modules": [
+   {
+    "title": "Fundamentos de Engenharia de dados",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C12",
+  "title": "Estatística, métodos",
+  "requirements": "M42, C10                 Evidência: Executar experimento estatístico e justificar incerteza e",
+  "modules": [
+   {
+    "title": "Fundamentos de Estatística, métodos",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C13",
+  "title": "Engenharia de LLMs e",
+  "requirements": "M52, M57                 Evidência: Projetar solução LLM com conjunto de avaliação, custo e",
+  "modules": [
+   {
+    "title": "Fundamentos de Engenharia de LLMs e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C14",
+  "title": "Governança, segurança e",
+  "requirements": "M52, M58                   Evidência: Elaborar threat model, governança e controles auditáveis de",
+  "modules": [
+   {
+    "title": "Fundamentos de Governança, segurança e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C15",
+  "title": "Formação internacional e",
+  "requirements": "Nenhum                     Evidência: Publicar documentação técnica bilíngue e apresentar",
+  "modules": [
+   {
+    "title": "Fundamentos de Formação internacional e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "C16",
+  "title": "Computação gráfica e",
+  "requirements": "M03, M04                   Evidência: Construir cena interativa com desempenho e acessibilidade",
+  "modules": [
+   {
+    "title": "Fundamentos de Computação gráfica e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M01",
+  "title": "Internet, Web e funcionamento da Web",
+  "requirements": "Nenhum                     Evidência: Desenhar ciclo DNS–HTTP–renderização e interpretar uma",
+  "modules": [
+   {
+    "title": "Fundamentos de Internet, Web e funcionamento da Web",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M02",
+  "title": "HTML: semântica e acessibilidade",
+  "requirements": "M01                        Evidência: Produzir formulário semântico navegável por teclado e leitor",
+  "modules": [
+   {
+    "title": "Fundamentos e história do HTML",
+    "topics": [
+     "O que é linguagem de marcação",
+     "HTML, DOM e navegador",
+     "Estrutura de um documento",
+     "doctype, html, head e body",
+     "Validação e especificação HTML"
+    ]
+   },
+   {
+    "title": "Texto e semântica",
+    "topics": [
+     "Títulos e hierarquia",
+     "Parágrafos, ênfase e importância",
+     "Citações, abreviações e código",
+     "Listas ordenadas, não ordenadas e de descrição",
+     "Elementos genéricos e semânticos"
+    ]
+   },
+   {
+    "title": "Navegação e estrutura",
+    "topics": [
+     "Links e URLs",
+     "Caminhos relativos e absolutos",
+     "header, nav, main, footer",
+     "article, section e aside",
+     "Âncoras e navegação acessível"
+    ]
+   },
+   {
+    "title": "Imagens e multimídia",
+    "topics": [
+     "img e texto alternativo",
+     "picture e imagens responsivas",
+     "figure e figcaption",
+     "audio e video",
+     "Legendas e transcrições"
+    ]
+   },
+   {
+    "title": "Tabelas e dados tabulares",
+    "topics": [
+     "table, caption e cabeçalhos",
+     "thead, tbody e tfoot",
+     "Associação de células",
+     "Quando não usar tabelas"
+    ]
+   },
+   {
+    "title": "Formulários completos",
+    "topics": [
+     "form, action e method",
+     "label e controles",
+     "input e tipos",
+     "select, textarea e button",
+     "Validação nativa e mensagens",
+     "fieldset e legend",
+     "Autocompletar e acessibilidade"
+    ]
+   },
+   {
+    "title": "Metadados e integração",
+    "topics": [
+     "title, meta e viewport",
+     "Idioma e codificação",
+     "Scripts defer e module",
+     "Carregamento de recursos",
+     "Dados estruturados introdutórios"
+    ]
+   },
+   {
+    "title": "Acessibilidade e qualidade",
+    "topics": [
+     "HTML semântico vs ARIA",
+     "Ordem de foco",
+     "Navegação por teclado",
+     "Erros comuns e validação",
+     "Projeto de página acessível"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M03",
+  "title": "CSS e engenharia de interfaces",
+  "requirements": "M02                        Evidência: Implementar layout responsivo e explicar cascata e",
+  "modules": [
+   {
+    "title": "Introdução e sintaxe",
+    "topics": [
+     "O que é CSS",
+     "Declarações, regras e comentários",
+     "Inline, interno e externo",
+     "Ferramentas do navegador"
+    ]
+   },
+   {
+    "title": "Seletores e combinadores",
+    "topics": [
+     "Seletores de tipo, classe e ID",
+     "Atributos",
+     "Descendente, filho e irmãos",
+     "Listas de seletores",
+     "Seletores complexos"
+    ]
+   },
+   {
+    "title": "Cascata, herança e especificidade",
+    "topics": [
+     "Origens e importância",
+     "Especificidade",
+     "Herança e valores iniciais",
+     "@layer",
+     "Resolução de conflitos",
+     "Origens da cascata e importância",
+     "@layer e ordem entre camadas",
+     ":where(), :is(), :not() e especificidade",
+     "Propriedades herdadas versus não herdadas",
+     "initial, inherit, unset, revert e revert-layer"
+    ]
+   },
+   {
+    "title": "Cores e unidades de medida",
+    "topics": [
+     "Hex, rgb, hsl e oklch",
+     "Unidades absolutas e relativas",
+     "px, em, rem, %, vw, vh",
+     "Unidades dinâmicas de viewport",
+     "calc(), min(), max(), clamp()"
+    ]
+   },
+   {
+    "title": "Tipografia e fontes",
+    "topics": [
+     "font-family e fontes de sistema",
+     "@font-face",
+     "Tamanho, peso e estilo",
+     "line-height, letter-spacing",
+     "Fontes variáveis",
+     "Quebra e alinhamento de texto",
+     "Anatomia tipográfica: x-height, ascendentes e descendentes",
+     "Fontes locais, web fonts e estratégias de carregamento",
+     "@font-face: font-display, formatos e subconjuntos",
+     "Fontes variáveis e eixos de variação",
+     "Escalas tipográficas fluidas com clamp()",
+     "Quebra de linhas, hifenização e overflow-wrap",
+     "Legibilidade, largura de linha e acessibilidade tipográfica"
+    ]
+   },
+   {
+    "title": "Modelo de caixas",
+    "topics": [
+     "Content, padding, border, margin",
+     "box-sizing",
+     "Dimensões intrínsecas",
+     "Overflow",
+     "Colapso de margens",
+     "outline e foco",
+     "Diferença entre content-box e border-box com cálculos",
+     "Largura intrínseca, min-content e max-content",
+     "Margens automáticas e centralização horizontal",
+     "Colapso de margens: quando ocorre e quando não ocorre",
+     "Padding percentual e dimensões lógicas",
+     "Overflow: visible, hidden, clip, auto e scroll",
+     "Box model no DevTools: inspeção e depuração",
+     "Exercícios de cálculo de largura total e altura total",
+     "Box sizing em layouts responsivos e componentes"
+    ]
+   },
+   {
+    "title": "Fluxo e posicionamento",
+    "topics": [
+     "block, inline e inline-block",
+     "display e fluxo normal",
+     "position relative/absolute/fixed/sticky",
+     "z-index e stacking context",
+     "visibility e overflow"
+    ]
+   },
+   {
+    "title": "Flexbox completo",
+    "topics": [
+     "Eixo principal e transversal",
+     "justify-content e align-items",
+     "flex-basis, grow e shrink",
+     "flex-wrap e gap",
+     "Padrões de layout e depuração",
+     "Eixo principal e transversal em diferentes writing modes",
+     "flex-basis versus width e min-width:auto",
+     "Algoritmo de distribuição de espaço livre",
+     "flex-grow e flex-shrink: cálculos e exemplos",
+     "Alinhamento de linhas em flex-wrap",
+     "Gap, ordem visual e ordem de navegação",
+     "Padrões de navegação, cartões e layouts elásticos",
+     "Depuração de overflow e encolhimento inesperado"
+    ]
+   },
+   {
+    "title": "Grid completo",
+    "topics": [
+     "Linhas, colunas e áreas",
+     "repeat(), minmax() e fr",
+     "Posicionamento explícito e automático",
+     "Auto-fit e auto-fill",
+     "subgrid e layouts aninhados",
+     "Grid explícito versus implícito",
+     "fr, minmax(), repeat(), auto-fill e auto-fit",
+     "Posicionamento por linhas nomeadas",
+     "Áreas nomeadas e layouts semânticos",
+     "Auto-placement e grid-auto-flow",
+     "Subgrid e alinhamento entre componentes",
+     "Grid versus Flexbox: critérios de escolha",
+     "Layouts responsivos sem breakpoints artificiais"
+    ]
+   },
+   {
+    "title": "Responsividade",
+    "topics": [
+     "Mobile-first",
+     "Media queries",
+     "Container queries",
+     "Breakpoints orientados ao conteúdo",
+     "Viewport e imagens fluidas",
+     "Mobile-first e progressive enhancement",
+     "Media queries por largura, orientação e recursos",
+     "Container queries: tamanho e estilo",
+     "Unidades dinâmicas de viewport: svh, lvh, dvh",
+     "Imagens responsivas e prevenção de overflow",
+     "Teste em zoom de 200% e 400%",
+     "Preferências de contraste e movimento reduzido"
+    ]
+   },
+   {
+    "title": "Pseudoclasses e pseudoelementos",
+    "topics": [
+     ":hover, :focus e :focus-visible",
+     ":nth-child, :not, :is, :where",
+     ":has()",
+     "::before, ::after e ::marker",
+     "Estados de formulários",
+     "Estados de foco: :focus, :focus-visible e :focus-within",
+     "Seletores relacionais com :has()",
+     ":nth-child() e filtros of S",
+     "::before, ::after e conteúdo gerado",
+     "::selection, ::marker, ::placeholder e ::file-selector-button"
+    ]
+   },
+   {
+    "title": "Superfícies e efeitos",
+    "topics": [
+     "Backgrounds e gradientes",
+     "Bordas, radius e sombras",
+     "Filtros e transparência",
+     "Máscaras e mistura de camadas"
+    ]
+   },
+   {
+    "title": "Transformações e movimento",
+    "topics": [
+     "transform",
+     "transition",
+     "@keyframes e animation",
+     "Timing functions",
+     "prefers-reduced-motion"
+    ]
+   },
+   {
+    "title": "CSS moderno e arquitetura",
+    "topics": [
+     "Custom properties",
+     "Nesting",
+     "Design tokens",
+     "Metodologias de organização",
+     "CSS modular e manutenção"
+    ]
+   },
+   {
+    "title": "Acessibilidade, compatibilidade e performance",
+    "topics": [
+     "Contraste e zoom",
+     "Foco visível",
+     "Suporte entre navegadores",
+     "Layout, paint e compositing",
+     "DevTools e auditoria"
+    ]
+   },
+   {
+    "title": "Projeto e certificação",
+    "topics": [
+     "Interface responsiva sem framework",
+     "Reprodução a partir de especificação",
+     "Teste em teclado e telas diferentes",
+     "Prova teórica de cascata e layout",
+     "Depuração de cinco problemas"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M04",
+  "title": "JavaScript fundamental",
+  "requirements": "C00                        Evidência: Resolver oito problemas de variáveis, tipos, coerção, decisões",
+  "modules": [
+   {
+    "title": "Introdução à linguagem",
+    "topics": [
+     "ECMAScript vs navegador vs Node.js",
+     "Execução e console",
+     "Sintaxe e expressões",
+     "Comentários e modo estrito"
+    ]
+   },
+   {
+    "title": "Valores, tipos e variáveis",
+    "topics": [
+     "Primitivos",
+     "let, const e var",
+     "undefined e null",
+     "typeof",
+     "Coerção e conversão explícita"
+    ]
+   },
+   {
+    "title": "Operadores e expressões",
+    "topics": [
+     "Aritméticos e comparação",
+     "Igualdade estrita e abstrata",
+     "Operadores lógicos",
+     "Curto-circuito e nullish",
+     "Precedência"
+    ]
+   },
+   {
+    "title": "Controle de fluxo",
+    "topics": [
+     "if e else",
+     "switch",
+     "for e while",
+     "break e continue",
+     "Invariantes simples"
+    ]
+   },
+   {
+    "title": "Funções fundamentais",
+    "topics": [
+     "Declaração e expressão",
+     "Parâmetros e retorno",
+     "Funções arrow",
+     "Escopo introdutório",
+     "Decomposição de problemas"
+    ]
+   },
+   {
+    "title": "Strings e coleções iniciais",
+    "topics": [
+     "Strings e Unicode introdutório",
+     "Arrays e índices",
+     "Métodos essenciais",
+     "Iteração e transformações"
+    ]
+   },
+   {
+    "title": "Objetos introdutórios",
+    "topics": [
+     "Propriedades e acesso",
+     "Identidade e referência",
+     "Mutação e cópia",
+     "Modelagem de dados"
+    ]
+   },
+   {
+    "title": "Erros e depuração",
+    "topics": [
+     "SyntaxError e TypeError",
+     "try/catch introdutório",
+     "Breakpoints e rastreamento",
+     "Testes simples"
+    ]
+   },
+   {
+    "title": "Algoritmos e prova de domínio",
+    "topics": [
+     "Pseudocódigo e código",
+     "Casos extremos",
+     "Rastreamento manual",
+     "Exercícios inéditos",
+     "Projeto independente"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M05",
+  "title": "Objetos, arrays, protótipos e classes",
+  "requirements": "M04                        Evidência: Modelar dados com arrays/objetos e explicar referência,",
+  "modules": [
+   {
+    "title": "Modelo de objetos",
+    "topics": [
+     "Objetos e propriedades",
+     "Descritores",
+     "Identidade e mutabilidade",
+     "Cópia rasa e profunda"
+    ]
+   },
+   {
+    "title": "Arrays e coleções",
+    "topics": [
+     "map, filter, reduce",
+     "Map e Set",
+     "Complexidade e escolhas",
+     "Iteração"
+    ]
+   },
+   {
+    "title": "Protótipos",
+    "topics": [
+     "Cadeia de protótipos",
+     "Delegação de propriedades",
+     "Object.create",
+     "this e chamadas de método"
+    ]
+   },
+   {
+    "title": "Classes",
+    "topics": [
+     "constructor",
+     "extends e super",
+     "Campos privados",
+     "Composição vs herança"
+    ]
+   },
+   {
+    "title": "Aplicação e avaliação",
+    "topics": [
+     "Modelagem de domínio",
+     "Testes de comportamento",
+     "Refatoração",
+     "Prova de explicação e depuração"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M06",
+  "title": "JavaScript profundo",
+  "requirements": "M05                        Evidência: Explicar closures, this, escopo e assincronia por rastreamento",
+  "modules": [
+   {
+    "title": "Escopo e closures",
+    "topics": [
+     "Ambiente léxico",
+     "Closures e captura",
+     "Hoisting e TDZ",
+     "Módulos"
+    ]
+   },
+   {
+    "title": "This e semântica de chamadas",
+    "topics": [
+     "Regras de vinculação",
+     "call, apply, bind",
+     "Arrow functions",
+     "Armadilhas comuns"
+    ]
+   },
+   {
+    "title": "Assincronismo",
+    "topics": [
+     "Call stack e event loop",
+     "Promises e microtasks",
+     "async/await",
+     "Tratamento de rejeições",
+     "Concorrência e cancelamento"
+    ]
+   },
+   {
+    "title": "Iteração avançada",
+    "topics": [
+     "Iteradores e protocolos",
+     "Geradores",
+     "Async iterators",
+     "Streams introdutórios"
+    ]
+   },
+   {
+    "title": "Memória e performance",
+    "topics": [
+     "Garbage collection",
+     "Referências e vazamentos",
+     "Profiling",
+     "Medição e benchmarking"
+    ]
+   },
+   {
+    "title": "Avaliação avançada",
+    "topics": [
+     "Rastrear execuções",
+     "Corrigir race conditions",
+     "Explicar garantias da linguagem",
+     "Projeto modular testado"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M07",
+  "title": "JavaScript Avançado e",
+  "requirements": "M06                        Evidência: Ler trechos ECMA-262 e testar casos de iteradores, proxies e",
+  "modules": [
+   {
+    "title": "Fundamentos de JavaScript Avançado e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M08",
+  "title": "JavaScript Engines e",
+  "requirements": "M07                        Evidência: Comparar perfis de CPU/memória, localizar vazamento e",
+  "modules": [
+   {
+    "title": "Fundamentos de JavaScript Engines e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M09",
+  "title": "Web APIs e Browser",
+  "requirements": "M02, M04                   Evidência: Criar SPA simples em JS puro com DOM, eventos, fetch e",
+  "modules": [
+   {
+    "title": "Fundamentos de Web APIs e Browser",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M10",
+  "title": "Estruturas de Dados",
+  "requirements": "M04                        Evidência: Implementar e comparar lista, pilha, fila, mapa e árvore com",
+  "modules": [
+   {
+    "title": "Fundamentos de Estruturas de Dados",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M11",
+  "title": "Algoritmos e",
+  "requirements": "M10                        Evidência: Analisar Big-O e resolver problemas com estratégias distintas.",
+  "modules": [
+   {
+    "title": "Fundamentos de Algoritmos e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M12",
+  "title": "Arquitetura de",
+  "requirements": "C00                    Evidência: Explicar memória, CPU e representação por simulação de",
+  "modules": [
+   {
+    "title": "Fundamentos de Arquitetura de",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M13",
+  "title": "Sistemas Operacionais",
+  "requirements": "M12                    Evidência: Investigar processos, threads, escalonamento e permissões",
+  "modules": [
+   {
+    "title": "Fundamentos de Sistemas Operacionais",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M14",
+  "title": "Git, GitHub e Workflow",
+  "requirements": "C00                    Evidência: Publicar repositório com branches, commits, pull request e",
+  "modules": [
+   {
+    "title": "Fundamentos de Git, GitHub e Workflow",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M15",
+  "title": "Engenharia de Software",
+  "requirements": "M04                    Evidência: Refatorar módulo com responsabilidades claras e revisão de",
+  "modules": [
+   {
+    "title": "Fundamentos de Engenharia de Software",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M16",
+  "title": "Testes e Quality",
+  "requirements": "M04                    Evidência: Criar suíte unitária, integração e E2E com falha reproduzida.",
+  "modules": [
+   {
+    "title": "Fundamentos de Testes e Quality",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M17",
+  "title": "TypeScript — etapas 17A",
+  "requirements": "M05                    Evidência: 17A: tipar projeto com unions/narrowing; 17B: generics e",
+  "modules": [
+   {
+    "title": "Fundamentos de TypeScript — etapas 17A",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M18",
+  "title": "React",
+  "requirements": "M09, M17               Evidência: Criar interface React com estado, formulários e testes.",
+  "modules": [
+   {
+    "title": "Fundamentos de React",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M19",
+  "title": "Gerenciamento de Estado",
+  "requirements": "M18                    Evidência: Comparar estado local/compartilhado e evitar atualizações",
+  "modules": [
+   {
+    "title": "Fundamentos de Gerenciamento de Estado",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M20",
+  "title": "Next.js",
+  "requirements": "M18, M01               Evidência: Construir aplicação Next com rotas, renderização e análise de",
+  "modules": [
+   {
+    "title": "Fundamentos de Next.js",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M21",
+  "title": "Node.js",
+  "requirements": "M05, C00               Evidência: Criar utilitário Node com filesystem, streams e tratamento de",
+  "modules": [
+   {
+    "title": "Fundamentos de Node.js",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M22",
+  "title": "APIs e Backend",
+  "requirements": "M21, M01               Evidência: Criar API HTTP com contratos, validação, erros e testes.",
+  "modules": [
+   {
+    "title": "Fundamentos de APIs e Backend",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M23",
+  "title": "Bancos de Dados",
+  "requirements": "C00                    Evidência: Projetar esquema relacional e escrever consultas SQL com",
+  "modules": [
+   {
+    "title": "Fundamentos de Bancos de Dados",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M24",
+  "title": "Web e Application",
+  "requirements": "M09, M22               Evidência: Demonstrar mitigação de XSS/CSRF/injeção com testes.",
+  "modules": [
+   {
+    "title": "Fundamentos de Web e Application",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M25",
+  "title": "Identity & Access",
+  "requirements": "M22, M23               Evidência: Implementar autenticação e autorização com cenários de",
+  "modules": [
+   {
+    "title": "Fundamentos de Identity & Access",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M26",
+  "title": "Security Engineering",
+  "requirements": "M24, M25               Evidência: Produzir threat model e plano de testes de segurança.",
+  "modules": [
+   {
+    "title": "Fundamentos de Security Engineering",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M27",
+  "title": "Linux e Infraestrutura",
+  "requirements": "C00                    Evidência: Configurar Linux, usuários, processos e permissões em",
+  "modules": [
+   {
+    "title": "Fundamentos de Linux e Infraestrutura",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M28",
+  "title": "Docker",
+  "requirements": "M21, M27               Evidência: Containerizar serviço e verificar isolamento e persistência.",
+  "modules": [
+   {
+    "title": "Fundamentos de Docker",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M29",
+  "title": "CI/CD",
+  "requirements": "M14, M16               Evidência: Criar pipeline CI/CD com testes e bloqueio de falhas.",
+  "modules": [
+   {
+    "title": "Fundamentos de CI/CD",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M30",
+  "title": "Cloud",
+  "requirements": "M22, M27               Evidência: Implantar serviço em cloud com limites de custo e",
+  "modules": [
+   {
+    "title": "Fundamentos de Cloud",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M31",
+  "title": "Kubernetes",
+  "requirements": "M28, M30               Evidência: Operar workload Kubernetes com probes e rollback.",
+  "modules": [
+   {
+    "title": "Fundamentos de Kubernetes",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M32",
+  "title": "Infrastructure as Code",
+  "requirements": "M27, M30               Evidência: Declarar infraestrutura como código e revisar plano de",
+  "modules": [
+   {
+    "title": "Fundamentos de Infrastructure as Code",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M33",
+  "title": "Distributed Systems",
+  "requirements": "M13, M22, M23          Evidência: Modelar falhas de rede, consistência e replicação em serviço.",
+  "modules": [
+   {
+    "title": "Fundamentos de Distributed Systems",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M34",
+  "title": "Mensageria e",
+  "requirements": "M22, M33               Evidência: Construir fila de mensagens com reentrega e idempotência.",
+  "modules": [
+   {
+    "title": "Fundamentos de Mensageria e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M35",
+  "title": "Resiliência",
+  "requirements": "M22, M33               Evidência: Testar timeout, retry, circuit breaker e degradação.",
+  "modules": [
+   {
+    "title": "Fundamentos de Resiliência",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M36",
+  "title": "Distributed Transactions",
+  "requirements": "M23, M33               Evidência: Simular transação distribuída e estratégia de compensação.",
+  "modules": [
+   {
+    "title": "Fundamentos de Distributed Transactions",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M37",
+  "title": "Observability",
+  "requirements": "M22, M29               Evidência: Instrumentar logs, métricas e traces com diagnóstico de",
+  "modules": [
+   {
+    "title": "Fundamentos de Observability",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M38",
+  "title": "Reliability Engineering",
+  "requirements": "M35, M37               Evidência: Definir SLI/SLO e política de error budget com exercício de",
+  "modules": [
+   {
+    "title": "Fundamentos de Reliability Engineering",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M39",
+  "title": "System Design",
+  "requirements": "M22, M23, M33          Evidência: Produzir design doc com capacidade, falhas e trade-offs",
+  "modules": [
+   {
+    "title": "Fundamentos de System Design",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M40",
+  "title": "Álgebra Linear",
+  "requirements": "C00                    Evidência: Resolver sistemas lineares, vetores e autovalores em",
+  "modules": [
+   {
+    "title": "Fundamentos de Álgebra Linear",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M41",
+  "title": "Cálculo",
+  "requirements": "M40                    Evidência: Calcular derivadas/gradientes e interpretar otimização.",
+  "modules": [
+   {
+    "title": "Fundamentos de Cálculo",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M42",
+  "title": "Probabilidade e",
+  "requirements": "M40                    Evidência: Resolver distribuições, inferência e intervalos com hipóteses",
+  "modules": [
+   {
+    "title": "Fundamentos de Probabilidade e",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M43",
+  "title": "Otimização",
+  "requirements": "M41, M42               Evidência: Implementar gradiente descendente e discutir convergência.",
+  "modules": [
+   {
+    "title": "Fundamentos de Otimização",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M44",
+  "title": "Machine Learning",
+  "requirements": "M40, M41, M42, C10   Evidência: Treinar baseline supervisionado com divisão correta e",
+  "modules": [
+   {
+    "title": "Fundamentos de Machine Learning",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M45",
+  "title": "Redes Neurais",
+  "requirements": "M44                  Evidência: Implementar rede neural pequena e explicar",
+  "modules": [
+   {
+    "title": "Fundamentos de Redes Neurais",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M46",
+  "title": "Treinamento",
+  "requirements": "M45, M43             Evidência: Comparar treinamento, regularização e ajustes por",
+  "modules": [
+   {
+    "title": "Fundamentos de Treinamento",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M47",
+  "title": "Arquiteturas",
+  "requirements": "M45, M46             Evidência: Explicar atenção e arquiteturas por diagramas e cálculo",
+  "modules": [
+   {
+    "title": "Fundamentos de Arquiteturas",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M48",
+  "title": "Ecossistema Python para",
+  "requirements": "C10                  Evidência: Criar notebook Python com NumPy/pandas e pipeline",
+  "modules": [
+   {
+    "title": "Fundamentos de Ecossistema Python para",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M49",
+  "title": "Transformer Internals",
+  "requirements": "M44, M45, M46, M47   Evidência: Explicar e implementar atenção multi-head simplificada com",
+  "modules": [
+   {
+    "title": "Fundamentos de Transformer Internals",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M50",
+  "title": "LLM Training",
+  "requirements": "M49, M48             Evidência: Projetar experimento de treino de LLM em escala didática e",
+  "modules": [
+   {
+    "title": "Fundamentos de LLM Training",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M51",
+  "title": "LLM Inference",
+  "requirements": "M49                  Evidência: Comparar estratégias de inferência, latência, memória e",
+  "modules": [
+   {
+    "title": "Fundamentos de LLM Inference",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M52",
+  "title": "Integração de LLMs",
+  "requirements": "M22, M16             Evidência: Integrar API de LLM com tratamento de erro, limites e testes",
+  "modules": [
+   {
+    "title": "Fundamentos de Integração de LLMs",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M53",
+  "title": "IA com",
+  "requirements": "M52, M17             Evidência: Criar integração IA em TypeScript com tipos, testes e",
+  "modules": [
+   {
+    "title": "Fundamentos de IA com",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M54",
+  "title": "Embeddings e Vector",
+  "requirements": "M52, M40             Evidência: Construir busca vetorial com métricas e análise de relevância.",
+  "modules": [
+   {
+    "title": "Fundamentos de Embeddings e Vector",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M55",
+  "title": "RAG",
+  "requirements": "M52, M54             Evidência: Construir RAG com conjunto de perguntas e análise de",
+  "modules": [
+   {
+    "title": "Fundamentos de RAG",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M56",
+  "title": "AI Agents",
+  "requirements": "M52, M55             Evidência: Construir agente restrito com permissões, logs e limites de",
+  "modules": [
+   {
+    "title": "Fundamentos de AI Agents",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M57",
+  "title": "Avaliação de Sistemas de",
+  "requirements": "M52, M16             Evidência: Criar conjunto de avaliação de LLM, métricas, baseline e",
+  "modules": [
+   {
+    "title": "Fundamentos de Avaliação de Sistemas de",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M58",
+  "title": "Segurança de IA",
+  "requirements": "M52, M24             Evidência: Testar prompt injection, exfiltração e políticas de autorização.",
+  "modules": [
+   {
+    "title": "Fundamentos de Segurança de IA",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M59",
+  "title": "MLOps",
+  "requirements": "M44, M29             Evidência: Versionar dados/modelos e automatizar validação e",
+  "modules": [
+   {
+    "title": "Fundamentos de MLOps",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M60",
+  "title": "AI Infrastructure",
+  "requirements": "M30, M59                   Evidência: Projetar infraestrutura de IA com capacidade, filas e custos.",
+  "modules": [
+   {
+    "title": "Fundamentos de AI Infrastructure",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M61",
+  "title": "AI Systems Architecture",
+  "requirements": "M52, M39                   Evidência: Escrever arquitetura de sistema IA com fronteiras e contratos.",
+  "modules": [
+   {
+    "title": "Fundamentos de AI Systems Architecture",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M62",
+  "title": "AI Reliability",
+  "requirements": "M57, M58, M61              Evidência: Simular falhas e medir confiabilidade de pipeline IA.",
+  "modules": [
+   {
+    "title": "Fundamentos de AI Reliability",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M63",
+  "title": "AI Cost Engineering",
+  "requirements": "M52, M57                   Evidência: Estimar custo por requisição, cache e limites orçamentários.",
+  "modules": [
+   {
+    "title": "Fundamentos de AI Cost Engineering",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ },
+ {
+  "code": "M64",
+  "title": "AI Architecture Trade-offs",
+  "requirements": "M61, M62, M63              Evidência: Comparar três arquiteturas IA sob custo, risco, qualidade e",
+  "modules": [
+   {
+    "title": "Fundamentos de AI Architecture Trade-offs",
+    "topics": [
+     "Definições e terminologia",
+     "Contexto histórico e aplicações",
+     "Conceitos fundamentais e exemplos",
+     "Limites e erros conceituais"
+    ]
+   },
+   {
+    "title": "Teoria e modelos",
+    "topics": [
+     "Modelos formais e pressupostos",
+     "Raciocínio e justificativas",
+     "Análise de casos e contraexemplos",
+     "Relação com pré-requisitos"
+    ]
+   },
+   {
+    "title": "Métodos e ferramentas",
+    "topics": [
+     "Técnicas e procedimentos",
+     "Leitura de documentação e fontes primárias",
+     "Exercícios graduais",
+     "Diagnóstico de erros"
+    ]
+   },
+   {
+    "title": "Aplicações e projeto",
+    "topics": [
+     "Problema integrador",
+     "Implementação ou demonstração conforme a disciplina",
+     "Testes e documentação",
+     "Comparação de alternativas"
+    ]
+   },
+   {
+    "title": "Avaliação de domínio",
+    "topics": [
+     "Prova teórica inédita",
+     "Explicação oral ou escrita",
+     "Transferência para novo problema",
+     "Revisão após 7 e 30 dias"
+    ]
+   }
+  ]
+ }
+]

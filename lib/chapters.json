@@ -1,0 +1,476 @@
+{
+  "M03-5-0": {
+    "title": "Modelo de caixas: quatro regiões e cálculo",
+    "sections": [
+      {
+        "title": "Modelo conceitual",
+        "body": "Todo elemento gera uma ou mais caixas conforme o modelo de formatação. A caixa principal possui área de conteúdo, preenchimento (padding), borda (border) e margem (margin). Padding pertence ao interior da borda; margin separa a caixa das vizinhas e não recebe background. A área efetivamente pintada depende de background-clip."
+      },
+      {
+        "title": "Dimensões e matemática",
+        "body": "No modelo content-box, a largura externa sem margens é width + padding esquerdo + direito + border esquerdo + direito. Se width=240px, padding horizontal=20px e borda horizontal=2px, o total é 284px. As margens somam espaço externo, mas não fazem parte da largura da border-box."
+      },
+      {
+        "title": "Nuances de layout",
+        "body": "A propriedade width não define necessariamente o espaço final ocupado: min-width, max-width, conteúdo intrínseco, box-sizing e o algoritmo de layout interferem. Margens verticais de blocos no fluxo normal podem colapsar; margens em flex e grid não colapsam da mesma forma."
+      }
+    ],
+    "code": ".caixa { width:240px; padding:20px; border:2px solid; margin:12px; }",
+    "questions": [
+      "Calcule a largura da border-box e a largura incluindo margens horizontais.",
+      "Explique por que a cor de fundo não pinta a margem.",
+      "Investigue quando duas margens verticais podem colapsar."
+    ]
+  },
+  "M03-5-1": {
+    "title": "box-sizing: dois modelos de dimensionamento",
+    "sections": [
+      {
+        "title": "content-box",
+        "body": "É o valor inicial de box-sizing. Width e height especificam a dimensão da caixa de conteúdo; padding e borda aumentam a dimensão externa."
+      },
+      {
+        "title": "border-box",
+        "body": "Width e height incluem padding e borda. A área de conteúdo restante é reduzida, respeitando restrições do algoritmo de layout. O comportamento costuma facilitar a composição de componentes."
+      },
+      {
+        "title": "Generalização",
+        "body": "Uma regra global frequentemente usada é *, *::before, *::after { box-sizing: border-box; }, mas ela é uma decisão de projeto. É necessário analisar widgets nativos, largura mínima de conteúdo e overflow."
+      }
+    ],
+    "code": "* , *::before, *::after { box-sizing: border-box; }\n.cartao { width: 300px; padding: 24px; border: 1px solid; }",
+    "questions": [
+      "Calcule a largura do conteúdo de .cartao.",
+      "Compare o resultado com content-box.",
+      "Justifique por que border-box não elimina overflow automaticamente."
+    ]
+  },
+  "M03-4-0": {
+    "title": "Famílias tipográficas e estratégias de fallback",
+    "sections": [
+      {
+        "title": "Família tipográfica",
+        "body": "font-family declara uma lista ordenada de famílias. O navegador tenta encontrar fontes que cubram os caracteres solicitados; diferentes caracteres de uma linha podem usar fontes distintas."
+      },
+      {
+        "title": "Fontes genéricas",
+        "body": "serif, sans-serif, monospace, cursive e fantasy são famílias genéricas. Uma pilha robusta considera suporte a acentos, símbolos, pesos e diferentes sistemas operacionais."
+      },
+      {
+        "title": "Leitura e semântica",
+        "body": "A tipografia modifica legibilidade e hierarquia visual, mas não substitui elementos semânticos HTML. Um texto visualmente grande não se torna automaticamente um título h1."
+      }
+    ],
+    "code": "body { font-family: system-ui, -apple-system, \"Segoe UI\", sans-serif; }\ncode { font-family: ui-monospace, monospace; }",
+    "questions": [
+      "Explique a ordem da lista de fontes.",
+      "Diferencie família genérica de uma fonte instalada.",
+      "Analise o efeito de uma fonte ausente no sistema."
+    ]
+  },
+  "M03-7-0": {
+    "title": "Flexbox: eixos e direção do fluxo",
+    "sections": [
+      {
+        "title": "Modelo unidimensional",
+        "body": "Flexbox distribui itens ao longo de um eixo principal e controla alinhamento no eixo transversal. Não é correto associar sempre o eixo principal à horizontal: ele depende de flex-direction e do modo de escrita."
+      },
+      {
+        "title": "Flex container e flex items",
+        "body": "display:flex estabelece um contexto de formatação flex para filhos diretos. Os descendentes mais profundos não se tornam itens flex automaticamente."
+      },
+      {
+        "title": "Alinhamento",
+        "body": "justify-content distribui espaço livre no eixo principal; align-items alinha itens no transversal. Se não há espaço livre, justify-content pode parecer não produzir efeito."
+      }
+    ],
+    "code": ".linha { display:flex; flex-direction:row; justify-content:space-between; align-items:center; gap:16px; }",
+    "questions": [
+      "Identifique os eixos quando flex-direction é column.",
+      "Explique por que justify-content não é sempre alinhamento horizontal.",
+      "Desenhe a distribuição de três itens com gap."
+    ]
+  },
+  "M03-8-0": {
+    "title": "Grid: linhas, trilhas, células e áreas",
+    "sections": [
+      {
+        "title": "Modelo bidimensional",
+        "body": "CSS Grid define uma malha de linhas e colunas. As trilhas são os espaços entre linhas; células são interseções; áreas são regiões retangulares de células."
+      },
+      {
+        "title": "Grid explícito",
+        "body": "grid-template-columns e grid-template-rows descrevem trilhas explícitas. Itens podem ser posicionados por linhas numeradas ou nomeadas."
+      },
+      {
+        "title": "Grid implícito",
+        "body": "Se houver itens além da malha explícita, o algoritmo de auto-placement pode criar trilhas implícitas. grid-auto-rows e grid-auto-columns controlam seu dimensionamento."
+      }
+    ],
+    "code": ".grade { display:grid; grid-template-columns: 12rem minmax(0,1fr); gap:1rem; }",
+    "questions": [
+      "Diferencie trilha, linha e célula.",
+      "Explique por que minmax(0,1fr) pode evitar overflow em certos layouts.",
+      "Descreva uma situação em que surge uma linha implícita."
+    ]
+  },
+  "M03-9-1": {
+    "title": "Media queries e condições de apresentação",
+    "sections": [
+      {
+        "title": "Consulta de mídia",
+        "body": "@media aplica regras quando condições sobre o ambiente de apresentação são satisfeitas. Exemplos incluem largura do viewport, orientação, capacidade de hover e preferências de acessibilidade."
+      },
+      {
+        "title": "Mobile-first",
+        "body": "Uma estratégia comum é declarar estilos básicos adequados a espaços pequenos e adicionar aprimoramentos com min-width. O breakpoint deve ser escolhido onde o conteúdo deixa de funcionar, não pela marca de um dispositivo."
+      },
+      {
+        "title": "Distinções importantes",
+        "body": "Media queries observam características do ambiente; container queries permitem responder ao contêiner. Viewport width não é o mesmo que largura do elemento pai."
+      }
+    ],
+    "code": ".layout { display:block; }\n@media (min-width: 48rem) { .layout { display:grid; grid-template-columns: 1fr 2fr; } }",
+    "questions": [
+      "Justifique a escolha de um breakpoint pelo conteúdo.",
+      "Diferencie viewport de contêiner.",
+      "Proponha um teste com zoom de 200%."
+    ]
+  },
+  "M03-2-1": {
+    "title": "Especificidade: comparação de seletores",
+    "sections": [
+      {
+        "title": "Modelo de prioridade",
+        "body": "A cascata compara, entre outros fatores, origem, importância, camadas, especificidade e ordem de aparição. Especificidade só decide quando as regras competem no mesmo nível relevante da cascata."
+      },
+      {
+        "title": "Contagem",
+        "body": "Uma forma didática é comparar tuplas (IDs, classes/atributos/pseudoclasses, tipos/pseudoelementos), da esquerda para a direita. Seletores em :where() têm especificidade zero; :is() e :not() usam a maior especificidade de seus argumentos."
+      },
+      {
+        "title": "Armadilha",
+        "body": "Um seletor com ID não supera necessariamente uma declaração !important em outra origem/camada. A cascata não é apenas uma soma de pontos."
+      }
+    ],
+    "code": "#painel .titulo { color: navy; }\n.card .titulo { color: teal; }\n:where(#painel) .titulo { color: purple; }",
+    "questions": [
+      "Calcule a especificidade de cada seletor.",
+      "Explique por que :where() é útil em bibliotecas de componentes.",
+      "Diferencie especificidade de ordem de origem."
+    ]
+  },
+  "M02-0-2": {
+    "title": "Estrutura de um documento HTML",
+    "sections": [
+      {
+        "title": "Documento e árvore",
+        "body": "HTML descreve uma estrutura de nós interpretada pelo parser do navegador. O DOM é uma representação em memória manipulável por APIs; não é idêntico ao texto-fonte original."
+      },
+      {
+        "title": "Esqueleto mínimo",
+        "body": "doctype sinaliza o modo padrão de interpretação. html é a raiz; head contém metadados; body reúne conteúdo renderizável e interativo. Atributos como lang e meta charset são fundamentais."
+      },
+      {
+        "title": "Validação",
+        "body": "Um navegador frequentemente recupera erros de marcação, mas a recuperação não transforma um documento inválido em um documento bem projetado. Use validadores e examine a árvore no DevTools."
+      }
+    ],
+    "code": "<!doctype html>\n<html lang=\"pt-BR\">\n<head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Estudo</title></head>\n<body><main><h1>Meu estudo</h1></main></body>\n</html>",
+    "questions": [
+      "Diferencie HTML-fonte e DOM.",
+      "Explique a finalidade de lang e charset.",
+      "Identifique os elementos que são metadados."
+    ]
+  },
+  "M02-5-1": {
+    "title": "Labels e controles de formulário",
+    "sections": [
+      {
+        "title": "Associação explícita",
+        "body": "Um label associado por for ao id de um controle fornece nome acessível e amplia a área clicável. O id deve ser único no documento."
+      },
+      {
+        "title": "Nome, valor e envio",
+        "body": "name identifica a chave enviada pelo formulário; id serve para associação e referências no documento; value representa o valor do controle. Não são atributos intercambiáveis."
+      },
+      {
+        "title": "Acessibilidade",
+        "body": "Placeholders não substituem rótulos persistentes. Agrupe conjuntos de controles relacionados com fieldset e legend quando necessário."
+      }
+    ],
+    "code": "<form>\n<label for=\"email\">E-mail</label>\n<input id=\"email\" name=\"email\" type=\"email\" autocomplete=\"email\" required>\n<button type=\"submit\">Enviar</button>\n</form>",
+    "questions": [
+      "Diferencie id, name e value.",
+      "Explique por que placeholder não substitui label.",
+      "Crie um campo de telefone com rótulo associado."
+    ]
+  },
+  "M04-1-1": {
+    "title": "let, const e var: escopo e atribuição",
+    "sections": [
+      {
+        "title": "Bindings e escopo",
+        "body": "let e const criam bindings com escopo de bloco; var tem escopo de função ou global, conforme o contexto. O termo variável designa o vínculo com um valor, não necessariamente uma caixa física na memória."
+      },
+      {
+        "title": "Inicialização",
+        "body": "const exige inicialização e impede reatribuição do binding. Isso não congela o objeto referenciado; propriedades de objetos podem continuar mutáveis."
+      },
+      {
+        "title": "Hoisting e TDZ",
+        "body": "Declarações são processadas antes da execução, mas acessar let/const antes da inicialização lança ReferenceError (temporal dead zone). var pode produzir undefined antes da atribuição, dependendo do contexto."
+      }
+    ],
+    "code": "const pessoa = { nome: \"Ana\" };\npessoa.nome = \"Bia\"; // permitido\n// pessoa = {} seria erro\nlet total = 0; total += 1;",
+    "questions": [
+      "Explique por que const não implica imutabilidade profunda.",
+      "Compare o escopo de var e let dentro de um bloco.",
+      "Descreva o que acontece ao acessar let antes da declaração."
+    ]
+  },
+  "M04-2-1": {
+    "title": "Igualdade estrita e igualdade abstrata",
+    "sections": [
+      {
+        "title": "Comparações",
+        "body": "=== compara sem realizar a conversão de tipos característica de ==. A igualdade abstrata possui regras de coerção específicas; não equivale a uma simples comparação de texto."
+      },
+      {
+        "title": "Valores especiais",
+        "body": "NaN não é igual a si mesmo por ===; Object.is(NaN,NaN) é true. Objetos distintos são comparados por identidade, não por igualdade estrutural."
+      },
+      {
+        "title": "Boas práticas",
+        "body": "Prefira === na maioria dos casos para reduzir conversões implícitas, mas compreenda a especificação de == antes de julgá-la. Uma exceção intencional é x == null para verificar null ou undefined."
+      }
+    ],
+    "code": "console.log(0 === \"0\"); // false\nconsole.log(0 == \"0\");  // true\nconsole.log({a:1} === {a:1}); // false",
+    "questions": [
+      "Justifique cada resultado sem executar.",
+      "Explique por que dois objetos iguais visualmente não são idênticos.",
+      "Pesquise o comportamento de NaN e Object.is."
+    ]
+  },
+  "M04-4-1": {
+    "title": "Parâmetros, argumentos e retorno",
+    "sections": [
+      {
+        "title": "Contrato de função",
+        "body": "Parâmetros são nomes declarados na definição da função; argumentos são valores fornecidos em uma chamada. O retorno representa o resultado observável da execução, quando há return."
+      },
+      {
+        "title": "Ausência de retorno",
+        "body": "Uma função que termina sem return explícito retorna undefined. console.log exibe uma mensagem, mas não substitui return."
+      },
+      {
+        "title": "Projeto",
+        "body": "Uma boa função declara entradas esperadas, saídas, pressupostos e tratamento de entradas inválidas. Funções puras simplificam testes porque não dependem de estado externo mutável."
+      }
+    ],
+    "code": "function dobro(numero) { return numero * 2; }\nconst resultado = dobro(7);\nconsole.log(resultado); // 14",
+    "questions": [
+      "Diferencie parâmetro e argumento no exemplo.",
+      "Compare return com console.log.",
+      "Projete uma função para calcular média e liste pré-condições."
+    ]
+  },
+  "C00-0-0": {
+    "title": "O que é pensamento computacional?",
+    "sections": [
+      {
+        "title": "Problemas e representações",
+        "body": "Pensamento computacional é a formulação sistemática de problemas de maneira que uma solução possa ser expressa e avaliada. Não depende exclusivamente de computadores ou de uma linguagem específica."
+      },
+      {
+        "title": "Quatro estratégias",
+        "body": "Decomposição divide tarefas; abstração destaca características relevantes; reconhecimento de padrões encontra semelhanças; algoritmização organiza passos precisos. Essas estratégias são úteis, mas não constituem uma receita universal."
+      },
+      {
+        "title": "Correção e limites",
+        "body": "Um algoritmo deve ter entradas e saídas identificáveis, condições de aplicação e critérios de término quando exigidos. A correção depende de uma especificação: sem saber o resultado esperado, não há como provar que a solução é correta."
+      }
+    ],
+    "code": "ENTRADA: lista de números\nSE lista vazia: informar ausência de máximo\nSENÃO: percorrer lista guardando o maior\nSAÍDA: maior valor",
+    "questions": [
+      "Defina algoritmo e especifique um exemplo cotidiano.",
+      "Explique por que uma lista vazia exige tratamento.",
+      "Crie um contraexemplo para uma solução que assume números positivos."
+    ]
+  },
+  "M03-9-0": {
+    "title": "Responsividade: conteúdo antes do dispositivo",
+    "sections": [
+      {
+        "title": "Conceito e definições",
+        "body": "Design responsivo adapta a interface a espaço, conteúdo, zoom, orientação e preferências. Não se limita a escolher larguras populares de celulares."
+      },
+      {
+        "title": "Modelo e consequências",
+        "body": "Media queries testam características do ambiente; container queries respondem ao espaço disponível do componente. Uma abordagem mobile-first usa a base para telas estreitas e amplia quando necessário."
+      },
+      {
+        "title": "Exemplo para investigar",
+        "body": "@media (min-width: 48rem) { .layout { grid-template-columns: 1fr 2fr; } }"
+      },
+      {
+        "title": "Equívoco frequente",
+        "body": "Desabilitar zoom, assumir dimensões físicas e ignorar navegação por teclado."
+      },
+      {
+        "title": "Leitura primária",
+        "body": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries"
+      }
+    ]
+  },
+  "M02-0-0": {
+    "title": "HTML: documento, semântica e estrutura",
+    "sections": [
+      {
+        "title": "Conceito e definições",
+        "body": "HTML descreve a estrutura e o significado de documentos. Elementos são interpretados pelo parser do navegador e participam da construção do DOM."
+      },
+      {
+        "title": "Modelo e consequências",
+        "body": "DOCTYPE seleciona o modo de interpretação; html indica o idioma; head contém metadados e body contém o conteúdo representado. Semântica adequada auxilia acessibilidade e manutenção."
+      },
+      {
+        "title": "Exemplo para investigar",
+        "body": "<!doctype html>\n<html lang=\"pt-BR\"><head><meta charset=\"utf-8\"><title>Exemplo</title></head><body><main><h1>Minha página</h1></main></body></html>"
+      },
+      {
+        "title": "Equívoco frequente",
+        "body": "Usar div para tudo, pular a hierarquia de títulos ou confundir HTML com linguagem de programação."
+      },
+      {
+        "title": "Leitura primária",
+        "body": "https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+      }
+    ]
+  },
+  "M04-0-0": {
+    "title": "JavaScript: linguagem e ambiente",
+    "sections": [
+      {
+        "title": "Conceito e definições",
+        "body": "JavaScript é uma linguagem padronizada por ECMAScript. Navegadores e Node.js oferecem APIs de ambiente que não fazem parte do núcleo da linguagem."
+      },
+      {
+        "title": "Modelo e consequências",
+        "body": "Uma engine analisa e executa código; ambientes fornecem funções como setTimeout e fetch. O código pode manipular valores, objetos e funções, mas não deve confundir API Web com sintaxe da linguagem."
+      },
+      {
+        "title": "Exemplo para investigar",
+        "body": "const total = [10, 20, 30].reduce((soma, valor) => soma + valor, 0); console.log(total);"
+      },
+      {
+        "title": "Equívoco frequente",
+        "body": "Afirmar que DOM e fetch fazem parte da especificação ECMAScript."
+      },
+      {
+        "title": "Leitura primária",
+        "body": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+      }
+    ]
+  },
+  "M03-1-0": {
+    "title": "Seletores: correspondência e escopo",
+    "sections": [
+      {
+        "title": "Conceito e definições",
+        "body": "Seletores determinam quais elementos podem receber uma declaração. Classe, atributo, tipo e combinadores expressam critérios diferentes."
+      },
+      {
+        "title": "Modelo e consequências",
+        "body": "Uma regra participa da cascata apenas se seu seletor corresponder ao elemento. Seletores complexos podem depender de relações de ancestralidade e irmandade."
+      },
+      {
+        "title": "Exemplo para investigar",
+        "body": "article > p { color: rebeccapurple; } seleciona parágrafos filhos diretos de article."
+      },
+      {
+        "title": "Equívoco frequente",
+        "body": "Acreditar que um seletor mais longo é sempre o mais específico."
+      },
+      {
+        "title": "Leitura primária",
+        "body": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors"
+      }
+    ]
+  },
+  "M03-2-0": {
+    "title": "Cascata: origem, camada e especificidade",
+    "sections": [
+      {
+        "title": "Conceito e definições",
+        "body": "Quando declarações competem, o navegador resolve prioridades por origem, importância, camadas, especificidade e ordem."
+      },
+      {
+        "title": "Modelo e consequências",
+        "body": "Herança não é a mesma coisa que cascata: propriedades herdadas obtêm valores de ancestrais quando não existe valor diretamente definido aplicável."
+      },
+      {
+        "title": "Exemplo para investigar",
+        "body": "Uma regra em camada posterior pode vencer outra mais específica de camada anterior, respeitando a ordenação da cascata."
+      },
+      {
+        "title": "Equívoco frequente",
+        "body": "Usar !important indiscriminadamente para corrigir conflitos."
+      },
+      {
+        "title": "Leitura primária",
+        "body": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade"
+      }
+    ]
+  },
+  "M04-1-0": {
+    "title": "Valores e tipos em JavaScript",
+    "sections": [
+      {
+        "title": "Conceito e definições",
+        "body": "JavaScript possui tipos primitivos e objetos. Variáveis são vínculos com valores, não caixas que possuem um tipo fixo."
+      },
+      {
+        "title": "Modelo e consequências",
+        "body": "typeof oferece uma classificação útil, mas tem peculiaridades históricas como typeof null === \"object\". Objetos são referenciados e podem ser mutáveis."
+      },
+      {
+        "title": "Exemplo para investigar",
+        "body": "let valor = 3; valor = \"três\"; // o vínculo foi reatribuído a outro tipo"
+      },
+      {
+        "title": "Equívoco frequente",
+        "body": "Confundir const com imutabilidade profunda de objetos."
+      },
+      {
+        "title": "Leitura primária",
+        "body": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
+      }
+    ]
+  },
+  "M04-2-0": {
+    "title": "Controle de fluxo e decisões",
+    "sections": [
+      {
+        "title": "Conceito e definições",
+        "body": "Programas escolhem caminhos usando condições e repetem ações com estruturas iterativas. O raciocínio exige invariantes e casos de término."
+      },
+      {
+        "title": "Modelo e consequências",
+        "body": "A expressão de condição é convertida em booleano quando necessário. Curto-circuito pode evitar avaliação de partes da expressão."
+      },
+      {
+        "title": "Exemplo para investigar",
+        "body": "for (let i = 0; i < 3; i++) { console.log(i); }"
+      },
+      {
+        "title": "Equívoco frequente",
+        "body": "Escrever loops sem condição de término ou confundir == com ===."
+      },
+      {
+        "title": "Leitura primária",
+        "body": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling"
+      }
+    ]
+  }
+}

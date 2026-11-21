@@ -1,0 +1,670 @@
+{
+  "M03-5-0": [
+    {
+      "kind": "Conceitual",
+      "prompt": "Explique a diferença entre content-box e border-box e diga se margin é incluída na largura declarada.",
+      "answer": "Em content-box, width representa o conteúdo; em border-box, inclui conteúdo, padding e borda. Margin é externa e não entra em width."
+    },
+    {
+      "kind": "Cálculo",
+      "prompt": "Uma caixa usa width: 240px; padding: 16px em cada lado; border: 2px em cada lado; box-sizing: content-box. Calcule a largura da borda.",
+      "answer": "240 + 32 + 4 = 276px, sem margens."
+    },
+    {
+      "kind": "Transferência",
+      "prompt": "Repita o cálculo com box-sizing: border-box e width: 240px. Quanto sobra para o conteúdo?",
+      "answer": "A caixa até a borda mede 240px; conteúdo = 240 - 32 - 4 = 204px."
+    },
+    {
+      "kind": "Diagnóstico",
+      "prompt": "Por que definir width:100% e padding horizontal pode produzir transbordamento em content-box?",
+      "answer": "Porque os paddings são somados à largura de conteúdo de 100%; border-box ou restrições de layout podem evitar esse caso."
+    }
+  ],
+  "M03-4-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Diferencie font-family, font-size e line-height.",
+      "answer": "font-family escolhe famílias e fallback; font-size define tamanho nominal; line-height controla a caixa de linha."
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Por que fixar height: 32px em um botão com texto pode causar problemas de acessibilidade?",
+      "answer": "O texto pode aumentar com zoom, localização ou preferências e ultrapassar a altura fixa."
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Proponha um estilo de corpo de texto com fonte de sistema, line-height relativo e largura legível.",
+      "answer": "Ex.: font-family:system-ui,sans-serif; line-height:1.6; max-width:65ch; sem impedir zoom."
+    }
+  ],
+  "M03-7-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Qual é o eixo principal quando flex-direction: column?",
+      "answer": "É o eixo vertical na direção de bloco habitual, embora orientação de escrita e direção possam afetar o comportamento visual."
+    },
+    {
+      "kind": "Diagnóstico",
+      "prompt": "Por que justify-content: center não centraliza horizontalmente um flex container com flex-direction: column?",
+      "answer": "Porque justify-content atua no eixo principal, que nesse caso é a coluna."
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Explique a função de flex: 1 1 16rem.",
+      "answer": "grow 1 permite crescimento; shrink 1 permite encolhimento; basis 16rem é a base de tamanho."
+    }
+  ],
+  "M03-8-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Em que situações CSS Grid é mais adequado que Flexbox?",
+      "answer": "Quando há necessidade de coordenar linhas e colunas ou posicionamento bidimensional."
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Explique o significado de minmax(16rem, 1fr).",
+      "answer": "Uma trilha com mínimo de 16rem e máximo flexível de uma fração do espaço disponível."
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Proponha uma grade que se ajuste automaticamente à largura disponível.",
+      "answer": "Ex.: grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr)); gap:1rem."
+    }
+  ],
+  "M03-9-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Compare media queries e container queries.",
+      "answer": "Media queries consideram condições do ambiente/viewport; container queries podem considerar o tamanho de um contêiner elegível."
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Explique o princípio mobile-first e forneça um exemplo.",
+      "answer": "Estilos-base para largura estreita e aprimoramentos via @media (min-width:...)."
+    },
+    {
+      "kind": "Diagnóstico",
+      "prompt": "Por que breakpoints baseados somente em modelos de aparelhos são frágeis?",
+      "answer": "Tamanhos variam com janela, zoom, fonte, conteúdo, orientação e componentes."
+    }
+  ],
+  "M02-0-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Qual é a função de <!doctype html> e do atributo lang?",
+      "answer": "DOCTYPE indica o modo padrão de interpretação; lang identifica o idioma principal do documento."
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Crie uma estrutura com main, h1 e um parágrafo.",
+      "answer": "Ex.: <main><h1>Título</h1><p>Texto</p></main>."
+    },
+    {
+      "kind": "Diagnóstico",
+      "prompt": "Por que usar div em lugar de todos os elementos semânticos pode prejudicar a experiência?",
+      "answer": "Perde significado nativo e dificulta navegação assistiva e manutenção."
+    }
+  ],
+  "M04-0-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Diferencie ECMAScript, JavaScript no navegador e Node.js.",
+      "answer": "ECMAScript padroniza a linguagem; navegador e Node.js são ambientes que expõem APIs distintas."
+    },
+    {
+      "kind": "Análise",
+      "prompt": "fetch e document fazem parte do núcleo ECMAScript? Justifique.",
+      "answer": "Não; são APIs de ambiente, tipicamente Web, não elementos do núcleo ECMAScript."
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Explique o que faz reduce no exemplo do capítulo.",
+      "answer": "Acumula os valores do array, começando em 0, resultando em 60."
+    }
+  ],
+  "C00-0-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Defina algoritmo, entrada, saída e condição de término.",
+      "answer": "Algoritmo é uma sequência finita e precisa de passos para um objetivo; entradas são dados recebidos; saídas são resultados; término define quando encerra."
+    },
+    {
+      "kind": "Transferência",
+      "prompt": "Como o algoritmo de máximo deve tratar uma lista vazia?",
+      "answer": "Deve explicitar contrato: retornar ausência, lançar erro ou usar outro comportamento definido, sem presumir primeiro elemento."
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Por que um procedimento que nunca termina não resolve completamente o problema?",
+      "answer": "Porque não produz a saída esperada em tempo finito para entradas do domínio especificado."
+    }
+  ],
+  "M03-1-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Qual a diferença entre classe e ID como seletores CSS?",
+      "answer": "Classe pode ser compartilhada; ID deve ser único no documento e possui especificidade maior."
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "O que seleciona article > p?",
+      "answer": "Elementos p que são filhos diretos de article."
+    },
+    {
+      "kind": "Diagnóstico",
+      "prompt": "Por que seletor longo nem sempre vence uma regra?",
+      "answer": "Cascata considera origem, importância, camadas, especificidade e ordem."
+    }
+  ],
+  "M03-2-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Cascata e herança são o mesmo processo?",
+      "answer": "Não. Cascata resolve declarações aplicáveis; herança fornece certos valores de ancestrais quando apropriado."
+    },
+    {
+      "kind": "Diagnóstico",
+      "prompt": "Por que !important não é boa solução padrão para organizar estilos?",
+      "answer": "Dificulta manutenção e cria competição de prioridades."
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Qual a utilidade de @layer?",
+      "answer": "Definir ordem de camadas de regras para controlar precedência de forma explícita."
+    }
+  ],
+  "M04-1-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "Por que const não torna um objeto imutável?",
+      "answer": "Impede reatribuição do vínculo, não mutações internas do objeto."
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Qual o resultado de typeof null e por que merece atenção?",
+      "answer": "\"object\", peculiaridade histórica da linguagem."
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Explique a diferença entre primitivo e objeto.",
+      "answer": "Primitivos são valores não-objetos; objetos possuem identidade e propriedades e podem ser mutáveis."
+    }
+  ],
+  "M04-2-0": [
+    {
+      "kind": "Teoria",
+      "prompt": "O que é uma invariante de loop?",
+      "answer": "Propriedade que permanece verdadeira antes/depois das iterações e ajuda a provar correção."
+    },
+    {
+      "kind": "Análise",
+      "prompt": "O que o loop for (let i=0;i<3;i++) imprime?",
+      "answer": "0, 1, 2."
+    },
+    {
+      "kind": "Diagnóstico",
+      "prompt": "Qual risco de uma condição de parada incorreta?",
+      "answer": "Loop infinito ou execução insuficiente, com resultados incorretos."
+    }
+  ],
+  "M02-0-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: O DOM (Document Object Model) é uma representação em árvore de um documento que permite ao navegador.",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Explique o que poderia dar errado.",
+      "answer": null
+    }
+  ],
+  "M03-0-0": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: CSS é uma linguagem de folhas de estilo que descreve a apresentação de documentos estruturados, espe.",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Explique o que poderia dar errado.",
+      "answer": null
+    }
+  ],
+  "M03-0-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Uma regra CSS consiste em um seletor e um bloco de declarações; cada declaração combina propriedade .",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Explique o que poderia dar errado.",
+      "answer": null
+    }
+  ],
+  "C00-0-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Computação não é sinônimo de computador eletrônico..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Confundir uma descrição vaga, como “organize os dados”, com um algoritmo executável.",
+      "answer": null
+    }
+  ],
+  "C00-0-2": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Decomposição reduz a complexidade ao criar subproblemas com interfaces claras..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Confundir decompor com simplesmente escrever uma lista sem definir dependências e contratos.",
+      "answer": null
+    }
+  ],
+  "C00-1-0": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Um modelo formal explicita estado, operações válidas e critérios de término..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Achar que um exemplo bem-sucedido demonstra correção para todas as entradas.",
+      "answer": null
+    }
+  ],
+  "M02-0-2": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Um documento HTML possui doctype, elemento raiz html e regiões head e body..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Colocar conteúdo principal no head ou esquecer a codificação de caracteres.",
+      "answer": null
+    }
+  ],
+  "M02-1-0": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: A hierarquia de títulos h1–h6 comunica estrutura temática..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Escolher h4 porque “fica menor” quando o conteúdo exige h2.",
+      "answer": null
+    }
+  ],
+  "M02-2-0": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: O elemento a cria um hiperlink..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Usar “clique aqui” sem contexto ou confundir URL relativa à raiz com relativa ao arquivo.",
+      "answer": null
+    }
+  ],
+  "M02-3-0": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Imagens informativas requerem alternativas textuais que transmitam sua função no contexto..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Escrever alt=\"imagem\" ou repetir informação sem acrescentar significado.",
+      "answer": null
+    }
+  ],
+  "M02-5-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Rótulos de formulários vinculam significado ao controle..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Confundir placeholder com label persistente ou confundir id com name.",
+      "answer": null
+    }
+  ],
+  "M03-2-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: A especificidade compara componentes de seletores; porém a cascata também considera origem, importân.",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Achar que !important é uma forma de aumentar a especificidade numérica.",
+      "answer": null
+    }
+  ],
+  "M03-3-2": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Unidades relativas dependem de um referencial..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Afirmar que em e rem sempre são equivalentes ou que 100% sempre corresponde à largura da tela.",
+      "answer": null
+    }
+  ],
+  "M03-4-3": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: line-height controla a altura da caixa de linha e influencia legibilidade..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Confundir line-height com margin entre parágrafos.",
+      "answer": null
+    }
+  ],
+  "M03-5-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: box-sizing altera a interpretação das dimensões especificadas..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Pensar que border-box sempre impede estouro horizontal.",
+      "answer": null
+    }
+  ],
+  "M03-5-3": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: overflow descreve como o conteúdo que excede a caixa é tratado..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Usar overflow: hidden para ocultar problemas de layout sem investigar sua causa.",
+      "answer": null
+    }
+  ],
+  "M03-6-2": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: position: relative desloca visualmente sem remover o espaço no fluxo; absolute posiciona relativamen.",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Achar que absolute é sempre relativo à janela.",
+      "answer": null
+    }
+  ],
+  "M03-7-2": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: flex-basis estabelece tamanho base; flex-grow distribui espaço livre positivo segundo fatores; flex-.",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Achar que flex:1 significa simplesmente “largura de 100%”.",
+      "answer": null
+    }
+  ],
+  "M03-8-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Grid é bidimensional: define trilhas de linhas e colunas..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Interpretar fr como porcentagem fixa independente de conteúdo e restrições.",
+      "answer": null
+    }
+  ],
+  "M03-9-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Media queries condicionam estilos a características do ambiente, como largura de viewport..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Escolher breakpoints apenas pelos nomes de aparelhos sem observar a ruptura do conteúdo.",
+      "answer": null
+    }
+  ],
+  "M03-9-2": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Container queries podem adaptar um componente ao tamanho do contêiner, em vez de depender somente da.",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Achar que @container funciona sem um contêiner elegível no ancestral.",
+      "answer": null
+    }
+  ],
+  "M03-10-0": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: :hover reflete apontamento; :focus reflete foco; :focus-visible tenta indicar quando a apresentação .",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Remover outline sem oferecer indicador de foco equivalente.",
+      "answer": null
+    }
+  ],
+  "M04-1-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: let e const criam bindings de escopo de bloco; const impede reatribuir o binding, não torna objetos .",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Afirmar que const congela objetos ou que var e let diferem apenas na grafia.",
+      "answer": null
+    }
+  ],
+  "M04-2-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: === compara sem coerção de tipos entre operandos de tipos distintos; == aplica regras específicas de.",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Dizer que === sempre compara o conteúdo profundo de objetos.",
+      "answer": null
+    }
+  ],
+  "M04-3-2": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Um laço exige condição de progresso e término..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Explorar apenas o valor final sem conseguir explicar o estado intermediário.",
+      "answer": null
+    }
+  ],
+  "M04-4-1": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Parâmetros nomeiam bindings locais definidos pela função; argumentos são valores fornecidos em uma c.",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Confundir console.log com return ou supor que toda função precisa alterar estado externo.",
+      "answer": null
+    }
+  ],
+  "M04-7-2": [
+    {
+      "kind": "Compreensão",
+      "prompt": "Explique com suas palavras o conceito central de: Depurar é formular hipóteses, reproduzir defeitos, observar estado e testar correções..",
+      "answer": null
+    },
+    {
+      "kind": "Aplicação",
+      "prompt": "Construa um exemplo original e justifique cada decisão.",
+      "answer": null
+    },
+    {
+      "kind": "Análise",
+      "prompt": "Identifique uma limitação ou erro frequente associado a este conteúdo: Corrigir um bug sem conseguir construir um caso que o reproduza.",
+      "answer": null
+    }
+  ]
+}
