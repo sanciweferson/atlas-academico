@@ -1,3 +1,216 @@
-'use client';import Link from 'next/link';import {useTheme} from 'next-themes';import {useEffect,useState} from 'react';import {Moon,Sun,GraduationCap,Menu,X,BookOpen,LayoutDashboard} from 'lucide-react';import {usePathname} from 'next/navigation';
-const links=[['/catalogo','Catálogo'],['/estudo','Meu estudo'],['/painel','Painel'],['/login','Entrar']];
-export default function Nav(){const {setTheme,resolvedTheme}=useTheme();const [mounted,setMounted]=useState(false);const [open,setOpen]=useState(false);const path=usePathname();useEffect(()=>setMounted(true),[]);return <header className="site-header"><nav className="shell nav-inner"><Link href="/" className="brand" onClick={()=>setOpen(false)}><span className="brand-icon"><GraduationCap size={22}/></span><span>Atlas <span className="brand-accent">Acadêmico</span><small>LABORATÓRIO DE APRENDIZAGEM</small></span></Link><div className="desktop-links">{links.map(([href,label])=><Link className={'nav-link '+(path===href?'active':'')} href={href} key={href}>{label}</Link>)}</div><div className="flex gap-2 items-center"><button className="icon-button" aria-label="Alternar tema claro ou escuro" title="Alternar tema" onClick={()=>setTheme(resolvedTheme==='dark'?'light':'dark')}>{mounted&&resolvedTheme==='dark'?<Sun size={19}/>:<Moon size={19}/>}</button><button className="icon-button mobile-menu" aria-label={open?'Fechar menu':'Abrir menu'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X size={20}/>:<Menu size={20}/>}</button></div></nav>{open&&<div className="mobile-links shell">{links.map(([href,label])=><Link href={href} key={href} onClick={()=>setOpen(false)}>{label}</Link>)}</div>}</header>}
+"use client"
+
+import Link from "next/link"
+import { useTheme } from "next-themes"
+import { useEffect, useRef, useState } from "react"
+import {
+  Moon,
+  Sun,
+  GraduationCap,
+  Menu,
+  X,
+  Home,
+  BookOpen,
+  NotebookPen,
+  LayoutDashboard,
+  LogIn,
+} from "lucide-react"
+import { usePathname } from "next/navigation"
+
+const STORAGE_KEY = "atlas-sidebar-open"
+
+const links = [
+  { href: "/", label: "Início", icon: Home },
+  { href: "/catalogo", label: "Disciplinas", icon: BookOpen },
+  { href: "/estudo", label: "Meu estudo", icon: NotebookPen },
+  { href: "/painel", label: "Painel", icon: LayoutDashboard },
+  { href: "/login", label: "Entrar", icon: LogIn },
+]
+
+export default function Nav() {
+  const { setTheme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  const openButtonRef = useRef<HTMLButtonElement>(null)
+  const sidebarRef = useRef<HTMLElement>(null)
+
+  // Restaura o estado da aba antes de começar a gravar mudanças.
+  useEffect(() => {
+    try {
+      setOpen(sessionStorage.getItem(STORAGE_KEY) === "true")
+    } catch {
+      // O menu ainda funciona se o armazenamento estiver indisponível.
+    }
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!mounted) return
+    try {
+      sessionStorage.setItem(STORAGE_KEY, String(open))
+    } catch {
+      // Falhas no armazenamento não impedem abrir/fechar o menu.
+    }
+  }, [mounted, open])
+
+  useEffect(() => {
+    if (!open) return
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = "hidden"
+    openButtonRef.current?.focus()
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault()
+        setOpen(false)
+        openButtonRef.current?.focus()
+        return
+      }
+
+      if (event.key !== "Tab") return
+      const focusable = Array.from(
+        sidebarRef.current?.querySelectorAll<HTMLElement>(
+          "a[href], button:not([disabled])",
+        ) ?? [],
+      )
+      if (!focusable.length) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [open])
+
+  const closeMenu = () => setOpen(false)
+  const toggleTheme = () =>
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+
+  return (
+    <>
+      <header
+        className={`site-header atlas-header ${open ? "atlas-header-menu-open" : ""}`}
+      >
+        <nav className="shell nav-inner atlas-nav-inner">
+          <Link href="/" className="brand atlas-brand" onClick={closeMenu}>
+            <span className="brand-icon">
+              <GraduationCap size={22} />
+            </span>
+            <span>
+              Atlas <span className="brand-accent">Acadêmico</span>
+              <small>LABORATÓRIO DE APRENDIZAGEM</small>
+            </span>
+          </Link>
+
+          <div className="desktop-links">
+            {links.slice(1).map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={"nav-link " + (pathname === href ? "active" : "")}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="atlas-nav-actions">
+            <button
+              type="button"
+              className="icon-button desktop-theme-button"
+              aria-label="Alternar tema"
+              title="Alternar tema"
+              onClick={toggleTheme}
+            >
+              {mounted && resolvedTheme === "dark" ? (
+                <Sun size={19} />
+              ) : (
+                <Moon size={19} />
+              )}
+            </button>
+            <button
+              ref={openButtonRef}
+              type="button"
+              className={`icon-button mobile-menu atlas-menu-toggle ${open ? "is-open" : ""}`}
+              aria-label={open ? "Fechar menu lateral" : "Abrir menu lateral"}
+              aria-expanded={open}
+              aria-controls="atlas-sidebar"
+              onClick={() => setOpen((previous) => !previous)}
+            >
+              {open ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      {open && (
+        <div className="atlas-sidebar-layer">
+          <button
+            type="button"
+            className="atlas-sidebar-backdrop"
+            aria-label="Fechar menu lateral"
+            tabIndex={-1}
+            onClick={closeMenu}
+          />
+          <aside
+            ref={sidebarRef}
+            id="atlas-sidebar"
+            className="atlas-sidebar"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu principal"
+          >
+            <div className="atlas-sidebar-header">
+              <h2>Menu</h2>
+              <div className="atlas-sidebar-actions">
+                <button
+                  type="button"
+                  className="atlas-sidebar-icon-button"
+                  aria-label="Alternar tema"
+                  title="Alternar tema"
+                  onClick={toggleTheme}
+                >
+                  {mounted && resolvedTheme === "dark" ? (
+                    <Sun size={23} />
+                  ) : (
+                    <Moon size={23} />
+                  )}
+                </button>
+              </div>
+            </div>
+            <div className="atlas-sidebar-scroll">
+              <div className="atlas-sidebar-links">
+                {links.map(({ href, label, icon: Icon }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className={
+                      "atlas-sidebar-link " +
+                      (pathname === href ? "is-active" : "")
+                    }
+                    onClick={closeMenu}
+                  >
+                    <Icon size={23} strokeWidth={1.8} />
+                    <span>{label}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </aside>
+        </div>
+      )}
+    </>
+  )
+}
