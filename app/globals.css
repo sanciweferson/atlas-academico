@@ -1275,3 +1275,39 @@ summary:focus-visible {
     padding: 14px 20px 14px 25px;
   }
 }
+
+
+/* Atlas Acadêmico — autenticação e perfil */
+.atlas-auth-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:clamp(24px,6vw,96px);align-items:center;max-width:1080px;margin:24px auto 40px;min-height:550px}
+.atlas-auth-intro{display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding:24px 0}
+.atlas-auth-intro h1{font-size:clamp(2rem,4vw,3.25rem);font-weight:850;letter-spacing:-.045em;line-height:1.13}
+.atlas-auth-intro p{font-size:17px;color:var(--muted);max-width:480px}
+.atlas-auth-emblem{display:grid;place-items:center;width:64px;height:64px;background:var(--accent-soft);color:var(--accent);border-radius:19px}
+.atlas-auth-feature{margin-top:12px;border-left:3px solid var(--accent);padding:12px 18px;color:var(--muted);font-size:14px}
+.atlas-auth-card{background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);border-radius:24px;padding:clamp(24px,4vw,40px)}
+.atlas-auth-card h2{font-size:26px;font-weight:800;letter-spacing:-.03em}
+.atlas-auth-card>.muted{margin-top:6px;font-size:14px}
+.atlas-auth-form{display:flex;flex-direction:column;gap:17px;margin-top:26px}
+.atlas-auth-form label,.atlas-profile-form label{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:700}
+.atlas-input-wrap{position:relative;display:flex;align-items:center}
+.atlas-input-wrap>svg{position:absolute;left:14px;color:var(--muted);pointer-events:none}
+.atlas-input-wrap .field{width:100%;padding-left:43px;min-height:49px}
+.atlas-input-wrap .field[type=password],.atlas-input-wrap .field[type=text]{padding-right:46px}
+.atlas-password-toggle{position:absolute;right:9px;display:grid;place-items:center;width:35px;height:35px;border:0;background:transparent;color:var(--muted)}
+.atlas-auth-text-button{display:inline-flex;align-items:center;gap:8px;align-self:flex-end;background:transparent;color:var(--accent);font-weight:700;font-size:13px}
+.atlas-auth-submit{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:49px}
+.atlas-auth-switch{text-align:center;font-size:14px;margin-top:23px;color:var(--muted)}
+.atlas-auth-switch a{color:var(--accent);font-weight:800}
+.atlas-auth-message{font-size:13px;line-height:1.6;background:var(--accent-soft);color:var(--fg);border-radius:10px;padding:12px 14px}
+.atlas-auth-message.success{border-left:3px solid #16a34a}
+.atlas-spin{animation:atlas-rotate 1s linear infinite}@keyframes atlas-rotate{to{transform:rotate(360deg)}}
+.atlas-profile-layout{max-width:800px;margin:0 auto}.atlas-profile-heading{margin-bottom:24px}.atlas-profile-heading>.muted{margin-top:8px}
+.atlas-profile-card{max-width:800px;margin:0 auto}.atlas-avatar-section{display:flex;align-items:center;gap:24px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+.atlas-avatar-circle{display:grid;place-items:center;flex:none;width:116px;height:116px;overflow:hidden;border-radius:50%;background:var(--accent-soft);color:var(--accent);border:3px solid var(--border)}
+.atlas-avatar-circle img{width:100%;height:100%;object-fit:cover}.atlas-avatar-buttons{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.atlas-avatar-upload{cursor:pointer}.atlas-avatar-buttons .btn-secondary{display:inline-flex;align-items:center;gap:8px;border-radius:11px;padding:12px 17px;font-weight:700;font-size:14px}
+.atlas-visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.atlas-profile-form{display:flex;flex-direction:column;gap:17px;margin-top:28px}.atlas-profile-form .field{margin-top:4px}.atlas-profile-form>button{align-self:flex-start;display:flex;align-items:center;gap:8px}
+.atlas-profile-footer{display:flex;justify-content:flex-end;margin-top:24px;padding-top:20px;border-top:1px solid var(--border)}
+@media(max-width:800px){.atlas-auth-layout{grid-template-columns:1fr;max-width:510px;gap:16px;min-height:0;margin:0 auto 30px}.atlas-auth-intro{padding:10px 0;gap:10px}.atlas-auth-intro h1{font-size:1.8rem}.atlas-auth-intro p{font-size:14px}.atlas-auth-feature{display:none}}
+@media(max-width:480px){.atlas-auth-card{padding:22px 18px;border-radius:18px}.atlas-avatar-section{flex-direction:column;align-items:flex-start}.atlas-avatar-circle{width:96px;height:96px}}

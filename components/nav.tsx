@@ -14,9 +14,10 @@ import {
   NotebookPen,
   LayoutDashboard,
   LogIn,
+  UserRound,
 } from "lucide-react"
 import { usePathname } from "next/navigation"
-
+import { browserSupabase } from "@/lib/supabase"
 const STORAGE_KEY = "atlas-sidebar-open"
 
 const links = [
@@ -25,12 +26,16 @@ const links = [
   { href: "/estudo", label: "Meu estudo", icon: NotebookPen },
   { href: "/painel", label: "Painel", icon: LayoutDashboard },
   { href: "/login", label: "Entrar", icon: LogIn },
+  { href: "/perfil", label: "Meu perfil", icon: UserRound },
 ]
 
 export default function Nav() {
   const { setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [open, setOpen] = useState(false)
+  const [authStatus, setAuthStatus] = useState<
+    "loading" | "authenticated" | "anonymous"
+  >("loading")
   const pathname = usePathname()
   const openButtonRef = useRef<HTMLButtonElement>(null)
   const sidebarRef = useRef<HTMLElement>(null)
@@ -94,6 +99,52 @@ export default function Nav() {
     }
   }, [open])
 
+  useEffect(() => {
+    const supabase = browserSupabase()
+
+    if (!supabase) {
+      setAuthStatus("anonymous")
+      return
+    }
+
+    let active = true
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!active) return
+
+      setAuthStatus(session?.user ? "authenticated" : "anonymous")
+    })
+
+    void supabase.auth
+      .getUser()
+      .then(({ data, error }) => {
+        if (!active) return
+
+        setAuthStatus(!error && data.user ? "authenticated" : "anonymous")
+      })
+      .catch(() => {
+        if (active) setAuthStatus("anonymous")
+      })
+
+    return () => {
+      active = false
+      subscription.unsubscribe()
+    }
+  }, [])
+
+  const visibleLinks = links.filter(({ href }) => {
+    if (href === "/login") {
+      return authStatus === "anonymous"
+    }
+
+    if (href === "/perfil") {
+      return authStatus === "authenticated"
+    }
+
+    return true
+  })
   const closeMenu = () => setOpen(false)
   const toggleTheme = () =>
     setTheme(resolvedTheme === "dark" ? "light" : "dark")
@@ -115,7 +166,7 @@ export default function Nav() {
           </Link>
 
           <div className="desktop-links">
-            {links.slice(1).map(({ href, label }) => (
+            {visibleLinks.slice(1).map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
@@ -192,7 +243,7 @@ export default function Nav() {
             </div>
             <div className="atlas-sidebar-scroll">
               <div className="atlas-sidebar-links">
-                {links.map(({ href, label, icon: Icon }) => (
+                {visibleLinks.map(({ href, label, icon: Icon }) => (
                   <Link
                     key={href}
                     href={href}
