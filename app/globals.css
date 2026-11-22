@@ -1128,71 +1128,6 @@ summary:focus-visible {
 
   .atlas-menu-toggle { display:grid; place-items:center; flex-shrink:0; }
 
-  /* Cabeçalho aberto: não cobre nem desfoca o topo do painel. */
-
-  .atlas-header.atlas-header-menu-open {
-
-    position:fixed;
-
-    top:0; left:0; right:0;
-
-    height:0; min-height:0;
-
-    z-index:10020;
-
-    background:transparent;
-
-    border:0;
-
-    backdrop-filter:none;
-
-    -webkit-backdrop-filter:none;
-
-    box-shadow:none;
-
-    pointer-events:none;
-
-  }
-
-  .atlas-header-menu-open .atlas-brand,
-
-  .atlas-header-menu-open .desktop-links,
-
-  .atlas-header-menu-open .desktop-theme-button { visibility:hidden; }
-
-  .atlas-header-menu-open .atlas-menu-toggle {
-
-    position:fixed;
-
-    top:14px;
-
-    right:16px;
-
-    z-index:10021;
-
-    display:grid;
-
-    place-items:center;
-
-    width:48px;
-
-    height:48px;
-
-    margin:0;
-
-    pointer-events:auto;
-
-    background:#19212c;
-
-    color:#fff;
-
-    border:1px solid #3b4655;
-
-    border-radius:9px;
-
-  }
-
-  .atlas-header-menu-open .atlas-menu-toggle:hover { background:#293445; color:#fff; }
 
 }
 
@@ -1211,10 +1146,11 @@ summary:focus-visible {
     top: 0;
     height: auto;
     min-height: 68px;
-    z-index: 10020;
+    z-index: 40;
   }
 
   .site-header.atlas-header-menu-open {
+    z-index: 40;
     background: transparent;
     border-color: transparent;
     box-shadow: none;
