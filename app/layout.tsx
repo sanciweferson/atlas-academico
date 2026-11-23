@@ -1,3 +1,30 @@
-import type {Metadata} from 'next';import Providers from '@/components/providers';import Nav from '@/components/nav';import './globals.css';
-export const metadata:Metadata={title:'Atlas Acadêmico | Seu campus digital',description:'Currículo e aulas de Ciência da Computação, Engenharia de Software e Inteligência Artificial'};
-export default function Layout({children}:{children:React.ReactNode}){return <html lang="pt-BR" data-scroll-behavior="smooth" suppressHydrationWarning><body><Providers><Nav/><main className="shell pt-9 pb-10 min-h-[70vh]">{children}</main><footer className="site-footer"><div className="shell flex flex-wrap gap-3 justify-between"><span>© Atlas Acadêmico · Plataforma de aprendizagem</span><span>Conteúdo em desenvolvimento · Estude com senso crítico</span></div></footer></Providers></body></html>}
+import type { Metadata } from "next"
+import Providers from "@/components/providers"
+import Nav from "@/components/nav"
+import AtlasNotificationWatcher from "@/components/atlas-notification-watcher"
+import AtlasFooter from "@/components/atlas-footer"
+import AtlasReadingPreferences from "@/components/atlas-reading-preferences"
+import "./globals.css"
+
+export const metadata: Metadata = {
+  title: "Atlas Acadêmico | Seu campus digital",
+  description: "Currículo e aulas de Ciência da Computação, Engenharia de Software e Inteligência Artificial",
+}
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body>
+        <Providers>
+          <AtlasReadingPreferences />
+          <Nav />
+          <AtlasNotificationWatcher />
+          <div className="atlas-v3-page-area">
+            <main id="conteudo-principal" className="shell atlas-v3-main">{children}</main>
+            <AtlasFooter />
+          </div>
+        </Providers>
+      </body>
+    </html>
+  )
+}

@@ -1,0 +1,39 @@
+.page { width: 100%; max-width: 950px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+.intro { display: flex; flex-direction: column; gap: 8px; margin-bottom: 5px; }
+.intro p { max-width: 660px; line-height: 1.6; }
+.card { padding: clamp(18px, 3vw, 28px); background: var(--card); border: 1px solid var(--border); border-radius: 20px; box-shadow: var(--shadow); }
+.cardHeading { display: flex; gap: 13px; align-items: center; padding-bottom: 22px; }
+.headingIcon { display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; border-radius: 13px; background: var(--accent-soft); color: var(--accent); }
+.cardHeading h2 { font-weight: 800; font-size: 20px; color: var(--fg); }
+.cardHeading p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+.themeGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.themeChoice { position: relative; display: flex; align-items: center; gap: 12px; min-width: 0; text-align: left; padding: 16px 13px; color: var(--fg); border: 1px solid var(--border); border-radius: 13px; background: transparent; cursor: pointer; }
+.themeChoice:hover { border-color: var(--accent); }
+.selected { border-color: var(--accent); background: var(--accent-soft); }
+.themeChoice > svg { flex: 0 0 auto; color: var(--accent); }
+.themeText { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.themeText strong { font-size: 14px; }
+.themeText small { color: var(--muted); font-size: 11px; line-height: 1.35; }
+.check { margin-left: auto; }
+.hint { color: var(--muted); margin-top: 13px; font-size: 12px; }
+.controlRow { display: grid; gap: 10px; margin-bottom: 23px; }
+.controlRow label { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 14px; font-weight: 700; }
+.controlRow label strong { color: var(--accent); }
+.range { width: 100%; accent-color: var(--accent); cursor: pointer; }
+.rangeLabels { display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; }
+.select { max-width: 280px; min-height: 44px; padding: 10px 12px; border: 1px solid var(--border); background: var(--card); color: var(--fg); border-radius: 10px; }
+.preview { padding: 18px 20px; border: 1px solid var(--border); background: var(--bg); border-radius: 13px; }
+.previewLabel { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+.preview p { color: var(--fg); }
+.toggleRow { display: flex; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; }
+.toggleText { display: flex; flex-direction: column; gap: 6px; }
+.toggleText strong { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; }
+.toggleText strong svg { color: var(--accent); }
+.toggleText small { color: var(--muted); font-size: 13px; line-height: 1.55; }
+.toggleRow input { width: 19px; height: 19px; flex: 0 0 19px; accent-color: var(--accent); cursor: pointer; }
+.bottomRow { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; }
+.bottomRow p { font-size: 12px; color: var(--muted); }
+.reset { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 15px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; color: var(--fg); font-size: 13px; cursor: pointer; }
+.reset:hover { border-color: var(--accent); }
+.themeChoice:focus-visible, .reset:focus-visible, .select:focus-visible, .toggleRow input:focus-visible, .range:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+@media(max-width: 680px) { .themeGrid { grid-template-columns: 1fr; } .themeChoice { min-height: 64px; } }

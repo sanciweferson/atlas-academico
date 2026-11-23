@@ -48,7 +48,7 @@ export default function AuthForm({ mode }: { mode: Mode }) {
         setMessage("Cadastro solicitado. Verifique seu e-mail para confirmar a conta. Se já existir uma conta, use a opção Entrar.")
         return
       }
-      router.push(mode === "signup" ? "/perfil" : "/painel")
+     router.push(mode === "signup" ? "/perfil" : "/")
       router.refresh()
     } catch {
       setMessage("Não foi possível conectar. Tente novamente.")

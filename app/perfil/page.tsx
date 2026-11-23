@@ -2,15 +2,13 @@
 
 import Link from "next/link"
 import { ChangeEvent, FormEvent, useEffect, useState } from "react"
-import { Camera, LogOut, Save, Trash2, UserRound } from "lucide-react"
-import { useRouter } from "next/navigation"
+import { Camera, Save, Trash2, UserRound } from "lucide-react"
 import { browserSupabase } from "@/lib/supabase"
 
 type Profile = { full_name: string | null; avatar_path: string | null }
 const BUCKET = "avatars"
 
 export default function PerfilPage() {
-  const router = useRouter()
   const [userId, setUserId] = useState<string | null>(null)
   const [email, setEmail] = useState("")
   const [fullName, setFullName] = useState("")
@@ -103,18 +101,10 @@ export default function PerfilPage() {
     setBusy(false)
   }
 
-  async function signOut() {
-    const s=browserSupabase()
-    if(!s)return
-    await s.auth.signOut()
-    router.push("/login")
-    router.refresh()
-  }
-
   if(loading) return <div className="panel atlas-profile-card">Carregando seu perfil...</div>
   if(!userId) return <div className="panel atlas-profile-card"><h1 className="text-2xl font-bold">Meu perfil</h1><p>Entre na sua conta para visualizar e editar seu perfil.</p><Link className="btn" href="/login">Entrar</Link>{message && <p role="status">{message}</p>}</div>
   return <div className="atlas-profile-layout">
-    <div className="atlas-profile-heading"><span className="eyebrow">MINHA CONTA</span><h1 className="page-title">Meu perfil</h1><p className="muted">Personalize suas informações no Atlas Acadêmico.</p></div>
+    <div className="atlas-profile-heading"><Link className="back-link" href="/">← Voltar ao início</Link><span className="eyebrow">MINHA CONTA</span><h1 className="page-title">Meu perfil</h1><p className="muted">Personalize suas informações no Atlas Acadêmico.</p></div>
     <div className="panel atlas-profile-card">
       <div className="atlas-avatar-section">
         <div className="atlas-avatar-circle">{avatarUrl ? <img src={avatarUrl} alt="Sua foto de perfil"/> : <UserRound size={54}/>}</div>
@@ -122,7 +112,6 @@ export default function PerfilPage() {
       </div>
       <form className="atlas-profile-form" onSubmit={save}><label>Nome completo<input className="field" autoComplete="name" maxLength={120} required value={fullName} onChange={e=>setFullName(e.target.value)}/></label><label>E-mail<input className="field" type="email" value={email} readOnly aria-describedby="atlas-email-help"/></label><p id="atlas-email-help" className="muted text-sm">O e-mail está vinculado à autenticação da sua conta.</p><button type="submit" className="btn" disabled={busy}><Save size={17}/> Salvar alterações</button></form>
       {message && <p className="atlas-auth-message" role="status">{message}</p>}
-      <div className="atlas-profile-footer"><button type="button" className="atlas-auth-text-button" onClick={()=>void signOut()}><LogOut size={17}/> Sair da conta</button></div>
     </div>
   </div>
 }
