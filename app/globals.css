@@ -2619,3 +2619,12 @@ html.atlas-v31-high-contrast .atlas-v31-account-delete-preview-danger h3 { color
 html.atlas-v31-high-contrast .atlas-v31-account-delete-preview-danger button {
   border-color: var(--border); color: var(--fg); background: #080808; opacity: 1;
 }
+
+/* ATLAS V3.1 — RODAPE CONTATOS 2026-11 */
+.atlas-v3-footer-social .atlas-v31-footer-contact-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:14px}
+.atlas-v3-footer-social .atlas-v31-footer-contact-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;min-width:118px;padding:10px 16px;border:1px solid var(--border);border-radius:13px;background:var(--card);color:var(--fg);font-size:13px;font-weight:650;line-height:1.2;text-decoration:none;transition:background .15s,color .15s,border-color .15s}
+.atlas-v3-footer-social .atlas-v31-footer-contact-button svg{flex:0 0 auto;color:var(--accent)}
+.atlas-v3-footer-social .atlas-v31-footer-contact-button:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.atlas-v3-footer-social .atlas-v31-footer-contact-button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:380px){.atlas-v3-footer-social .atlas-v31-footer-contact-button{flex:1 1 120px}}
+@media(prefers-reduced-motion:reduce){.atlas-v3-footer-social .atlas-v31-footer-contact-button{transition:none}}

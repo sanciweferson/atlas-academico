@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { GraduationCap, Facebook, Instagram, Youtube, Linkedin, Github, Home, BookOpen, NotebookPen, Settings, FileText, ShieldCheck, Cookie, BookOpenCheck, CircleHelp } from "lucide-react"
+import { GraduationCap, Facebook, Instagram, Youtube, Linkedin, Github, Home, BookOpen, NotebookPen, Settings, FileText, ShieldCheck, Cookie, BookOpenCheck, CircleHelp, Mail, MessageCircle } from "lucide-react"
 import { useAtlasLanguage } from "@/lib/atlas-i18n"
 
 const sociais = [
@@ -56,9 +56,9 @@ export default function AtlasFooter() {
             ))}
           </div>
           <small>{tr("Conheça os perfis e canais do criador do Atlas Acadêmico.")}</small>
-          <div className="atlas-v31-contact-links" aria-label="Contato com o Atlas">
-            <a href="mailto:sanciw45@gmail.com">E-mail</a>
-            <a href="https://wa.me/5585985637557" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <div className="atlas-v31-footer-contact-actions" aria-label="Contato com o Atlas">
+            <a className="atlas-v31-footer-contact-button" href="mailto:sanciw45@gmail.com" aria-label="Enviar e-mail ao Atlas Acadêmico"><Mail size={19} aria-hidden="true" /><span>E-mail</span></a>
+            <a className="atlas-v31-footer-contact-button" href="https://wa.me/5585985637557" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp do Atlas (nova aba)"><MessageCircle size={19} aria-hidden="true" /><span>WhatsApp</span></a>
           </div>
         </section>
       </div>
