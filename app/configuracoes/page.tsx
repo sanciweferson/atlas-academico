@@ -3,6 +3,7 @@
 import { useAtlasLanguage } from "@/lib/atlas-i18n"
 import AtlasLanguageChoices from "@/components/atlas-language-choices"
 import AtlasAccessibilityCenter from "@/components/atlas-accessibility-center"
+import AtlasAccountDeletionPreview from "@/components/atlas-account-deletion-preview"
 import styles from "./configuracoes.module.css"
 
 export default function ConfiguracoesPage() {
@@ -16,6 +17,7 @@ export default function ConfiguracoesPage() {
       </header>
       <AtlasAccessibilityCenter />
       <AtlasLanguageChoices />
+      <AtlasAccountDeletionPreview />
     </div>
   )
 }

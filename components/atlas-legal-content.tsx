@@ -41,8 +41,8 @@ const documents: Record<"termos" | "privacidade" | "cookies", { title: string; s
     summary: "Como o Atlas Acadêmico utiliza dados de conta e preferências de estudo.",
     sections: [
       { title: "1. Responsável e alcance", paragraphs: [
-        "O Atlas Acadêmico é um projeto educacional independente. Esta política descreve funcionalidades verificadas no código da plataforma, sem substituir a avaliação das configurações reais dos provedores de infraestrutura.",
-        "Solicitações relacionadas a dados pessoais podem ser enviadas ao e-mail público indicado nesta página. A identificação formal do responsável e os procedimentos de atendimento ainda precisam de validação antes da publicação definitiva.",
+        "O Atlas Acadêmico é um projeto educacional independente mantido por Sanciweferson Mendes Sousa, pessoa física e responsável pelas decisões sobre o tratamento de dados pessoais da plataforma. Esta política descreve funcionalidades verificadas no código da plataforma, sem substituir a avaliação das configurações reais dos provedores de infraestrutura.",
+        "Solicitações relacionadas a dados pessoais podem ser enviadas ao e-mail público indicado nesta página. Os procedimentos de atendimento ainda precisam de validação antes da publicação definitiva.",
       ] },
       { title: "2. Quais dados são tratados", points: [
         "Conta: e-mail, nome informado no cadastro, identificador de usuário e dados de autenticação gerenciados pelo Supabase.",
@@ -115,7 +115,7 @@ export default function AtlasLegalContent({ kind }: { kind: "termos" | "privacid
         <p className="muted">{page.summary}</p>
         <p className="atlas-v31-legal-date">Última revisão do rascunho: {updated}</p>
       </header>
-      <div className="atlas-v31-legal-note" role="note"><Info size={20} aria-hidden="true" /><p><strong>Documento em revisão.</strong> Texto preliminar baseado no funcionamento atual do Atlas. O contato foi informado, mas ainda é necessário definir prazos de retenção, validar a identificação do responsável e conferir os serviços utilizados antes da publicação definitiva.</p></div>
+      <div className="atlas-v31-legal-note" role="note"><Info size={20} aria-hidden="true" /><p><strong>Documento em revisão.</strong> Texto preliminar baseado no funcionamento atual do Atlas. O responsável e o contato foram informados, mas ainda é necessário definir prazos de retenção, validar os procedimentos de atendimento e conferir os serviços utilizados antes da publicação definitiva.</p></div>
       <section className="atlas-v31-legal-contact" aria-label="Contato do Atlas">
         <strong>Contato, suporte e privacidade</strong>
         <p>Para questões sobre dados pessoais, utilize preferencialmente o e-mail. O WhatsApp é um canal alternativo de contato.</p>

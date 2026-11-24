@@ -2444,3 +2444,178 @@ html.atlas-v31-reduce-motion *, html.atlas-v31-reduce-motion *::before, html.atl
 .atlas-v31-discipline-icon[data-brand="mongodb"] { color: #198643; background: #e6faea; border-color: #a6d7b5; }
 .atlas-v31-discipline-icon[data-brand="supabase"] { color: #168e62; background: #e3f9ed; border-color: #93c9ac; }
 @media(max-width: 420px) { .atlas-v31-discipline-icon { flex-basis: 48px; width: 48px; height: 48px; } }
+
+
+/* ATLAS V3.1 — OCULTAR BARRA DO EDITOR */
+.atlas-v31-photo-dialog {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.atlas-v31-photo-dialog::-webkit-scrollbar {
+  display: none;
+}
+
+/* ATLAS V3.1 — PACOTE 22: BORDAS DE ALTO CONTRASTE NA HOME */
+/* Só se aplica com alto contraste ligado; não altera os gradientes originais. */
+html.atlas-v31-high-contrast .hero,
+html.atlas-v31-high-contrast .atlas-v31-dmx-card {
+  border: 2px solid var(--border);
+}
+
+/* ATLAS V3.1 — PACOTE 22.1: ALTO CONTRASTE HOME + DEVMATRIX */
+/* Escopo estrito: sem mudanças quando o modo de alto contraste estiver desligado. */
+html.atlas-v31-high-contrast .hero,
+html.atlas-v31-high-contrast .atlas-v31-dmx-card,
+html.atlas-v31-high-contrast .atlas-v31-dmx-intro,
+html.atlas-v31-high-contrast .atlas-v31-dmx-tabpanel,
+html.atlas-v31-high-contrast .atlas-v31-dmx-loading-card,
+html.atlas-v31-high-contrast .atlas-v31-dmx-redirect {
+  background: #000;
+  color: #fff;
+  border: 2px solid var(--border);
+  box-shadow: none;
+}
+
+/* Texto claro sobre fundo escuro, sem roxos de baixa legibilidade. */
+html.atlas-v31-high-contrast .hero :is(.hero-title span, .hero-desc, .hero-label),
+html.atlas-v31-high-contrast .atlas-v31-dmx-card :is(.atlas-v31-dmx-kicker, p),
+html.atlas-v31-high-contrast .atlas-v31-dmx-page :is(.atlas-v31-dmx-kicker, .atlas-v31-dmx-panel-icon, .atlas-v31-dmx-disclaimer, .atlas-v31-dmx-manual, .atlas-v31-dmx-return),
+html.atlas-v31-high-contrast .atlas-v31-dmx-page :is(.atlas-v31-dmx-intro, .atlas-v31-dmx-tabpanel, .atlas-v31-dmx-loading-card) p {
+  color: #fff;
+}
+
+/* Botões primários: amarelo/preto; secundários: preto/amarelo. */
+html.atlas-v31-high-contrast .hero .btn-light,
+html.atlas-v31-high-contrast .atlas-v31-dmx-button {
+  background: var(--accent);
+  color: #000;
+  border: 2px solid var(--border);
+  opacity: 1;
+}
+html.atlas-v31-high-contrast .hero .btn-light:hover,
+html.atlas-v31-high-contrast .atlas-v31-dmx-button:hover {
+  background: #fff;
+  color: #000;
+  opacity: 1;
+}
+html.atlas-v31-high-contrast .hero .btn-ghost,
+html.atlas-v31-high-contrast .atlas-v31-dmx-secondary {
+  background: #000;
+  color: var(--accent);
+  border: 2px solid var(--border);
+  opacity: 1;
+}
+html.atlas-v31-high-contrast .hero .btn-ghost:hover,
+html.atlas-v31-high-contrast .atlas-v31-dmx-secondary:hover {
+  background: #28230a;
+  color: #fff;
+}
+
+/* Componentes e controles internos que mantinham cores fixas. */
+html.atlas-v31-high-contrast .hero :is(.hero-label, .hero-visual, .visual-row),
+html.atlas-v31-high-contrast .atlas-v31-dmx-page :is(.atlas-v31-dmx-emblem, .atlas-v31-dmx-loading-logo, .atlas-v31-dmx-tablist, .atlas-v31-dmx-progress) {
+  border-color: var(--border);
+}
+html.atlas-v31-high-contrast .hero .hero-visual,
+html.atlas-v31-high-contrast .atlas-v31-dmx-page :is(.atlas-v31-dmx-tablist, .atlas-v31-dmx-progress) {
+  background: #080808;
+  box-shadow: none;
+}
+html.atlas-v31-high-contrast .atlas-v31-dmx-page .atlas-v31-dmx-tablist button {
+  color: #fff;
+  border-color: var(--border);
+}
+html.atlas-v31-high-contrast .atlas-v31-dmx-page .atlas-v31-dmx-tablist button[aria-selected="true"] {
+  background: var(--accent);
+  color: #000;
+}
+html.atlas-v31-high-contrast .atlas-v31-dmx-page :is(.atlas-v31-dmx-loading-logo, .atlas-v31-dmx-emblem) {
+  background: #000;
+  color: var(--accent);
+}
+html.atlas-v31-high-contrast .atlas-v31-dmx-page .atlas-v31-dmx-spinner {
+  border-color: #777;
+  border-top-color: var(--accent);
+}
+html.atlas-v31-high-contrast .atlas-v31-dmx-page .atlas-v31-dmx-progress span {
+  background: var(--accent);
+}
+
+html.atlas-v31-high-contrast .hero :is(a, button):focus-visible,
+html.atlas-v31-high-contrast .atlas-v31-dmx-card :is(a, button):focus-visible,
+html.atlas-v31-high-contrast .atlas-v31-dmx-page :is(a, button):focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* ATLAS V3.1 — PACOTE 22.2: BOTOES GERAIS DE ALTO CONTRASTE */
+/* Apenas componentes que usam as classes gerais .btn e .btn-secondary. */
+/* Não modifica o tema normal, nem os controles específicos ainda não auditados. */
+html.atlas-v31-high-contrast .btn:not(.btn-secondary):not(.btn-ghost):not(:disabled):not([aria-disabled="true"]) {
+  background: var(--accent);
+  color: #000;
+  border: 1px solid var(--border);
+  opacity: 1;
+}
+html.atlas-v31-high-contrast .btn:not(.btn-secondary):not(.btn-ghost):not(:disabled):not([aria-disabled="true"]):hover {
+  background: #fff;
+  color: #000;
+  opacity: 1;
+}
+html.atlas-v31-high-contrast .btn-secondary:not(:disabled):not([aria-disabled="true"]) {
+  background: #000;
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+html.atlas-v31-high-contrast .btn-secondary:not(:disabled):not([aria-disabled="true"]):hover {
+  background: var(--accent-soft);
+  color: #fff;
+}
+html.atlas-v31-high-contrast :is(.btn, .btn-secondary):is(:disabled, [aria-disabled="true"]) {
+  background: #28230a;
+  color: #fff;
+  border: 1px solid var(--border);
+  opacity: 1;
+  cursor: not-allowed;
+}
+html.atlas-v31-high-contrast :is(.btn, .btn-secondary):focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ATLAS V3.1 — PACOTE 21D: PREVIA INATIVA DE EXCLUSAO */
+.atlas-v31-account-delete-preview {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--card);
+  color: var(--fg);
+  padding: clamp(18px, 3vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+.atlas-v31-account-delete-preview-heading { display: flex; align-items: flex-start; gap: 12px; }
+.atlas-v31-account-delete-preview-heading > svg { color: var(--accent); flex-shrink: 0; }
+.atlas-v31-account-delete-preview-heading h2 { font-size: 20px; font-weight: 750; }
+.atlas-v31-account-delete-preview-heading p { margin-top: 5px; color: var(--muted); font-size: 14px; }
+.atlas-v31-account-delete-preview-danger {
+  border: 1px solid #bd5151;
+  border-radius: 13px;
+  padding: 18px;
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+}
+.atlas-v31-account-delete-preview-danger h3 { display: flex; align-items: center; gap: 9px; font-size: 17px; font-weight: 750; color: #d65f5f; }
+.atlas-v31-account-delete-preview-danger > p { line-height: 1.6; max-width: 76ch; font-size: 14px; }
+.atlas-v31-account-delete-preview-danger button {
+  border: 1px solid #bd5151; border-radius: 10px; padding: 11px 15px;
+  font-size: 14px; font-weight: 750; color: #b64c4c; background: transparent;
+  cursor: not-allowed;
+}
+.atlas-v31-account-delete-preview-note { color: var(--muted); font-size: 13px !important; }
+html.atlas-v31-high-contrast .atlas-v31-account-delete-preview-danger { border-color: var(--border); }
+html.atlas-v31-high-contrast .atlas-v31-account-delete-preview-danger h3 { color: var(--accent); }
+html.atlas-v31-high-contrast .atlas-v31-account-delete-preview-danger button {
+  border-color: var(--border); color: var(--fg); background: #080808; opacity: 1;
+}

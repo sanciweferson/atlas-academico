@@ -163,18 +163,37 @@ export default function PerfilPage() {
       const previous = avatarPath
       setAvatarPath(newPath)
       setCrop(null)
-      setMessage("Foto atualizada com sucesso. Seu novo avatar será exibido nos dispositivos conectados à sua conta.")
       if (previous && previous !== newPath) {
-        // Falha na limpeza da imagem antiga não deve invalidar o salvamento atual.
-        void s.storage.from(BUCKET).remove([previous])
+        // O novo avatar ja foi salvo. Falhas ao excluir o anterior exigem aviso, nao rollback.
+        try {
+          const { error: cleanupError } = await s.storage.from(BUCKET).remove([previous])
+          if (cleanupError) {
+            setMessage("Foto atualizada, mas não foi possível excluir o arquivo anterior. Entre em contato com o suporte para concluir a limpeza.")
+            return
+          }
+        } catch {
+          setMessage("Foto atualizada, mas não foi possível confirmar a exclusão do arquivo anterior. Entre em contato com o suporte.")
+          return
+        }
       }
+      setMessage("Foto atualizada com sucesso. Seu novo avatar será exibido nos dispositivos conectados à sua conta.")
     } catch (error) {
-      // Se o banco não confirmou a nova foto, remove o arquivo recém-enviado.
+      // Só exclui o upload se a consulta confirmar que ele não foi vinculado ao perfil.
+      let cleanupWarning = ""
       if (newPath) {
-        const { data } = await s.from("profiles").select("avatar_path").eq("id", userId).maybeSingle<{ avatar_path: string | null }>()
-        if (data?.avatar_path !== newPath) void s.storage.from(BUCKET).remove([newPath])
+        try {
+          const { data, error: readError } = await s.from("profiles").select("avatar_path").eq("id", userId).maybeSingle<{ avatar_path: string | null }>()
+          if (readError) {
+            cleanupWarning = " Não foi possível confirmar o estado do arquivo enviado; contate o suporte se necessário."
+          } else if (data?.avatar_path !== newPath) {
+            const { error: cleanupError } = await s.storage.from(BUCKET).remove([newPath])
+            if (cleanupError) cleanupWarning = " Não foi possível limpar o arquivo enviado; contate o suporte."
+          }
+        } catch {
+          cleanupWarning = " Não foi possível confirmar a limpeza do arquivo enviado; contate o suporte."
+        }
       }
-      setMessage(error instanceof Error ? error.message : "Não foi possível enviar a foto. Tente novamente.")
+      setMessage((error instanceof Error ? error.message : "Não foi possível enviar a foto. Tente novamente.") + cleanupWarning)
     } finally { setBusy(false) }
   }
 
@@ -187,8 +206,15 @@ export default function PerfilPage() {
       const { error } = await s.from("profiles").update({ avatar_path: null }).eq("id", userId)
       if (error) { setMessage(`Erro ao remover foto: ${error.message}`); return }
       setAvatarPath(null)
-      void s.storage.from(BUCKET).remove([previous])
-      setMessage("Foto removida.")
+      // O perfil foi atualizado; confirmar separadamente a exclusão do arquivo.
+      try {
+        const { error: cleanupError } = await s.storage.from(BUCKET).remove([previous])
+        setMessage(cleanupError
+          ? "Foto removida do perfil, mas o arquivo não pôde ser excluído do armazenamento. Entre em contato com o suporte."
+          : "Foto removida do perfil e do armazenamento.")
+      } catch {
+        setMessage("Foto removida do perfil, mas não foi possível confirmar a exclusão do arquivo. Entre em contato com o suporte.")
+      }
     } catch { setMessage("Não foi possível remover sua foto. Verifique sua conexão.") }
     finally { setBusy(false) }
   }
