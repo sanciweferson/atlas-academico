@@ -1,471 +1,499 @@
 {
- "C00-0-0": {
-  "definition": "Pensamento computacional é uma forma de formular problemas e construir procedimentos precisos para resolvê-los. Não se limita a escrever código.",
-  "deep": "Decomposição divide um problema em partes verificáveis; abstração seleciona propriedades relevantes; reconhecimento de padrões permite reutilizar estratégias; algoritmos especificam passos e condições de término. Uma solução também precisa declarar entradas, saídas e pressupostos.",
-  "example": "Ao preparar uma lista de compras, separe itens por categoria, identifique repetições e estabeleça uma ordem de verificação. O algoritmo deve tratar o caso de lista vazia.",
-  "code": "entrada: lista de itens\npara cada item da lista:\n    se ainda não foi comprado:\n        adicionar ao carrinho\nsaída: lista de itens comprados",
-  "questions": [
-   "Defina algoritmo com suas próprias palavras e diferencie-o de um programa.",
-   "Descreva entradas, saídas e exceções de um processo cotidiano.",
-   "Escreva um algoritmo que funcione inclusive quando a entrada estiver vazia."
-  ],
-  "reading": "Livro: Computer Science: An Overview, capítulos introdutórios; materiais de pensamento computacional de universidades."
- },
- "M02-0-0": {
-  "definition": "HTML é uma linguagem de marcação usada para representar a estrutura e o significado do conteúdo de documentos da Web.",
-  "deep": "Um documento HTML é interpretado por um parser que constrói uma árvore DOM. Elementos e atributos comunicam estrutura e semântica; a apresentação visual é responsabilidade predominante do CSS e o comportamento dinâmico pode ser programado com JavaScript. HTML não é uma linguagem de programação de propósito geral.",
-  "example": "Uma notícia deve usar elementos que descrevam título, parágrafos, autoria e seções, e não apenas caixas genéricas com aparência de notícia.",
-  "code": "<!doctype html>\n<html lang=\"pt-BR\">\n<head><meta charset=\"utf-8\"><title>Notícia</title></head>\n<body><main><article><h1>Título da notícia</h1><p>Texto.</p></article></main></body>\n</html>",
-  "questions": [
-   "Explique a diferença entre marcação, estilo e comportamento.",
-   "Identifique o papel de doctype, html, head, title e body.",
-   "Construa uma página simples e justifique as escolhas semânticas."
-  ],
-  "reading": "WHATWG HTML Living Standard: Introduction e The document element; MDN: Introduction to HTML."
- },
- "M02-0-1": {
-  "definition": "O DOM (Document Object Model) é uma representação em árvore de um documento que permite ao navegador e aos scripts inspecionar e manipular seus nós.",
-  "deep": "O parser de HTML processa a marcação e constrói nós e relações de parentesco na árvore do documento. O DOM não é o próprio texto HTML: scripts podem modificar nós após o carregamento, alterando o estado da árvore. A renderização também considera estilos CSS e regras de layout.",
-  "example": "Ao ler um elemento main contendo um h1, o navegador cria nós relacionados em uma árvore; document.querySelector pode encontrar esse h1 em um ambiente com DOM.",
-  "code": "<main><h1>Notícia</h1></main>\n\n// Em um navegador:\nconst titulo = document.querySelector(\"h1\");\nconsole.log(titulo.textContent);",
-  "questions": [
-   "Explique a diferença entre texto HTML e árvore DOM.",
-   "Desenhe a árvore de nós do exemplo.",
-   "Explique o que ocorre quando um script altera textContent."
-  ],
-  "reading": "WHATWG HTML Living Standard: Parsing HTML documents; MDN: Introduction to the DOM."
- },
- "M03-0-0": {
-  "definition": "CSS é uma linguagem de folhas de estilo que descreve a apresentação de documentos estruturados, especialmente HTML.",
-  "deep": "Uma regra associa seletores a declarações. O navegador identifica os elementos correspondentes e calcula valores considerando cascata, herança e outras regras do modelo CSS. CSS não é simplesmente uma lista de cores: define layout, tipografia, adaptação de interface e aspectos de animação.",
-  "example": "Um parágrafo pode manter seu significado em HTML enquanto recebe estilos diferentes em tela pequena e grande.",
-  "code": "p {\n  color: #243b53;\n  line-height: 1.6;\n}",
-  "questions": [
-   "Explique o papel do seletor, da propriedade e do valor.",
-   "Escreva duas regras para elementos diferentes.",
-   "Descreva por que CSS não substitui HTML semântico."
-  ],
-  "reading": "MDN: CSS first steps; CSS Snapshot (W3C)."
- },
- "M03-0-1": {
-  "definition": "Uma regra CSS consiste em um seletor e um bloco de declarações; cada declaração combina propriedade e valor.",
-  "deep": "O navegador analisa tokens e gramática CSS; declarações inválidas podem ser ignoradas sem invalidar toda a folha. Comentários usam /* ... */. Algumas propriedades são abreviações (shorthands) que afetam várias propriedades de uma vez.",
-  "example": "Uma declaração com propriedade inexistente não deve impedir que outra declaração válida seja aplicada.",
-  "code": "h1 {\n  color: navy;\n  margin-block: 1rem;\n  propriedade-inexistente: 3;\n}",
-  "questions": [
-   "Separe seletor, bloco e declarações no exemplo.",
-   "Explique o efeito de uma propriedade inválida.",
-   "Crie uma regra usando uma propriedade abreviada."
-  ],
-  "reading": "MDN: CSS syntax; CSS Syntax Module Level 3."
- },
- "M03-4-0": {
-  "definition": "Tipografia em CSS controla como o texto é apresentado: família, tamanho, peso, altura de linha, espaçamento e outros parâmetros.",
-  "deep": "A escolha da família de fontes depende da disponibilidade local ou do carregamento de fontes externas. O navegador pode utilizar uma família de fallback. Legibilidade envolve comprimento de linha, contraste, espaçamento e escalabilidade. Unidades relativas, como rem, favorecem adaptação às preferências do usuário.",
-  "example": "Um título e um parágrafo podem compartilhar a família tipográfica, mas usar pesos e tamanhos distintos para estabelecer hierarquia.",
-  "code": "body { font-family: system-ui, sans-serif; line-height: 1.6; }\nh1 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; }",
-  "questions": [
-   "Diferencie font-family, font-size, font-weight e line-height.",
-   "Explique por que uma pilha de fallback é útil.",
-   "Crie uma escala tipográfica que não dependa apenas de pixels fixos."
-  ],
-  "reading": "MDN: CSS fonts; CSS Fonts Module Level 4; WCAG: Resize text."
- },
- "M03-5-0": {
-  "definition": "O modelo de caixas descreve como o navegador organiza conteúdo, preenchimento, borda e margem de elementos.",
-  "deep": "Por padrão, width se refere à caixa de conteúdo (content-box), enquanto border-box faz width incluir padding e borda. Margens ficam fora da borda. O comportamento de margens verticais no fluxo normal pode envolver colapso; isso não se aplica de forma idêntica a itens flex e grid.",
-  "example": "Uma caixa com width 200px, padding horizontal 20px e borda horizontal 2px ocupa 244px de largura externa no modelo content-box, desconsiderando margens.",
-  "code": ".caixa {\n  box-sizing: content-box;\n  width: 200px;\n  padding: 10px 20px;\n  border: 2px solid;\n  margin: 12px;\n}",
-  "questions": [
-   "Calcule a largura da borda externa no exemplo e justifique.",
-   "Compare content-box e border-box.",
-   "Explique por que margin não faz parte da largura declarada de border-box."
-  ],
-  "reading": "MDN: Introduction to the CSS box model; CSS Box Model Module."
- },
- "M03-7-0": {
-  "definition": "Flexbox é um modelo de layout unidimensional que distribui itens ao longo de um eixo principal e um eixo transversal.",
-  "deep": "A direção do eixo principal depende de flex-direction. justify-content atua no eixo principal; align-items controla o alinhamento no eixo transversal. O tamanho final dos itens depende de flex-basis, flex-grow, flex-shrink e restrições de tamanho mínimo/máximo.",
-  "example": "Uma barra de navegação horizontal pode distribuir o logotipo à esquerda e links à direita sem posicionamento absoluto.",
-  "code": ".nav { display: flex; align-items: center; gap: 1rem; }\n.nav__links { margin-inline-start: auto; display: flex; gap: 1rem; }",
-  "questions": [
-   "Defina eixo principal e transversal para flex-direction: column.",
-   "Diferencie justify-content e align-items.",
-   "Crie uma navegação que se reorganize em telas estreitas."
-  ],
-  "reading": "MDN: Basic concepts of flexbox; CSS Flexible Box Layout Module."
- },
- "M03-8-0": {
-  "definition": "CSS Grid é um sistema de layout bidimensional organizado por linhas, colunas, trilhas e áreas.",
-  "deep": "Diferentemente do Flexbox, Grid pode coordenar linhas e colunas ao mesmo tempo. A unidade fr distribui uma fração do espaço disponível em determinadas condições; minmax() define limites para trilhas; repeat() evita repetição. A colocação automática preenche a grade segundo regras de fluxo.",
-  "example": "Uma grade de cartões pode se ajustar à largura disponível sem definir um breakpoint para cada quantidade de colunas.",
-  "code": ".cards {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));\n  gap: 1rem;\n}",
-  "questions": [
-   "Explique a diferença entre trilha e célula.",
-   "Compare um layout apropriado para Flexbox e outro para Grid.",
-   "Altere o exemplo para ter duas colunas fixas e discuta as limitações."
-  ],
-  "reading": "MDN: Basic concepts of grid layout; CSS Grid Layout Module."
- },
- "M03-9-0": {
-  "definition": "Design responsivo busca fazer uma interface funcionar em diferentes tamanhos, dispositivos, preferências e condições de uso.",
-  "deep": "Media queries avaliam características do ambiente, como largura da viewport; container queries podem reagir às dimensões de um contêiner. Uma estratégia mobile-first começa com regras básicas para telas menores e adiciona ajustes quando necessário. Responsividade também envolve conteúdo, navegação e acessibilidade.",
-  "example": "Uma barra lateral pode virar um painel recolhível em telas estreitas, enquanto o conteúdo mantém leitura confortável.",
-  "code": ".layout { display: block; }\n@media (min-width: 48rem) {\n  .layout { display: grid; grid-template-columns: 16rem 1fr; }\n}",
-  "questions": [
-   "Explique a diferença entre media query e container query.",
-   "Descreva um problema de responsividade que não seja resolvido só com largura.",
-   "Projete dois estados de layout e justifique o breakpoint."
-  ],
-  "reading": "MDN: Responsive design; CSS Media Queries Module."
- },
- "M04-0-0": {
-  "definition": "JavaScript é uma linguagem de programação padronizada pela especificação ECMAScript, utilizada em navegadores e outros ambientes de execução.",
-  "deep": "A linguagem define valores, operações, objetos, funções e regras de avaliação. APIs como document e fetch não pertencem ao núcleo ECMAScript: são disponibilizadas por ambientes específicos. A execução depende de uma engine e do host; confundir linguagem e ambiente produz erros de entendimento.",
-  "example": "O mesmo código de cálculo pode rodar no navegador e no Node.js, mas o objeto document normalmente só existe em ambientes com DOM.",
-  "code": "const dobro = numero => numero * 2;\nconsole.log(dobro(5)); // 10",
-  "questions": [
-   "Diferencie ECMAScript, engine e ambiente de execução.",
-   "Dê dois exemplos de APIs que não pertencem ao núcleo da linguagem.",
-   "Escreva uma função pura simples e explique o resultado."
-  ],
-  "reading": "ECMA-262: Introduction; MDN: JavaScript Guide."
- },
- "M04-1-0": {
-  "definition": "Valores são entidades manipuladas pelo programa; tipos descrevem categorias de valores e as operações permitidas.",
-  "deep": "JavaScript possui tipos primitivos como string, number, boolean, bigint, symbol, undefined e null, além de objetos. typeof é útil, mas tem peculiaridades históricas, como typeof null produzir \"object\". Variáveis associam identificadores a valores e podem ser declaradas com let, const ou var.",
-  "example": "const impede a reatribuição da variável, mas não congela automaticamente o conteúdo de um objeto.",
-  "code": "const pessoa = { nome: \"Ana\" };\npessoa.nome = \"Bia\"; // permitido\n// pessoa = {}; // erro de reatribuição",
-  "questions": [
-   "Liste os tipos primitivos e explique a peculiaridade de null.",
-   "Compare let e const.",
-   "Justifique por que um objeto declarado com const ainda pode ser alterado."
-  ],
-  "reading": "ECMA-262: ECMAScript Language Types; MDN: Grammar and types."
- },
- "C00-0-1": {
-  "definition": "Computação não é sinônimo de computador eletrônico.",
-  "deep": "Computação não é sinônimo de computador eletrônico. Um procedimento computacional transforma representações de entradas em saídas segundo regras. Diferencie problema, instância, algoritmo, programa e execução.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "Problema: ordenar números. Instância: [8, 2, 5]. Algoritmo: comparar pares e trocar posições até a sequência ficar ordenada. Programa: implementação dessas regras em uma linguagem.",
-  "questions": [
-   "Dê dois exemplos de problemas com instâncias diferentes.",
-   "Defina condição de parada de um algoritmo de busca.",
-   "Explique por que um algoritmo pode estar correto e sua implementação conter defeitos."
-  ],
-  "reading": "Computer Science: An Overview; materiais introdutórios de algoritmos.",
-  "pitfall": "Confundir uma descrição vaga, como “organize os dados”, com um algoritmo executável."
- },
- "C00-0-2": {
-  "definition": "Decomposição reduz a complexidade ao criar subproblemas com interfaces claras.",
-  "deep": "Decomposição reduz a complexidade ao criar subproblemas com interfaces claras. Abstração ignora detalhes irrelevantes para um objetivo, mas não pode apagar requisitos. Invariantes são propriedades que permanecem verdadeiras ao longo da execução.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "Processar pedidos: validar entrada → calcular itens → aplicar desconto → emitir resumo. Cada etapa tem pré-condições e pós-condições.",
-  "questions": [
-   "Decomponha o cálculo de uma conta de restaurante em cinco subproblemas.",
-   "Escreva entrada e saída de cada subproblema.",
-   "Apresente um caso em que uma abstração inadequada causa erro."
-  ],
-  "reading": "Computer Science: An Overview; materiais introdutórios de algoritmos.",
-  "pitfall": "Confundir decompor com simplesmente escrever uma lista sem definir dependências e contratos."
- },
- "C00-1-0": {
-  "definition": "Um modelo formal explicita estado, operações válidas e critérios de término.",
-  "deep": "Um modelo formal explicita estado, operações válidas e critérios de término. Uma máquina abstrata pode ser descrita por estados e transições; pseudocódigo é uma notação menos formal, porém útil para especificar algoritmos.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "estado = saldo inicial; para cada lançamento válido, saldo ← saldo + valor; saída = saldo final",
-  "questions": [
-   "Descreva o estado de um caixa antes e depois de uma venda.",
-   "Defina uma pré-condição para saque.",
-   "Encontre uma entrada que invalide um algoritmo sem validação."
-  ],
-  "reading": "Computer Science: An Overview; materiais introdutórios de algoritmos.",
-  "pitfall": "Achar que um exemplo bem-sucedido demonstra correção para todas as entradas."
- },
- "M02-0-2": {
-  "definition": "Um documento HTML possui doctype, elemento raiz html e regiões head e body.",
-  "deep": "Um documento HTML possui doctype, elemento raiz html e regiões head e body. Head contém metadados; body contém o conteúdo representado no documento. A linguagem declarada auxilia tecnologias assistivas e processamento linguístico.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "<!doctype html>\n<html lang=\"pt-BR\">\n<head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Curso</title></head>\n<body><h1>Primeira página</h1></body>\n</html>",
-  "questions": [
-   "Explique a finalidade do doctype moderno.",
-   "Identifique três informações que pertencem ao head.",
-   "Monte um documento mínimo com idioma e título corretos."
-  ],
-  "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
-  "pitfall": "Colocar conteúdo principal no head ou esquecer a codificação de caracteres."
- },
- "M02-1-0": {
-  "definition": "A hierarquia de títulos h1–h6 comunica estrutura temática.",
-  "deep": "A hierarquia de títulos h1–h6 comunica estrutura temática. O nível escolhido deve refletir a organização do conteúdo, não o tamanho visual desejado. CSS controla aparência sem substituir semântica.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "<main><h1>Guia de estudo</h1><section><h2>HTML</h2><h3>Estrutura</h3></section></main>",
-  "questions": [
-   "Esboce a hierarquia de títulos de uma apostila com dois capítulos.",
-   "Explique por que p não substitui um título.",
-   "Corrija uma página que pula níveis sem motivo estrutural."
-  ],
-  "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
-  "pitfall": "Escolher h4 porque “fica menor” quando o conteúdo exige h2."
- },
- "M02-2-0": {
-  "definition": "O elemento a cria um hiperlink.",
-  "deep": "O elemento a cria um hiperlink. href identifica o destino; URLs podem ser absolutas ou relativas. O contexto de resolução de URLs depende do documento base. Links devem ter texto que descreva sua finalidade.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "<a href=\"/aulas/html.html\">Abrir aula de HTML</a>\n<a href=\"https://html.spec.whatwg.org/\">Especificação HTML</a>",
-  "questions": [
-   "Diferencie /css/guia.html de css/guia.html.",
-   "Crie um link interno para #referencias.",
-   "Explique por que o texto do link deve ser significativo."
-  ],
-  "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
-  "pitfall": "Usar “clique aqui” sem contexto ou confundir URL relativa à raiz com relativa ao arquivo."
- },
- "M02-3-0": {
-  "definition": "Imagens informativas requerem alternativas textuais que transmitam sua função no contexto.",
-  "deep": "Imagens informativas requerem alternativas textuais que transmitam sua função no contexto. Imagens decorativas geralmente usam alt vazio. O texto alternativo não é uma descrição mecânica de pixels; é substituto funcional do conteúdo.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "<img src=\"grafico.png\" alt=\"Vendas cresceram de janeiro a março\">\n<img src=\"ornamento.svg\" alt=\"\">",
-  "questions": [
-   "Escreva alt adequado para um gráfico que mostra queda de receita.",
-   "Justifique quando usar alt vazio.",
-   "Explique a diferença entre legenda visível e texto alternativo."
-  ],
-  "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
-  "pitfall": "Escrever alt=\"imagem\" ou repetir informação sem acrescentar significado."
- },
- "M02-5-1": {
-  "definition": "Rótulos de formulários vinculam significado ao controle.",
-  "deep": "Rótulos de formulários vinculam significado ao controle. A associação explícita usa for no label e id no input. name determina o nome do campo na submissão; id identifica o elemento no documento.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "<form><label for=\"email\">E-mail</label><input id=\"email\" name=\"email\" type=\"email\" required><button>Enviar</button></form>",
-  "questions": [
-   "Explique o papel de id e name.",
-   "Crie um campo obrigatório de telefone com rótulo.",
-   "Descreva o que acontece com um campo sem name na submissão padrão."
-  ],
-  "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
-  "pitfall": "Confundir placeholder com label persistente ou confundir id com name."
- },
- "M03-1-0": {
-  "definition": "Seletores de tipo escolhem elementos pelo nome; classes selecionam por atributo class; IDs selecionam um valor de id.",
-  "deep": "Seletores de tipo escolhem elementos pelo nome; classes selecionam por atributo class; IDs selecionam um valor de id. A especificidade é uma dimensão da cascata, não uma garantia absoluta de vitória.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "p { color: gray; }\n.alerta { color: crimson; }\n#mensagem { color: darkblue; }",
-  "questions": [
-   "Compare p, .alerta e #mensagem em especificidade.",
-   "Crie um seletor para botões com classe primario.",
-   "Explique quando uma regra de menor especificidade pode prevalecer."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Tratar um ID como forma recomendada de estilizar tudo ou confundir especificidade com ordem de execução."
- },
- "M03-2-1": {
-  "definition": "A especificidade compara componentes de seletores; porém a cascata também considera origem, importância, camadas e ordem.",
-  "deep": "A especificidade compara componentes de seletores; porém a cascata também considera origem, importância, camadas e ordem. A comparação não equivale a somar números decimais. :where() possui especificidade zero.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "/* Compare apenas quando origem/camada/importância não decidirem */\n.card p { color: navy; }\np { color: gray; }",
-  "questions": [
-   "Compare .card p e p.",
-   "Explique por que !important não é “mais um ID”.",
-   "Investigue o papel de :where() em bibliotecas CSS."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Achar que !important é uma forma de aumentar a especificidade numérica."
- },
- "M03-3-2": {
-  "definition": "Unidades relativas dependem de um referencial.",
-  "deep": "Unidades relativas dependem de um referencial. rem costuma usar o tamanho de fonte do elemento raiz; em pode depender do tamanho de fonte do próprio elemento ou do pai, conforme a propriedade. Percentuais também dependem da propriedade e do contexto.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "html { font-size: 16px; }\n.card { padding: 1rem; }\n.card h2 { font-size: 1.5rem; }",
-  "questions": [
-   "Calcule 1.5rem com fonte raiz de 20px.",
-   "Explique por que 2em pode produzir valores diferentes em propriedades distintas.",
-   "Escolha unidades para espaçamento e texto, justificando."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Afirmar que em e rem sempre são equivalentes ou que 100% sempre corresponde à largura da tela."
- },
- "M03-4-3": {
-  "definition": "line-height controla a altura da caixa de linha e influencia legibilidade.",
-  "deep": "line-height controla a altura da caixa de linha e influencia legibilidade. Um valor numérico sem unidade é herdado como fator; um valor em unidade absoluta pode gerar efeitos inesperados quando descendentes mudam de tamanho. letter-spacing modifica espaçamento entre caracteres.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "body { font-size: 1rem; line-height: 1.6; }\nh1 { line-height: 1.15; letter-spacing: -.02em; }",
-  "questions": [
-   "Compare line-height: 1.5 e line-height: 24px em textos de tamanhos distintos.",
-   "Explique por que valores sem unidade são frequentemente úteis.",
-   "Projete uma escala de títulos legível."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Confundir line-height com margin entre parágrafos."
- },
- "M03-5-1": {
-  "definition": "box-sizing altera a interpretação das dimensões especificadas.",
-  "deep": "box-sizing altera a interpretação das dimensões especificadas. border-box simplifica componentes responsivos, mas não elimina restrições de min/max nem impede overflow causado por conteúdo intrínseco.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "*, *::before, *::after { box-sizing: border-box; }\n.card { width: 300px; padding: 24px; border: 2px solid; }",
-  "questions": [
-   "Calcule a largura da área de conteúdo do exemplo.",
-   "Dê um contraexemplo de overflow mesmo com border-box.",
-   "Explique a diferença entre width e max-width."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Pensar que border-box sempre impede estouro horizontal."
- },
- "M03-5-3": {
-  "definition": "overflow descreve como o conteúdo que excede a caixa é tratado.",
-  "deep": "overflow descreve como o conteúdo que excede a caixa é tratado. visible, hidden, clip, auto e scroll têm semânticas diferentes; a criação de contêineres de rolagem influencia posicionamento e experiência do usuário.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": ".painel { max-height: 14rem; overflow: auto; }",
-  "questions": [
-   "Compare auto e scroll.",
-   "Explique como overflow pode afetar um elemento sticky.",
-   "Descreva como testar conteúdo ampliado por zoom."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Usar overflow: hidden para ocultar problemas de layout sem investigar sua causa."
- },
- "M03-6-2": {
-  "definition": "position: relative desloca visualmente sem remover o espaço no fluxo; absolute posiciona relativamente ao bloco de referência apropriado e sai do fluxo normal.",
-  "deep": "position: relative desloca visualmente sem remover o espaço no fluxo; absolute posiciona relativamente ao bloco de referência apropriado e sai do fluxo normal. fixed e sticky obedecem regras diferentes de referência e rolagem.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": ".cartao { position: relative; }\n.selo { position: absolute; top: 0; right: 0; }",
-  "questions": [
-   "Explique o bloco de referência de .selo.",
-   "Compare relative e absolute quanto ao fluxo.",
-   "Proponha caso apropriado para sticky."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Achar que absolute é sempre relativo à janela."
- },
- "M03-7-2": {
-  "definition": "flex-basis estabelece tamanho base; flex-grow distribui espaço livre positivo segundo fatores; flex-shrink participa da redução quando falta espaço, considerando tamanhos base e restrições.",
-  "deep": "flex-basis estabelece tamanho base; flex-grow distribui espaço livre positivo segundo fatores; flex-shrink participa da redução quando falta espaço, considerando tamanhos base e restrições. min-width:auto pode impedir redução esperada.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": ".linha { display: flex; width: 500px; }\n.a { flex: 1 1 200px; }\n.b { flex: 1 1 100px; }",
-  "questions": [
-   "Explique grow, shrink e basis separadamente.",
-   "Investigue por que um texto longo pode impedir o encolhimento.",
-   "Compare flex: 1 1 0 e flex: 1 1 auto."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Achar que flex:1 significa simplesmente “largura de 100%”."
- },
- "M03-8-1": {
-  "definition": "Grid é bidimensional: define trilhas de linhas e colunas.",
-  "deep": "Grid é bidimensional: define trilhas de linhas e colunas. fr representa fração do espaço flexível disponível após outras restrições; minmax() impõe limites a trilhas. repeat() reduz repetição sintática.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": ".grade { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }",
-  "questions": [
-   "Explique o propósito de minmax(0,1fr).",
-   "Crie um grid com coluna lateral fixa e conteúdo flexível.",
-   "Compare Grid e Flexbox em um painel de cartões."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Interpretar fr como porcentagem fixa independente de conteúdo e restrições."
- },
- "M03-9-1": {
-  "definition": "Media queries condicionam estilos a características do ambiente, como largura de viewport.",
-  "deep": "Media queries condicionam estilos a características do ambiente, como largura de viewport. Estratégia mobile-first começa com regras de base e acrescenta mudanças quando o conteúdo exige, evitando depender apenas de dispositivos específicos.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": ".cards { display:grid; grid-template-columns: 1fr; }\n@media (min-width: 48rem) { .cards { grid-template-columns: repeat(2,1fr); } }",
-  "questions": [
-   "Explique o que acontece abaixo de 48rem.",
-   "Justifique um breakpoint a partir de um layout que deixa de caber.",
-   "Descreva um teste com zoom de 200%."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Escolher breakpoints apenas pelos nomes de aparelhos sem observar a ruptura do conteúdo."
- },
- "M03-9-2": {
-  "definition": "Container queries podem adaptar um componente ao tamanho do contêiner, em vez de depender somente da viewport.",
-  "deep": "Container queries podem adaptar um componente ao tamanho do contêiner, em vez de depender somente da viewport. Para consultas de tamanho, um ancestral precisa estabelecer um contêiner de consulta apropriado.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": ".painel { container-type: inline-size; }\n@container (min-width: 35rem) { .resumo { display:grid; grid-template-columns: 1fr 1fr; } }",
-  "questions": [
-   "Compare media e container queries.",
-   "Explique onde colocar container-type.",
-   "Projete um cartão reutilizável em sidebar e área principal."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Achar que @container funciona sem um contêiner elegível no ancestral."
- },
- "M03-10-0": {
-  "definition": ":hover reflete apontamento; :focus reflete foco; :focus-visible tenta indicar quando a apresentação visual do foco é apropriada.",
-  "deep": ":hover reflete apontamento; :focus reflete foco; :focus-visible tenta indicar quando a apresentação visual do foco é apropriada. Interfaces devem ser utilizáveis por teclado e não depender exclusivamente de hover.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "button:hover { background: #dde; }\nbutton:focus-visible { outline: 3px solid #245de5; outline-offset: 2px; }",
-  "questions": [
-   "Explique por que hover não substitui foco.",
-   "Projete estilo de foco perceptível.",
-   "Teste uma navegação sem mouse."
-  ],
-  "reading": "CSS Specifications (W3C); MDN Web Docs.",
-  "pitfall": "Remover outline sem oferecer indicador de foco equivalente."
- },
- "M04-1-1": {
-  "definition": "let e const criam bindings de escopo de bloco; const impede reatribuir o binding, não torna objetos profundamente imutáveis.",
-  "deep": "let e const criam bindings de escopo de bloco; const impede reatribuir o binding, não torna objetos profundamente imutáveis. var tem escopo de função ou global conforme contexto e comportamento distinto de inicialização.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "const pessoa = {nome:\"Ana\"};\npessoa.nome = \"Bia\"; // permitido\n// pessoa = {} seria reatribuição proibida",
-  "questions": [
-   "Explique binding versus objeto.",
-   "Mostre um caso de escopo de bloco com let.",
-   "Diferencie mutação e reatribuição."
-  ],
-  "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
-  "pitfall": "Afirmar que const congela objetos ou que var e let diferem apenas na grafia."
- },
- "M04-2-1": {
-  "definition": "=== compara sem coerção de tipos entre operandos de tipos distintos; == aplica regras específicas de conversão.",
-  "deep": "=== compara sem coerção de tipos entre operandos de tipos distintos; == aplica regras específicas de conversão. Para objetos, a comparação por igualdade envolve identidade de referência, não equivalência estrutural.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "console.log(0 === false); // false\nconsole.log(0 == false); // true\nconsole.log({} === {}); // false",
-  "questions": [
-   "Preveja e justifique três comparações com null e undefined.",
-   "Explique por que dois objetos literais distintos não são ===.",
-   "Diferencie conversão explícita e coerção."
-  ],
-  "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
-  "pitfall": "Dizer que === sempre compara o conteúdo profundo de objetos."
- },
- "M04-3-2": {
-  "definition": "Um laço exige condição de progresso e término.",
-  "deep": "Um laço exige condição de progresso e término. Um invariante é uma propriedade preservada entre iterações e pode sustentar um argumento de correção. Testar apenas entradas pequenas não constitui prova geral.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "let soma = 0;\nfor (let i = 0; i < 4; i++) { soma += i; }\n// invariante: soma acumula 0 + ... + (i-1)",
-  "questions": [
-   "Rastreie i e soma em cada iteração.",
-   "Escreva condição de término.",
-   "Formule um invariante para encontrar o máximo de um array."
-  ],
-  "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
-  "pitfall": "Explorar apenas o valor final sem conseguir explicar o estado intermediário."
- },
- "M04-4-1": {
-  "definition": "Parâmetros nomeiam bindings locais definidos pela função; argumentos são valores fornecidos em uma chamada.",
-  "deep": "Parâmetros nomeiam bindings locais definidos pela função; argumentos são valores fornecidos em uma chamada. return encerra a execução da função e determina seu valor de retorno. Funções podem ser puras ou produzir efeitos observáveis.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "function area(largura, altura) { return largura * altura; }\nconst resultado = area(3, 4);",
-  "questions": [
-   "Diferencie parâmetros e argumentos no exemplo.",
-   "Crie uma função que devolva o maior de dois números.",
-   "Explique por que registrar um valor no console não é retorná-lo."
-  ],
-  "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
-  "pitfall": "Confundir console.log com return ou supor que toda função precisa alterar estado externo."
- },
- "M04-7-2": {
-  "definition": "Depurar é formular hipóteses, reproduzir defeitos, observar estado e testar correções.",
-  "deep": "Depurar é formular hipóteses, reproduzir defeitos, observar estado e testar correções. Breakpoints, inspeção de variáveis e rastreamento de pilha ajudam a localizar causas, não apenas sintomas.",
-  "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-  "code": "function dividir(a,b){ if(b===0) throw new RangeError(\"divisor zero\"); return a/b; }",
-  "questions": [
-   "Proponha três casos de teste para dividir.",
-   "Descreva uma sequência de depuração com breakpoint.",
-   "Explique diferença entre erro de sintaxe e erro lógico."
-  ],
-  "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
-  "pitfall": "Corrigir um bug sem conseguir construir um caso que o reproduza."
- }
+  "C00-0-0": {
+    "definition": "Pensamento computacional é uma forma de formular problemas e construir procedimentos precisos para resolvê-los. Não se limita a escrever código.",
+    "deep": "Decomposição divide um problema em partes verificáveis; abstração seleciona propriedades relevantes; reconhecimento de padrões permite reutilizar estratégias; algoritmos especificam passos e condições de término. Uma solução também precisa declarar entradas, saídas e pressupostos.",
+    "example": "Ao preparar uma lista de compras, separe itens por categoria, identifique repetições e estabeleça uma ordem de verificação. O algoritmo deve tratar o caso de lista vazia.",
+    "code": "entrada: lista de itens\npara cada item da lista:\n    se ainda não foi comprado:\n        adicionar ao carrinho\nsaída: lista de itens comprados",
+    "questions": [
+      "Defina algoritmo com suas próprias palavras e diferencie-o de um programa.",
+      "Descreva entradas, saídas e exceções de um processo cotidiano.",
+      "Escreva um algoritmo que funcione inclusive quando a entrada estiver vazia."
+    ],
+    "reading": "Livro: Computer Science: An Overview, capítulos introdutórios; materiais de pensamento computacional de universidades."
+  },
+  "M02-0-0": {
+    "definition": "HTML é uma linguagem de marcação usada para representar a estrutura e o significado do conteúdo de documentos da Web.",
+    "deep": "Um documento HTML é interpretado por um parser que constrói uma árvore DOM. Elementos e atributos comunicam estrutura e semântica; a apresentação visual é responsabilidade predominante do CSS e o comportamento dinâmico pode ser programado com JavaScript. HTML não é uma linguagem de programação de propósito geral.",
+    "example": "Uma notícia deve usar elementos que descrevam título, parágrafos, autoria e seções, e não apenas caixas genéricas com aparência de notícia.",
+    "code": "<!doctype html>\n<html lang=\"pt-BR\">\n<head><meta charset=\"utf-8\"><title>Notícia</title></head>\n<body><main><article><h1>Título da notícia</h1><p>Texto.</p></article></main></body>\n</html>",
+    "questions": [
+      "Explique a diferença entre marcação, estilo e comportamento.",
+      "Identifique o papel de doctype, html, head, title e body.",
+      "Construa uma página simples e justifique as escolhas semânticas."
+    ],
+    "reading": "WHATWG HTML Living Standard: Introduction e The document element; MDN: Introduction to HTML."
+  },
+  "M02-0-1": {
+    "definition": "O DOM (Document Object Model) é uma representação em árvore de um documento que permite ao navegador e aos scripts inspecionar e manipular seus nós.",
+    "deep": "O parser de HTML processa a marcação e constrói nós e relações de parentesco na árvore do documento. O DOM não é o próprio texto HTML: scripts podem modificar nós após o carregamento, alterando o estado da árvore. A renderização também considera estilos CSS e regras de layout.",
+    "example": "Ao ler um elemento main contendo um h1, o navegador cria nós relacionados em uma árvore; document.querySelector pode encontrar esse h1 em um ambiente com DOM.",
+    "code": "<main><h1>Notícia</h1></main>\n\n// Em um navegador:\nconst titulo = document.querySelector(\"h1\");\nconsole.log(titulo.textContent);",
+    "questions": [
+      "Explique a diferença entre texto HTML e árvore DOM.",
+      "Desenhe a árvore de nós do exemplo.",
+      "Explique o que ocorre quando um script altera textContent."
+    ],
+    "reading": "WHATWG HTML Living Standard: Parsing HTML documents; MDN: Introduction to the DOM."
+  },
+  "M03-0-0": {
+    "definition": "CSS é uma linguagem de folhas de estilo que descreve a apresentação de documentos estruturados, especialmente HTML.",
+    "deep": "Uma regra associa seletores a declarações. O navegador identifica os elementos correspondentes e calcula valores considerando cascata, herança e outras regras do modelo CSS. CSS não é simplesmente uma lista de cores: define layout, tipografia, adaptação de interface e aspectos de animação.",
+    "example": "Um parágrafo pode manter seu significado em HTML enquanto recebe estilos diferentes em tela pequena e grande.",
+    "code": "p {\n  color: #243b53;\n  line-height: 1.6;\n}",
+    "questions": [
+      "Explique o papel do seletor, da propriedade e do valor.",
+      "Escreva duas regras para elementos diferentes.",
+      "Descreva por que CSS não substitui HTML semântico."
+    ],
+    "reading": "MDN: CSS first steps; CSS Snapshot (W3C)."
+  },
+  "M03-0-1": {
+    "definition": "Uma regra CSS consiste em um seletor e um bloco de declarações; cada declaração combina propriedade e valor.",
+    "deep": "O navegador analisa tokens e gramática CSS; declarações inválidas podem ser ignoradas sem invalidar toda a folha. Comentários usam /* ... */. Algumas propriedades são abreviações (shorthands) que afetam várias propriedades de uma vez.",
+    "example": "Uma declaração com propriedade inexistente não deve impedir que outra declaração válida seja aplicada.",
+    "code": "h1 {\n  color: navy;\n  margin-block: 1rem;\n  propriedade-inexistente: 3;\n}",
+    "questions": [
+      "Separe seletor, bloco e declarações no exemplo.",
+      "Explique o efeito de uma propriedade inválida.",
+      "Crie uma regra usando uma propriedade abreviada."
+    ],
+    "reading": "MDN: CSS syntax; CSS Syntax Module Level 3."
+  },
+  "M03-4-0": {
+    "definition": "Tipografia em CSS controla como o texto é apresentado: família, tamanho, peso, altura de linha, espaçamento e outros parâmetros.",
+    "deep": "A escolha da família de fontes depende da disponibilidade local ou do carregamento de fontes externas. O navegador pode utilizar uma família de fallback. Legibilidade envolve comprimento de linha, contraste, espaçamento e escalabilidade. Unidades relativas, como rem, favorecem adaptação às preferências do usuário.",
+    "example": "Um título e um parágrafo podem compartilhar a família tipográfica, mas usar pesos e tamanhos distintos para estabelecer hierarquia.",
+    "code": "body { font-family: system-ui, sans-serif; line-height: 1.6; }\nh1 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.15; }",
+    "questions": [
+      "Diferencie font-family, font-size, font-weight e line-height.",
+      "Explique por que uma pilha de fallback é útil.",
+      "Crie uma escala tipográfica que não dependa apenas de pixels fixos."
+    ],
+    "reading": "MDN: CSS fonts; CSS Fonts Module Level 4; WCAG: Resize text."
+  },
+  "M03-5-0": {
+    "definition": "O modelo de caixas descreve como o navegador organiza conteúdo, preenchimento, borda e margem de elementos.",
+    "deep": "Por padrão, width se refere à caixa de conteúdo (content-box), enquanto border-box faz width incluir padding e borda. Margens ficam fora da borda. O comportamento de margens verticais no fluxo normal pode envolver colapso; isso não se aplica de forma idêntica a itens flex e grid.",
+    "example": "Uma caixa com width 200px, padding horizontal 20px e borda horizontal 2px ocupa 244px de largura externa no modelo content-box, desconsiderando margens.",
+    "code": ".caixa {\n  box-sizing: content-box;\n  width: 200px;\n  padding: 10px 20px;\n  border: 2px solid;\n  margin: 12px;\n}",
+    "questions": [
+      "Calcule a largura da borda externa no exemplo e justifique.",
+      "Compare content-box e border-box.",
+      "Explique por que margin não faz parte da largura declarada de border-box."
+    ],
+    "reading": "MDN: Introduction to the CSS box model; CSS Box Model Module."
+  },
+  "M03-7-0": {
+    "definition": "Flexbox é um modelo de layout unidimensional que distribui itens ao longo de um eixo principal e um eixo transversal.",
+    "deep": "A direção do eixo principal depende de flex-direction. justify-content atua no eixo principal; align-items controla o alinhamento no eixo transversal. O tamanho final dos itens depende de flex-basis, flex-grow, flex-shrink e restrições de tamanho mínimo/máximo.",
+    "example": "Uma barra de navegação horizontal pode distribuir o logotipo à esquerda e links à direita sem posicionamento absoluto.",
+    "code": ".nav { display: flex; align-items: center; gap: 1rem; }\n.nav__links { margin-inline-start: auto; display: flex; gap: 1rem; }",
+    "questions": [
+      "Defina eixo principal e transversal para flex-direction: column.",
+      "Diferencie justify-content e align-items.",
+      "Crie uma navegação que se reorganize em telas estreitas."
+    ],
+    "reading": "MDN: Basic concepts of flexbox; CSS Flexible Box Layout Module."
+  },
+  "M03-8-0": {
+    "definition": "CSS Grid é um sistema de layout bidimensional organizado por linhas, colunas, trilhas e áreas.",
+    "deep": "Diferentemente do Flexbox, Grid pode coordenar linhas e colunas ao mesmo tempo. A unidade fr distribui uma fração do espaço disponível em determinadas condições; minmax() define limites para trilhas; repeat() evita repetição. A colocação automática preenche a grade segundo regras de fluxo.",
+    "example": "Uma grade de cartões pode se ajustar à largura disponível sem definir um breakpoint para cada quantidade de colunas.",
+    "code": ".cards {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));\n  gap: 1rem;\n}",
+    "questions": [
+      "Explique a diferença entre trilha e célula.",
+      "Compare um layout apropriado para Flexbox e outro para Grid.",
+      "Altere o exemplo para ter duas colunas fixas e discuta as limitações."
+    ],
+    "reading": "MDN: Basic concepts of grid layout; CSS Grid Layout Module."
+  },
+  "M03-9-0": {
+    "definition": "Design responsivo busca fazer uma interface funcionar em diferentes tamanhos, dispositivos, preferências e condições de uso.",
+    "deep": "Media queries avaliam características do ambiente, como largura da viewport; container queries podem reagir às dimensões de um contêiner. Uma estratégia mobile-first começa com regras básicas para telas menores e adiciona ajustes quando necessário. Responsividade também envolve conteúdo, navegação e acessibilidade.",
+    "example": "Uma barra lateral pode virar um painel recolhível em telas estreitas, enquanto o conteúdo mantém leitura confortável.",
+    "code": ".layout { display: block; }\n@media (min-width: 48rem) {\n  .layout { display: grid; grid-template-columns: 16rem 1fr; }\n}",
+    "questions": [
+      "Explique a diferença entre media query e container query.",
+      "Descreva um problema de responsividade que não seja resolvido só com largura.",
+      "Projete dois estados de layout e justifique o breakpoint."
+    ],
+    "reading": "MDN: Responsive design; CSS Media Queries Module."
+  },
+  "M04-0-0": {
+    "definition": "JavaScript é uma linguagem de programação padronizada pela especificação ECMAScript, utilizada em navegadores e outros ambientes de execução.",
+    "deep": "A linguagem define valores, operações, objetos, funções e regras de avaliação. APIs como document e fetch não pertencem ao núcleo ECMAScript: são disponibilizadas por ambientes específicos. A execução depende de uma engine e do host; confundir linguagem e ambiente produz erros de entendimento.",
+    "example": "O mesmo código de cálculo pode rodar no navegador e no Node.js, mas o objeto document normalmente só existe em ambientes com DOM.",
+    "code": "const dobro = numero => numero * 2;\nconsole.log(dobro(5)); // 10",
+    "questions": [
+      "Diferencie ECMAScript, engine e ambiente de execução.",
+      "Dê dois exemplos de APIs que não pertencem ao núcleo da linguagem.",
+      "Escreva uma função pura simples e explique o resultado."
+    ],
+    "reading": "ECMA-262: Introduction; MDN: JavaScript Guide."
+  },
+  "M04-1-0": {
+    "definition": "Valores são entidades manipuladas pelo programa; tipos descrevem categorias de valores e as operações permitidas.",
+    "deep": "JavaScript possui tipos primitivos como string, number, boolean, bigint, symbol, undefined e null, além de objetos. typeof é útil, mas tem peculiaridades históricas, como typeof null produzir \"object\". Variáveis associam identificadores a valores e podem ser declaradas com let, const ou var.",
+    "example": "const impede a reatribuição da variável, mas não congela automaticamente o conteúdo de um objeto.",
+    "code": "const pessoa = { nome: \"Ana\" };\npessoa.nome = \"Bia\"; // permitido\n// pessoa = {}; // erro de reatribuição",
+    "questions": [
+      "Liste os tipos primitivos e explique a peculiaridade de null.",
+      "Compare let e const.",
+      "Justifique por que um objeto declarado com const ainda pode ser alterado."
+    ],
+    "reading": "ECMA-262: ECMAScript Language Types; MDN: Grammar and types."
+  },
+  "C00-0-1": {
+    "definition": "Computação não é sinônimo de computador eletrônico.",
+    "deep": "Computação não é sinônimo de computador eletrônico. Um procedimento computacional transforma representações de entradas em saídas segundo regras. Diferencie problema, instância, algoritmo, programa e execução.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "Problema: ordenar números. Instância: [8, 2, 5]. Algoritmo: comparar pares e trocar posições até a sequência ficar ordenada. Programa: implementação dessas regras em uma linguagem.",
+    "questions": [
+      "Dê dois exemplos de problemas com instâncias diferentes.",
+      "Defina condição de parada de um algoritmo de busca.",
+      "Explique por que um algoritmo pode estar correto e sua implementação conter defeitos."
+    ],
+    "reading": "Computer Science: An Overview; materiais introdutórios de algoritmos.",
+    "pitfall": "Confundir uma descrição vaga, como “organize os dados”, com um algoritmo executável."
+  },
+  "C00-0-2": {
+    "definition": "Decomposição reduz a complexidade ao criar subproblemas com interfaces claras.",
+    "deep": "Decomposição reduz a complexidade ao criar subproblemas com interfaces claras. Abstração ignora detalhes irrelevantes para um objetivo, mas não pode apagar requisitos. Invariantes são propriedades que permanecem verdadeiras ao longo da execução.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "Processar pedidos: validar entrada → calcular itens → aplicar desconto → emitir resumo. Cada etapa tem pré-condições e pós-condições.",
+    "questions": [
+      "Decomponha o cálculo de uma conta de restaurante em cinco subproblemas.",
+      "Escreva entrada e saída de cada subproblema.",
+      "Apresente um caso em que uma abstração inadequada causa erro."
+    ],
+    "reading": "Computer Science: An Overview; materiais introdutórios de algoritmos.",
+    "pitfall": "Confundir decompor com simplesmente escrever uma lista sem definir dependências e contratos."
+  },
+  "C00-1-0": {
+    "definition": "Um modelo formal explicita estado, operações válidas e critérios de término.",
+    "deep": "Um modelo formal explicita estado, operações válidas e critérios de término. Uma máquina abstrata pode ser descrita por estados e transições; pseudocódigo é uma notação menos formal, porém útil para especificar algoritmos.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "estado = saldo inicial; para cada lançamento válido, saldo ← saldo + valor; saída = saldo final",
+    "questions": [
+      "Descreva o estado de um caixa antes e depois de uma venda.",
+      "Defina uma pré-condição para saque.",
+      "Encontre uma entrada que invalide um algoritmo sem validação."
+    ],
+    "reading": "Computer Science: An Overview; materiais introdutórios de algoritmos.",
+    "pitfall": "Achar que um exemplo bem-sucedido demonstra correção para todas as entradas."
+  },
+  "M02-0-2": {
+    "definition": "Um documento HTML possui doctype, elemento raiz html e regiões head e body.",
+    "deep": "Um documento HTML possui doctype, elemento raiz html e regiões head e body. Head contém metadados; body contém o conteúdo representado no documento. A linguagem declarada auxilia tecnologias assistivas e processamento linguístico.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "<!doctype html>\n<html lang=\"pt-BR\">\n<head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Curso</title></head>\n<body><h1>Primeira página</h1></body>\n</html>",
+    "questions": [
+      "Explique a finalidade do doctype moderno.",
+      "Identifique três informações que pertencem ao head.",
+      "Monte um documento mínimo com idioma e título corretos."
+    ],
+    "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
+    "pitfall": "Colocar conteúdo principal no head ou esquecer a codificação de caracteres."
+  },
+  "M02-1-0": {
+    "definition": "A hierarquia de títulos h1–h6 comunica estrutura temática.",
+    "deep": "A hierarquia de títulos h1–h6 comunica estrutura temática. O nível escolhido deve refletir a organização do conteúdo, não o tamanho visual desejado. CSS controla aparência sem substituir semântica.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "<main><h1>Guia de estudo</h1><section><h2>HTML</h2><h3>Estrutura</h3></section></main>",
+    "questions": [
+      "Esboce a hierarquia de títulos de uma apostila com dois capítulos.",
+      "Explique por que p não substitui um título.",
+      "Corrija uma página que pula níveis sem motivo estrutural."
+    ],
+    "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
+    "pitfall": "Escolher h4 porque “fica menor” quando o conteúdo exige h2."
+  },
+  "M02-2-0": {
+    "definition": "O elemento a cria um hiperlink.",
+    "deep": "O elemento a cria um hiperlink. href identifica o destino; URLs podem ser absolutas ou relativas. O contexto de resolução de URLs depende do documento base. Links devem ter texto que descreva sua finalidade.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "<a href=\"/aulas/html.html\">Abrir aula de HTML</a>\n<a href=\"https://html.spec.whatwg.org/\">Especificação HTML</a>",
+    "questions": [
+      "Diferencie /css/guia.html de css/guia.html.",
+      "Crie um link interno para #referencias.",
+      "Explique por que o texto do link deve ser significativo."
+    ],
+    "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
+    "pitfall": "Usar “clique aqui” sem contexto ou confundir URL relativa à raiz com relativa ao arquivo."
+  },
+  "M02-3-0": {
+    "definition": "Imagens informativas requerem alternativas textuais que transmitam sua função no contexto.",
+    "deep": "Imagens informativas requerem alternativas textuais que transmitam sua função no contexto. Imagens decorativas geralmente usam alt vazio. O texto alternativo não é uma descrição mecânica de pixels; é substituto funcional do conteúdo.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "<img src=\"grafico.png\" alt=\"Vendas cresceram de janeiro a março\">\n<img src=\"ornamento.svg\" alt=\"\">",
+    "questions": [
+      "Escreva alt adequado para um gráfico que mostra queda de receita.",
+      "Justifique quando usar alt vazio.",
+      "Explique a diferença entre legenda visível e texto alternativo."
+    ],
+    "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
+    "pitfall": "Escrever alt=\"imagem\" ou repetir informação sem acrescentar significado."
+  },
+  "M02-5-1": {
+    "definition": "Rótulos de formulários vinculam significado ao controle.",
+    "deep": "Rótulos de formulários vinculam significado ao controle. A associação explícita usa for no label e id no input. name determina o nome do campo na submissão; id identifica o elemento no documento.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "<form><label for=\"email\">E-mail</label><input id=\"email\" name=\"email\" type=\"email\" required><button>Enviar</button></form>",
+    "questions": [
+      "Explique o papel de id e name.",
+      "Crie um campo obrigatório de telefone com rótulo.",
+      "Descreva o que acontece com um campo sem name na submissão padrão."
+    ],
+    "reading": "HTML Living Standard (WHATWG); MDN Web Docs.",
+    "pitfall": "Confundir placeholder com label persistente ou confundir id com name."
+  },
+  "M03-1-0": {
+    "definition": "Seletores de tipo escolhem elementos pelo nome; classes selecionam por atributo class; IDs selecionam um valor de id.",
+    "deep": "Seletores de tipo escolhem elementos pelo nome; classes selecionam por atributo class; IDs selecionam um valor de id. A especificidade é uma dimensão da cascata, não uma garantia absoluta de vitória.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "p { color: gray; }\n.alerta { color: crimson; }\n#mensagem { color: darkblue; }",
+    "questions": [
+      "Compare p, .alerta e #mensagem em especificidade.",
+      "Crie um seletor para botões com classe primario.",
+      "Explique quando uma regra de menor especificidade pode prevalecer."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Tratar um ID como forma recomendada de estilizar tudo ou confundir especificidade com ordem de execução."
+  },
+  "M03-2-1": {
+    "definition": "A especificidade compara componentes de seletores; porém a cascata também considera origem, importância, camadas e ordem.",
+    "deep": "A especificidade compara componentes de seletores; porém a cascata também considera origem, importância, camadas e ordem. A comparação não equivale a somar números decimais. :where() possui especificidade zero.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "/* Compare apenas quando origem/camada/importância não decidirem */\n.card p { color: navy; }\np { color: gray; }",
+    "questions": [
+      "Compare .card p e p.",
+      "Explique por que !important não é “mais um ID”.",
+      "Investigue o papel de :where() em bibliotecas CSS."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Achar que !important é uma forma de aumentar a especificidade numérica."
+  },
+  "M03-3-2": {
+    "definition": "Unidades relativas dependem de um referencial.",
+    "deep": "Unidades relativas dependem de um referencial. rem costuma usar o tamanho de fonte do elemento raiz; em pode depender do tamanho de fonte do próprio elemento ou do pai, conforme a propriedade. Percentuais também dependem da propriedade e do contexto.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "html { font-size: 16px; }\n.card { padding: 1rem; }\n.card h2 { font-size: 1.5rem; }",
+    "questions": [
+      "Calcule 1.5rem com fonte raiz de 20px.",
+      "Explique por que 2em pode produzir valores diferentes em propriedades distintas.",
+      "Escolha unidades para espaçamento e texto, justificando."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Afirmar que em e rem sempre são equivalentes ou que 100% sempre corresponde à largura da tela."
+  },
+  "M03-4-3": {
+    "definition": "line-height controla a altura da caixa de linha e influencia legibilidade.",
+    "deep": "line-height controla a altura da caixa de linha e influencia legibilidade. Um valor numérico sem unidade é herdado como fator; um valor em unidade absoluta pode gerar efeitos inesperados quando descendentes mudam de tamanho. letter-spacing modifica espaçamento entre caracteres.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "body { font-size: 1rem; line-height: 1.6; }\nh1 { line-height: 1.15; letter-spacing: -.02em; }",
+    "questions": [
+      "Compare line-height: 1.5 e line-height: 24px em textos de tamanhos distintos.",
+      "Explique por que valores sem unidade são frequentemente úteis.",
+      "Projete uma escala de títulos legível."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Confundir line-height com margin entre parágrafos."
+  },
+  "M03-5-1": {
+    "definition": "box-sizing altera a interpretação das dimensões especificadas.",
+    "deep": "box-sizing altera a interpretação das dimensões especificadas. border-box simplifica componentes responsivos, mas não elimina restrições de min/max nem impede overflow causado por conteúdo intrínseco.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "*, *::before, *::after { box-sizing: border-box; }\n.card { width: 300px; padding: 24px; border: 2px solid; }",
+    "questions": [
+      "Calcule a largura da área de conteúdo do exemplo.",
+      "Dê um contraexemplo de overflow mesmo com border-box.",
+      "Explique a diferença entre width e max-width."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Pensar que border-box sempre impede estouro horizontal."
+  },
+  "M03-5-3": {
+    "definition": "overflow descreve como o conteúdo que excede a caixa é tratado.",
+    "deep": "overflow descreve como o conteúdo que excede a caixa é tratado. visible, hidden, clip, auto e scroll têm semânticas diferentes; a criação de contêineres de rolagem influencia posicionamento e experiência do usuário.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": ".painel { max-height: 14rem; overflow: auto; }",
+    "questions": [
+      "Compare auto e scroll.",
+      "Explique como overflow pode afetar um elemento sticky.",
+      "Descreva como testar conteúdo ampliado por zoom."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Usar overflow: hidden para ocultar problemas de layout sem investigar sua causa."
+  },
+  "M03-6-2": {
+    "definition": "position: relative desloca visualmente sem remover o espaço no fluxo; absolute posiciona relativamente ao bloco de referência apropriado e sai do fluxo normal.",
+    "deep": "position: relative desloca visualmente sem remover o espaço no fluxo; absolute posiciona relativamente ao bloco de referência apropriado e sai do fluxo normal. fixed e sticky obedecem regras diferentes de referência e rolagem.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": ".cartao { position: relative; }\n.selo { position: absolute; top: 0; right: 0; }",
+    "questions": [
+      "Explique o bloco de referência de .selo.",
+      "Compare relative e absolute quanto ao fluxo.",
+      "Proponha caso apropriado para sticky."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Achar que absolute é sempre relativo à janela."
+  },
+  "M03-7-2": {
+    "definition": "flex-basis estabelece tamanho base; flex-grow distribui espaço livre positivo segundo fatores; flex-shrink participa da redução quando falta espaço, considerando tamanhos base e restrições.",
+    "deep": "flex-basis estabelece tamanho base; flex-grow distribui espaço livre positivo segundo fatores; flex-shrink participa da redução quando falta espaço, considerando tamanhos base e restrições. min-width:auto pode impedir redução esperada.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": ".linha { display: flex; width: 500px; }\n.a { flex: 1 1 200px; }\n.b { flex: 1 1 100px; }",
+    "questions": [
+      "Explique grow, shrink e basis separadamente.",
+      "Investigue por que um texto longo pode impedir o encolhimento.",
+      "Compare flex: 1 1 0 e flex: 1 1 auto."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Achar que flex:1 significa simplesmente “largura de 100%”."
+  },
+  "M03-8-1": {
+    "definition": "Grid é bidimensional: define trilhas de linhas e colunas.",
+    "deep": "Grid é bidimensional: define trilhas de linhas e colunas. fr representa fração do espaço flexível disponível após outras restrições; minmax() impõe limites a trilhas. repeat() reduz repetição sintática.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": ".grade { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }",
+    "questions": [
+      "Explique o propósito de minmax(0,1fr).",
+      "Crie um grid com coluna lateral fixa e conteúdo flexível.",
+      "Compare Grid e Flexbox em um painel de cartões."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Interpretar fr como porcentagem fixa independente de conteúdo e restrições."
+  },
+  "M03-9-1": {
+    "definition": "Media queries condicionam estilos a características do ambiente, como largura de viewport.",
+    "deep": "Media queries condicionam estilos a características do ambiente, como largura de viewport. Estratégia mobile-first começa com regras de base e acrescenta mudanças quando o conteúdo exige, evitando depender apenas de dispositivos específicos.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": ".cards { display:grid; grid-template-columns: 1fr; }\n@media (min-width: 48rem) { .cards { grid-template-columns: repeat(2,1fr); } }",
+    "questions": [
+      "Explique o que acontece abaixo de 48rem.",
+      "Justifique um breakpoint a partir de um layout que deixa de caber.",
+      "Descreva um teste com zoom de 200%."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Escolher breakpoints apenas pelos nomes de aparelhos sem observar a ruptura do conteúdo."
+  },
+  "M03-9-2": {
+    "definition": "Container queries podem adaptar um componente ao tamanho do contêiner, em vez de depender somente da viewport.",
+    "deep": "Container queries podem adaptar um componente ao tamanho do contêiner, em vez de depender somente da viewport. Para consultas de tamanho, um ancestral precisa estabelecer um contêiner de consulta apropriado.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": ".painel { container-type: inline-size; }\n@container (min-width: 35rem) { .resumo { display:grid; grid-template-columns: 1fr 1fr; } }",
+    "questions": [
+      "Compare media e container queries.",
+      "Explique onde colocar container-type.",
+      "Projete um cartão reutilizável em sidebar e área principal."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Achar que @container funciona sem um contêiner elegível no ancestral."
+  },
+  "M03-10-0": {
+    "definition": ":hover reflete apontamento; :focus reflete foco; :focus-visible tenta indicar quando a apresentação visual do foco é apropriada.",
+    "deep": ":hover reflete apontamento; :focus reflete foco; :focus-visible tenta indicar quando a apresentação visual do foco é apropriada. Interfaces devem ser utilizáveis por teclado e não depender exclusivamente de hover.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "button:hover { background: #dde; }\nbutton:focus-visible { outline: 3px solid #245de5; outline-offset: 2px; }",
+    "questions": [
+      "Explique por que hover não substitui foco.",
+      "Projete estilo de foco perceptível.",
+      "Teste uma navegação sem mouse."
+    ],
+    "reading": "CSS Specifications (W3C); MDN Web Docs.",
+    "pitfall": "Remover outline sem oferecer indicador de foco equivalente."
+  },
+  "M04-1-1": {
+    "definition": "let e const criam bindings de escopo de bloco; const impede reatribuir o binding, não torna objetos profundamente imutáveis.",
+    "deep": "let e const criam bindings de escopo de bloco; const impede reatribuir o binding, não torna objetos profundamente imutáveis. var tem escopo de função ou global conforme contexto e comportamento distinto de inicialização.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "const pessoa = {nome:\"Ana\"};\npessoa.nome = \"Bia\"; // permitido\n// pessoa = {} seria reatribuição proibida",
+    "questions": [
+      "Explique binding versus objeto.",
+      "Mostre um caso de escopo de bloco com let.",
+      "Diferencie mutação e reatribuição."
+    ],
+    "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
+    "pitfall": "Afirmar que const congela objetos ou que var e let diferem apenas na grafia."
+  },
+  "M04-2-1": {
+    "definition": "=== compara sem coerção de tipos entre operandos de tipos distintos; == aplica regras específicas de conversão.",
+    "deep": "=== compara sem coerção de tipos entre operandos de tipos distintos; == aplica regras específicas de conversão. Para objetos, a comparação por igualdade envolve identidade de referência, não equivalência estrutural.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "console.log(0 === false); // false\nconsole.log(0 == false); // true\nconsole.log({} === {}); // false",
+    "questions": [
+      "Preveja e justifique três comparações com null e undefined.",
+      "Explique por que dois objetos literais distintos não são ===.",
+      "Diferencie conversão explícita e coerção."
+    ],
+    "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
+    "pitfall": "Dizer que === sempre compara o conteúdo profundo de objetos."
+  },
+  "M04-3-2": {
+    "definition": "Um laço exige condição de progresso e término.",
+    "deep": "Um laço exige condição de progresso e término. Um invariante é uma propriedade preservada entre iterações e pode sustentar um argumento de correção. Testar apenas entradas pequenas não constitui prova geral.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "let soma = 0;\nfor (let i = 0; i < 4; i++) { soma += i; }\n// invariante: soma acumula 0 + ... + (i-1)",
+    "questions": [
+      "Rastreie i e soma em cada iteração.",
+      "Escreva condição de término.",
+      "Formule um invariante para encontrar o máximo de um array."
+    ],
+    "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
+    "pitfall": "Explorar apenas o valor final sem conseguir explicar o estado intermediário."
+  },
+  "M04-4-1": {
+    "definition": "Parâmetros nomeiam bindings locais definidos pela função; argumentos são valores fornecidos em uma chamada.",
+    "deep": "Parâmetros nomeiam bindings locais definidos pela função; argumentos são valores fornecidos em uma chamada. return encerra a execução da função e determina seu valor de retorno. Funções podem ser puras ou produzir efeitos observáveis.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "function area(largura, altura) { return largura * altura; }\nconst resultado = area(3, 4);",
+    "questions": [
+      "Diferencie parâmetros e argumentos no exemplo.",
+      "Crie uma função que devolva o maior de dois números.",
+      "Explique por que registrar um valor no console não é retorná-lo."
+    ],
+    "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
+    "pitfall": "Confundir console.log com return ou supor que toda função precisa alterar estado externo."
+  },
+  "M04-7-2": {
+    "definition": "Depurar é formular hipóteses, reproduzir defeitos, observar estado e testar correções.",
+    "deep": "Depurar é formular hipóteses, reproduzir defeitos, observar estado e testar correções. Breakpoints, inspeção de variáveis e rastreamento de pilha ajudam a localizar causas, não apenas sintomas.",
+    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
+    "code": "function dividir(a,b){ if(b===0) throw new RangeError(\"divisor zero\"); return a/b; }",
+    "questions": [
+      "Proponha três casos de teste para dividir.",
+      "Descreva uma sequência de depuração com breakpoint.",
+      "Explique diferença entre erro de sintaxe e erro lógico."
+    ],
+    "reading": "ECMAScript Specification (ECMA-262); MDN Web Docs.",
+    "pitfall": "Corrigir um bug sem conseguir construir um caso que o reproduza."
+  },
+  "M65-0-0": {
+    "definition": "React Native é uma tecnologia para construir interfaces de aplicativos móveis com JavaScript ou TypeScript e o modelo de componentes do React. Diferentemente de uma página Web, os componentes são renderizados usando recursos da plataforma móvel.",
+    "deep": "React é a biblioteca de programação declarativa da interface; React Native fornece componentes e APIs apropriados ao ambiente móvel. View e Text não equivalem diretamente às tags div e p do navegador. É necessário entender navegação, ciclo de vida, dimensões de tela, acessibilidade, permissões e distribuição em Android e iOS. A existência de código compartilhado não elimina as diferenças entre plataformas.",
+    "example": "Um aplicativo de lista de tarefas pode manter o estado com useState, apresentar tarefas usando View e Text e registrar um toque usando Pressable. A aparência usa StyleSheet ou estilos compatíveis; não depende de DOM ou CSS tradicional.",
+    "pitfall": "Acreditar que todo código de React Web pode ser copiado sem adaptações. APIs como document, window e elementos HTML não têm o mesmo papel no ambiente React Native.",
+    "exercise": "Explique, com suas palavras, duas diferenças entre um site React e um aplicativo React Native. Proponha um aplicativo simples e indique três telas que ele teria."
+  },
+  "M65-0-1": {
+    "definition": "Expo é um conjunto de ferramentas e serviços para desenvolver aplicativos com React Native. Ele facilita a criação, a execução e a construção de versões para dispositivos móveis.",
+    "deep": "Expo organiza fluxos de desenvolvimento e permite incorporar bibliotecas e recursos de plataforma. Expo Go facilita experiências iniciais, enquanto development builds permitem testar configurações e módulos nativos próprios. Escolher entre o fluxo Expo e configurações nativas mais diretas exige avaliar dependências, requisitos de plataforma, manutenção e distribuição.",
+    "example": "Para testar rapidamente uma tela inicial com componentes nativos comuns, pode-se iniciar um projeto Expo e abri-lo no dispositivo. Se o projeto depender de um módulo nativo que não está disponível no Expo Go, uma development build pode ser necessária.",
+    "pitfall": "Tratar Expo Go como substituto universal de testes em builds de produção. As capacidades e o comportamento de desenvolvimento podem diferir.",
+    "exercise": "Compare dois cenários: um protótipo educacional e um aplicativo com módulo nativo específico. Explique qual ambiente de teste escolheria e por quê."
+  },
+  "M65-0-2": {
+    "definition": "O ambiente de desenvolvimento mobile reúne editor, Node.js, ferramentas do projeto e um meio de testar o aplicativo em dispositivo físico ou emulador.",
+    "deep": "O fluxo completo envolve instalar dependências, iniciar o servidor de desenvolvimento, abrir a aplicação, examinar avisos e testar interações. As ferramentas variam por sistema operacional, pelas versões do React Native e pelos recursos nativos necessários. Build para iOS geralmente depende de infraestrutura Apple ou serviço de compilação compatível.",
+    "example": "Antes de escrever uma tela de cadastro, execute uma aplicação mínima, confirme que ela aparece no dispositivo, teste um botão e verifique se o console exibe erros. Só então acrescente recursos.",
+    "pitfall": "Começar instalando extensões e pacotes aleatórios sem verificar compatibilidade com as versões do projeto. Isso dificulta diagnosticar falhas.",
+    "exercise": "Desenhe a sequência de diagnóstico para um aplicativo que funciona no editor, mas não abre no telefone: conexão, servidor, logs, dependências e diferenças de ambiente."
+  },
+  "M65-0-3": {
+    "definition": "Um projeto Expo com TypeScript distribui configuração, rotas, componentes, recursos visuais e lógica de aplicação em arquivos e pastas para facilitar sua evolução.",
+    "deep": "O TypeScript ajuda a identificar incompatibilidades de tipos durante o desenvolvimento. A estrutura específica depende do template escolhido e do uso de roteamento baseado em arquivos. É importante separar apresentação, estado, comunicação externa e validação de dados, sem criar abstrações desnecessárias em um projeto pequeno.",
+    "example": "Um aplicativo de estudos pode conter uma tela inicial, uma tela de lista de aulas, um componente reutilizável de cartão e um módulo de serviço para obter dados. A interface de uma aula descreve id, título e estado da conclusão.",
+    "pitfall": "Confundir a organização sugerida pelo template com uma regra fixa. Uma estrutura só é útil se for consistente, documentada e compreendida.",
+    "exercise": "Proponha pastas e responsabilidades para um aplicativo com duas telas e três componentes reutilizáveis. Justifique como evitaria dependências circulares."
+  }
 }

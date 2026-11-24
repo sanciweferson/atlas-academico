@@ -1,9 +1,12 @@
 "use client"
 
+import { Code2 } from "lucide-react"
 import Link from "next/link"
+import * as Dialog from "@radix-ui/react-dialog"
 import { usePathname, useRouter } from "next/navigation"
 import { useTheme } from "next-themes"
 import { useEffect, useRef, useState } from "react"
+import { BookOpenCheck, CircleHelp } from "lucide-react"
 import {
   BarChart3,
   Bell, BookOpen,
@@ -27,6 +30,7 @@ import {
 } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 import { browserSupabase } from "@/lib/supabase"
+import { useAtlasLanguage } from "@/lib/atlas-i18n"
 
 const COLLAPSED_KEY = "atlas-v3-desktop-collapsed"
 const MOBILE_OPEN_KEY = "atlas-v3-mobile-open"
@@ -39,7 +43,9 @@ const navSections: NavSection[] = [
     items: [
       { href: "/", label: "Início", icon: Home },
       { href: "/catalogo", label: "Disciplinas", icon: BookOpen },
+      { href: "/devmatrix", label: "DevMatrix", icon: Code2 },
       { href: "/estudo", label: "Meus estudos", icon: NotebookPen },
+      { href: "/guia", label: "Guia da plataforma", icon: BookOpenCheck },
     ],
   },
   {
@@ -59,13 +65,16 @@ const navSections: NavSection[] = [
       { href: "/perfil", label: "Meu perfil", icon: UserRound },
       { href: "/login", label: "Entrar", icon: LogIn },
       { href: "/configuracoes", label: "Configurações", icon: Settings },
+      { href: "/faq", label: "Perguntas frequentes", icon: CircleHelp },
     ],
   },
 ]
 export default function Nav() {
   const pathname = usePathname()
+  const { tr } = useAtlasLanguage()
   const router = useRouter()
   const [logoutBusy, setLogoutBusy] = useState(false)
+  const [logoutOpen, setLogoutOpen] = useState(false)
   const [logoutError, setLogoutError] = useState("")
   const { resolvedTheme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
@@ -73,6 +82,7 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [authStatus, setAuthStatus] = useState<"loading" | "authenticated" | "anonymous">("loading")
   const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const logoutOpenerRef = useRef<HTMLButtonElement | null>(null)
   const mobilePanelRef = useRef<HTMLElement>(null)
   const previousPathRef = useRef(pathname)
 
@@ -162,13 +172,13 @@ useEffect(() => {
   async function signOutFromSidebar() {
     const supabase = browserSupabase()
     if (!supabase || logoutBusy) return
-    if (!window.confirm("Deseja sair da sua conta do Atlas Acadêmico?")) return
     setLogoutBusy(true)
     setLogoutError("")
     try {
       const { error } = await supabase.auth.signOut()
       if (error) { setLogoutError("Não foi possível sair. Tente novamente."); return }
       setAuthStatus("anonymous")
+      setLogoutOpen(false)
       setMobileOpen(false)
       router.push("/")
       router.refresh()
@@ -188,36 +198,40 @@ useEffect(() => {
 
     return (
       <div className="atlas-v3-nav-section" key={title}>
-        <span className="atlas-v3-nav-section-title">{title}</span>
+        <span className="atlas-v3-nav-section-title">{tr(title)}</span>
         {visibleItems.map(({ href, label, icon: Icon }) =>
           href ? (
             <Link
               key={href}
               href={href}
-              title={label}
+              title={tr(label)}
               aria-current={isActive(href) ? "page" : undefined}
               className={`atlas-v3-link${isActive(href) ? " is-active" : ""}`}
               onClick={closeOnNavigate ? () => setMobileOpen(false) : undefined}
             >
               <Icon size={20} strokeWidth={1.9} aria-hidden="true" />
-              <span className="atlas-v3-link-label">{label}</span>
+              <span className="atlas-v3-link-label">{tr(label)}</span>
             </Link>
           ) : (
             <span key={label} className="atlas-v3-link atlas-v3-link-disabled" aria-disabled="true" title={`${label} — em breve`}>
               <Icon size={20} strokeWidth={1.9} aria-hidden="true" />
-              <span className="atlas-v3-link-label">{label}<small className="atlas-v3-link-soon">Em breve</small></span>
+              <span className="atlas-v3-link-label">{tr(label)}<small className="atlas-v3-link-soon">Em breve</small></span>
             </span>
           )
         )}
         {title === "CONTA E SISTEMA" && authStatus === "authenticated" && (
           <>
             <button type="button" className="atlas-v3-link atlas-v3-logout"
-              title="Sair da conta" aria-label="Sair da conta" disabled={logoutBusy}
-              onClick={() => void signOutFromSidebar()}>
+              title={tr("Sair da conta")} aria-label={tr("Sair da conta")} disabled={logoutBusy}
+              onClick={(event) => {
+                logoutOpenerRef.current = event.currentTarget
+                setLogoutError("")
+                if (closeOnNavigate) setMobileOpen(false)
+                setLogoutOpen(true)
+              }}>
               <LogOut size={20} strokeWidth={1.9} aria-hidden="true" />
-              <span className="atlas-v3-link-label">{logoutBusy ? "Saindo..." : "Sair da conta"}</span>
+              <span className="atlas-v3-link-label">{tr(logoutBusy ? "Saindo..." : "Sair da conta")}</span>
             </button>
-            {logoutError && <p role="alert" className="atlas-v3-logout-error">{logoutError}</p>}
           </>
         )}
       </div>
@@ -238,6 +252,7 @@ useEffect(() => {
             </span>
           </Link>
           <div className="atlas-v3-header-actions">
+            <Link href="/devmatrix" className="atlas-v31-dmx-header-link atlas-v3-desktop-action" title="Conheça o DevMatrix"><Code2 size={17} aria-hidden="true" /> DevMatrix</Link>
             <Link
               href="/catalogo"
               className="atlas-v3-icon atlas-v3-desktop-action"
@@ -348,6 +363,44 @@ useEffect(() => {
           </aside>
         </div>
       )}
+      <Dialog.Root
+        open={logoutOpen}
+        onOpenChange={(open) => { if (!logoutBusy) setLogoutOpen(open) }}
+      >
+        <Dialog.Portal>
+          <Dialog.Overlay className="atlas-v31-dialog-overlay" />
+          <Dialog.Content
+            className="atlas-v31-dialog-content"
+            onCloseAutoFocus={(event) => {
+              event.preventDefault()
+              if (logoutOpenerRef.current?.isConnected) {
+                logoutOpenerRef.current.focus()
+              } else if (menuButtonRef.current?.getClientRects().length) {
+                menuButtonRef.current.focus()
+              } else {
+                document.querySelector<HTMLElement>(".atlas-v3-brand")?.focus()
+              }
+            }}
+            onEscapeKeyDown={(event) => { if (logoutBusy) event.preventDefault() }}
+            onPointerDownOutside={(event) => { if (logoutBusy) event.preventDefault() }}
+          >
+            <span className="atlas-v31-dialog-symbol" aria-hidden="true"><LogOut size={27} /></span>
+            <Dialog.Title className="atlas-v31-dialog-title">{tr("Sair da sua conta?")}</Dialog.Title>
+            <Dialog.Description className="atlas-v31-dialog-description">
+              {tr("Você será desconectado do Atlas Acadêmico. Para acessar sua conta novamente, será necessário entrar com suas credenciais.")}
+            </Dialog.Description>
+            {logoutError && <p role="alert" className="atlas-v31-dialog-error">{logoutError}</p>}
+            <div className="atlas-v31-dialog-actions">
+              <Dialog.Close asChild>
+                <button type="button" className="btn-secondary" disabled={logoutBusy}>{tr("Cancelar")}</button>
+              </Dialog.Close>
+              <button type="button" className="btn" disabled={logoutBusy} onClick={() => void signOutFromSidebar()}>
+                {tr(logoutBusy ? "Saindo..." : "Sim, sair da conta")}
+              </button>
+            </div>
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
     </>
   )
 }

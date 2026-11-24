@@ -1,13 +1,23 @@
 "use client"
 
 import Link from "next/link"
-import { Bookmark, CalendarCheck, CalendarDays, NotebookPen } from "lucide-react"
+import { useState } from "react"
+import * as Dialog from "@radix-ui/react-dialog"
+import { Bookmark, CalendarCheck, CalendarDays, NotebookPen, RotateCcw, TriangleAlert } from "lucide-react"
 import { useAtlasLocalStudy } from "@/lib/atlas-local-study"
 
 export default function ProgressoPage() {
-  const { favorites, sessions, ready } = useAtlasLocalStudy()
+  const { favorites, sessions, ready, storageError, resetCompletedSessions } = useAtlasLocalStudy()
+  const [open, setOpen] = useState(false)
+  const [feedback, setFeedback] = useState("")
   const completed = sessions.filter((session) => session.complete).length
   const planned = sessions.filter((session) => !session.complete).length
+  function confirmReset() {
+    if (resetCompletedSessions()) {
+      setOpen(false)
+      setFeedback("As conclusões foram zeradas neste navegador. Suas sessões e anotações foram preservadas.")
+    } else setFeedback("Não foi possível atualizar o progresso. Verifique o armazenamento do navegador.")
+  }
   return <div className="atlas-v3-study-page">
     <header><span className="eyebrow">ACOMPANHAMENTO</span><h1 className="page-title">Meu progresso</h1>
       <p className="muted mt-2">Resumo da organização dos seus estudos neste navegador. Concluir uma sessão não significa dominar a aula.</p></header>
@@ -18,6 +28,33 @@ export default function ProgressoPage() {
         <div className="panel"><Bookmark size={24} aria-hidden="true"/><strong>{favorites.length}</strong><span>Aulas favoritas</span></div>
       </div>
     )}
+    <section className="panel atlas-v31-reset-row" aria-label="Gerenciar conclusões locais">
+      <div>
+        <h2 className="text-lg font-bold">Gerenciar progresso das sessões</h2>
+        <p className="muted">Zere as sessões concluídas sem excluir agendamentos, favoritos ou anotações da conta.</p>
+      </div>
+      <button className="atlas-v31-reset-button" type="button" disabled={!ready || completed === 0}
+        onClick={() => { setFeedback(""); setOpen(true) }}><RotateCcw size={17} aria-hidden="true"/> Zerar conclusões</button>
+    </section>
+    {feedback && <p role="status" className="atlas-v31-reset-feedback">{feedback}</p>}
+    {storageError && <p role="alert">{storageError}</p>}
+    <Dialog.Root open={open} onOpenChange={setOpen}>
+      <Dialog.Portal>
+        <Dialog.Overlay className="atlas-v31-dialog-overlay"/>
+        <Dialog.Content className="atlas-v31-dialog-content atlas-v31-reset-modal">
+          <span className="atlas-v31-reset-icon" aria-hidden="true"><TriangleAlert size={26}/></span>
+          <Dialog.Title className="atlas-v31-dialog-title">Zerar conclusões das sessões?</Dialog.Title>
+          <Dialog.Description className="atlas-v31-dialog-description">
+            As {completed} {completed === 1 ? "sessão concluída voltará" : "sessões concluídas voltarão"} ao estado não concluído.
+            Seus agendamentos, favoritos e anotações do Supabase não serão apagados.
+          </Dialog.Description>
+          <div className="atlas-v31-dialog-actions">
+            <Dialog.Close asChild><button type="button" className="btn-secondary">Cancelar</button></Dialog.Close>
+            <button type="button" className="atlas-v31-reset-confirm" onClick={confirmReset}>Sim, zerar</button>
+          </div>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
     <div className="panel atlas-v3-study-links"><NotebookPen size={22} aria-hidden="true"/><div><h2>Minhas anotações</h2>
       <p className="muted text-sm">Confira suas anotações sincronizadas no Painel, quando estiver conectado.</p></div>
       <Link className="btn-secondary" href="/painel">Abrir painel</Link></div>

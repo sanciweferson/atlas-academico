@@ -4461,5 +4461,107 @@
     ]
    }
   ]
+ },
+ {
+  "code": "M65",
+  "title": "React Native e Expo — Desenvolvimento Mobile",
+  "requirements": "Pré-requisitos recomendados: M04 (JavaScript), M17 (TypeScript) e M18 (React). Evidência de domínio: construir, testar e documentar um aplicativo multiplataforma com navegação, formulários, persistência e acesso a API.",
+  "modules": [
+   {
+    "title": "Fundamentos do desenvolvimento mobile",
+    "topics": [
+     "O que é React Native e diferenças em relação ao React Web",
+     "Expo e React Native CLI: cenários de uso e limites",
+     "Preparação do ambiente e ferramentas de desenvolvimento",
+     "Estrutura de um projeto Expo com TypeScript",
+     "Expo Go, development builds e dispositivos de teste",
+     "Ciclo de execução, Metro Bundler e recarga",
+     "Diferenças entre Android e iOS",
+     "Primeiro aplicativo: tela, interação e organização"
+    ]
+   },
+   {
+    "title": "Componentes e interface nativa",
+    "topics": [
+     "View, Text, Image e ScrollView",
+     "StyleSheet, estilos e unidades de layout",
+     "Flexbox e responsividade em telas pequenas",
+     "Safe areas e orientação de tela",
+     "FlatList, SectionList e listas eficientes",
+     "Pressable e feedback de interação",
+     "Acessibilidade: rótulos, ordem de foco e leitores de tela"
+    ]
+   },
+   {
+    "title": "Estado, formulários e navegação",
+    "topics": [
+     "Hooks React no contexto mobile",
+     "TextInput, Keyboard e validação de formulários",
+     "Estado local, composição e elevação de estado",
+     "Expo Router: conceitos e estrutura de rotas",
+     "Navegação em pilha e abas",
+     "Parâmetros de rota e deep links",
+     "Estados de carregamento, erro e vazio",
+     "Navegação acessível e fluxo de autenticação"
+    ]
+   },
+   {
+    "title": "Dados, API e persistência",
+    "topics": [
+     "Requisições HTTP e tratamento de falhas",
+     "Fetch, serialização JSON e TypeScript",
+     "Sincronização de estado remoto e cache",
+     "Armazenamento local de dados não sensíveis",
+     "SecureStore e cuidados com credenciais",
+     "Sessão e autenticação segura em aplicativos",
+     "Estratégias offline e reconciliação de dados"
+    ]
+   },
+   {
+    "title": "Recursos nativos e permissões",
+    "topics": [
+     "Permissões em Android e iOS",
+     "Câmera e seleção de imagens",
+     "Sistema de arquivos e compartilhamento",
+     "Localização e boas práticas de privacidade",
+     "Notificações locais e notificações push",
+     "Links, sensores e recursos específicos de plataforma",
+     "Gerenciamento de erros e indisponibilidade de APIs"
+    ]
+   },
+   {
+    "title": "Arquitetura, qualidade e segurança",
+    "topics": [
+     "Organização por funcionalidades e componentes",
+     "Configuração e segredos: o que não embutir no aplicativo",
+     "Testes unitários de lógica e componentes",
+     "Testes de integração e fluxos críticos",
+     "Depuração em dispositivo e análise de logs",
+     "Desempenho de listas, imagens e renderização",
+     "Acessibilidade e testes em dispositivos reais"
+    ]
+   },
+   {
+    "title": "Builds e distribuição",
+    "topics": [
+     "Build de desenvolvimento e build de produção",
+     "EAS Build e configuração de projetos",
+     "Assinatura de aplicativos e credenciais de distribuição",
+     "Publicação na Google Play e App Store",
+     "Atualizações, versionamento e compatibilidade",
+     "Monitoramento, relatórios de erro e manutenção"
+    ]
+   },
+   {
+    "title": "Projeto integrador e avaliação de domínio",
+    "topics": [
+     "Definição de requisitos e protótipo",
+     "Implementação de aplicativo mobile completo",
+     "Testes, acessibilidade e segurança do aplicativo",
+     "Documentação técnica e justificativa das decisões",
+     "Avaliação independente e revisão após 7 e 30 dias"
+    ]
+   }
+  ]
  }
 ]

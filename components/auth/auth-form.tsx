@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { FormEvent, useState } from "react"
+import { FormEvent, useEffect, useState } from "react"
 import { Eye, EyeOff, GraduationCap, LoaderCircle, LockKeyhole, Mail, UserRound } from "lucide-react"
 import { browserSupabase } from "@/lib/supabase"
 
@@ -18,6 +18,15 @@ export default function AuthForm({ mode }: { mode: Mode }) {
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState("")
   const [success, setSuccess] = useState(false)
+
+  useEffect(() => {
+    if (mode !== "login") return
+    const params = new URLSearchParams(window.location.search)
+    if (params.get("senha") === "atualizada") {
+      setSuccess(true)
+      setMessage("Senha atualizada com sucesso! Entre com sua nova senha.")
+    }
+  }, [mode])
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -55,20 +64,6 @@ export default function AuthForm({ mode }: { mode: Mode }) {
     } finally { setBusy(false) }
   }
 
-  async function resetPassword() {
-    if (!email.trim()) { setMessage("Informe seu e-mail para receber o link de recuperação."); return }
-    const supabase = browserSupabase()
-    if (!supabase) { setMessage("Supabase não configurado."); return }
-    setBusy(true)
-    try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
-        redirectTo: `${window.location.origin}/redefinir-senha`,
-      })
-      setSuccess(!error)
-      setMessage(error ? error.message : "Se o e-mail estiver cadastrado, você receberá instruções de recuperação.")
-    } finally { setBusy(false) }
-  }
-
   return (
     <div className="atlas-auth-layout">
       <div className="atlas-auth-intro">
@@ -94,7 +89,7 @@ export default function AuthForm({ mode }: { mode: Mode }) {
           {mode === "signup" && <label>Confirmar senha
             <span className="atlas-input-wrap"><LockKeyhole size={18}/><input className="field" type={visible ? "text" : "password"} autoComplete="new-password" minLength={6} required placeholder="Repita sua senha" value={confirmPassword} onChange={e=>setConfirmPassword(e.target.value)}/></span>
           </label>}
-          {mode === "login" && <button type="button" className="atlas-auth-text-button" onClick={()=>void resetPassword()} disabled={busy}>Esqueci minha senha</button>}
+          {mode === "login" && <Link href="/recuperar-senha" className="atlas-auth-text-button">Esqueci minha senha</Link>}
           <button className="btn atlas-auth-submit" type="submit" disabled={busy}>{busy ? <LoaderCircle className="atlas-spin" size={19}/> : null}{mode === "login" ? "Entrar" : "Criar conta"}</button>
           {message && <p className={success ? "atlas-auth-message success" : "atlas-auth-message"} role="status">{message}</p>}
         </form>

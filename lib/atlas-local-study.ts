@@ -106,8 +106,15 @@ export function useAtlasLocalStudy() {
   function setSessionComplete(id: string, complete: boolean) {
     return update((old) => ({ ...old, sessions: old.sessions.map((item) => item.id === id ? { ...item, complete } : item) }))
   }
+  // Zera somente indicadores de conclusão local. Não remove sessões,
+  // favoritos ou registros sincronizados com o Supabase.
+  function resetCompletedSessions() {
+    return update((old) => ({
+      ...old, sessions: old.sessions.map((item) => item.complete ? { ...item, complete: false } : item),
+    }))
+  }
   function removeSession(id: string) {
     return update((old) => ({ ...old, sessions: old.sessions.filter((item) => item.id !== id) }))
   }
-  return { ...data, ready, storageError, toggleFavorite, createSession, setSessionComplete, removeSession }
+  return { ...data, ready, storageError, toggleFavorite, createSession, setSessionComplete, removeSession, resetCompletedSessions }
 }

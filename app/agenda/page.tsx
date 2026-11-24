@@ -5,6 +5,8 @@ import Link from "next/link"
 import { CalendarDays, Check, Clock3, Trash2, RotateCcw, BellRing } from "lucide-react"
 import { atlasLessons, findAtlasLesson } from "@/lib/atlas-study-index"
 import { useAtlasLocalStudy } from "@/lib/atlas-local-study"
+import AtlasTimePicker from "@/components/atlas-time-picker"
+import AtlasLessonPicker from "@/components/atlas-lesson-picker"
 
 const suggestedTimes = ["07:30", "09:00", "12:30", "15:00", "19:00"]
 const pad = (number: number) => String(number).padStart(2, "0")
@@ -14,7 +16,7 @@ const displayDate = (iso: string) => new Intl.DateTimeFormat("pt-BR", { dateStyl
 
 export default function AgendaPage() {
   const { sessions, ready, createSession, removeSession, setSessionComplete, storageError } = useAtlasLocalStudy()
-  const [lessonId, setLessonId] = useState(atlasLessons[0]?.id ?? "")
+  const [lessonId, setLessonId] = useState("")
   const [date, setDate] = useState("")
   const [time, setTime] = useState("")
   const [minimumDate, setMinimumDate] = useState("")
@@ -66,9 +68,7 @@ export default function AgendaPage() {
       <form className="panel atlas-v3-study-form atlas-v3-agenda-form" onSubmit={submit}>
         <h2><CalendarDays size={20} aria-hidden="true" /> Agendar uma aula</h2>
         <label htmlFor="atlas-agenda-lesson">Aula</label>
-        <select className="field" id="atlas-agenda-lesson" value={lessonId} onChange={(event) => setLessonId(event.target.value)} required>
-          {atlasLessons.map((lesson) => <option key={lesson.id} value={lesson.id}>{lesson.discipline} — {lesson.title}</option>)}
-        </select>
+        <AtlasLessonPicker id="atlas-agenda-lesson" value={lessonId} onChange={(selected) => { setLessonId(selected); setMessage("") }} />
 
         <div className="atlas-v3-date-time-grid">
           <div className="atlas-v3-date-time-control">
@@ -81,7 +81,7 @@ export default function AgendaPage() {
           </div>
           <div className="atlas-v3-date-time-control">
             <label htmlFor="atlas-agenda-time"><Clock3 size={16} aria-hidden="true" /> Horário</label>
-            <input id="atlas-agenda-time" className="field" type="time" required step={60} value={time} onChange={(event) => { setTime(event.target.value); setMessage("") }} />
+            <AtlasTimePicker id="atlas-agenda-time" value={time} onChange={(selected) => { setTime(selected); setMessage("") }} />
             <div className="atlas-v3-agenda-chips" role="group" aria-label="Horários sugeridos">
               {suggestedTimes.map((value) => <button key={value} type="button" className="atlas-v3-agenda-chip" aria-pressed={time === value} onClick={() => { setTime(value); setMessage("") }}>{value}</button>)}
             </div>
@@ -98,7 +98,7 @@ export default function AgendaPage() {
           <Link href="/notificacoes" className="text-link">Configurar notificações</Link>
         </div>
         {message && <p role="status" className="muted text-sm">{message}</p>}
-        <p className="muted text-sm">O seletor de calendário e relógio é fornecido pelo sistema do seu navegador. Por isso, sua aparência pode variar entre Windows, Android e iPhone.</p>
+        <p className="muted text-sm">Escolha o horário no formato de 24 horas (00:00 a 23:59). O calendário de datas continua sendo o controle do navegador.</p>
       </form>
 
       <section aria-labelledby="atlas-agenda-lista">

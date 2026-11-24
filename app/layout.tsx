@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Providers from "@/components/providers"
 import Nav from "@/components/nav"
 import AtlasNotificationWatcher from "@/components/atlas-notification-watcher"
+import AtlasScrollProgress from "@/components/atlas-scroll-progress"
 import AtlasFooter from "@/components/atlas-footer"
 import AtlasReadingPreferences from "@/components/atlas-reading-preferences"
 import "./globals.css"
@@ -19,6 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <AtlasReadingPreferences />
           <Nav />
           <AtlasNotificationWatcher />
+          <AtlasScrollProgress />
           <div className="atlas-v3-page-area">
             <main id="conteudo-principal" className="shell atlas-v3-main">{children}</main>
             <AtlasFooter />

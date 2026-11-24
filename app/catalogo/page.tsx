@@ -3,7 +3,8 @@ import Link from "next/link"
 import { useMemo, useState } from "react"
 import curriculum from "@/lib/curriculum.json"
 import lessons from "@/lib/lessons.json"
-import { ArrowRight, Search, BookOpen } from "lucide-react"
+import { ArrowRight, Search } from "lucide-react"
+import AtlasDisciplineIcon from "@/components/atlas-discipline-icon"
 type Course = (typeof curriculum)[number]
 const priority = [
   "C00",
@@ -20,6 +21,7 @@ const priority = [
   "M16",
   "M17A",
   "M18",
+  "M65",
   "M20",
 ]
 export default function Catalogo() {
@@ -48,7 +50,7 @@ export default function Catalogo() {
         <span className="eyebrow">Biblioteca de disciplinas</span>
         <h1 className="page-title">Catálogo acadêmico</h1>
         <p className="muted mt-3 max-w-2xl">
-          Explore as 81 unidades do currículo. A sequência recomendada é
+          Explore as {curriculum.length} unidades do currículo. A sequência recomendada é
           provisória e não substitui a análise individual dos pré-requisitos.
         </p>
       </div>
@@ -93,8 +95,8 @@ export default function Catalogo() {
               className="course-card"
             >
               <div className="flex justify-between items-center">
+                <AtlasDisciplineIcon code={c.code} />
                 <span className="pill">{c.code}</span>
-                <BookOpen size={18} className="muted" />
               </div>
               <h2 className="font-bold text-lg mt-5">{c.title}</h2>
               <p className="muted text-sm mt-3">
