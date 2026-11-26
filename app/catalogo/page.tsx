@@ -1,114 +1,81 @@
 "use client"
+
 import Link from "next/link"
-import { useMemo, useState } from "react"
-import curriculum from "@/lib/curriculum.json"
-import lessons from "@/lib/lessons.json"
-import { ArrowRight, Search } from "lucide-react"
-import AtlasDisciplineIcon from "@/components/atlas-discipline-icon"
-type Course = (typeof curriculum)[number]
-const priority = [
-  "C00",
-  "M01",
-  "M02",
-  "M03",
-  "M04",
-  "M05",
-  "M06",
-  "M09",
-  "M10",
-  "M11",
-  "M14",
-  "M16",
-  "M17A",
-  "M18",
-  "M65",
-  "M20",
+import { ArrowRight, BookOpenText, Calculator, Code2, FlaskConical, Globe2, GraduationCap, Landmark, Languages, Scale, type LucideIcon } from "lucide-react"
+import { useAtlasLanguage } from "@/lib/atlas-i18n"
+import styles from "./catalogo.module.css"
+
+type SubjectKey = "portugues" | "matematica" | "ingles" | "ciencias" | "historia" | "geografia" | "direito"
+type Subject = { key: SubjectKey; Icon: LucideIcon }
+const upcoming: Subject[] = [
+  { key: "portugues", Icon: BookOpenText },
+  { key: "matematica", Icon: Calculator },
+  { key: "ingles", Icon: Languages },
+  { key: "ciencias", Icon: FlaskConical },
+  { key: "historia", Icon: Landmark },
+  { key: "geografia", Icon: Globe2 },
+  { key: "direito", Icon: Scale },
 ]
+
+const copy = {
+  "pt-BR": {
+    kicker: "BIBLIOTECA ACADÊMICA", heading: "Explorar disciplinas",
+    intro: "Escolha uma área do conhecimento. Programação já possui unidades e aulas para explorar; as demais disciplinas estão em preparação.",
+    available: "DISPONÍVEL", soon: "EM BREVE", programming: "Programação",
+    programmingDetail: "Fundamentos, Web, JavaScript, backend, engenharia de software e IA",
+    enter: "Explorar Programação", note: "Novas disciplinas serão disponibilizadas à medida que seus conteúdos forem revisados.",
+    names: { portugues: "Português", matematica: "Matemática", ingles: "Inglês", ciencias: "Ciências", historia: "História", geografia: "Geografia", direito: "Direito" },
+  },
+  en: {
+    kicker: "ACADEMIC LIBRARY", heading: "Explore subjects",
+    intro: "Choose a field of study. Programming already has units and lessons to explore; other subjects are being prepared.",
+    available: "AVAILABLE", soon: "COMING SOON", programming: "Programming",
+    programmingDetail: "Foundations, Web, JavaScript, backend, software engineering and AI",
+    enter: "Explore Programming", note: "More subjects will be available as their lessons are reviewed.",
+    names: { portugues: "Portuguese", matematica: "Mathematics", ingles: "English", ciencias: "Science", historia: "History", geografia: "Geography", direito: "Law" },
+  },
+  es: {
+    kicker: "BIBLIOTECA ACADÉMICA", heading: "Explorar asignaturas",
+    intro: "Elige un área de estudio. Programación ya tiene unidades y lecciones; las demás asignaturas están en preparación.",
+    available: "DISPONIBLE", soon: "PRÓXIMAMENTE", programming: "Programación",
+    programmingDetail: "Fundamentos, Web, JavaScript, backend, ingeniería de software e IA",
+    enter: "Explorar Programación", note: "Habrá más asignaturas a medida que revisemos sus contenidos.",
+    names: { portugues: "Portugués", matematica: "Matemáticas", ingles: "Inglés", ciencias: "Ciencias", historia: "Historia", geografia: "Geografía", direito: "Derecho" },
+  },
+} as const
+
 export default function Catalogo() {
-  const [q, setQ] = useState("")
-  const [sort, setSort] = useState("pedagogica")
-  const courses = useMemo(() => {
-    let a = [...curriculum] as Course[]
-    if (sort === "pedagogica")
-      a.sort((x, y) => {
-        const i = priority.indexOf(x.code),
-          j = priority.indexOf(y.code)
-        return (
-          (i < 0 ? 1000 : i) - (j < 0 ? 1000 : j) ||
-          x.code.localeCompare(y.code)
-        )
-      })
-    if (sort === "codigo") a.sort((x, y) => x.code.localeCompare(y.code))
-    if (sort === "alfabetica") a.sort((x, y) => x.title.localeCompare(y.title))
-    return a.filter((x) =>
-      (x.title + " " + x.code).toLowerCase().includes(q.toLowerCase()),
-    )
-  }, [q, sort])
+  const { language } = useAtlasLanguage()
+  const t = copy[language]
   return (
-    <div className="space-y-7">
-      <div>
-        <span className="eyebrow">Biblioteca de disciplinas</span>
-        <h1 className="page-title">Catálogo acadêmico</h1>
-        <p className="muted mt-3 max-w-2xl">
-          Explore as {curriculum.length} unidades do currículo. A sequência recomendada é
-          provisória e não substitui a análise individual dos pré-requisitos.
-        </p>
+    <div className={styles.page}>
+      <header className={styles.intro}>
+        <span className={styles.eyebrow}><GraduationCap size={16} aria-hidden="true" /> {t.kicker}</span>
+        <h1>{t.heading}</h1>
+        <p>{t.intro}</p>
+      </header>
+      <div className={styles.grid} aria-label={t.heading}>
+        <Link href="/catalogo/programacao" className={`${styles.card} ${styles.activeCard}`}>
+          <div className={styles.cardTop}>
+            <span className={`${styles.iconTile} ${styles.activeIcon}`}><Code2 size={26} aria-hidden="true" /></span>
+            <span className={styles.available}>{t.available}</span>
+          </div>
+          <h2>{t.programming}</h2>
+          <p>{t.programmingDetail}</p>
+          <span className={styles.cardAction}>{t.enter} <ArrowRight size={17} aria-hidden="true" /></span>
+        </Link>
+        {upcoming.map(({ key, Icon }) => (
+          <article key={key} className={`${styles.card} ${styles.upcomingCard}`} aria-label={`${t.names[key]} — ${t.soon}`}>
+            <div className={styles.cardTop}>
+              <span className={styles.iconTile}><Icon size={25} aria-hidden="true" /></span>
+              <span className={styles.soon}>{t.soon}</span>
+            </div>
+            <h2>{t.names[key]}</h2>
+            <p>{t.note}</p>
+          </article>
+        ))}
       </div>
-      <div className="panel grid md:grid-cols-[1fr_220px] gap-3">
-        <div className="relative">
-          <Search
-            size={18}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--muted)]"
-          />
-          <input
-            className="field !pl-12"
-            placeholder="Buscar por nome ou código..."
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-          />
-        </div>
-        <select
-          className="field"
-          aria-label="Ordenação do catálogo"
-          value={sort}
-          onChange={(e) => setSort(e.target.value)}
-        >
-          <option value="pedagogica">Ordem recomendada</option>
-          <option value="codigo">Código original</option>
-          <option value="alfabetica">Ordem alfabética</option>
-        </select>
-      </div>
-      <p className="muted text-sm">{courses.length} unidades encontradas</p>
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
-        {courses.map((c, i) => {
-          const count = c.modules.reduce(
-            (n, m, j) =>
-              n +
-              m.topics.filter((_, k) => `${c.code}-${j}-${k}` in lessons)
-                .length,
-            0,
-          )
-          return (
-            <Link
-              href={"/disciplina/" + encodeURIComponent(c.code)}
-              key={c.code}
-              className="course-card"
-            >
-              <div className="flex justify-between items-center">
-                <AtlasDisciplineIcon code={c.code} />
-                <span className="pill">{c.code}</span>
-              </div>
-              <h2 className="font-bold text-lg mt-5">{c.title}</h2>
-              <p className="muted text-sm mt-3">
-                {c.modules.length} módulos · {count} aulas redigidas
-              </p>
-              <span className="text-link mt-5 inline-flex">
-                Abrir disciplina <ArrowRight size={16} />
-              </span>
-            </Link>
-          )
-        })}
-      </div>
+      <p className={styles.note}>{t.note}</p>
     </div>
   )
 }

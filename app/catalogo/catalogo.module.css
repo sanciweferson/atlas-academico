@@ -1,0 +1,77 @@
+/* Atlas V3.1 — vitrine de disciplinas (OKLCH, escopo local) */
+.page {
+  --subject-bg: oklch(0.99 0.003 265);
+  --subject-card: oklch(1 0 0);
+  --subject-line: oklch(0.922 0.014 260);
+  --subject-fg: oklch(0.25 0.05 265);
+  --subject-muted: oklch(0.55 0.04 257);
+  --subject-accent: oklch(0.56 0.205 281);
+  --subject-accent-soft: oklch(0.96 0.023 291);
+  display: grid; gap: 26px; padding: clamp(16px, 2.5vw, 26px);
+  background: var(--subject-bg); color: var(--subject-fg);
+  border: 1px solid var(--subject-line); border-radius: 22px;
+}
+:global(html.dark) .page {
+  --subject-bg: oklch(0.177 0.034 270);
+  --subject-card: oklch(0.228 0.035 265);
+  --subject-line: oklch(0.33 0.044 265);
+  --subject-fg: oklch(0.94 0.012 270);
+  --subject-muted: oklch(0.73 0.038 259);
+  --subject-accent: oklch(0.75 0.139 289);
+  --subject-accent-soft: oklch(0.27 0.055 287);
+}
+:global(html.atlas-v31-high-contrast) .page {
+  --subject-bg: var(--bg); --subject-card: var(--card);
+  --subject-line: var(--border); --subject-fg: var(--fg);
+  --subject-muted: var(--muted); --subject-accent: var(--accent);
+  --subject-accent-soft: var(--accent-soft);
+}
+.intro { display: grid; gap: 10px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--subject-accent); font-size: 12px; font-weight: 800; letter-spacing: .09em; }
+.intro h1 { color: var(--subject-fg); font-weight: 800; font-size: clamp(30px, 4vw, 45px); letter-spacing: -.03em; line-height: 1.12; }
+.intro p { color: var(--subject-muted); max-width: 720px; font-size: 15px; line-height: 1.65; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; }
+.card { display: grid; align-content: start; gap: 13px; min-width: 0; min-height: 209px; padding: clamp(20px, 2.4vw, 27px); background: var(--subject-card); border: 1px solid var(--subject-line); border-radius: 20px; color: var(--subject-fg); text-decoration: none; }
+.cardTop { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.iconTile { display: grid; place-items: center; height: 49px; width: 49px; border: 1px solid var(--subject-line); border-radius: 13px; background: var(--subject-accent-soft); color: var(--subject-accent); }
+.activeCard { border-color: var(--subject-accent); box-shadow: 0 7px 25px oklch(0.3 0.05 270 / .06); transition: transform .16s, box-shadow .16s, border-color .16s; }
+.activeCard:hover { transform: translateY(-2px); box-shadow: 0 12px 28px oklch(0.3 0.05 270 / .1); }
+.activeCard:focus-visible { outline: 3px solid var(--subject-accent); outline-offset: 3px; }
+.activeIcon { color: var(--subject-accent); }
+.available, .soon { display: inline-flex; align-items: center; border-radius: 20px; padding: 6px 10px; font-size: 11px; letter-spacing: .04em; font-weight: 800; }
+.available { background: var(--subject-accent-soft); color: var(--subject-accent); }
+.soon { background: var(--subject-bg); color: var(--subject-muted); border: 1px solid var(--subject-line); }
+.card h2 { color: var(--subject-fg); font-weight: 800; font-size: 21px; }
+.card p { color: var(--subject-muted); font-size: 13px; line-height: 1.6; }
+.cardAction { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; color: var(--subject-accent); font-size: 14px; font-weight: 800; }
+.upcomingCard { cursor: default; }
+.note { font-size: 12px; color: var(--subject-muted); line-height: 1.5; }
+@media (max-width: 690px) {
+  .page { padding: 12px; }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    min-height: 160px;
+    padding: 12px;
+    gap: 9px;
+    border-radius: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .cardTop { gap: 6px; flex-wrap: wrap; }
+
+  .iconTile {
+    width: 38px;
+    height: 38px;
+  }
+
+  .card h2 { font-size: 16px; }
+  .card p { font-size: 11px; line-height: 1.4; }
+  .available, .soon { font-size: 10px; padding: 4px 7px; }
+  .cardAction { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .activeCard { transition: none; } .activeCard:hover { transform: none; } }
