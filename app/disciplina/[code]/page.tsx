@@ -1,2 +1,23 @@
-import Link from 'next/link';import {notFound} from 'next/navigation';import curriculum from '@/lib/curriculum.json';import lessons from '@/lib/lessons.json';import chapters from '@/lib/chapters.json';import {ArrowLeft,ArrowRight,BookOpen,Layers3} from 'lucide-react';
-export default async function Disciplina({params}:{params:Promise<{code:string}>}){const {code}=await params;const c=curriculum.find(x=>x.code===code);if(!c)notFound();const count=c.modules.reduce((n,m,i)=>n+m.topics.filter((_,j)=>`${c.code}-${i}-${j}` in lessons).length,0);return <div className="space-y-7"><Link href="/catalogo" className="back-link"><ArrowLeft size={16}/> Voltar ao catálogo</Link><section className="panel space-y-4"><span className="eyebrow">DISCIPLINA {c.code}</span><h1 className="page-title">{c.title}</h1><p className="muted">{c.requirements}</p><div className="flex gap-2 flex-wrap"><span className="pill"><Layers3 size={14} className="inline mr-1"/>{c.modules.length} módulos</span><span className="pill"><BookOpen size={14} className="inline mr-1"/>{count} aulas redigidas</span></div></section><div className="flex justify-between gap-3 items-center"><div><span className="eyebrow">Programa curricular</span><h2 className="section-title">Módulos e aulas</h2></div></div>{c.modules.map((m,i)=><details key={i} className="module-card" open={i===0}><summary className="module-summary"><span className="module-index">{String(i+1).padStart(2,'0')}</span><span className="flex-1"><strong className="block">{m.title}</strong><small className="muted">{m.topics.length} tópicos de estudo</small></span><span className="module-plus">+</span></summary><div className="module-body">{m.topics.map((topic,j)=>{const id=`${c.code}-${i}-${j}`;const written=id in lessons;const extended=id in chapters;return <Link key={id} href={'/aula/'+id} className="lesson-row"><div className="flex-1"><p className="font-medium">Aula {String(j+1).padStart(2,'0')} · {topic}</p><span className={'text-xs mt-1 inline-block '+(written?'text-emerald-600 dark:text-emerald-400':'muted')}>{extended?'Capítulo ampliado':written?'Introdução redigida':'Conteúdo em planejamento'}</span></div><ArrowRight size={17} className="muted"/></Link>})}</div></details>)}</div>}
+import { notFound } from "next/navigation"
+import curriculum from "@/lib/curriculum.json"
+import lessons from "@/lib/lessons.json"
+import chapters from "@/lib/chapters.json"
+import AtlasDisciplineModules from "@/components/atlas-discipline-modules"
+
+export default async function Disciplina({ params }: { params: Promise<{ code: string }> }) {
+  const { code } = await params
+  const course = curriculum.find(item => item.code === code)
+  if (!course) notFound()
+
+  const writtenIds: string[] = []
+  const extendedIds: string[] = []
+  course.modules.forEach((module, i) => {
+    module.topics.forEach((_, j) => {
+      const id = `${course.code}-${i}-${j}`
+      if (Object.prototype.hasOwnProperty.call(lessons, id)) writtenIds.push(id)
+      if (Object.prototype.hasOwnProperty.call(chapters, id)) extendedIds.push(id)
+    })
+  })
+
+  return <AtlasDisciplineModules course={course} writtenIds={writtenIds} extendedIds={extendedIds} />
+}

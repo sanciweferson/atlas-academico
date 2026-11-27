@@ -1,0 +1,1234 @@
+{
+  "C00-0-0": {
+    "id": "curricular-C00-0-0-v1",
+    "title": "O que é pensamento computacional?",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 01 — O que é pensamento computacional?",
+    "exercises": [
+      {
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Qual afirmação diferencia pensamento computacional de programação?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Pensamento computacional exige uma linguagem específica."
+          },
+          {
+            "id": "b",
+            "text": "Pensamento computacional pode ser usado sem escrever código."
+          },
+          {
+            "id": "c",
+            "text": "Programação é anterior a qualquer algoritmo."
+          },
+          {
+            "id": "d",
+            "text": "Todo problema humano deve ser automatizado."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "As estratégias de formular, representar e examinar problemas não dependem da escrita de programas.",
+        "hint": "",
+        "id": "C00-0-0-q01"
+      },
+      {
+        "kind": "choice",
+        "level": 1,
+        "prompt": "O que é a entrada de um procedimento?",
+        "options": [
+          {
+            "id": "a",
+            "text": "O resultado produzido após executar todos os passos."
+          },
+          {
+            "id": "b",
+            "text": "A quantidade de erros encontrados."
+          },
+          {
+            "id": "c",
+            "text": "Os dados recebidos para processar."
+          },
+          {
+            "id": "d",
+            "text": "A linguagem na qual o algoritmo foi escrito."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Entrada é informação fornecida ao procedimento.",
+        "hint": "",
+        "id": "C00-0-0-q02"
+      },
+      {
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Qual é um exemplo de decomposição adequada de um evento?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Separar orçamento, inscrições e logística, definindo dependências."
+          },
+          {
+            "id": "b",
+            "text": "Ignorar todas as atividades difíceis."
+          },
+          {
+            "id": "c",
+            "text": "Criar uma lista sem identificar responsáveis nem resultados."
+          },
+          {
+            "id": "d",
+            "text": "Escolher a cor dos convites antes de entender a demanda."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "A decomposição cria partes tratáveis e mantém relações entre elas.",
+        "hint": "",
+        "id": "C00-0-0-q03"
+      },
+      {
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Num mapa de transporte, escolher apenas linhas e estações para estudar conexões é principalmente:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Repetição."
+          },
+          {
+            "id": "b",
+            "text": "Erro de sintaxe."
+          },
+          {
+            "id": "c",
+            "text": "Execução automática."
+          },
+          {
+            "id": "d",
+            "text": "Abstração."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Abstração seleciona o que importa para uma pergunta específica.",
+        "hint": "",
+        "id": "C00-0-0-q04"
+      },
+      {
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Um algoritmo procura o maior número mas inicia “maior = 0”. Que entrada o expõe?",
+        "options": [
+          {
+            "id": "a",
+            "text": "[2, 5, 1]"
+          },
+          {
+            "id": "b",
+            "text": "[0, 0]"
+          },
+          {
+            "id": "c",
+            "text": "[-9, -4, -7]"
+          },
+          {
+            "id": "d",
+            "text": "[1, 3]"
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Todos os valores negativos tornam zero uma resposta indevida.",
+        "hint": "",
+        "id": "C00-0-0-q05"
+      },
+      {
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Qual pergunta testa diretamente uma condição de contorno?",
+        "options": [
+          {
+            "id": "a",
+            "text": "O título ficou bonito?"
+          },
+          {
+            "id": "b",
+            "text": "O que acontece quando a lista está vazia?"
+          },
+          {
+            "id": "c",
+            "text": "Que cor terá o botão?"
+          },
+          {
+            "id": "d",
+            "text": "Quantas linguagens existem?"
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "A lista vazia é uma entrada de borda comum para algoritmos que percorrem coleções.",
+        "hint": "",
+        "id": "C00-0-0-q06"
+      },
+      {
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Uma regra compartilhada de empréstimos funciona para livros, mas exige inspeção para equipamentos. O melhor procedimento é:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Usar a mesma regra sem mudanças."
+          },
+          {
+            "id": "b",
+            "text": "Excluir a inspeção para simplificar."
+          },
+          {
+            "id": "c",
+            "text": "Ignorar os dois tipos de item."
+          },
+          {
+            "id": "d",
+            "text": "Reaproveitar a base e especificar a exceção de equipamentos."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Generalização exige preservar as diferenças relevantes.",
+        "hint": "",
+        "id": "C00-0-0-q07"
+      },
+      {
+        "kind": "choice",
+        "level": 5,
+        "prompt": "Qual argumento justifica melhor a correção de um procedimento?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Comparar entradas válidas, saídas esperadas e condições do contrato."
+          },
+          {
+            "id": "b",
+            "text": "Mostrar apenas um exemplo bem-sucedido."
+          },
+          {
+            "id": "c",
+            "text": "Usar a linguagem mais popular."
+          },
+          {
+            "id": "d",
+            "text": "Conseguir executar mais rapidamente uma vez."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Correção depende da especificação e de evidências que cobrem as condições do problema.",
+        "hint": "",
+        "id": "C00-0-0-q08"
+      },
+      {
+        "kind": "text",
+        "level": 2,
+        "prompt": "Crie um exemplo cotidiano distinguindo problema, entrada, saída e algoritmo.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Problema é definido com objetivo verificável",
+          "Entrada e saída são coerentes",
+          "Passos seguem ordem e condições claras"
+        ],
+        "hint": "Escolha uma tarefa pequena, como conferir uma lista de presença.",
+        "id": "C00-0-0-q09"
+      },
+      {
+        "kind": "text",
+        "level": 3,
+        "prompt": "Explique quando reconhecer padrões ajuda e quando pode causar generalização indevida.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Identifica semelhanças relevantes",
+          "Aponta ao menos uma diferença que exige exceção",
+          "Justifica como testar a generalização"
+        ],
+        "hint": "Pense em duas tarefas parecidas que obedecem a regras parcialmente diferentes.",
+        "id": "C00-0-0-q10"
+      },
+      {
+        "kind": "text",
+        "level": 3,
+        "prompt": "Descreva como dividir uma tarefa de organização escolar em subproblemas com entradas e saídas.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Pelo menos três subproblemas identificados",
+          "Dependências entre etapas explicitadas",
+          "Entradas e saídas de cada parte"
+        ],
+        "hint": "Uma etapa pode precisar dos resultados de outra.",
+        "id": "C00-0-0-q11"
+      },
+      {
+        "kind": "text",
+        "level": 4,
+        "prompt": "Proponha testes para um procedimento que calcula o maior elemento de uma lista.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Inclui caso usual",
+          "Inclui negativos e lista vazia",
+          "Explica o resultado esperado de cada teste"
+        ],
+        "hint": "Um procedimento pode assumir que todos os números são positivos.",
+        "id": "C00-0-0-q12"
+      },
+      {
+        "kind": "text",
+        "level": 4,
+        "prompt": "Explique por que uma abstração para rotas pode falhar em uma análise de acessibilidade.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Define objetivo da abstração",
+          "Mostra detalhe relevante omitido",
+          "Propõe revisão verificável"
+        ],
+        "hint": "Distância não é o único critério de uma rota.",
+        "id": "C00-0-0-q13"
+      },
+      {
+        "kind": "text",
+        "level": 5,
+        "prompt": "Construa um contraexemplo para um algoritmo de sua escolha e proponha como corrigir o contrato.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Procedimento original explicitado",
+          "Contraexemplo válido e concreto",
+          "Revisão do contrato ou do procedimento justificada"
+        ],
+        "hint": "Escolha uma hipótese implícita e tente quebrá-la.",
+        "id": "C00-0-0-q14"
+      }
+    ]
+  },
+  "C00-0-1": {
+    "id": "curricular-C00-0-1-v1",
+    "title": "Contexto histórico e aplicações do pensamento computacional",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 02 — Contexto histórico e aplicações do pensamento computacional",
+    "exercises": [
+      {
+        "kind": "choice",
+        "level": 1,
+        "prompt": "O que é historicamente correto sobre algoritmos?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Foram criados com os celulares."
+          },
+          {
+            "id": "b",
+            "text": "Existem apenas desde a Internet."
+          },
+          {
+            "id": "c",
+            "text": "Procedimentos sistemáticos antecedem computadores eletrônicos."
+          },
+          {
+            "id": "d",
+            "text": "São sinônimo de inteligência artificial."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Procedimentos de cálculo e organização são anteriores à computação eletrônica.",
+        "hint": "",
+        "id": "C00-0-1-q01"
+      },
+      {
+        "kind": "choice",
+        "level": 1,
+        "prompt": "A palavra “algoritmo” tem relação histórica com:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Ada Lovelace."
+          },
+          {
+            "id": "b",
+            "text": "Al-Khwārizmī."
+          },
+          {
+            "id": "c",
+            "text": "Alan Kay."
+          },
+          {
+            "id": "d",
+            "text": "Grace Hopper."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "A trajetória etimológica remete ao nome de al-Khwārizmī.",
+        "hint": "",
+        "id": "C00-0-1-q02"
+      },
+      {
+        "kind": "choice",
+        "level": 2,
+        "prompt": "A Máquina Analítica de Babbage foi:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Um projeto histórico de máquina programável não concluído."
+          },
+          {
+            "id": "b",
+            "text": "Um navegador moderno."
+          },
+          {
+            "id": "c",
+            "text": "Um programa de computador vendido no século XXI."
+          },
+          {
+            "id": "d",
+            "text": "Uma rede social."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "O projeto foi influente, embora não tenha sido concluído como máquina operacional à época.",
+        "hint": "",
+        "id": "C00-0-1-q03"
+      },
+      {
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Uma aplicação de pensamento computacional fora da programação seria:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Decidir sem critérios nem registros."
+          },
+          {
+            "id": "b",
+            "text": "Eliminar todo julgamento profissional."
+          },
+          {
+            "id": "c",
+            "text": "Escolher por sorteio e ignorar requisitos."
+          },
+          {
+            "id": "d",
+            "text": "Representar e conferir uma rotina de atendimento com regras claras."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "O método também serve a processos e decisões do cotidiano.",
+        "hint": "",
+        "id": "C00-0-1-q04"
+      },
+      {
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Por que a história da computação não deve ser atribuída a uma pessoa só?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Porque nenhuma contribuição foi relevante."
+          },
+          {
+            "id": "b",
+            "text": "Porque envolve práticas, ideias e máquinas em épocas e contextos diferentes."
+          },
+          {
+            "id": "c",
+            "text": "Porque a computação não tem história."
+          },
+          {
+            "id": "d",
+            "text": "Porque só a Internet importa."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "A formação da área envolveu contribuições e linhas de desenvolvimento diversas.",
+        "hint": "",
+        "id": "C00-0-1-q05"
+      },
+      {
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Qual distinção está correta?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Uma ideia de máquina e um programa em execução são realizações diferentes."
+          },
+          {
+            "id": "b",
+            "text": "Todo modelo matemático já é um computador físico."
+          },
+          {
+            "id": "c",
+            "text": "Toda tabela de cálculo é um software moderno."
+          },
+          {
+            "id": "d",
+            "text": "Uma máquina proposta é necessariamente concluída."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Conceitos, modelos, projetos e execuções precisam ser distinguidos.",
+        "hint": "",
+        "id": "C00-0-1-q06"
+      },
+      {
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Um serviço pretende automatizar prioridades de atendimento. O primeiro cuidado é:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Usar qualquer dado disponível."
+          },
+          {
+            "id": "b",
+            "text": "Ignorar pessoas afetadas."
+          },
+          {
+            "id": "c",
+            "text": "Verificar critérios, consequências e necessidade de revisão humana."
+          },
+          {
+            "id": "d",
+            "text": "Eliminar toda possibilidade de contestação."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Critérios e impactos são parte da especificação responsável.",
+        "hint": "",
+        "id": "C00-0-1-q07"
+      },
+      {
+        "kind": "choice",
+        "level": 5,
+        "prompt": "Um problema possui algoritmo correto mas exige recursos além dos disponíveis. Isso demonstra que:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Não é algoritmo."
+          },
+          {
+            "id": "b",
+            "text": "Automatizar é sempre melhor."
+          },
+          {
+            "id": "c",
+            "text": "A correção é irrelevante."
+          },
+          {
+            "id": "d",
+            "text": "Computabilidade, correção e viabilidade prática são questões distintas."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Uma tarefa resolúvel pode ser impraticável em certos recursos.",
+        "hint": "",
+        "id": "C00-0-1-q08"
+      },
+      {
+        "kind": "text",
+        "level": 2,
+        "prompt": "Explique por que procedimentos sistemáticos existiam antes dos computadores eletrônicos, usando exemplo.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Distingue procedimento de computador eletrônico",
+          "Apresenta exemplo histórico ou cotidiano",
+          "Evita afirmar que todo procedimento antigo era software"
+        ],
+        "hint": "Considere técnicas de cálculo e organização manual.",
+        "id": "C00-0-1-q09"
+      },
+      {
+        "kind": "text",
+        "level": 3,
+        "prompt": "Compare as contribuições históricas de al-Khwārizmī e do projeto da Máquina Analítica, sem atribuir toda a computação a eles.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Contextualiza corretamente os dois marcos",
+          "Diferencia procedimento e máquina proposta",
+          "Reconhece outras contribuições e limitações"
+        ],
+        "hint": "Distinga origem da palavra de origem de uma ideia.",
+        "id": "C00-0-1-q10"
+      },
+      {
+        "kind": "text",
+        "level": 3,
+        "prompt": "Escolha uma área não ligada diretamente à programação e mostre como usar decomposição e abstração.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Problema e objetivo claros",
+          "Divisão em subproblemas",
+          "Abstração justificada e com limitações"
+        ],
+        "hint": "Pode ser logística, educação ou organização doméstica.",
+        "id": "C00-0-1-q11"
+      },
+      {
+        "kind": "text",
+        "level": 4,
+        "prompt": "Analise riscos de automatizar uma fila de atendimento e proponha salvaguardas.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Identifica ao menos dois riscos",
+          "Estabelece critérios de prioridade transparentes",
+          "Prevê revisão e contestação humana"
+        ],
+        "hint": "Pense em dados incorretos e prioridades legais.",
+        "id": "C00-0-1-q12"
+      },
+      {
+        "kind": "text",
+        "level": 4,
+        "prompt": "Explique diferença entre possibilidade teórica de resolver um problema e viabilidade de uma solução real.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Distingue computabilidade de eficiência",
+          "Oferece exemplo fundamentado",
+          "Relaciona recursos e contexto"
+        ],
+        "hint": "O tempo e a memória disponíveis importam.",
+        "id": "C00-0-1-q13"
+      },
+      {
+        "kind": "text",
+        "level": 5,
+        "prompt": "Avalie criticamente a frase “se algo pode ser automatizado, deve ser automatizado”.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Refuta generalização com justificativa",
+          "Considera usuários e consequências",
+          "Propõe critérios antes de decidir"
+        ],
+        "hint": "Considere custos sociais, acessibilidade e responsabilização.",
+        "id": "C00-0-1-q14"
+      }
+    ]
+  },
+  "C00-0-2": {
+    "id": "curricular-C00-0-2-v1",
+    "title": "Conceitos fundamentais e exemplos",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 03 — Conceitos fundamentais e exemplos",
+    "exercises": [
+      {
+        "kind": "choice",
+        "level": 1,
+        "prompt": "A estrutura “se condição, então ação A; senão ação B” representa:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Repetição infinita."
+          },
+          {
+            "id": "b",
+            "text": "Seleção."
+          },
+          {
+            "id": "c",
+            "text": "Comentário."
+          },
+          {
+            "id": "d",
+            "text": "Armazenamento permanente."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "É uma decisão condicionada a uma regra.",
+        "hint": "",
+        "id": "C00-0-2-q01"
+      },
+      {
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Em uma soma acumulada, o subtotal inicialmente igual a 0 serve para:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Guardar o resultado final antes do cálculo."
+          },
+          {
+            "id": "b",
+            "text": "Evitar qualquer validação."
+          },
+          {
+            "id": "c",
+            "text": "Impedir a repetição."
+          },
+          {
+            "id": "d",
+            "text": "Representar a soma de nenhum item processado."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "A soma vazia é zero; o acumulador recebe itens progressivamente.",
+        "hint": "",
+        "id": "C00-0-2-q02"
+      },
+      {
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Ao somar [3, 1, 4], os subtotais após cada item são:",
+        "options": [
+          {
+            "id": "a",
+            "text": "3, 4, 8."
+          },
+          {
+            "id": "b",
+            "text": "3, 1, 4."
+          },
+          {
+            "id": "c",
+            "text": "0, 3, 1."
+          },
+          {
+            "id": "d",
+            "text": "8, 8, 8."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "O acumulador soma o item atual ao total anterior.",
+        "hint": "",
+        "id": "C00-0-2-q03"
+      },
+      {
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Uma pré-condição apropriada para calcular total de preços é:",
+        "options": [
+          {
+            "id": "a",
+            "text": "A tela deve ser azul."
+          },
+          {
+            "id": "b",
+            "text": "O usuário deve escrever um programa."
+          },
+          {
+            "id": "c",
+            "text": "Os preços de entrada devem ser números válidos segundo a regra."
+          },
+          {
+            "id": "d",
+            "text": "O algoritmo não pode terminar."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Uma pré-condição define requisitos aceitos para a entrada.",
+        "hint": "",
+        "id": "C00-0-2-q04"
+      },
+      {
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Qual descrição melhor assegura término ao processar uma lista finita?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Recomeçar sempre do primeiro item."
+          },
+          {
+            "id": "b",
+            "text": "Avançar para o próximo item até completar a lista."
+          },
+          {
+            "id": "c",
+            "text": "Repetir sem alterar estado."
+          },
+          {
+            "id": "d",
+            "text": "Pedir a mesma entrada indefinidamente."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "O progresso em direção ao fim da lista estabelece uma forma de término.",
+        "hint": "",
+        "id": "C00-0-2-q05"
+      },
+      {
+        "kind": "choice",
+        "level": 3,
+        "prompt": "O que é um invariante na soma acumulada?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Uma propriedade que só vale antes da execução."
+          },
+          {
+            "id": "b",
+            "text": "Um texto mostrado ao usuário."
+          },
+          {
+            "id": "c",
+            "text": "Um detalhe visual de interface."
+          },
+          {
+            "id": "d",
+            "text": "O subtotal igual à soma dos itens já processados."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "O invariante descreve uma propriedade preservada durante a repetição.",
+        "hint": "",
+        "id": "C00-0-2-q06"
+      },
+      {
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Qual representação ajuda a investigar atualização incorreta em um algoritmo?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Uma tabela de rastreamento passo a passo."
+          },
+          {
+            "id": "b",
+            "text": "Um ícone sem legenda."
+          },
+          {
+            "id": "c",
+            "text": "Uma preferência de cor."
+          },
+          {
+            "id": "d",
+            "text": "Uma lista de nomes sem valores intermediários."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "O rastreamento torna estados e transições observáveis.",
+        "hint": "",
+        "id": "C00-0-2-q07"
+      },
+      {
+        "kind": "choice",
+        "level": 5,
+        "prompt": "Se um pedido duplicado não aparece na especificação, qual resposta é mais rigorosa?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Assumir que o sistema fará o correto."
+          },
+          {
+            "id": "b",
+            "text": "Apagar todos os pedidos."
+          },
+          {
+            "id": "c",
+            "text": "Definir explicitamente o comportamento e testar essa situação."
+          },
+          {
+            "id": "d",
+            "text": "Ignorar porque ocorre raramente."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Casos de borda precisam integrar o contrato do procedimento.",
+        "hint": "",
+        "id": "C00-0-2-q08"
+      },
+      {
+        "kind": "text",
+        "level": 2,
+        "prompt": "Modele um algoritmo verbal de conferência de empréstimo com entrada, saída e decisões.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Define entrada e saída",
+          "Indica condições verificáveis",
+          "Considera casos de recusa"
+        ],
+        "hint": "Pense em cadastro e disponibilidade.",
+        "id": "C00-0-2-q09"
+      },
+      {
+        "kind": "text",
+        "level": 3,
+        "prompt": "Rastreie manualmente a soma de [3, 1, 4] e da lista vazia; justifique os resultados.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Mostra etapas e subtotais corretos",
+          "Explica comportamento da lista vazia",
+          "Explicita a condição de término"
+        ],
+        "hint": "Descreva o acumulador após cada item.",
+        "id": "C00-0-2-q10"
+      },
+      {
+        "kind": "text",
+        "level": 3,
+        "prompt": "Diferencie pré-condição, pós-condição e invariante com um único exemplo.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Define os três conceitos",
+          "Exemplo coerente",
+          "Relaciona cada conceito ao momento adequado"
+        ],
+        "hint": "Use a soma de uma lista.",
+        "id": "C00-0-2-q11"
+      },
+      {
+        "kind": "text",
+        "level": 4,
+        "prompt": "Transforme uma decisão ambígua em regra verificável com duas saídas diferentes.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Apresenta enunciado ambíguo",
+          "Refina condição de forma objetiva",
+          "Indica saídas e teste de fronteira"
+        ],
+        "hint": "Substitua “cadastro bom” por campos e regras explícitas.",
+        "id": "C00-0-2-q12"
+      },
+      {
+        "kind": "text",
+        "level": 4,
+        "prompt": "Descreva um laço que não termina e explique como modificá-lo para garantir progresso.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Identifica condição não atualizada",
+          "Explica o problema de término",
+          "Propõe atualização ou condição finita"
+        ],
+        "hint": "Observe se o estado muda após cada passo.",
+        "id": "C00-0-2-q13"
+      },
+      {
+        "kind": "text",
+        "level": 5,
+        "prompt": "Proponha uma bateria de testes para uma rotina de processamento de pedidos, incluindo entradas inválidas.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Cobre caso usual e bordas",
+          "Cobre caso inválido e duplicado",
+          "Define resultados esperados e justificativas"
+        ],
+        "hint": "Derive testes das regras e não de valores aleatórios.",
+        "id": "C00-0-2-q14"
+      }
+    ]
+  },
+  "C00-0-3": {
+    "id": "curricular-C00-0-3-v1",
+    "title": "Limites, erros conceituais e análise crítica",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 04 — Limites, erros conceituais e análise crítica",
+    "exercises": [
+      {
+        "kind": "choice",
+        "level": 1,
+        "prompt": "O que caracteriza uma especificação insuficiente?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Critérios de aceitação e entradas explícitas."
+          },
+          {
+            "id": "b",
+            "text": "Entradas validadas e resultado esperado."
+          },
+          {
+            "id": "c",
+            "text": "Regras de exceção definidas."
+          },
+          {
+            "id": "d",
+            "text": "Objetivos vagos sem critérios de verificação."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Uma descrição vaga impede verificar se a solução atende ao objetivo.",
+        "hint": "",
+        "id": "C00-0-3-q01"
+      },
+      {
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Um algoritmo pode estar correto e ainda assim ser:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Muito lento para entradas grandes."
+          },
+          {
+            "id": "b",
+            "text": "Necessariamente justo em todos os contextos."
+          },
+          {
+            "id": "c",
+            "text": "Livre de qualquer custo."
+          },
+          {
+            "id": "d",
+            "text": "Incapaz de receber entrada."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Correção não implica eficiência.",
+        "hint": "",
+        "id": "C00-0-3-q02"
+      },
+      {
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Uma rota considerada “melhor” apenas pela menor distância pode falhar porque:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sempre haverá infinitas rotas."
+          },
+          {
+            "id": "b",
+            "text": "Distância é proibida como critério."
+          },
+          {
+            "id": "c",
+            "text": "Pode ignorar acessibilidade e segurança relevantes."
+          },
+          {
+            "id": "d",
+            "text": "Não existem mapas digitais."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "A abstração depende do objetivo e de requisitos adicionais.",
+        "hint": "",
+        "id": "C00-0-3-q03"
+      },
+      {
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Qual é um contraexemplo para “todo número de uma lista é positivo”?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Lista [1, 2]."
+          },
+          {
+            "id": "b",
+            "text": "Lista [-2, 5]."
+          },
+          {
+            "id": "c",
+            "text": "Lista [3, 7]."
+          },
+          {
+            "id": "d",
+            "text": "Lista [10]."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Um valor negativo contradiz a afirmação universal.",
+        "hint": "",
+        "id": "C00-0-3-q04"
+      },
+      {
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Para prevenir laço infinito, uma medida relevante é:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Adicionar mais cores."
+          },
+          {
+            "id": "b",
+            "text": "Trocar o título da página."
+          },
+          {
+            "id": "c",
+            "text": "Remover as saídas."
+          },
+          {
+            "id": "d",
+            "text": "Demonstrar atualização do estado e condição de parada."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Repetições exigem progresso rumo ao término, quando essa é a especificação.",
+        "hint": "",
+        "id": "C00-0-3-q05"
+      },
+      {
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Por que vários testes aprovados não provam correção universal?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Podem não cobrir entradas e condições não testadas."
+          },
+          {
+            "id": "b",
+            "text": "Porque testes nunca têm utilidade."
+          },
+          {
+            "id": "c",
+            "text": "Porque não existe algoritmo correto."
+          },
+          {
+            "id": "d",
+            "text": "Porque somente a cor da interface determina erros."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Testes dão evidência, mas podem não cobrir todos os casos.",
+        "hint": "",
+        "id": "C00-0-3-q06"
+      },
+      {
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Uma regra automática exclui cidadãos sem acesso à Internet. O melhor próximo passo é:",
+        "options": [
+          {
+            "id": "a",
+            "text": "Manter a regra sem analisar impacto."
+          },
+          {
+            "id": "b",
+            "text": "Ignorar reclamações."
+          },
+          {
+            "id": "c",
+            "text": "Revisar requisitos, canais de atendimento e consequências."
+          },
+          {
+            "id": "d",
+            "text": "Eliminar os registros de exclusão."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "O objetivo deve incluir acessibilidade e mitigação de exclusão.",
+        "hint": "",
+        "id": "C00-0-3-q07"
+      },
+      {
+        "kind": "choice",
+        "level": 5,
+        "prompt": "Qual resposta compara com rigor duas soluções?",
+        "options": [
+          {
+            "id": "a",
+            "text": "Escolher a mais rápida, sem verificar resultado."
+          },
+          {
+            "id": "b",
+            "text": "Comparar correção, custos, limitações e impactos segundo critérios."
+          },
+          {
+            "id": "c",
+            "text": "Preferir a que tem mais etapas."
+          },
+          {
+            "id": "d",
+            "text": "Declarar ambas perfeitas sem testes."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "A escolha requer critérios explícitos e análise de compromissos.",
+        "hint": "",
+        "id": "C00-0-3-q08"
+      },
+      {
+        "kind": "text",
+        "level": 2,
+        "prompt": "Dê um exemplo de especificação vaga e reescreva-a com critérios verificáveis.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Identifica ambiguidades",
+          "Define entradas e resultados",
+          "Apresenta critério de aceitação"
+        ],
+        "hint": "Reformule “organizar melhor” definindo o que medir.",
+        "id": "C00-0-3-q09"
+      },
+      {
+        "kind": "text",
+        "level": 3,
+        "prompt": "Explique diferença entre correção e eficiência usando um procedimento concreto.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Define os dois conceitos",
+          "Apresenta exemplo coerente",
+          "Distingue defeito de lentidão"
+        ],
+        "hint": "Um método pode funcionar, mas demorar demais.",
+        "id": "C00-0-3-q10"
+      },
+      {
+        "kind": "text",
+        "level": 3,
+        "prompt": "Construa um contraexemplo para generalização precipitada entre duas situações semelhantes.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Regra geral explicitada",
+          "Contraexemplo válido",
+          "Indica revisão da regra"
+        ],
+        "hint": "Pense numa exceção de acessibilidade ou segurança.",
+        "id": "C00-0-3-q11"
+      },
+      {
+        "kind": "text",
+        "level": 4,
+        "prompt": "Audite uma rotina que presume que a entrada nunca está vazia. Mostre falha e correção.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Mostra entrada vazia",
+          "Descreve falha específica",
+          "Propõe contrato e teste de borda"
+        ],
+        "hint": "O que acontece ao acessar o primeiro elemento?",
+        "id": "C00-0-3-q12"
+      },
+      {
+        "kind": "text",
+        "level": 4,
+        "prompt": "Analise um sistema de avisos escolares considerando exclusão digital e privacidade.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Identifica pessoas afetadas",
+          "Explica riscos concretos",
+          "Propõe mitigação e revisão humana"
+        ],
+        "hint": "Nem todos têm celular ou conexão em casa.",
+        "id": "C00-0-3-q13"
+      },
+      {
+        "kind": "text",
+        "level": 5,
+        "prompt": "Faça uma revisão crítica de um procedimento: pressupostos, casos extremos, custos e consequências.",
+        "instruction": "Responda com suas palavras e justifique seu raciocínio. A resposta será autoavaliada com critérios, não corrigida automaticamente.",
+        "minCharacters": 70,
+        "rubric": [
+          "Formula problema e requisitos",
+          "Identifica pelo menos dois contraexemplos ou limites",
+          "Propõe testes e melhorias justificadas"
+        ],
+        "hint": "Avalie tanto correção quanto impactos do sistema.",
+        "id": "C00-0-3-q14"
+      }
+    ]
+  }
+}

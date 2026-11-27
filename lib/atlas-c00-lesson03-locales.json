@@ -1,0 +1,738 @@
+{
+  "locales": {
+    "en": {
+      "lesson": {
+        "definition": "Designing a solution requires turning requirements into steps, rules, and checks. Sequence, selection, iteration, and input/output contracts are basic tools for this kind of modeling.",
+        "deep": "Start with a concrete case; represent the decisions; test with examples and counterexamples. Pseudocode can express a procedure without depending on a programming language’s syntax. Termination conditions, states, and invariants help explain why a method works. The goal is to understand the solution’s behavior, not to memorize commands.",
+        "example": "To calculate a purchase total, accept a list of valid prices, add each item, and apply the stated discount rule. If the list is empty, the total before fees is zero; if an invalid negative price appears, report invalid input. The base amount for a percentage discount must be clearly defined.",
+        "pitfall": "A list of steps without an input/output contract, error handling, or appropriate ordering may look organized but still fail to be a reliable solution.",
+        "exercise": "Create a table with four loan scenarios: valid registration/item available, invalid registration, unavailable item, and duplicate request. For each, write the rule, the path followed, and the output. Then identify a case that has not yet been covered.",
+        "code": "",
+        "questions": [
+          "Model a decision with two clearly stated conditions.",
+          "Trace the running subtotal for [3, 1, 4] and for [].",
+          "Explain what makes a termination condition adequate."
+        ],
+        "reading": "Sources: CS Unplugged — Computational Thinking (https://www.csunplugged.org/en/computational-thinking/); ISTE — Computational Thinking (https://iste.org/computational-thinking/)."
+      },
+      "chapter": {
+        "title": "Fundamental concepts and examples",
+        "sections": [
+          {
+            "title": "Sequence and dependencies",
+            "body": "Sequence means executing operations in a specified order. Some operations depend on previous ones: a discount cannot be calculated until its base amount and applicable rule have been defined. However, not every task requires a linear order; independent activities can happen in parallel. A faithful representation must show real dependencies instead of imposing an arbitrary order."
+          },
+          {
+            "title": "Selection and conditions",
+            "body": "Selection means choosing a path based on a verifiable condition: “if registration is valid, issue a receipt; otherwise, explain why it was rejected.” A condition should not hide a subjective judgment that cannot be repeated consistently. “If the registration is good” needs explicit criteria, such as required fields being present and values falling within accepted ranges."
+          },
+          {
+            "title": "Iteration and termination",
+            "body": "Iteration applies operations to a collection or until a condition is met. When checking items in a list, each step advances to the next item; after the final item, processing ends. An iteration that never updates its state may never terminate. Distinguishing “while unprocessed items remain” from “forever” is essential to establishing expected behavior."
+          },
+          {
+            "title": "Preconditions, postconditions, and invariants",
+            "body": "A precondition states what must be true before execution: for example, a price list contains valid numbers. A postcondition describes the expected result: the total equals the sum of the items considered. An invariant is a property that remains true throughout execution: while traversing the list, the subtotal equals the sum of the elements already examined. These statements support logical review."
+          },
+          {
+            "title": "Manual tracing",
+            "body": "Consider the list [3, 1, 4]. Start with subtotal 0; after 3, subtotal 3; after 1, subtotal 4; after 4, subtotal 8. A trace table may have columns for item, position, and subtotal. Compare this with an empty list: no iteration occurs and the subtotal remains 0. Tracing reveals update errors and helps justify results."
+          },
+          {
+            "title": "Typical, boundary, and invalid cases",
+            "body": "Test cases should represent the input domain: a list with multiple elements, one element, an empty list, and invalid data when validation is required. When finding the smallest number, testing only positive numbers can conceal initialization bugs. Tests must be derived from the specification, not from random numbers."
+          },
+          {
+            "title": "Flowcharts and pseudocode",
+            "body": "Flowcharts visually represent control flow and decisions; pseudocode uses instructions written in structured language. Neither is a single language with universal syntax. Choose the representation that makes inputs, decisions, iteration, and outputs clear. The same idea can be expressed in prose, a flowchart, or later in HTML/CSS/JavaScript code when the problem calls for it."
+          },
+          {
+            "title": "Guided project: lending items",
+            "body": "Define a procedure for lending an item: check the user, availability, and loan period; if the request is valid, record the transaction and issue a receipt; otherwise, state the reason for refusal. Specify whether an item can be reserved, what happens to suspended accounts, and how to prevent duplicate records. The final procedure should be verifiable against test cases."
+          }
+        ],
+        "code": "",
+        "questions": [
+          "Modele uma seleção com duas condições claras.",
+          "Rastreie o subtotal de [3,1,4] e de [].",
+          "Explique o que torna uma condição de parada adequada."
+        ]
+      },
+      "exercise_set": {
+        "id": "curricular-C00-0-2-v1",
+        "title": "Fundamental concepts and examples",
+        "course": "Computational Thinking and Tools",
+        "lesson": "Lesson 03 — Fundamental concepts and examples",
+        "exercises": [
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "The structure “if condition, then action A; otherwise action B” represents:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Infinite iteration."
+              },
+              {
+                "id": "b",
+                "text": "Selection."
+              },
+              {
+                "id": "c",
+                "text": "A comment."
+              },
+              {
+                "id": "d",
+                "text": "Permanent storage."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "It is a decision governed by a condition.",
+            "hint": "",
+            "id": "C00-0-2-q01"
+          },
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "In a running sum, a subtotal initially set to 0 serves to:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Store the final result before calculation."
+              },
+              {
+                "id": "b",
+                "text": "Avoid all validation."
+              },
+              {
+                "id": "c",
+                "text": "Prevent iteration."
+              },
+              {
+                "id": "d",
+                "text": "Represent the sum of no processed items."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "The sum of an empty collection is zero; the accumulator is updated as items are processed.",
+            "hint": "",
+            "id": "C00-0-2-q02"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "When adding [3, 1, 4], the subtotals after each item are:",
+            "options": [
+              {
+                "id": "a",
+                "text": "3, 4, 8."
+              },
+              {
+                "id": "b",
+                "text": "3, 1, 4."
+              },
+              {
+                "id": "c",
+                "text": "0, 3, 1."
+              },
+              {
+                "id": "d",
+                "text": "8, 8, 8."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The accumulator adds each current item to the previous total.",
+            "hint": "",
+            "id": "C00-0-2-q03"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "An appropriate precondition for calculating a total from prices is:",
+            "options": [
+              {
+                "id": "a",
+                "text": "The screen must be blue."
+              },
+              {
+                "id": "b",
+                "text": "The user must write a program."
+              },
+              {
+                "id": "c",
+                "text": "Input prices must be valid numbers according to the rules."
+              },
+              {
+                "id": "d",
+                "text": "The algorithm must never terminate."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "A precondition specifies what inputs are acceptable.",
+            "hint": "",
+            "id": "C00-0-2-q04"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "Which description best guarantees termination when processing a finite list?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Always restart from the first item."
+              },
+              {
+                "id": "b",
+                "text": "Advance to the next item until the list is complete."
+              },
+              {
+                "id": "c",
+                "text": "Repeat without changing the state."
+              },
+              {
+                "id": "d",
+                "text": "Ask for the same input indefinitely."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Progress toward the end of the list establishes a termination mechanism.",
+            "hint": "",
+            "id": "C00-0-2-q05"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "What is an invariant in a running-sum algorithm?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A property that holds only before execution."
+              },
+              {
+                "id": "b",
+                "text": "Text shown to the user."
+              },
+              {
+                "id": "c",
+                "text": "A visual interface detail."
+              },
+              {
+                "id": "d",
+                "text": "The subtotal equals the sum of the items processed so far."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "An invariant describes a property preserved during iteration.",
+            "hint": "",
+            "id": "C00-0-2-q06"
+          },
+          {
+            "kind": "choice",
+            "level": 4,
+            "prompt": "Which representation helps investigate an incorrect update in an algorithm?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A step-by-step trace table."
+              },
+              {
+                "id": "b",
+                "text": "An icon without a label."
+              },
+              {
+                "id": "c",
+                "text": "A color preference."
+              },
+              {
+                "id": "d",
+                "text": "A list of names without intermediate values."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Tracing makes states and transitions observable.",
+            "hint": "",
+            "id": "C00-0-2-q07"
+          },
+          {
+            "kind": "choice",
+            "level": 5,
+            "prompt": "If duplicate requests are missing from the specification, which response is most rigorous?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Assume the system will do the right thing."
+              },
+              {
+                "id": "b",
+                "text": "Delete all requests."
+              },
+              {
+                "id": "c",
+                "text": "Explicitly define the behavior and test that situation."
+              },
+              {
+                "id": "d",
+                "text": "Ignore it because it is rare."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Edge cases must be included in the procedure’s contract.",
+            "hint": "",
+            "id": "C00-0-2-q08"
+          },
+          {
+            "kind": "text",
+            "level": 2,
+            "prompt": "Model a verbal algorithm for checking a loan request, including inputs, outputs, and decisions.",
+            "instruction": "Answer in your own words and justify your reasoning. You will assess your answer against a rubric; it will not be graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Defines inputs and outputs",
+              "States verifiable conditions",
+              "Covers refusal cases"
+            ],
+            "hint": "Think about registration and availability.",
+            "id": "C00-0-2-q09"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Manually trace the sum of [3, 1, 4] and an empty list; justify your results.",
+            "instruction": "Answer in your own words and justify your reasoning. You will assess your answer against a rubric; it will not be graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Shows correct steps and subtotals",
+              "Explains the behavior of an empty list",
+              "States the termination condition"
+            ],
+            "hint": "Describe the accumulator after each item.",
+            "id": "C00-0-2-q10"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Distinguish precondition, postcondition, and invariant using a single example.",
+            "instruction": "Answer in your own words and justify your reasoning. You will assess your answer against a rubric; it will not be graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Defines all three concepts",
+              "Provides a coherent example",
+              "Relates each concept to the appropriate stage"
+            ],
+            "hint": "Use the sum of a list.",
+            "id": "C00-0-2-q11"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Turn an ambiguous decision into a verifiable rule with two different outcomes.",
+            "instruction": "Answer in your own words and justify your reasoning. You will assess your answer against a rubric; it will not be graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Provides an ambiguous statement",
+              "Refines the condition objectively",
+              "States outcomes and a boundary test"
+            ],
+            "hint": "Replace “good registration” with explicit fields and rules.",
+            "id": "C00-0-2-q12"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Describe a loop that never terminates and explain how to change it to ensure progress.",
+            "instruction": "Answer in your own words and justify your reasoning. You will assess your answer against a rubric; it will not be graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Identifies a condition that is never updated",
+              "Explains the termination problem",
+              "Proposes an update or a finite condition"
+            ],
+            "hint": "Check whether the state changes after each step.",
+            "id": "C00-0-2-q13"
+          },
+          {
+            "kind": "text",
+            "level": 5,
+            "prompt": "Propose a test suite for an order-processing routine, including invalid inputs.",
+            "instruction": "Answer in your own words and justify your reasoning. You will assess your answer against a rubric; it will not be graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Covers typical and edge cases",
+              "Covers invalid and duplicate requests",
+              "Defines expected outcomes and explains why"
+            ],
+            "hint": "Derive tests from the rules, not random values.",
+            "id": "C00-0-2-q14"
+          }
+        ]
+      }
+    },
+    "es": {
+      "lesson": {
+        "definition": "Diseñar una solución exige transformar los requisitos en pasos, reglas y verificaciones. La secuencia, la selección, la repetición y los contratos de entrada/salida son herramientas básicas de este modelado.",
+        "deep": "Empieza con un caso concreto; representa las decisiones; prueba con ejemplos y contraejemplos. El pseudocódigo puede expresar el procedimiento sin depender de la sintaxis de un lenguaje de programación. Las condiciones de terminación, los estados y los invariantes ayudan a explicar por qué funciona un método. El objetivo es comprender el comportamiento de la solución, no memorizar comandos.",
+        "example": "Para calcular el total de una compra, recibe una lista de precios válidos, suma cada artículo y aplica la regla de descuento indicada. Si la lista está vacía, el total antes de los cargos es cero; si aparece un precio negativo no permitido, informa que la entrada no es válida. La base de cálculo de un descuento porcentual debe quedar claramente definida.",
+        "pitfall": "Una lista de pasos sin un contrato de entrada/salida, tratamiento de errores ni un orden adecuado puede parecer organizada, pero no constituye necesariamente una solución fiable.",
+        "exercise": "Elabora una tabla con cuatro escenarios de préstamo: registro válido/artículo disponible, registro inválido, artículo no disponible y solicitud duplicada. Para cada escenario escribe la regla, la ruta seguida y la salida. Después identifica un caso que todavía no esté cubierto.",
+        "code": "",
+        "questions": [
+          "Modela una selección con dos condiciones claramente definidas.",
+          "Rastrea el subtotal acumulado de [3, 1, 4] y de [].",
+          "Explica qué hace adecuada una condición de terminación."
+        ],
+        "reading": "Fuentes: CS Unplugged — Computational Thinking (https://www.csunplugged.org/en/computational-thinking/); ISTE — Computational Thinking (https://iste.org/computational-thinking/)."
+      },
+      "chapter": {
+        "title": "Conceptos fundamentales y ejemplos",
+        "sections": [
+          {
+            "title": "Secuencia y dependencias",
+            "body": "La secuencia consiste en ejecutar operaciones en un orden establecido. Algunas operaciones dependen de otras anteriores: no se puede calcular un descuento sin haber definido el importe base y la regla aplicable. Sin embargo, no todas las tareas requieren un orden lineal; las actividades independientes pueden realizarse en paralelo. Una representación fiel debe mostrar las dependencias reales en vez de imponer un orden arbitrario."
+          },
+          {
+            "title": "Selección y condiciones",
+            "body": "La selección consiste en elegir un camino según una condición verificable: «si el registro es válido, emitir un comprobante; de lo contrario, explicar el motivo del rechazo». Una condición no debe esconder una valoración subjetiva que no pueda repetirse de manera consistente. «Si el registro está bien» necesita criterios explícitos, como la presencia de campos obligatorios y valores dentro de los intervalos permitidos."
+          },
+          {
+            "title": "Repetición y terminación",
+            "body": "La repetición aplica operaciones a una colección o hasta que se cumple una condición. Al revisar los elementos de una lista, cada paso avanza al siguiente elemento; después del último, el proceso termina. Una repetición que nunca actualiza su estado puede no finalizar. Distinguir «mientras queden elementos sin procesar» de «para siempre» es esencial para establecer el comportamiento esperado."
+          },
+          {
+            "title": "Precondiciones, poscondiciones e invariantes",
+            "body": "Una precondición establece qué debe cumplirse antes de ejecutar el procedimiento: por ejemplo, una lista de precios contiene números válidos. Una poscondición describe el resultado esperado: el total equivale a la suma de los elementos considerados. Un invariante es una propiedad que se mantiene verdadera durante la ejecución: mientras se recorre la lista, el subtotal equivale a la suma de los elementos ya examinados. Estas afirmaciones ayudan a revisar la lógica."
+          },
+          {
+            "title": "Seguimiento manual",
+            "body": "Considera la lista [3, 1, 4]. Empieza con un subtotal de 0; después del 3, el subtotal es 3; después del 1, es 4; después del 4, es 8. Una tabla de seguimiento puede incluir las columnas elemento, posición y subtotal. Compárala con una lista vacía: no se realiza ninguna iteración y el subtotal permanece en 0. Este método revela errores de actualización y permite justificar los resultados."
+          },
+          {
+            "title": "Casos habituales, límite e inválidos",
+            "body": "Los casos de prueba deben representar el dominio de entrada: una lista con varios elementos, con un solo elemento, vacía y con datos inválidos cuando sea necesaria la validación. Al buscar el número menor, probar únicamente números positivos puede ocultar errores de inicialización. Las pruebas deben derivarse de la especificación, no de números aleatorios."
+          },
+          {
+            "title": "Diagramas de flujo y pseudocódigo",
+            "body": "Los diagramas de flujo representan visualmente el flujo de control y las decisiones; el pseudocódigo usa instrucciones expresadas en un lenguaje estructurado. Ninguno constituye un lenguaje único con sintaxis universal. Elige la representación que permita analizar entradas, decisiones, repetición y salidas. La misma idea puede expresarse en texto, un diagrama de flujo o, posteriormente, mediante código HTML/CSS/JavaScript cuando el problema lo requiera."
+          },
+          {
+            "title": "Proyecto guiado: préstamos",
+            "body": "Define un procedimiento para prestar un artículo: comprobar el usuario, la disponibilidad y el plazo; si la solicitud es válida, registrar la operación y emitir un comprobante; de lo contrario, indicar el motivo del rechazo. Especifica si se puede reservar un artículo, qué ocurre con las cuentas suspendidas y cómo evitar registros duplicados. El procedimiento final debe poder verificarse mediante casos de prueba."
+          }
+        ],
+        "code": "",
+        "questions": [
+          "Modele uma seleção com duas condições claras.",
+          "Rastreie o subtotal de [3,1,4] e de [].",
+          "Explique o que torna uma condição de parada adequada."
+        ]
+      },
+      "exercise_set": {
+        "id": "curricular-C00-0-2-v1",
+        "title": "Conceptos fundamentales y ejemplos",
+        "course": "Pensamiento computacional y herramientas",
+        "lesson": "Lección 03 — Conceptos fundamentales y ejemplos",
+        "exercises": [
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "La estructura «si se cumple la condición, hacer A; si no, hacer B» representa:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Repetición infinita."
+              },
+              {
+                "id": "b",
+                "text": "Selección."
+              },
+              {
+                "id": "c",
+                "text": "Un comentario."
+              },
+              {
+                "id": "d",
+                "text": "Almacenamiento permanente."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Es una decisión sujeta a una condición.",
+            "hint": "",
+            "id": "C00-0-2-q01"
+          },
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "En una suma acumulada, un subtotal inicialmente igual a 0 sirve para:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Guardar el resultado final antes del cálculo."
+              },
+              {
+                "id": "b",
+                "text": "Evitar toda validación."
+              },
+              {
+                "id": "c",
+                "text": "Impedir la repetición."
+              },
+              {
+                "id": "d",
+                "text": "Representar la suma de ningún elemento procesado."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "La suma de una colección vacía es cero; el acumulador se actualiza al procesar los elementos.",
+            "hint": "",
+            "id": "C00-0-2-q02"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "Al sumar [3, 1, 4], los subtotales después de cada elemento son:",
+            "options": [
+              {
+                "id": "a",
+                "text": "3, 4, 8."
+              },
+              {
+                "id": "b",
+                "text": "3, 1, 4."
+              },
+              {
+                "id": "c",
+                "text": "0, 3, 1."
+              },
+              {
+                "id": "d",
+                "text": "8, 8, 8."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "El acumulador añade cada elemento actual al total anterior.",
+            "hint": "",
+            "id": "C00-0-2-q03"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "Una precondición adecuada para calcular el total de una lista de precios es:",
+            "options": [
+              {
+                "id": "a",
+                "text": "La pantalla debe ser azul."
+              },
+              {
+                "id": "b",
+                "text": "El usuario debe escribir un programa."
+              },
+              {
+                "id": "c",
+                "text": "Los precios de entrada deben ser números válidos según las reglas."
+              },
+              {
+                "id": "d",
+                "text": "El algoritmo no debe terminar nunca."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Una precondición establece qué entradas se aceptan.",
+            "hint": "",
+            "id": "C00-0-2-q04"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "¿Qué descripción garantiza mejor la terminación al procesar una lista finita?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Volver siempre al primer elemento."
+              },
+              {
+                "id": "b",
+                "text": "Avanzar al siguiente elemento hasta completar la lista."
+              },
+              {
+                "id": "c",
+                "text": "Repetir sin modificar el estado."
+              },
+              {
+                "id": "d",
+                "text": "Pedir la misma entrada indefinidamente."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Avanzar hacia el final de la lista proporciona un mecanismo de terminación.",
+            "hint": "",
+            "id": "C00-0-2-q05"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "¿Qué es un invariante en un algoritmo de suma acumulada?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Una propiedad que solo se cumple antes de la ejecución."
+              },
+              {
+                "id": "b",
+                "text": "Un texto mostrado al usuario."
+              },
+              {
+                "id": "c",
+                "text": "Un detalle visual de la interfaz."
+              },
+              {
+                "id": "d",
+                "text": "El subtotal equivale a la suma de los elementos procesados hasta ese momento."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "Un invariante describe una propiedad conservada durante la repetición.",
+            "hint": "",
+            "id": "C00-0-2-q06"
+          },
+          {
+            "kind": "choice",
+            "level": 4,
+            "prompt": "¿Qué representación ayuda a investigar una actualización incorrecta en un algoritmo?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Una tabla de seguimiento paso a paso."
+              },
+              {
+                "id": "b",
+                "text": "Un icono sin etiqueta."
+              },
+              {
+                "id": "c",
+                "text": "Una preferencia de color."
+              },
+              {
+                "id": "d",
+                "text": "Una lista de nombres sin valores intermedios."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "El seguimiento permite observar los estados y las transiciones.",
+            "hint": "",
+            "id": "C00-0-2-q07"
+          },
+          {
+            "kind": "choice",
+            "level": 5,
+            "prompt": "Si la especificación no contempla solicitudes duplicadas, ¿cuál es la respuesta más rigurosa?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Suponer que el sistema hará lo correcto."
+              },
+              {
+                "id": "b",
+                "text": "Eliminar todas las solicitudes."
+              },
+              {
+                "id": "c",
+                "text": "Definir explícitamente el comportamiento y probar esa situación."
+              },
+              {
+                "id": "d",
+                "text": "Ignorarlo porque sucede pocas veces."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Los casos límite deben formar parte del contrato del procedimiento.",
+            "hint": "",
+            "id": "C00-0-2-q08"
+          },
+          {
+            "kind": "text",
+            "level": 2,
+            "prompt": "Modela un algoritmo verbal para comprobar una solicitud de préstamo, incluyendo entradas, salidas y decisiones.",
+            "instruction": "Responde con tus propias palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Define entradas y salidas",
+              "Indica condiciones verificables",
+              "Considera los casos de rechazo"
+            ],
+            "hint": "Piensa en el registro y la disponibilidad.",
+            "id": "C00-0-2-q09"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Rastrea manualmente la suma de [3, 1, 4] y de una lista vacía; justifica los resultados.",
+            "instruction": "Responde con tus propias palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Muestra los pasos y subtotales correctos",
+              "Explica el comportamiento de la lista vacía",
+              "Indica la condición de terminación"
+            ],
+            "hint": "Describe el acumulador después de cada elemento.",
+            "id": "C00-0-2-q10"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Distingue precondición, poscondición e invariante mediante un único ejemplo.",
+            "instruction": "Responde con tus propias palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Define los tres conceptos",
+              "Ofrece un ejemplo coherente",
+              "Relaciona cada concepto con el momento adecuado"
+            ],
+            "hint": "Usa la suma de una lista.",
+            "id": "C00-0-2-q11"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Convierte una decisión ambigua en una regla verificable con dos resultados distintos.",
+            "instruction": "Responde con tus propias palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Presenta un enunciado ambiguo",
+              "Precisa la condición de manera objetiva",
+              "Indica resultados y una prueba de frontera"
+            ],
+            "hint": "Sustituye «registro bueno» por campos y reglas explícitas.",
+            "id": "C00-0-2-q12"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Describe un bucle que no termina y explica cómo modificarlo para garantizar el avance.",
+            "instruction": "Responde con tus propias palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Identifica una condición que no se actualiza",
+              "Explica el problema de terminación",
+              "Propone una actualización o una condición finita"
+            ],
+            "hint": "Comprueba si el estado cambia después de cada paso.",
+            "id": "C00-0-2-q13"
+          },
+          {
+            "kind": "text",
+            "level": 5,
+            "prompt": "Propón un conjunto de pruebas para una rutina de procesamiento de pedidos, incluyendo entradas inválidas.",
+            "instruction": "Responde con tus propias palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Cubre casos habituales y casos límite",
+              "Cubre solicitudes inválidas y duplicadas",
+              "Define resultados esperados y los justifica"
+            ],
+            "hint": "Deriva las pruebas de las reglas, no de valores aleatorios.",
+            "id": "C00-0-2-q14"
+          }
+        ]
+      }
+    }
+  }
+}

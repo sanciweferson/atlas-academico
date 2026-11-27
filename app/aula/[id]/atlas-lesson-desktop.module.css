@@ -1,0 +1,981 @@
+/* Escopo exclusivo da aula C00-0-0. Estética preservada do HTML aprovado do Claude. */
+.root {
+  --lesson-bg: var(--bg);
+  --lesson-card: var(--card);
+  --lesson-line: var(--border);
+  --lesson-text: var(--fg);
+  --lesson-muted: var(--muted);
+  --lesson-cyan: #087b95;
+  --lesson-purple: var(--accent);
+  --lesson-soft: var(--accent-soft);
+  color: var(--lesson-text);
+  width: 100%;
+  min-width: 0;
+}
+:global(.dark) .root {
+  --lesson-cyan: #22d3ee;
+  --lesson-card: #101830;
+  --lesson-line: #253257;
+  --lesson-soft: #17133a;
+  --lesson-muted: #a8b3d0;
+}
+:global(.atlas-v31-high-contrast) .root {
+  --lesson-card: var(--card);
+  --lesson-line: var(--border);
+  --lesson-cyan: var(--accent);
+  --lesson-purple: var(--accent);
+  --lesson-soft: var(--accent-soft);
+}
+.root * {
+  box-sizing: border-box;
+}
+.grid {
+  display: grid;
+  grid-template-columns: minmax(205px, 245px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.card {
+  padding: 16px;
+  border: 1px solid var(--lesson-line);
+  border-radius: 14px;
+  background: var(--lesson-card);
+  min-width: 0;
+}
+.courseSide {
+  position: sticky;
+  top: 94px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: calc(100dvh - 115px);
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.courseHeading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.courseHeading strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.35;
+}
+.courseHeading p,
+.courseNote {
+  color: var(--lesson-muted);
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+.courseNote {
+  margin-top: 12px;
+}
+.courseIcon,
+.heroIcon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  color: var(--lesson-cyan);
+  background: var(--lesson-soft);
+  border: 1px solid var(--lesson-line);
+  border-radius: 14px;
+}
+.courseIcon {
+  width: 52px;
+  height: 52px;
+}
+.courseNavigation {
+  padding: 8px;
+}
+.courseNavigation details + details {
+  border-top: 1px solid var(--lesson-line);
+}
+.courseNavigation summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 13px 9px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+.courseNavigation {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.courseNavigation summary::-webkit-details-marker {
+  display: none;
+}
+.courseNavigation details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+/* Barra de rolagem personalizada dos módulos */
+.courseNavigation {
+  scrollbar-width: thin;
+  scrollbar-color: var(--lesson-cyan) transparent;
+}
+
+/* Chrome, Edge e Safari */
+.courseNavigation::-webkit-scrollbar {
+  width: 5px;
+}
+
+.courseNavigation::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.courseNavigation::-webkit-scrollbar-thumb {
+  background: var(--lesson-cyan);
+  border-radius: 20px;
+}
+
+.courseNavigation::-webkit-scrollbar-thumb:hover {
+  background: var(--lesson-purple);
+}
+.courseLinks {
+  display: grid;
+  gap: 3px;
+  padding: 0 0 10px;
+}
+.courseLink {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 9px;
+  padding: 9px;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.35;
+}
+.courseLink:hover,
+.courseLink.current {
+  color: var(--lesson-text);
+  background: color-mix(in srgb, var(--lesson-cyan) 15%, var(--lesson-card));
+}
+.courseLink.current {
+  box-shadow: inset 0 0 0 1px var(--lesson-cyan);
+  font-weight: 700;
+}
+.lessonDot {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--lesson-soft);
+  color: var(--lesson-purple);
+  font-size: 10px;
+  font-weight: 800;
+
+}
+.current .lessonDot {
+  background: var(--lesson-cyan);
+  color: var(--lesson-bg);
+}
+.lessonMain {
+  min-width: 0;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  color: var(--lesson-muted);
+  font-size: 12px;
+  margin-bottom: 19px;
+}
+.breadcrumb a:hover {
+  color: var(--lesson-purple);
+}
+.hero {
+  display: flex;
+  gap: 17px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+.heroIcon {
+  width: 66px;
+  height: 66px;
+}
+.heroText {
+  min-width: 0;
+  flex: 1;
+}
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.chip,
+.chipOutline {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+.chip {
+  color: #fff;
+  background: #7c5cff;
+}
+.chipOutline {
+  border: 1px solid var(--lesson-line);
+}
+.hero h1 {
+  font-size: clamp(26px, 2.8vw, 35px);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 9px 0 7px;
+  font-weight: 800;
+}
+.hero p {
+  color: var(--lesson-muted);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0 0 8px;
+}
+.tabStrip {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  margin: 16px 0;
+  border: 1px solid var(--lesson-line);
+  border-radius: 12px;
+  background: var(--lesson-card);
+  overflow-x: auto;
+}
+.tabStrip button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 1 0 auto;
+  white-space: nowrap;
+  border: 0;
+  border-radius: 9px;
+  min-height: 44px;
+  padding: 0 10px;
+  background: transparent;
+  color: var(--lesson-text);
+  font-size: 12px;
+  font-weight: 750;
+}
+.tabStrip .selectedTab {
+  background: var(--lesson-cyan);
+  color: var(--lesson-bg);
+}
+.tabPanel[hidden] {
+  display: none !important;
+}
+.tabPanel {
+  min-width: 0;
+}
+.objectives {
+  border: 1px solid var(--lesson-cyan);
+  background: color-mix(in srgb, var(--lesson-cyan) 9%, var(--lesson-card));
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+.objectives h2,
+.card h2,
+.example h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 17px;
+  font-weight: 800;
+  margin: 0 0 9px;
+}
+.objectives h2 svg,
+.objectives li svg {
+  color: var(--lesson-cyan);
+  flex: none;
+}
+.objectives ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 15px;
+  row-gap: 6px;
+}
+.objectives li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.objectives li svg {
+  margin-top: 3px;
+}
+.textSection {
+  margin-top: 24px;
+}
+.textSection h2 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 800;
+  margin: 0 0 9px;
+}
+.number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+  background: #7c5cff;
+  color: white;
+  font-size: 14px;
+}
+.textSection p,
+.example p,
+.card p {
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0;
+  white-space: pre-wrap;
+}
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  border: 1px solid var(--lesson-line);
+  border-radius: 12px;
+  margin: 14px 0;
+  padding: 10px;
+}
+.pillar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  text-align: center;
+  padding: 10px 5px;
+  background: var(--lesson-soft);
+  border: 1px solid var(--lesson-purple);
+  border-radius: 10px;
+}
+.pillar svg {
+  color: var(--lesson-cyan);
+}
+.pillar strong {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.pillar small {
+  font-size: 10px;
+  color: var(--lesson-muted);
+  line-height: 1.3;
+}
+.example {
+  border: 1px solid var(--lesson-purple);
+  background: var(--lesson-soft);
+  padding: 16px;
+  border-radius: 14px;
+  margin-top: 20px;
+}
+.codeBox {
+  border: 1px solid var(--lesson-line);
+  border-radius: 12px;
+  background: #0b1226;
+  color: #eaf0ff;
+  overflow: hidden;
+}
+.codeHeader {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  background: #141d3b;
+  border-bottom: 1px solid #253257;
+  color: #a78bfa;
+  font-size: 12px;
+  font-weight: 700;
+}
+.codeBox pre {
+  padding: 15px;
+  margin: 0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.summarySide {
+  grid-column: 2;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+}
+.summaryList {
+  margin: 0;
+  padding-left: 23px;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.summaryList li + li {
+  margin-top: 5px;
+}
+.tip {
+  background: var(--lesson-soft);
+  border-color: var(--lesson-purple);
+}
+.bottomNav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 26px;
+}
+.navCard {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 65px;
+  min-width: 0;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--lesson-line);
+  background: var(--lesson-card);
+  color: var(--lesson-text);
+  text-decoration: none;
+}
+.navCard svg {
+  flex: none;
+  width: 20px;
+}
+.navCard span {
+  min-width: 0;
+}
+.navCard small {
+  display: block;
+  color: var(--lesson-muted);
+  font-size: 11px;
+}
+.navCard strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.navCard.next {
+  border-color: var(--lesson-cyan);
+}
+.navCard.disabled {
+  opacity: 0.55;
+}
+@media (min-width: 1750px) {
+  .grid {
+    grid-template-columns: minmax(215px, 245px) minmax(0, 1fr) minmax(
+        210px,
+        245px
+      );
+  }
+  .summarySide {
+    grid-column: 3;
+    position: sticky;
+    top: 94px;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1150px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .courseSide {
+    position: static;
+    max-height: none;
+    grid-row: 2;
+  }
+  .summarySide {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .courseNavigation {
+    display: none;
+  }
+  .courseNote {
+    margin-top: 4px;
+  }
+  .lessonMain {
+    grid-row: 1;
+  }
+}
+@media (max-width: 800px) {
+  .root {
+    /* Versão mobile específica será refinada APÓS aprovação desktop. */
+  }
+  .heroIcon {
+    width: 52px;
+    height: 52px;
+  }
+  .heroIcon svg {
+    width: 30px;
+  }
+  .objectives ul {
+    grid-template-columns: 1fr;
+  }
+  .pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .bottomNav {
+    grid-template-columns: 1fr;
+  }
+  .summarySide {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .root * {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Pacote 02: SOMENTE links de retorno e navegacao entre aulas. */
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 6px 11px;
+  border: 1px solid var(--lesson-line);
+  border-radius: 10px;
+  background: var(--lesson-card);
+  color: var(--lesson-text);
+  font-weight: 700;
+  text-decoration: none;
+  max-width: 100%;
+  line-height: 1.35;
+}
+.breadcrumbLink span {
+  overflow-wrap: anywhere;
+}
+.breadcrumbLink:hover {
+  border-color: var(--lesson-cyan);
+  background: var(--lesson-soft);
+  color: var(--lesson-text);
+}
+.breadcrumbLink:focus-visible,
+.navCard:focus-visible {
+  outline: 3px solid var(--lesson-cyan);
+  outline-offset: 3px;
+}
+.breadcrumbSeparator {
+  color: var(--lesson-muted);
+  font-size: 17px;
+}
+.breadcrumbCurrent {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 6px 11px;
+  border: 1px solid var(--lesson-cyan);
+  border-radius: 10px;
+  color: var(--lesson-text);
+  font-weight: 800;
+  background: var(--lesson-soft);
+}
+/* Navegacao ao final de todas as colunas/painéis da aula. */
+.bottomNav {
+  grid-column: 1/-1;
+  border-top: 1px solid var(--lesson-line);
+  padding-top: 18px;
+  margin-top: 2px;
+}
+.navCard {
+  min-height: 54px;
+  padding: 8px 12px;
+  gap: 9px;
+  justify-content: flex-start;
+}
+.navCard:hover:not(.disabled) {
+  border-color: var(--lesson-cyan);
+  background: var(--lesson-soft);
+  color: var(--lesson-text);
+}
+.navCard.next {
+  justify-content: space-between;
+}
+.navCard svg {
+  width: 19px;
+  height: 19px;
+}
+.navMobileText {
+  display: none !important;
+}
+@media (max-width: 800px) {
+  .breadcrumb {
+    gap: 6px;
+  }
+  .breadcrumbLink {
+    min-height: 44px;
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+  .breadcrumbLink svg {
+    width: 15px;
+    height: 15px;
+  }
+  .breadcrumbCurrent {
+    min-height: 44px;
+    font-size: 11px;
+    padding: 7px 9px;
+  }
+  .bottomNav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 6px;
+    padding-top: 14px;
+  }
+  .navCard {
+    min-height: 52px;
+    padding: 8px 6px;
+    gap: 5px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+  .navCard.next {
+    justify-content: center;
+  }
+  .navCard svg {
+    width: 16px;
+    height: 16px;
+  }
+  .navCard small {
+    display: none;
+  }
+  .navCard strong {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+  .navDesktopText {
+    display: none !important;
+  }
+  .navMobileText {
+    display: block !important;
+  }
+}
+@media (max-width: 420px) {
+  .breadcrumbLink {
+    font-size: 10px;
+  }
+  .breadcrumbLink span {
+    max-width: 170px;
+  }
+  .navCard {
+    flex-direction: column;
+    gap: 3px;
+    min-height: 58px;
+  }
+  .navCard.next {
+    flex-direction: column-reverse;
+  }
+  .navCard strong {
+    font-size: 10px;
+  }
+}
+:global(.atlas-v31-high-contrast) .breadcrumbLink,
+:global(.atlas-v31-high-contrast) .breadcrumbCurrent,
+:global(.atlas-v31-high-contrast) .navCard {
+  border-color: var(--border);
+}
+
+/* Pacote 03: ajuste exclusivo dos cartoes de navegacao em telas desktop.
+   Evita que os botoes entrem na coluna da mini-sidebar do curso. */
+@media (min-width: 801px) {
+  .navCard {
+    min-height: 46px;
+    padding: 6px 10px;
+    gap: 7px;
+  }
+  .navCard svg {
+    width: 17px;
+    height: 17px;
+  }
+  .navCard small {
+    font-size: 10px;
+  }
+  .navCard strong {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+}
+@media (min-width: 1151px) {
+  .bottomNav {
+    grid-column: 2/-1;
+  }
+}
+
+/* Pacote 05: alinhamento e scrollbars invisiveis apenas na Aula C00-0-0. */
+/* A mini-sidebar acompanha a sidebar do Atlas sem alterar sua logica de abrir/fechar.
+   Remove, SOMENTE nesta tela e em desktop, a margem interna esquerda e a largura
+   maxima do contêiner .shell. Preserva o espaco entre a mini-sidebar e a aula. */
+@media (min-width: 801px) {
+  :global(.atlas-v3-main):has(.root) {
+    max-width: none;
+    margin-inline: 0;
+    padding-left: 0;
+  }
+}
+/* A lista continua rolavel; apenas a barra cinza nao aparece. */
+.courseSide {
+  scrollbar-width: none;
+}
+.courseSide::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* Barra vertical da pagina, apenas enquanto esta aula estiver aberta. */
+:global(html):has(.root),
+:global(body):has(.root) {
+  scrollbar-width: none;
+}
+:global(html):has(.root)::-webkit-scrollbar,
+:global(body):has(.root)::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* Menu principal e areas rolaveis do conteudo: mantem o scroll sem trilhas visiveis
+   nesta aula. Outras paginas do Atlas nao sao afetadas. */
+:global(html):has(.root) :global(.atlas-v3-sidebar-links),
+:global(html):has(.root) :global(.atlas-v3-mobile-panel),
+.root .tabStrip,
+.root .codeBox pre {
+  scrollbar-width: none;
+}
+:global(html):has(.root) :global(.atlas-v3-sidebar-links)::-webkit-scrollbar,
+:global(html):has(.root) :global(.atlas-v3-mobile-panel)::-webkit-scrollbar,
+.root .tabStrip::-webkit-scrollbar,
+.root .codeBox pre::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Pacote 12: respiro entre sidebar principal e mini-sidebar da Aula 01. */
+/* A grade permanece fluida quando a sidebar principal abre ou recolhe.
+   Aplica 14px APENAS ao lado inicial da grade com duas ou tres colunas.
+   Nao interfere no menu global, no gap entre mini-sidebar e aula,
+   nem nas regras mobile aprovadas. */
+@media (min-width: 1151px) {
+  .grid {
+    padding-inline-start: 14px;
+  }
+}
+
+/* Pacote 15: abas completas em telas estreitas, sem rolagem horizontal oculta.
+   Preserva a versao desktop e a selecao de cada aba. */
+@media (max-width: 600px) {
+  .root .tabStrip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    overflow: visible;
+    padding: 6px;
+  }
+  .root .tabStrip button {
+    flex: initial;
+    min-width: 0;
+    width: 100%;
+    min-height: 44px;
+    white-space: normal;
+    text-align: center;
+    padding: 7px 5px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+  .root .tabStrip button:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Pacote 17: largura util mobile sem modificar o menu Atlas. */
+@media (max-width: 600px) {
+  /* Remove a margem lateral do contêiner global APENAS em aulas do modulo. */
+  :global(.atlas-v3-main):has(.root) {
+    max-width: none;
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+  /* Respiro minimo de leitura sem cortar a interface em 320px/375px. */
+  .root {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 8px;
+  }
+  .heroText {
+    min-width: 0;
+  }
+  .hero h1,
+  .hero p {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Pacote 18: hero legivel de ponta a ponta e icones alinhados no mobile.
+   Nao interfere no desktop, nas outras rotas ou na sidebar principal. */
+@media (max-width: 600px) {
+  .root .hero {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 10px;
+    padding-inline: 4px 12px;
+    align-items: start;
+    min-width: 0;
+  }
+  .root .heroIcon {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+  .root .heroText {
+    display: contents;
+  }
+  .root .chips {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    min-width: 0;
+  }
+  .root .chipOutline {
+    overflow-wrap: anywhere;
+    max-width: 100%;
+  }
+  .root .hero h1 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: auto;
+  }
+  .root .hero p {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    max-width: 100%;
+    margin: 0;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+  .root .heroText > :last-child {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+  .root .tabStrip button {
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr);
+    align-items: center;
+    justify-content: initial;
+    gap: 7px;
+    text-align: left;
+    padding-inline: 10px;
+  }
+  .root .tabStrip button svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    justify-self: center;
+    align-self: center;
+    flex: none;
+  }
+  .root .tabStrip button:last-child:nth-child(odd) {
+    grid-template-columns: 20px max-content;
+    justify-content: center;
+  }
+}
+
+/* Pacote 19: Referencias alinhadas a esquerda no mobile. */
+@media (max-width: 600px) {
+  .root .tabStrip button:last-child:nth-child(odd) {
+    grid-column: 1 / 2;
+    grid-template-columns: 20px minmax(0, 1fr);
+    justify-content: initial;
+  }
+}
+
+/* Pacote 20: tipografia e respiro lateral em mobile. */
+@media (max-width: 600px) {
+  /* Mais espaco nas bordas, sem tocar no cabecalho do Atlas. */
+  .root {
+    padding-inline: 16px;
+  }
+  .root .lessonMain,
+  .root .textSection,
+  .root .hero,
+  .root .objectives,
+  .root .example {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .root .hero {
+    padding-inline: 0;
+  }
+  .root .hero h1 {
+    font-size: clamp(23px, 6.4vw, 27px) !important;
+    line-height: 1.19 !important;
+    letter-spacing: -0.02em;
+  }
+  .root .textSection h2 {
+    font-size: clamp(18px, 5vw, 20px) !important;
+    line-height: 1.3 !important;
+    gap: 9px;
+    margin-bottom: 12px;
+  }
+  .root .hero p,
+  .root .textSection p,
+  .root .example p,
+  .root .card p {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    overflow-wrap: break-word;
+  }
+  .root .textSection {
+    margin-top: 28px;
+  }
+  .root .textSection p + p {
+    margin-top: 12px;
+  }
+}
+
+
+/* P24: dois resumos lado a lado ocupam toda a largura util do conteudo.
+   Em telas extralargas, evita limitar os cards a ultima coluna. */
+@media (min-width: 1151px) {
+  .root .summarySide {
+    grid-column: 2 / -1;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    position: static;
+  }
+  .root .summarySide > .card {
+    min-width: 0;
+    height: 100%;
+  }
+}

@@ -1,0 +1,2818 @@
+{
+  "C00-1-0": {
+    "id": "curricular-C00-1-0-v1",
+    "title": "Modelos formais e pressupostos",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 01 — Modelos formais e pressupostos",
+    "exercises": [
+      {
+        "id": "C00-1-0-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "O que deve constar em um modelo de fila de atendimento?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Um estado e regras para inserir e retirar senhas."
+          },
+          {
+            "id": "b",
+            "text": "Somente as cores do painel."
+          },
+          {
+            "id": "c",
+            "text": "O nome da linguagem de programação."
+          },
+          {
+            "id": "d",
+            "text": "A marca do computador usado."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Esses elementos permitem descrever e verificar as mudanças no sistema.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-0-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Uma retirada exige saldo suficiente. Isso é exemplo de quê?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Pós-condição."
+          },
+          {
+            "id": "b",
+            "text": "Formatação da saída."
+          },
+          {
+            "id": "c",
+            "text": "Critério de desempate."
+          },
+          {
+            "id": "d",
+            "text": "Pré-condição."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "A regra deve ser verdadeira antes de efetuar a retirada.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-0-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Qual propriedade pode ser tratada como invariante de estoque?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "A fila sempre tem dez pessoas."
+          },
+          {
+            "id": "b",
+            "text": "Toda operação termina em um segundo."
+          },
+          {
+            "id": "c",
+            "text": "A quantidade disponível nunca fica negativa após operações válidas."
+          },
+          {
+            "id": "d",
+            "text": "Cada cliente compra um item."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Uma invariante vale em todos os estados alcançáveis previstos pelo modelo.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-0-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Quando um modelo de biblioteca precisa ser revisto?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Nunca: modelos são completos por definição."
+          },
+          {
+            "id": "b",
+            "text": "Quando há regras relevantes não representadas, como reservas."
+          },
+          {
+            "id": "c",
+            "text": "Sempre que o sistema muda de cor."
+          },
+          {
+            "id": "d",
+            "text": "Somente após instalar um compilador."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Modelos devem explicitar hipóteses e podem precisar de refinamentos.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-0-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Modele três estados possíveis de uma encomenda, com transições permitidas e proibidas.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-0-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Defina pré-condição e pós-condição para uma operação de cancelamento de reserva.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-0-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Proponha uma invariante para uma fila e explique como testá-la.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-0-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Compare um desenho de estados e um pseudocódigo para a mesma regra: o que cada um evidencia?",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-1-1": {
+    "id": "curricular-C00-1-1-v1",
+    "title": "Raciocínio e justificativas",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 02 — Raciocínio e justificativas",
+    "exercises": [
+      {
+        "id": "C00-1-1-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Qual evidência isolada NÃO demonstra correção geral?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "O algoritmo acertou três exemplos escolhidos."
+          },
+          {
+            "id": "b",
+            "text": "Uma invariante justificada."
+          },
+          {
+            "id": "c",
+            "text": "Uma análise cobrindo todos os casos permitidos."
+          },
+          {
+            "id": "d",
+            "text": "Uma prova baseada em pré-condições."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Poucos exemplos podem deixar classes de entrada sem teste.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-1-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Qual início é mais seguro para encontrar máximo de lista não vazia com negativos?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Iniciar o máximo em zero."
+          },
+          {
+            "id": "b",
+            "text": "Ignorar valores negativos."
+          },
+          {
+            "id": "c",
+            "text": "Escolher sempre o último sem comparar."
+          },
+          {
+            "id": "d",
+            "text": "Usar o primeiro elemento como máximo inicial."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Zero falha em listas compostas somente por números negativos.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-1-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Que frase descreve uma invariante de soma acumulada?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "O laço nunca termina."
+          },
+          {
+            "id": "b",
+            "text": "A entrada sempre tem tamanho fixo."
+          },
+          {
+            "id": "c",
+            "text": "Após k itens, o acumulador contém a soma dos k itens processados."
+          },
+          {
+            "id": "d",
+            "text": "O acumulador será sempre zero."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "A propriedade liga execução parcial e resultado.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-1-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Um argumento rigoroso precisa explicitar:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "A marca do editor de código."
+          },
+          {
+            "id": "b",
+            "text": "Condições iniciais, justificativa dos passos e conclusão."
+          },
+          {
+            "id": "c",
+            "text": "A preferência visual do autor."
+          },
+          {
+            "id": "d",
+            "text": "Somente o resultado de um teste."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Uma conclusão técnica depende das hipóteses e das transições explicadas.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-1-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Justifique, com palavras suas, por que iniciar máximo com zero pode falhar.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-1-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Elabore dois casos mutuamente exclusivos para uma regra de acesso e explique a cobertura.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-1-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Descreva uma invariante para contar itens em uma lista e seu significado ao final.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-1-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Escreva um argumento de correção de um procedimento simples, incluindo hipótese e limite.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-1-2": {
+    "id": "curricular-C00-1-2-v1",
+    "title": "Análise de casos e contraexemplos",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 03 — Análise de casos e contraexemplos",
+    "exercises": [
+      {
+        "id": "C00-1-2-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Uma afirmação diz \"serve para todo número inteiro\". Como refutá-la?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Encontrando um inteiro válido para o qual falha."
+          },
+          {
+            "id": "b",
+            "text": "Mostrando apenas um inteiro que funciona."
+          },
+          {
+            "id": "c",
+            "text": "Mudando a cor do resultado."
+          },
+          {
+            "id": "d",
+            "text": "Escolhendo um texto quando só aceita inteiros."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Uma instância válida falsa refuta uma afirmação universal.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-2-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Qual entrada investiga um caso de fronteira para lista?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "A mesma lista de tamanho médio repetida."
+          },
+          {
+            "id": "b",
+            "text": "Uma imagem decorativa."
+          },
+          {
+            "id": "c",
+            "text": "O nome do algoritmo."
+          },
+          {
+            "id": "d",
+            "text": "Uma lista com apenas um elemento."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Entradas mínimas frequentemente revelam casos esquecidos.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-2-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Qual é a utilidade de reduzir um contraexemplo?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Evitar documentar os testes."
+          },
+          {
+            "id": "b",
+            "text": "Transformar um teste em prova universal."
+          },
+          {
+            "id": "c",
+            "text": "Isolar a condição que produz a falha."
+          },
+          {
+            "id": "d",
+            "text": "Garantir que todas as entradas falham."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Casos menores tornam o erro mais diagnosticável.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-2-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Uma entrada fora do contrato demonstra que o algoritmo é incorreto no domínio previsto?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sim, mesmo se a entrada não for interpretável."
+          },
+          {
+            "id": "b",
+            "text": "Não necessariamente; é preciso verificar a pré-condição."
+          },
+          {
+            "id": "c",
+            "text": "Sim, sempre."
+          },
+          {
+            "id": "d",
+            "text": "Não há contratos em algoritmos."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "O contrato define quais entradas uma alegação de correção cobre.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-2-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Crie um contraexemplo mínimo para o algoritmo que inicia máximo em zero.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-2-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Defina uma partição de casos para validar uma fila de senhas.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-2-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Explique a diferença entre teste representativo e demonstração universal.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-2-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Avalie se uma entrada vazia é falha do algoritmo ou violação de contrato em dois cenários distintos.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-1-3": {
+    "id": "curricular-C00-1-3-v1",
+    "title": "Relação com pré-requisitos",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 04 — Relação com pré-requisitos",
+    "exercises": [
+      {
+        "id": "C00-1-3-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Qual é a pré-condição usual da busca binária?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "A lista estar ordenada pela chave consultada."
+          },
+          {
+            "id": "b",
+            "text": "O computador ter tela grande."
+          },
+          {
+            "id": "c",
+            "text": "Os elementos estarem em ordem aleatória."
+          },
+          {
+            "id": "d",
+            "text": "A lista conter exatamente dez elementos."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "A escolha de metade depende de uma ordem compatível com a comparação.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-3-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Qual é um pré-requisito conceitual para analisar um laço?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Ter instalado todos os editores."
+          },
+          {
+            "id": "b",
+            "text": "Conhecer uma marca de celular."
+          },
+          {
+            "id": "c",
+            "text": "Escolher um tema de cores."
+          },
+          {
+            "id": "d",
+            "text": "Compreender condições e atualização de estado."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Sem entender condições e estado é difícil explicar iteração e término.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-3-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Se a entrada viola uma pré-condição, é adequado:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Eliminar os testes."
+          },
+          {
+            "id": "b",
+            "text": "Esconder a restrição do usuário."
+          },
+          {
+            "id": "c",
+            "text": "Corrigir a entrada ou escolher outro método."
+          },
+          {
+            "id": "d",
+            "text": "Executar e presumir que o resultado vale."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Métodos exigem compatibilidade entre pressupostos e dados.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-3-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Qual distinção está correta?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Pré-requisito só existe em matemática avançada."
+          },
+          {
+            "id": "b",
+            "text": "Pré-requisito é conhecimento anterior; pré-condição é exigência para uma operação."
+          },
+          {
+            "id": "c",
+            "text": "São sempre sinônimos."
+          },
+          {
+            "id": "d",
+            "text": "Pré-condição significa interface gráfica."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Uma dependência de aprendizagem e uma regra de execução têm naturezas diferentes.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-1-3-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Desenhe uma cadeia de quatro conhecimentos necessários para compreender um laço.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-3-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Explique a diferença entre requisito curricular e pré-condição de execução.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-3-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Analise um cenário no qual a busca binária seria inadequada.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-1-3-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Proponha um checklist para decidir se um algoritmo pode ser usado em dados reais.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-2-0": {
+    "id": "curricular-C00-2-0-v1",
+    "title": "Técnicas e procedimentos",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 01 — Técnicas e procedimentos",
+    "exercises": [
+      {
+        "id": "C00-2-0-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Qual ferramenta ajuda a cruzar várias condições de uma decisão?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Tabela de decisão."
+          },
+          {
+            "id": "b",
+            "text": "Paleta de cores."
+          },
+          {
+            "id": "c",
+            "text": "Lista sem critérios."
+          },
+          {
+            "id": "d",
+            "text": "Cronômetro sem registro."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "A tabela organiza combinações de condições e saídas.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-0-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "O que é refinamento sucessivo?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Escrever código sem entender o problema."
+          },
+          {
+            "id": "b",
+            "text": "Apagar todas as restrições."
+          },
+          {
+            "id": "c",
+            "text": "Trocar a linguagem após cada teste."
+          },
+          {
+            "id": "d",
+            "text": "Detalhar progressivamente passos de uma solução."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "O refinamento transforma uma tarefa ampla em operações verificáveis.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-0-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Uma simulação manual deve registrar:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "A tela inicial do editor."
+          },
+          {
+            "id": "b",
+            "text": "A conclusão antes da execução."
+          },
+          {
+            "id": "c",
+            "text": "Entradas e alterações de estado ao longo dos passos."
+          },
+          {
+            "id": "d",
+            "text": "Somente o título do programa."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "O rastreamento expõe a sequência causal dos resultados.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-0-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Como escolher uma técnica adequadamente?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Escolhendo só pela aparência do diagrama."
+          },
+          {
+            "id": "b",
+            "text": "Analisando restrições, clareza e verificabilidade."
+          },
+          {
+            "id": "c",
+            "text": "Usando sempre a mais popular."
+          },
+          {
+            "id": "d",
+            "text": "Ignorando casos excepcionais."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "A decisão técnica precisa ser ajustada ao contexto.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-0-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Refine a tarefa \"organizar matrícula\" em cinco passos verificáveis.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-0-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Monte uma tabela verbal de decisão com duas condições e quatro combinações.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-0-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Rastreie manualmente um contador inicializado em zero e incrementado três vezes.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-0-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Compare decomposição e tabela de decisão num problema de pedidos e justifique sua escolha.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-2-1": {
+    "id": "curricular-C00-2-1-v1",
+    "title": "Leitura de documentação e fontes primárias",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 02 — Leitura de documentação e fontes primárias",
+    "exercises": [
+      {
+        "id": "C00-2-1-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "O que caracteriza melhor uma fonte primária técnica?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "É emitida pelo responsável pela especificação ou resultado original."
+          },
+          {
+            "id": "b",
+            "text": "É a postagem com mais curtidas."
+          },
+          {
+            "id": "c",
+            "text": "É qualquer resumo não identificado."
+          },
+          {
+            "id": "d",
+            "text": "É a primeira página de uma busca."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "A procedência permite interpretar autoridade e escopo.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-1-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Por que verificar a versão da documentação?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Porque versões garantem ausência de erros."
+          },
+          {
+            "id": "b",
+            "text": "Porque toda versão é idêntica."
+          },
+          {
+            "id": "c",
+            "text": "Porque exemplos dispensam leitura."
+          },
+          {
+            "id": "d",
+            "text": "Porque contratos e comportamentos podem mudar."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Versão conecta a orientação ao ambiente real.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-1-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Qual anotação é útil ao ler uma API?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "A cor de fundo do site."
+          },
+          {
+            "id": "b",
+            "text": "Uma opinião sem referência."
+          },
+          {
+            "id": "c",
+            "text": "Entradas, saídas, erros e restrições."
+          },
+          {
+            "id": "d",
+            "text": "Somente o logotipo."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Esses elementos compõem o contrato de uso.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-1-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Se tutorial e especificação divergem, a ação mais responsável é:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Copiar a resposta mais curta."
+          },
+          {
+            "id": "b",
+            "text": "Examinar escopo e versão e verificar a especificação."
+          },
+          {
+            "id": "c",
+            "text": "Confiar sempre no tutorial."
+          },
+          {
+            "id": "d",
+            "text": "Ignorar ambas as fontes."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "É necessário resolver diferenças de contexto antes de concluir.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-1-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Crie um roteiro de leitura de documentação com seis perguntas.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-1-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Explique a diferença entre especificação oficial e tutorial contextualizado.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-1-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Descreva como registrar versão e seção de uma fonte consultada.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-1-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Apresente um caso em que um exemplo funciona, mas viola uma regra descrita na documentação.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-2-2": {
+    "id": "curricular-C00-2-2-v1",
+    "title": "Exercícios graduais",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 03 — Exercícios graduais",
+    "exercises": [
+      {
+        "id": "C00-2-2-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Uma progressão adequada de exercícios é:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Identificar, aplicar, justificar e transferir."
+          },
+          {
+            "id": "b",
+            "text": "Copiar, copiar, copiar e decorar."
+          },
+          {
+            "id": "c",
+            "text": "Começar pela prova sem base."
+          },
+          {
+            "id": "d",
+            "text": "Repetir a mesma alternativa indefinidamente."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "A sequência amplia a autonomia cognitiva.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-2-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Qual sinal isolado é insuficiente para atestar domínio?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Explicar o raciocínio de modo consistente."
+          },
+          {
+            "id": "b",
+            "text": "Resolver um problema inédito."
+          },
+          {
+            "id": "c",
+            "text": "Reconhecer os próprios erros."
+          },
+          {
+            "id": "d",
+            "text": "Acertar uma pergunta de múltipla escolha."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Um acerto isolado pode resultar de sorte ou memória.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-2-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "O que significa variar um exercício?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Revelar a resposta previamente."
+          },
+          {
+            "id": "b",
+            "text": "Retirar todas as restrições."
+          },
+          {
+            "id": "c",
+            "text": "Manter o princípio e mudar o contexto ou as condições."
+          },
+          {
+            "id": "d",
+            "text": "Mudar apenas o número da questão."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Variação testa compreensão transferível.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-2-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Qual é o objetivo do feedback diagnóstico?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Garantir nota máxima automaticamente."
+          },
+          {
+            "id": "b",
+            "text": "Identificar a origem do erro e orientar nova tentativa."
+          },
+          {
+            "id": "c",
+            "text": "Punir o erro sem explicação."
+          },
+          {
+            "id": "d",
+            "text": "Substituir o estudo independente."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Feedback útil conecta evidências de desempenho à próxima ação.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-2-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Crie uma progressão de cinco níveis para o conceito de entrada e saída.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-2-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Descreva um erro próprio hipotético e uma estratégia de diagnóstico.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-2-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Reescreva um exercício de contagem em outro contexto sem mudar seu princípio.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-2-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Estabeleça critérios para afirmar que alguém dominou decomposição de problemas.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-2-3": {
+    "id": "curricular-C00-2-3-v1",
+    "title": "Diagnóstico de erros",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 04 — Diagnóstico de erros",
+    "exercises": [
+      {
+        "id": "C00-2-3-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Qual é o primeiro passo de um diagnóstico confiável?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Definir a diferença entre esperado e observado."
+          },
+          {
+            "id": "b",
+            "text": "Alterar várias regras ao mesmo tempo."
+          },
+          {
+            "id": "c",
+            "text": "Apagar o caso que falhou."
+          },
+          {
+            "id": "d",
+            "text": "Presumir que o usuário errou."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Um erro precisa ser descrito antes de ser explicado.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-3-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Para que serve reduzir um teste falho?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Provar que nenhuma outra falha existe."
+          },
+          {
+            "id": "b",
+            "text": "Dispensar a revisão."
+          },
+          {
+            "id": "c",
+            "text": "Diminuir o tamanho dos títulos."
+          },
+          {
+            "id": "d",
+            "text": "Isolar o comportamento responsável pela divergência."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Casos mínimos simplificam o raciocínio causal.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-3-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "O que é regressão?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Um erro de digitação sem efeito."
+          },
+          {
+            "id": "b",
+            "text": "Um teste feito somente uma vez."
+          },
+          {
+            "id": "c",
+            "text": "Uma funcionalidade antes correta que passa a falhar após mudança."
+          },
+          {
+            "id": "d",
+            "text": "Um programa sem interface."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Mudanças podem afetar comportamentos anteriores.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-3-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Por que registrar valores intermediários?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Para tornar o programa mais colorido."
+          },
+          {
+            "id": "b",
+            "text": "Para localizar o passo em que o estado diverge do esperado."
+          },
+          {
+            "id": "c",
+            "text": "Para evitar definir entradas."
+          },
+          {
+            "id": "d",
+            "text": "Para substituir todo teste."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "O estado observado ajuda a diagnosticar a causa.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-2-3-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Rastreie um laço que deveria contar até cinco, mas para em quatro.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-3-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Descreva um roteiro de depuração para fila que pula uma senha.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-3-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Crie três testes de regressão para correção de soma em lista.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-2-3-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Compare erro de especificação e erro de implementação usando um caso próprio.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-3-0": {
+    "id": "curricular-C00-3-0-v1",
+    "title": "Problema integrador",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 01 — Problema integrador",
+    "exercises": [
+      {
+        "id": "C00-3-0-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Qual formulação é verificável?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Nenhuma senha deve ser chamada duas vezes."
+          },
+          {
+            "id": "b",
+            "text": "O atendimento deve ser incrível."
+          },
+          {
+            "id": "c",
+            "text": "O painel precisa ser moderno."
+          },
+          {
+            "id": "d",
+            "text": "O projeto deve parecer profissional."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Um requisito verificável admite teste objetivo.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-0-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "O escopo de um projeto esclarece:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Somente a cor da tela."
+          },
+          {
+            "id": "b",
+            "text": "A resposta correta de todas as provas."
+          },
+          {
+            "id": "c",
+            "text": "A marca das ferramentas."
+          },
+          {
+            "id": "d",
+            "text": "O problema atendido e o que fica de fora."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "O escopo define limites do trabalho.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-0-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Qual artefato mostra regras de decisão?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Um título de página."
+          },
+          {
+            "id": "b",
+            "text": "Uma senha sem contexto."
+          },
+          {
+            "id": "c",
+            "text": "Uma tabela de decisão ou um fluxograma."
+          },
+          {
+            "id": "d",
+            "text": "Somente uma imagem decorativa."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Representações ajudam a comunicar o comportamento.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-0-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Por que validar incrementalmente?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Para evitar documentar decisões."
+          },
+          {
+            "id": "b",
+            "text": "Para detectar problemas cedo e revisar com menor custo."
+          },
+          {
+            "id": "c",
+            "text": "Para nunca testar casos extremos."
+          },
+          {
+            "id": "d",
+            "text": "Para aumentar o escopo a cada passo."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Validação gradual reduz incerteza e torna mudanças rastreáveis.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-0-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Defina objetivo, atores, entradas, saídas e três limites do projeto de senhas.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-0-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Escreva cinco requisitos verificáveis para o projeto integrador.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-0-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Desenhe um fluxo de atendimento com chegada, chamada e desistência.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-0-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Proponha critérios de aceitação para a primeira versão do projeto.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-3-1": {
+    "id": "curricular-C00-3-1-v1",
+    "title": "Implementação ou demonstração conforme a disciplina",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 02 — Implementação ou demonstração conforme a disciplina",
+    "exercises": [
+      {
+        "id": "C00-3-1-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "O que torna uma demonstração reprodutível?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Entradas, passos e saídas esperadas explícitos."
+          },
+          {
+            "id": "b",
+            "text": "Apenas narrar que deu certo."
+          },
+          {
+            "id": "c",
+            "text": "Ocultar os dados iniciais."
+          },
+          {
+            "id": "d",
+            "text": "Trocar as regras durante a execução."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Uma terceira pessoa deve conseguir repetir a sequência.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-1-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Qual operação exige tratamento de exceção?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Inserir em fila não vazia."
+          },
+          {
+            "id": "b",
+            "text": "Exibir título da aula."
+          },
+          {
+            "id": "c",
+            "text": "Contar itens numa lista conhecida."
+          },
+          {
+            "id": "d",
+            "text": "Chamar próximo quando a fila está vazia."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Sem uma condição alternativa, a operação pode falhar.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-1-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Uma simulação em papel pode ser adequada quando:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Precisa substituir todos os testes."
+          },
+          {
+            "id": "b",
+            "text": "Só mostra a aparência final."
+          },
+          {
+            "id": "c",
+            "text": "Representa o estado e permite executar as regras."
+          },
+          {
+            "id": "d",
+            "text": "Não possui nenhuma regra."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Uma implementação não precisa ser código para ter valor pedagógico.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-1-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "O que deve permanecer explícito numa implementação de fila?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Uma conclusão antecipada."
+          },
+          {
+            "id": "b",
+            "text": "A ordem dos elementos e as mudanças realizadas."
+          },
+          {
+            "id": "c",
+            "text": "A preferência de fonte do autor."
+          },
+          {
+            "id": "d",
+            "text": "O horário em que o estudante acordou."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "O estado deve permitir verificar o comportamento.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-1-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Implemente em pseudocódigo operações de inserir e chamar na fila.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-1-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Planeje uma demonstração com cartões que outra pessoa possa repetir.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-1-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Defina o tratamento de senha inexistente e fila vazia.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-1-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Compare uma simulação manual e uma implementação programada quanto a vantagens e limites.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-3-2": {
+    "id": "curricular-C00-3-2-v1",
+    "title": "Testes e documentação",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 03 — Testes e documentação",
+    "exercises": [
+      {
+        "id": "C00-3-2-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "O que é oráculo de teste?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Uma referência para decidir o resultado esperado."
+          },
+          {
+            "id": "b",
+            "text": "O nome do programa."
+          },
+          {
+            "id": "c",
+            "text": "O número de linhas do código."
+          },
+          {
+            "id": "d",
+            "text": "Um tipo de cor na interface."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Sem esperado definido não se avalia a correção da saída.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-2-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Qual registro de teste é mais útil?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Somente a palavra OK."
+          },
+          {
+            "id": "b",
+            "text": "Apenas a data, sem contexto."
+          },
+          {
+            "id": "c",
+            "text": "Uma captura sem explicar o cenário."
+          },
+          {
+            "id": "d",
+            "text": "Entrada, passos, esperado e observado."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "O registro permite reproduzir e auditar o resultado.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-2-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Qual teste avalia uma fronteira da fila?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Mudar o título do projeto."
+          },
+          {
+            "id": "b",
+            "text": "Repetir a mesma entrada sem observar saída."
+          },
+          {
+            "id": "c",
+            "text": "Chamar quando não há senhas."
+          },
+          {
+            "id": "d",
+            "text": "Somente chamar em fila com cem pessoas."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Fila vazia é um estado extremo relevante.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-2-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "A documentação deve incluir:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Uma lista de cores."
+          },
+          {
+            "id": "b",
+            "text": "Entradas válidas, comportamento, limites e exemplos."
+          },
+          {
+            "id": "c",
+            "text": "Somente elogios ao software."
+          },
+          {
+            "id": "d",
+            "text": "A opinião sem especificação."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Documentação precisa orientar uso e revisão técnica.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-2-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Escreva quatro casos de teste para a fila com esperado e observado simulados.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-2-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Defina um oráculo para a regra \"não chamar senha repetida\".",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-2-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Documente as instruções mínimas para outra pessoa testar seu procedimento.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-2-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Analise uma falha hipotética e descreva teste de regressão correspondente.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-3-3": {
+    "id": "curricular-C00-3-3-v1",
+    "title": "Comparação de alternativas",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 04 — Comparação de alternativas",
+    "exercises": [
+      {
+        "id": "C00-3-3-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Uma comparação justa exige:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Os mesmos critérios e cenários para cada alternativa."
+          },
+          {
+            "id": "b",
+            "text": "Critérios diferentes para favorecer a preferida."
+          },
+          {
+            "id": "c",
+            "text": "Apenas o preço sem contexto."
+          },
+          {
+            "id": "d",
+            "text": "Uma escolha anterior sem revisão."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Sem base comum não é possível interpretar diferenças.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-3-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "O que é compensação (trade-off)?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Garantir que uma solução vence em tudo."
+          },
+          {
+            "id": "b",
+            "text": "Eliminar qualquer restrição."
+          },
+          {
+            "id": "c",
+            "text": "Ignorar os usuários do sistema."
+          },
+          {
+            "id": "d",
+            "text": "Aceitar uma desvantagem em troca de outra vantagem."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Decisões técnicas costumam exigir equilíbrio de critérios.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-3-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Quando a decisão deve ser revista?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Somente quando muda a cor da tela."
+          },
+          {
+            "id": "b",
+            "text": "Sempre sem examinar evidências."
+          },
+          {
+            "id": "c",
+            "text": "Quando contexto ou requisitos mudam de forma relevante."
+          },
+          {
+            "id": "d",
+            "text": "Nunca, após ser registrada."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Uma escolha depende das hipóteses atuais.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-3-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Qual frase expressa melhor uma recomendação técnica?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Não há necessidade de comparar."
+          },
+          {
+            "id": "b",
+            "text": "Para baixa demanda e sem rede, cartões são suficientes sob estes critérios."
+          },
+          {
+            "id": "c",
+            "text": "Aplicativos são sempre melhores."
+          },
+          {
+            "id": "d",
+            "text": "Planilhas são proibidas em qualquer contexto."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "A conclusão deve explicitar contexto e justificativa.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-3-3-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Construa uma matriz de comparação entre cartões, planilha e aplicativo.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-3-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Defina quatro critérios e explique como avaliá-los no projeto de senhas.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-3-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Descreva uma situação em que a alternativa escolhida deixaria de ser adequada.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-3-3-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Escreva uma recomendação final com vantagens, riscos e limitações.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-4-0": {
+    "id": "curricular-C00-4-0-v1",
+    "title": "Prova teórica inédita",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 01 — Prova teórica inédita",
+    "exercises": [
+      {
+        "id": "C00-4-0-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Qual característica favorece avaliação de compreensão?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Exigir aplicação justificada num contexto novo."
+          },
+          {
+            "id": "b",
+            "text": "Repetir sempre a mesma alternativa."
+          },
+          {
+            "id": "c",
+            "text": "Mostrar o gabarito antes da tentativa."
+          },
+          {
+            "id": "d",
+            "text": "Avaliar somente a velocidade de clique."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Transferência reduz a chance de acerto por memorização.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-0-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Uma questão pede justificar uma pré-condição. O foco é:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "A cor da interface."
+          },
+          {
+            "id": "b",
+            "text": "O nome do autor."
+          },
+          {
+            "id": "c",
+            "text": "Uma preferência pessoal."
+          },
+          {
+            "id": "d",
+            "text": "Relação entre regra e validade da operação."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "A justificativa exige explicar por que a condição importa.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-0-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "O registro de exercícios concluídos equivale a aprovação?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sim, mesmo sem respostas."
+          },
+          {
+            "id": "b",
+            "text": "Sim, sem critérios."
+          },
+          {
+            "id": "c",
+            "text": "Não: prática formativa não é avaliação oficial."
+          },
+          {
+            "id": "d",
+            "text": "Sim, independentemente da qualidade."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "A progressão oficial depende de avaliação própria e critérios definidos.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-0-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "O que fazer ao não saber responder?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Ocultar a dúvida."
+          },
+          {
+            "id": "b",
+            "text": "Explicitar o que conhece e identificar o pressuposto faltante."
+          },
+          {
+            "id": "c",
+            "text": "Inventar uma justificativa."
+          },
+          {
+            "id": "d",
+            "text": "Copiar a alternativa de outra pessoa."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "Diagnosticar lacunas auxilia o estudo responsável.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-0-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Explique a diferença entre exemplo correto e prova de correção.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-0-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Analise uma fila com duas prioridades e formule pré-condições.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-0-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Elabore um contraexemplo para uma afirmação universal sobre contagem.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-0-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Descreva critérios para avaliar uma resposta discursiva sem atribuir nota automática.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-4-1": {
+    "id": "curricular-C00-4-1-v1",
+    "title": "Explicação oral ou escrita",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 02 — Explicação oral ou escrita",
+    "exercises": [
+      {
+        "id": "C00-4-1-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Qual ordem favorece uma explicação técnica?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Problema, regras, exemplo, limites e testes."
+          },
+          {
+            "id": "b",
+            "text": "Resposta final sem contexto."
+          },
+          {
+            "id": "c",
+            "text": "Jargão sem definição e conclusão."
+          },
+          {
+            "id": "d",
+            "text": "Somente lista de ferramentas."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "A sequência permite acompanhar o raciocínio.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-1-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Por que definir termos técnicos?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Para aumentar artificialmente o texto."
+          },
+          {
+            "id": "b",
+            "text": "Para esconder erros de execução."
+          },
+          {
+            "id": "c",
+            "text": "Para dispensar exemplos."
+          },
+          {
+            "id": "d",
+            "text": "Para evitar ambiguidade e adaptar a linguagem ao público."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Definições estabelecem uma base compartilhada.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-1-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Uma explicação de correção deve:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Falar somente do tempo gasto."
+          },
+          {
+            "id": "b",
+            "text": "Apresentar apenas o título do algoritmo."
+          },
+          {
+            "id": "c",
+            "text": "Justificar por que os passos satisfazem as regras."
+          },
+          {
+            "id": "d",
+            "text": "Repetir o resultado sem motivo."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "A argumentação conecta operações e resultado.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-1-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Qual evidência sugere comunicação eficaz?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "O texto não contém exemplos."
+          },
+          {
+            "id": "b",
+            "text": "Outra pessoa reproduz o procedimento corretamente."
+          },
+          {
+            "id": "c",
+            "text": "O autor usou muitas siglas."
+          },
+          {
+            "id": "d",
+            "text": "A apresentação foi rápida."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "A reprodutibilidade ajuda a avaliar clareza.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-1-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Escreva uma explicação da fila para alguém que nunca programou.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-1-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Defina estado, pré-condição e invariante em frases próprias.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-1-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Prepare um roteiro oral de dois minutos sobre o projeto integrador.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-1-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Revise uma explicação sua e identifique três ambiguidades possíveis.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-4-2": {
+    "id": "curricular-C00-4-2-v1",
+    "title": "Transferência para novo problema",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 03 — Transferência para novo problema",
+    "exercises": [
+      {
+        "id": "C00-4-2-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "O que caracteriza transferência de conhecimento?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Adaptar um princípio a novas restrições com justificativa."
+          },
+          {
+            "id": "b",
+            "text": "Trocar nomes sem revisar regras."
+          },
+          {
+            "id": "c",
+            "text": "Copiar o resultado esperado."
+          },
+          {
+            "id": "d",
+            "text": "Evitar novos testes."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Transferência exige compreender a estrutura e o contexto.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-2-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "Qual diferença pode importar entre fila humana e fila de impressão?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "A existência de uma lista ordenada."
+          },
+          {
+            "id": "b",
+            "text": "A presença de itens na fila."
+          },
+          {
+            "id": "c",
+            "text": "A necessidade de entradas."
+          },
+          {
+            "id": "d",
+            "text": "Falha de execução e necessidade de repetição."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Novos estados podem ser necessários para falhas.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-2-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Ao adaptar um procedimento, deve-se primeiro:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Eliminar os casos de exceção."
+          },
+          {
+            "id": "b",
+            "text": "Copiar o código sem revisar."
+          },
+          {
+            "id": "c",
+            "text": "Identificar hipóteses que continuam válidas."
+          },
+          {
+            "id": "d",
+            "text": "Presumir todos os pressupostos iguais."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Compatibilidade das hipóteses determina o que pode ser reutilizado.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-2-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Como validar uma adaptação?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Usar somente a aparência do sistema."
+          },
+          {
+            "id": "b",
+            "text": "Testar casos anteriores e novos casos específicos do contexto."
+          },
+          {
+            "id": "c",
+            "text": "Verificar apenas o cenário ideal antigo."
+          },
+          {
+            "id": "d",
+            "text": "Não registrar resultados."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "O novo domínio traz propriedades próprias.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-2-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Adapte o procedimento de senhas para uma fila de impressão.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-2-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Compare fila FIFO e fila com prioridade; identifique pressupostos alterados.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-2-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Proponha dois testes novos para uma fila com falhas de execução.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-2-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Explique um princípio de pensamento computacional que possa ser transferido a uma tarefa doméstica.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  },
+  "C00-4-3": {
+    "id": "curricular-C00-4-3-v1",
+    "title": "Revisão após 7 e 30 dias",
+    "course": "Pensamento computacional e ferramentas",
+    "lesson": "Aula 04 — Revisão após 7 e 30 dias",
+    "exercises": [
+      {
+        "id": "C00-4-3-q01",
+        "kind": "choice",
+        "level": 1,
+        "prompt": "Qual ação caracteriza recuperação ativa?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Responder sem consultar e depois conferir."
+          },
+          {
+            "id": "b",
+            "text": "Reler apenas a mesma resposta pronta."
+          },
+          {
+            "id": "c",
+            "text": "Marcar como concluído sem praticar."
+          },
+          {
+            "id": "d",
+            "text": "Copiar o texto duas vezes sem reflexão."
+          }
+        ],
+        "correctOptionId": "a",
+        "explanation": "Recuperação testa acesso independente ao conhecimento.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-3-q02",
+        "kind": "choice",
+        "level": 2,
+        "prompt": "O que a revisão de trinta dias deve priorizar?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Memorizar a letra do gabarito."
+          },
+          {
+            "id": "b",
+            "text": "Evitar exercícios inéditos."
+          },
+          {
+            "id": "c",
+            "text": "Repetir somente o título da aula."
+          },
+          {
+            "id": "d",
+            "text": "Aplicação em novo problema e justificativa."
+          }
+        ],
+        "correctOptionId": "d",
+        "explanation": "Transferência ajuda a identificar aprendizagem durável.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-3-q03",
+        "kind": "choice",
+        "level": 3,
+        "prompt": "Uma data de revisão registrada prova domínio?",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Sim, independentemente do conteúdo."
+          },
+          {
+            "id": "b",
+            "text": "Sim, desde que haja uma marca verde."
+          },
+          {
+            "id": "c",
+            "text": "Não; é necessária evidência da resposta e do raciocínio."
+          },
+          {
+            "id": "d",
+            "text": "Sim, sempre."
+          }
+        ],
+        "correctOptionId": "c",
+        "explanation": "Agendamento e desempenho são informações distintas.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-3-q04",
+        "kind": "choice",
+        "level": 4,
+        "prompt": "Ao encontrar lacuna numa revisão, é adequado:",
+        "instruction": "Escolha a alternativa e explique sua decisão antes de verificar.",
+        "options": [
+          {
+            "id": "a",
+            "text": "Consultar somente a resposta antes de tentar."
+          },
+          {
+            "id": "b",
+            "text": "Retomar o pré-requisito e tentar uma variação nova."
+          },
+          {
+            "id": "c",
+            "text": "Ignorar a dificuldade."
+          },
+          {
+            "id": "d",
+            "text": "Atribuir nota máxima."
+          }
+        ],
+        "correctOptionId": "b",
+        "explanation": "A revisão serve para orientar estudo posterior.",
+        "hint": "Identifique a definição, os pressupostos e o comportamento previsto."
+      },
+      {
+        "id": "C00-4-3-q05",
+        "kind": "text",
+        "level": 2,
+        "prompt": "Crie um protocolo pessoal de revisão no dia 7 e no dia 30.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-3-q06",
+        "kind": "text",
+        "level": 3,
+        "prompt": "Explique sem consulta a diferença entre estado e invariante, depois revise sua explicação.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 80,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-3-q07",
+        "kind": "text",
+        "level": 4,
+        "prompt": "Proponha uma tarefa inédita de transferência para a revisão do dia 30.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      },
+      {
+        "id": "C00-4-3-q08",
+        "kind": "text",
+        "level": 5,
+        "prompt": "Defina critérios observáveis para decidir que conteúdo precisa de reforço.",
+        "instruction": "Responda com suas palavras e inclua pelo menos um exemplo ou justificativa.",
+        "minCharacters": 120,
+        "rubric": [
+          "Identifica os conceitos e condições relevantes do problema.",
+          "Explica os passos ou a conclusão com coerência e exemplo próprio.",
+          "Reconhece pelo menos uma limitação, exceção ou forma de testar a resposta."
+        ],
+        "hint": "Separe seu raciocínio em hipótese, desenvolvimento e conclusão."
+      }
+    ]
+  }
+}

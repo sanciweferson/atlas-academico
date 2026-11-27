@@ -1,0 +1,730 @@
+{
+  "locales": {
+    "en": {
+      "lesson": {
+        "definition": "The practice of describing systematic procedures predates electronic computers by centuries. Modern computing brought together earlier calculation methods, mathematical formalization, and new machines capable of carrying out instructions.",
+        "deep": "The history of computing cannot be reduced to a single invention. Many cultures developed methods for calculation. The word algorithm is historically linked to al-Khwārizmī, a ninth-century mathematician. In the nineteenth century, Babbage and Lovelace explored programmable machines; in the twentieth, work on logic and computability helped clarify what it means for a procedure to be carried out mechanically. Today computational thinking is applied in education, science, and public services, but its uses require ethical and contextual evaluation.",
+        "example": "A nurse organizes a triage queue using clinical rules and priorities. The process has inputs, classifications, decisions, and traceability. Human responsibility remains essential: incomplete rules and incorrect data can cause harm. Such a process should not be automated without a careful assessment.",
+        "pitfall": "Do not confuse the origin of the word algorithm with the invention of all algorithms, or attribute the entire history of computing to one person.",
+        "exercise": "Create a timeline with four milestones: manual procedures, al-Khwārizmī, the Analytical Engine, and twentieth-century models of computability. For each milestone, explain its contribution and what cannot reasonably be inferred from it.",
+        "reading": "Sources: Stanford Encyclopedia of Philosophy — The Modern History of Computing (https://plato.stanford.edu/entries/computing-history/); The Philosophy of Computer Science (https://plato.stanford.edu/entries/computer-science/).",
+        "questions": [
+          "Explain why algorithms existed before electronic computers.",
+          "Distinguish a proposed machine from a program that is actually running.",
+          "Discuss one modern application and one risk of automation."
+        ],
+        "code": ""
+      },
+      "chapter": {
+        "title": "Historical context and applications of computational thinking",
+        "sections": [
+          {
+            "title": "Before electronics",
+            "body": "Recipes, calculation tables, arithmetic methods, counting instruments, and work instructions demonstrate that systematic procedures have existed for a long time. It would be misleading to call all of these “programs” in the modern sense: written instructions, mathematical rules, and executable software have different properties. They share an interest in repeatable operations, communicating methods, and checking results."
+          },
+          {
+            "title": "Al-Khwārizmī and terminology",
+            "body": "The name of Muḥammad ibn Mūsā al-Khwārizmī, a ninth-century scholar, is part of the history of the word “algorithm.” His work on arithmetic and algebraic procedures was influential. This etymological connection does not mean he invented the idea of step-by-step procedures: other societies already used calculation methods. Historical context prevents oversimplification."
+          },
+          {
+            "title": "Machines and stored programs",
+            "body": "In the nineteenth century, Charles Babbage proposed the Analytical Engine, but the project was never completed as a working machine during his lifetime. Ada Lovelace discussed operations and possibilities extending beyond numerical calculation. During the twentieth century, mathematical models of computation and electronic machine architectures contributed to general-purpose computers. A proposal, a theoretical model, a built machine, and running software are different achievements."
+          },
+          {
+            "title": "Logic, computability, and limits",
+            "body": "The question “Which tasks can be solved by an effective procedure?” motivated research on computability in the twentieth century. An algorithm specifies operations that can be followed, but this does not imply that every problem has an algorithmic solution. Even when an algorithm exists, it may take too long or require too many resources to be useful. Separate theoretical possibility, correctness, and practical feasibility."
+          },
+          {
+            "title": "Applications beyond programming",
+            "body": "In scientific research, a procedure can organize data and record hypotheses; in logistics, a process can separate receiving, verification, and distribution; in education, explicit criteria can support the review of answers. Decomposition and representation improve clarity in these contexts, but domain knowledge is still essential. Solving the wrong problem precisely is still an error."
+          },
+          {
+            "title": "Data, responsibility, and bias",
+            "body": "Solutions may reproduce inappropriate assumptions. Classification can disadvantage people when the data do not represent those affected; a form can exclude people without a particular document; a rule can expose sensitive information. Before automating, ask who will be affected, how decisions can be challenged, and who is responsible for correcting failures."
+          },
+          {
+            "title": "Comparative case study",
+            "body": "Compare two proposals for scheduling appointments: (A) record arrival order only; (B) consider arrival order, legally required priorities, and available time slots. Option A is simpler but may fail in context; option B needs more data and transparent rules. The aim is not to select a universally correct answer, but to define criteria and test consequences before adopting a procedure."
+          }
+        ],
+        "code": "",
+        "questions": [
+          "Explain why algorithms existed before electronic computers.",
+          "Distinguish a proposed machine from a program that is actually running.",
+          "Discuss one modern application and one risk of automation."
+        ]
+      },
+      "exercise_set": {
+        "id": "curricular-C00-0-1-v1",
+        "title": "Historical context and applications of computational thinking",
+        "course": "Computational thinking and tools",
+        "lesson": "Lesson 02 — Historical context and applications of computational thinking",
+        "exercises": [
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "What is historically accurate about algorithms?",
+            "options": [
+              {
+                "id": "a",
+                "text": "They were invented with mobile phones."
+              },
+              {
+                "id": "b",
+                "text": "They have existed only since the Internet."
+              },
+              {
+                "id": "c",
+                "text": "Systematic procedures predate electronic computers."
+              },
+              {
+                "id": "d",
+                "text": "They are synonymous with artificial intelligence."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Calculation and organizational procedures existed before electronic computing.",
+            "hint": "",
+            "id": "C00-0-1-q01"
+          },
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "The word “algorithm” is historically associated with:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Ada Lovelace."
+              },
+              {
+                "id": "b",
+                "text": "Al-Khwārizmī."
+              },
+              {
+                "id": "c",
+                "text": "Alan Kay."
+              },
+              {
+                "id": "d",
+                "text": "Grace Hopper."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Its etymological history is linked to the name al-Khwārizmī.",
+            "hint": "",
+            "id": "C00-0-1-q02"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "Babbage’s Analytical Engine was:",
+            "options": [
+              {
+                "id": "a",
+                "text": "A historical design for a programmable machine that was not completed."
+              },
+              {
+                "id": "b",
+                "text": "A modern web browser."
+              },
+              {
+                "id": "c",
+                "text": "A computer program sold in the twenty-first century."
+              },
+              {
+                "id": "d",
+                "text": "A social network."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "The design was influential, even though it was not completed as an operational machine at the time.",
+            "hint": "",
+            "id": "C00-0-1-q03"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "An application of computational thinking beyond programming would be:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Making decisions without criteria or records."
+              },
+              {
+                "id": "b",
+                "text": "Eliminating all professional judgment."
+              },
+              {
+                "id": "c",
+                "text": "Choosing at random while ignoring requirements."
+              },
+              {
+                "id": "d",
+                "text": "Modeling and checking a service workflow using clear rules."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "The approach also supports everyday processes and decisions.",
+            "hint": "",
+            "id": "C00-0-1-q04"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "Why should the history of computing not be credited to just one person?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Because no contribution was relevant."
+              },
+              {
+                "id": "b",
+                "text": "Because it involves practices, ideas, and machines from different periods and contexts."
+              },
+              {
+                "id": "c",
+                "text": "Because computing has no history."
+              },
+              {
+                "id": "d",
+                "text": "Because only the Internet matters."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "The field developed through many contributions and lines of research.",
+            "hint": "",
+            "id": "C00-0-1-q05"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "Which distinction is correct?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A proposed machine and an executing program are different achievements."
+              },
+              {
+                "id": "b",
+                "text": "Every mathematical model is already a physical computer."
+              },
+              {
+                "id": "c",
+                "text": "Every calculation table is modern software."
+              },
+              {
+                "id": "d",
+                "text": "A proposed machine is necessarily completed."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Concepts, models, designs, and implementations must be distinguished.",
+            "hint": "",
+            "id": "C00-0-1-q06"
+          },
+          {
+            "kind": "choice",
+            "level": 4,
+            "prompt": "A service plans to automate appointment priorities. What should it check first?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Use any available data."
+              },
+              {
+                "id": "b",
+                "text": "Ignore affected people."
+              },
+              {
+                "id": "c",
+                "text": "Examine criteria, consequences, and the need for human review."
+              },
+              {
+                "id": "d",
+                "text": "Remove every opportunity to challenge decisions."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Criteria and consequences belong in a responsible specification.",
+            "hint": "",
+            "id": "C00-0-1-q07"
+          },
+          {
+            "kind": "choice",
+            "level": 5,
+            "prompt": "A problem has a correct algorithm, but it needs more resources than are available. This shows that:",
+            "options": [
+              {
+                "id": "a",
+                "text": "It is not an algorithm."
+              },
+              {
+                "id": "b",
+                "text": "Automation is always better."
+              },
+              {
+                "id": "c",
+                "text": "Correctness does not matter."
+              },
+              {
+                "id": "d",
+                "text": "Computability, correctness, and practical feasibility are separate questions."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "A solvable task can still be impractical with limited resources.",
+            "hint": "",
+            "id": "C00-0-1-q08"
+          },
+          {
+            "kind": "text",
+            "level": 2,
+            "prompt": "Explain, with an example, why systematic procedures existed before electronic computers.",
+            "instruction": "Answer in your own words and justify your reasoning. Your answer will be self-assessed using criteria, not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Distinguishes a procedure from an electronic computer",
+              "Provides a historical or everyday example",
+              "Avoids assuming every old procedure was software"
+            ],
+            "hint": "Think of manual calculation and organizational methods.",
+            "id": "C00-0-1-q09"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Compare al-Khwārizmī’s historical contribution with the Analytical Engine project without crediting either with all of computing.",
+            "instruction": "Answer in your own words and justify your reasoning. Your answer will be self-assessed using criteria, not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Puts both milestones into historical context",
+              "Distinguishes a procedure from a proposed machine",
+              "Recognizes other contributions and limitations"
+            ],
+            "hint": "Distinguish where a term comes from and where an idea originated.",
+            "id": "C00-0-1-q10"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Choose an area outside programming and show how decomposition and abstraction could be applied.",
+            "instruction": "Answer in your own words and justify your reasoning. Your answer will be self-assessed using criteria, not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Defines the problem and objective clearly",
+              "Breaks the problem into subproblems",
+              "Justifies abstraction and identifies its limitations"
+            ],
+            "hint": "Consider logistics, education, or household organization.",
+            "id": "C00-0-1-q11"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Analyze the risks of automating a service queue and propose safeguards.",
+            "instruction": "Answer in your own words and justify your reasoning. Your answer will be self-assessed using criteria, not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Identifies at least two risks",
+              "Establishes transparent priority criteria",
+              "Provides for human review and appeals"
+            ],
+            "hint": "Consider incorrect data and legally required priorities.",
+            "id": "C00-0-1-q12"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Explain the difference between theoretically solving a problem and implementing a feasible real-world solution.",
+            "instruction": "Answer in your own words and justify your reasoning. Your answer will be self-assessed using criteria, not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Distinguishes computability from efficiency",
+              "Gives a well-founded example",
+              "Connects resources and context"
+            ],
+            "hint": "Available time and memory matter.",
+            "id": "C00-0-1-q13"
+          },
+          {
+            "kind": "text",
+            "level": 5,
+            "prompt": "Critically assess the claim “If something can be automated, it should be automated.”",
+            "instruction": "Answer in your own words and justify your reasoning. Your answer will be self-assessed using criteria, not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Challenges the generalization with reasons",
+              "Considers users and consequences",
+              "Proposes criteria for making the decision"
+            ],
+            "hint": "Consider social costs, accessibility, and accountability.",
+            "id": "C00-0-1-q14"
+          }
+        ]
+      }
+    },
+    "es": {
+      "lesson": {
+        "definition": "La práctica de describir procedimientos sistemáticos es muy anterior a las computadoras electrónicas. La informática moderna reunió métodos antiguos de cálculo, formalización matemática y nuevas máquinas capaces de ejecutar instrucciones.",
+        "deep": "La historia de la computación no se reduce a un único invento. Muchas culturas desarrollaron métodos de cálculo. La palabra algoritmo se relaciona históricamente con al-Juarismi, matemático del siglo IX. En el siglo XIX, Babbage y Lovelace exploraron las máquinas programables; en el siglo XX, las investigaciones sobre lógica y computabilidad ayudaron a esclarecer qué significa ejecutar mecánicamente un procedimiento. Hoy el pensamiento computacional se aplica a la educación, la ciencia y los servicios, pero requiere una evaluación ética y contextual.",
+        "example": "Una enfermera organiza una cola de triaje según reglas clínicas y prioridades. El proceso tiene entradas, categorías, decisiones y trazabilidad. La responsabilidad humana sigue siendo esencial: las reglas incompletas y los datos incorrectos pueden causar daños. Por ello no se debe automatizar sin una evaluación cuidadosa.",
+        "pitfall": "No confundas el origen de la palabra algoritmo con la invención de todos los algoritmos, ni atribuyas toda la historia de la computación a una sola persona.",
+        "exercise": "Construye una línea del tiempo con cuatro hitos: procedimientos manuales, al-Juarismi, la Máquina Analítica y los modelos de computabilidad del siglo XX. Para cada hito, indica su aportación y lo que no se puede deducir de ella.",
+        "reading": "Fuentes: Stanford Encyclopedia of Philosophy — The Modern History of Computing (https://plato.stanford.edu/entries/computing-history/); The Philosophy of Computer Science (https://plato.stanford.edu/entries/computer-science/).",
+        "questions": [
+          "Explica por qué existían algoritmos antes de las computadoras electrónicas.",
+          "Distingue una máquina propuesta de un programa en ejecución.",
+          "Comenta una aplicación moderna y un riesgo de la automatización."
+        ],
+        "code": ""
+      },
+      "chapter": {
+        "title": "Contexto histórico y aplicaciones del pensamiento computacional",
+        "sections": [
+          {
+            "title": "Antes de la electrónica",
+            "body": "Las recetas, tablas de cálculo, métodos aritméticos, instrumentos de conteo e instrucciones de trabajo muestran que los procedimientos sistemáticos son antiguos. No sería correcto llamar “programas” a todos ellos en el sentido actual: las instrucciones escritas, las reglas matemáticas y el software ejecutable tienen propiedades diferentes. Comparten el interés por las operaciones repetibles, la comunicación de métodos y la comprobación de resultados."
+          },
+          {
+            "title": "Al-Juarismi y la terminología",
+            "body": "El nombre de Muḥammad ibn Mūsā al-Juarismi, estudioso del siglo IX, forma parte de la historia de la palabra “algoritmo”. Su trabajo sobre procedimientos de aritmética y álgebra fue influyente. Esta relación etimológica no significa que inventara los procedimientos paso a paso: otras sociedades ya utilizaban métodos de cálculo. El contexto histórico evita simplificaciones."
+          },
+          {
+            "title": "Máquinas y programas almacenados",
+            "body": "En el siglo XIX, Charles Babbage propuso la Máquina Analítica, pero el proyecto no llegó a completarse como máquina operativa durante su vida. Ada Lovelace analizó operaciones y posibilidades más allá del cálculo numérico. En el siglo XX, los modelos matemáticos de computación y las arquitecturas electrónicas contribuyeron al desarrollo de computadoras de propósito general. Una propuesta, un modelo teórico, una máquina construida y un programa en ejecución son logros distintos."
+          },
+          {
+            "title": "Lógica, computabilidad y límites",
+            "body": "La pregunta «¿qué tareas pueden resolverse mediante un procedimiento efectivo?» impulsó la investigación de la computabilidad en el siglo XX. Un algoritmo especifica operaciones que se pueden seguir, pero no implica que todos los problemas tengan solución algorítmica. Incluso si existe un algoritmo, puede ser demasiado lento o requerir demasiados recursos. Debemos distinguir posibilidad teórica, corrección y viabilidad práctica."
+          },
+          {
+            "title": "Aplicaciones más allá de la programación",
+            "body": "En la investigación científica, un procedimiento puede organizar datos y registrar hipótesis; en logística, puede separar recepción, verificación y distribución; en educación, unos criterios explícitos pueden ayudar a revisar respuestas. La descomposición y la representación aportan claridad, pero no sustituyen el conocimiento del área. Resolver con precisión el problema equivocado sigue siendo un error."
+          },
+          {
+            "title": "Datos, responsabilidad y sesgos",
+            "body": "Las soluciones pueden reproducir supuestos inadecuados. Una clasificación puede perjudicar a personas cuando los datos no representan a quienes se ven afectados; un formulario puede excluir a quien carece de cierto documento; una regla puede revelar información sensible. Antes de automatizar, pregunta quiénes serán afectados, cómo se podrán impugnar los resultados y quién revisará los fallos."
+          },
+          {
+            "title": "Estudio de caso comparativo",
+            "body": "Compara dos propuestas para organizar citas: (A) registrar solo el orden de llegada; (B) considerar llegada, prioridades legales y horarios disponibles. La opción A es más sencilla, pero puede fallar en su contexto; la B exige más datos y reglas transparentes. El objetivo no es elegir una respuesta universal, sino definir criterios y poner a prueba sus consecuencias antes de adoptar un procedimiento."
+          }
+        ],
+        "code": "",
+        "questions": [
+          "Explica por qué existían algoritmos antes de las computadoras electrónicas.",
+          "Distingue una máquina propuesta de un programa en ejecución.",
+          "Comenta una aplicación moderna y un riesgo de la automatización."
+        ]
+      },
+      "exercise_set": {
+        "id": "curricular-C00-0-1-v1",
+        "title": "Contexto histórico y aplicaciones del pensamiento computacional",
+        "course": "Pensamiento computacional y herramientas",
+        "lesson": "Lección 02 — Contexto histórico y aplicaciones del pensamiento computacional",
+        "exercises": [
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "¿Qué afirmación histórica sobre los algoritmos es correcta?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Se crearon con los teléfonos móviles."
+              },
+              {
+                "id": "b",
+                "text": "Solo existen desde Internet."
+              },
+              {
+                "id": "c",
+                "text": "Los procedimientos sistemáticos preceden a las computadoras electrónicas."
+              },
+              {
+                "id": "d",
+                "text": "Son sinónimo de inteligencia artificial."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Los procedimientos de cálculo y organización son anteriores a la informática electrónica.",
+            "hint": "",
+            "id": "C00-0-1-q01"
+          },
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "La palabra «algoritmo» se relaciona históricamente con:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Ada Lovelace."
+              },
+              {
+                "id": "b",
+                "text": "Al-Juarismi."
+              },
+              {
+                "id": "c",
+                "text": "Alan Kay."
+              },
+              {
+                "id": "d",
+                "text": "Grace Hopper."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Su historia etimológica se relaciona con el nombre de al-Juarismi.",
+            "hint": "",
+            "id": "C00-0-1-q02"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "La Máquina Analítica de Babbage fue:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Un diseño histórico de máquina programable que no llegó a completarse."
+              },
+              {
+                "id": "b",
+                "text": "Un navegador web moderno."
+              },
+              {
+                "id": "c",
+                "text": "Un programa informático vendido en el siglo XXI."
+              },
+              {
+                "id": "d",
+                "text": "Una red social."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "El diseño fue influyente, aunque no se completó como máquina operativa en su época.",
+            "hint": "",
+            "id": "C00-0-1-q03"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "Una aplicación del pensamiento computacional fuera de la programación sería:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Decidir sin criterios ni registros."
+              },
+              {
+                "id": "b",
+                "text": "Eliminar todo juicio profesional."
+              },
+              {
+                "id": "c",
+                "text": "Elegir al azar e ignorar los requisitos."
+              },
+              {
+                "id": "d",
+                "text": "Representar y revisar un proceso de atención mediante reglas claras."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "Este enfoque también sirve para procesos y decisiones cotidianos.",
+            "hint": "",
+            "id": "C00-0-1-q04"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "¿Por qué no se debe atribuir la historia de la computación a una sola persona?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Porque ninguna contribución fue relevante."
+              },
+              {
+                "id": "b",
+                "text": "Porque abarca prácticas, ideas y máquinas de distintas épocas y contextos."
+              },
+              {
+                "id": "c",
+                "text": "Porque la computación no tiene historia."
+              },
+              {
+                "id": "d",
+                "text": "Porque solo importa Internet."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "El desarrollo del campo implicó contribuciones y líneas de investigación diversas.",
+            "hint": "",
+            "id": "C00-0-1-q05"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "¿Qué distinción es correcta?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Una máquina propuesta y un programa en ejecución son logros diferentes."
+              },
+              {
+                "id": "b",
+                "text": "Todo modelo matemático es ya una computadora física."
+              },
+              {
+                "id": "c",
+                "text": "Toda tabla de cálculo es software moderno."
+              },
+              {
+                "id": "d",
+                "text": "Toda máquina propuesta necesariamente se construye."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Hay que distinguir conceptos, modelos, diseños e implementaciones.",
+            "hint": "",
+            "id": "C00-0-1-q06"
+          },
+          {
+            "kind": "choice",
+            "level": 4,
+            "prompt": "Un servicio quiere automatizar las prioridades de atención. ¿Qué debe comprobar primero?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Usar cualquier dato disponible."
+              },
+              {
+                "id": "b",
+                "text": "Ignorar a las personas afectadas."
+              },
+              {
+                "id": "c",
+                "text": "Revisar criterios, consecuencias y la necesidad de supervisión humana."
+              },
+              {
+                "id": "d",
+                "text": "Eliminar toda posibilidad de reclamación."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Los criterios y sus efectos forman parte de una especificación responsable.",
+            "hint": "",
+            "id": "C00-0-1-q07"
+          },
+          {
+            "kind": "choice",
+            "level": 5,
+            "prompt": "Un problema tiene un algoritmo correcto, pero exige más recursos de los disponibles. Esto demuestra que:",
+            "options": [
+              {
+                "id": "a",
+                "text": "No es un algoritmo."
+              },
+              {
+                "id": "b",
+                "text": "Automatizar siempre es mejor."
+              },
+              {
+                "id": "c",
+                "text": "La corrección no importa."
+              },
+              {
+                "id": "d",
+                "text": "Computabilidad, corrección y viabilidad práctica son cuestiones distintas."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "Una tarea resoluble puede ser inviable con recursos limitados.",
+            "hint": "",
+            "id": "C00-0-1-q08"
+          },
+          {
+            "kind": "text",
+            "level": 2,
+            "prompt": "Explica, con un ejemplo, por qué existían procedimientos sistemáticos antes de las computadoras electrónicas.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Distingue un procedimiento de una computadora electrónica",
+              "Da un ejemplo histórico o cotidiano",
+              "Evita afirmar que todo procedimiento antiguo era software"
+            ],
+            "hint": "Piensa en técnicas de cálculo y organización manual.",
+            "id": "C00-0-1-q09"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Compara la contribución histórica de al-Juarismi con el proyecto de la Máquina Analítica sin atribuirles toda la historia de la computación.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Contextualiza ambos hitos históricos",
+              "Distingue un procedimiento de una máquina propuesta",
+              "Reconoce otras contribuciones y limitaciones"
+            ],
+            "hint": "Distingue el origen de la palabra del origen de una idea.",
+            "id": "C00-0-1-q10"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Elige un área ajena a la programación y muestra cómo aplicar descomposición y abstracción.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Define claramente el problema y el objetivo",
+              "Divide el problema en subproblemas",
+              "Justifica la abstracción y reconoce sus límites"
+            ],
+            "hint": "Puedes usar logística, educación u organización doméstica.",
+            "id": "C00-0-1-q11"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Analiza los riesgos de automatizar una cola de atención y propone medidas de protección.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Identifica al menos dos riesgos",
+              "Establece criterios de prioridad transparentes",
+              "Prevé revisión humana y posibilidad de reclamación"
+            ],
+            "hint": "Piensa en datos incorrectos y prioridades legales.",
+            "id": "C00-0-1-q12"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Explica la diferencia entre resolver teóricamente un problema y llevar a la práctica una solución viable.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Distingue computabilidad de eficiencia",
+              "Ofrece un ejemplo fundamentado",
+              "Relaciona recursos y contexto"
+            ],
+            "hint": "El tiempo y la memoria disponibles son importantes.",
+            "id": "C00-0-1-q13"
+          },
+          {
+            "kind": "text",
+            "level": 5,
+            "prompt": "Evalúa críticamente la frase «si algo puede automatizarse, debe automatizarse».",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Evaluarás tu respuesta con criterios; no se corregirá automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Cuestiona la generalización con argumentos",
+              "Considera usuarios y consecuencias",
+              "Propone criterios antes de decidir"
+            ],
+            "hint": "Considera costes sociales, accesibilidad y rendición de cuentas.",
+            "id": "C00-0-1-q14"
+          }
+        ]
+      }
+    }
+  }
+}

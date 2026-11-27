@@ -1,0 +1,738 @@
+{
+  "locales": {
+    "en": {
+      "lesson": {
+        "definition": "Computational thinking improves the clarity of solutions, but it does not eliminate uncertainty, human judgment, or limitations in data, time, and resources.",
+        "deep": "Common mistakes include vague specifications, premature generalization, abstractions that discard critical information, confusion between correctness and efficiency, inadequate testing, and the assumption that automation always brings improvement. Sound analysis constructs counterexamples and revises requirements in light of the people affected.",
+        "example": "A school decides who should receive notices. If it includes only “students with Internet access at home,” it excludes families without access; if contact details are outdated, notices may fail to arrive. Before automating the process, the school must clarify its goals, choose inclusive channels, and provide for human review.",
+        "pitfall": "A solution that works for two examples has not been proven correct for every case. Educational feedback is different from formal verification.",
+        "exercise": "Audit the rule “always serve people in order of arrival.” Describe two scenarios where it works and two where justified exceptions are needed. Propose a revised rule with explicit priorities and explain who should decide those priorities.",
+        "code": "",
+        "questions": [
+          "Distinguish correctness from efficiency using an example.",
+          "Construct a counterexample to an abstraction that overlooks accessibility.",
+          "Explain how to test a loop that might never terminate."
+        ],
+        "reading": "Sources: Stanford Encyclopedia of Philosophy — Computability and Complexity (https://plato.stanford.edu/entries/computability/); ISTE — Computational Thinking (https://iste.org/computational-thinking/)."
+      },
+      "chapter": {
+        "title": "Limitations, conceptual errors, and critical analysis",
+        "sections": [
+          {
+            "title": "Ill-defined problems",
+            "body": "“Build the best system” does not tell us who will use it, what goal it serves, or how alternatives will be compared. A specification should state its users, expected results, constraints, and acceptance criteria. Precision does not mean ignoring the complexity of the world: some needs conflict and require explicit negotiation."
+          },
+          {
+            "title": "Inadequate abstractions",
+            "body": "Every abstraction omits details. If a route planner considers only distance, it may overlook accessibility, safety, or operating hours. When a user has reduced mobility, these factors become core requirements. An abstraction is useful relative to a stated objective; outside that context it may fail badly."
+          },
+          {
+            "title": "False patterns and generalization",
+            "body": "Recognizing similarities is useful, but it does not justify assuming different cases follow the same rule. If two classes learn with one method, that does not prove it works for every class. Look for counterexamples, contextual changes, and omitted variables. Generalization requires explaining which properties remain constant."
+          },
+          {
+            "title": "Correctness, efficiency, and cost",
+            "body": "Correctness means satisfying a specification within its defined domain. Efficiency concerns resource use, such as time and memory. One algorithm may be correct but too slow for large inputs; another may be fast but yield wrong answers. Overall quality also involves maintenance, accessibility, privacy, and clarity, which cannot be reduced to the number of steps."
+          },
+          {
+            "title": "Unexpected inputs and edge cases",
+            "body": "Solutions fail when they assume values that have not been guaranteed. Examples include division by zero, an empty list, a missing name, or invalid dates. A generic error message is not enough: acceptable inputs and the treatment of rejected inputs must be defined. A boundary test checks behavior where conditions change."
+          },
+          {
+            "title": "Termination conditions and loops",
+            "body": "A procedure can become stuck if no instruction changes the condition that controls repetition. For example, “while requests remain pending, check again” does not terminate if no request is ever marked as handled. A correctness argument must explain why the number of pending requests decreases or why the process terminates. This differs from services deliberately designed to run continuously."
+          },
+          {
+            "title": "Bias and responsibility",
+            "body": "Automated rules can institutionalize unfairness or amplify poor-quality data. Before using results in high-impact contexts, identify those responsible, the people affected, the data used, ways to challenge decisions, and protective measures. Computational thinking helps make choices explicit, but does not replace ethical, legal, or professional assessment."
+          },
+          {
+            "title": "Reviewing with counterexamples",
+            "body": "For each proposed solution, ask: Is there a valid input on which it fails? A missing condition? An excluded user? An unacceptable cost? Construct a specific counterexample and revise the procedure. One counterexample can disprove a universal claim; several successful tests alone cannot prove correctness in every case."
+          }
+        ],
+        "code": "",
+        "questions": [
+          "Diferencie correção de eficiência com exemplo.",
+          "Construa um contraexemplo para abstração que ignore acessibilidade.",
+          "Explique como testar um laço que pode não terminar."
+        ]
+      },
+      "exercise_set": {
+        "id": "curricular-C00-0-3-v1",
+        "title": "Limitations, conceptual errors, and critical analysis",
+        "course": "Computational Thinking and Tools",
+        "lesson": "Lesson 04 — Limitations, conceptual errors, and critical analysis",
+        "exercises": [
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "What characterizes an insufficient specification?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Explicit acceptance criteria and inputs."
+              },
+              {
+                "id": "b",
+                "text": "Validated inputs and an expected result."
+              },
+              {
+                "id": "c",
+                "text": "Defined rules for exceptions."
+              },
+              {
+                "id": "d",
+                "text": "Vague goals with no verifiable criteria."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "A vague description makes it impossible to check whether a solution meets its goal.",
+            "hint": "",
+            "id": "C00-0-3-q01"
+          },
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "An algorithm can be correct and still be:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Too slow for large inputs."
+              },
+              {
+                "id": "b",
+                "text": "Necessarily fair in every context."
+              },
+              {
+                "id": "c",
+                "text": "Free of all costs."
+              },
+              {
+                "id": "d",
+                "text": "Unable to receive input."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Correctness does not imply efficiency.",
+            "hint": "",
+            "id": "C00-0-3-q02"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "A route considered “best” solely because it is shortest may fail because:",
+            "options": [
+              {
+                "id": "a",
+                "text": "There are always infinitely many routes."
+              },
+              {
+                "id": "b",
+                "text": "Distance is a forbidden criterion."
+              },
+              {
+                "id": "c",
+                "text": "It may ignore relevant accessibility and safety needs."
+              },
+              {
+                "id": "d",
+                "text": "Digital maps do not exist."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "The appropriate abstraction depends on the goal and additional requirements.",
+            "hint": "",
+            "id": "C00-0-3-q03"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "Which is a counterexample to “every number in a list is positive”?",
+            "options": [
+              {
+                "id": "a",
+                "text": "List [1, 2]."
+              },
+              {
+                "id": "b",
+                "text": "List [-2, 5]."
+              },
+              {
+                "id": "c",
+                "text": "List [3, 7]."
+              },
+              {
+                "id": "d",
+                "text": "List [10]."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "A negative value contradicts the universal claim.",
+            "hint": "",
+            "id": "C00-0-3-q04"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "To prevent an infinite loop, an important measure is to:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Add more colors."
+              },
+              {
+                "id": "b",
+                "text": "Change the page title."
+              },
+              {
+                "id": "c",
+                "text": "Remove output operations."
+              },
+              {
+                "id": "d",
+                "text": "Show that the state changes toward a stopping condition."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "When termination is required, repetition needs progress toward that goal.",
+            "hint": "",
+            "id": "C00-0-3-q05"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "Why do several passing tests not prove universal correctness?",
+            "options": [
+              {
+                "id": "a",
+                "text": "They may omit inputs and conditions that have not been tested."
+              },
+              {
+                "id": "b",
+                "text": "Testing is never useful."
+              },
+              {
+                "id": "c",
+                "text": "No algorithm can ever be correct."
+              },
+              {
+                "id": "d",
+                "text": "Only interface color determines errors."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Tests provide evidence, but may not cover all cases.",
+            "hint": "",
+            "id": "C00-0-3-q06"
+          },
+          {
+            "kind": "choice",
+            "level": 4,
+            "prompt": "An automated rule excludes citizens without Internet access. The best next step is to:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Keep the rule without examining its impact."
+              },
+              {
+                "id": "b",
+                "text": "Ignore complaints."
+              },
+              {
+                "id": "c",
+                "text": "Review requirements, service channels, and consequences."
+              },
+              {
+                "id": "d",
+                "text": "Delete the records of exclusion."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Accessibility and measures against exclusion must be part of the goal.",
+            "hint": "",
+            "id": "C00-0-3-q07"
+          },
+          {
+            "kind": "choice",
+            "level": 5,
+            "prompt": "Which answer rigorously compares two solutions?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Choose the faster one without checking the result."
+              },
+              {
+                "id": "b",
+                "text": "Compare correctness, costs, limitations, and impacts against explicit criteria."
+              },
+              {
+                "id": "c",
+                "text": "Prefer the one with more steps."
+              },
+              {
+                "id": "d",
+                "text": "Declare both perfect without tests."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "A defensible choice requires explicit criteria and trade-off analysis.",
+            "hint": "",
+            "id": "C00-0-3-q08"
+          },
+          {
+            "kind": "text",
+            "level": 2,
+            "prompt": "Give an example of a vague specification and rewrite it with verifiable criteria.",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Identifies ambiguities",
+              "Defines inputs and outputs",
+              "Provides an acceptance criterion"
+            ],
+            "hint": "Make “organize things better” measurable.",
+            "id": "C00-0-3-q09"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Explain the difference between correctness and efficiency using a concrete procedure.",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Defines both concepts",
+              "Gives a coherent example",
+              "Distinguishes incorrect results from slowness"
+            ],
+            "hint": "A method can work correctly but take far too long.",
+            "id": "C00-0-3-q10"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Construct a counterexample to a hasty generalization between two similar situations.",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "States the general rule",
+              "Provides a valid counterexample",
+              "Explains how to revise the rule"
+            ],
+            "hint": "Think about an accessibility or safety exception.",
+            "id": "C00-0-3-q11"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Audit a routine that assumes its input is never empty. Show the failure and a correction.",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Demonstrates empty input",
+              "Describes a specific failure",
+              "Proposes an input contract and boundary test"
+            ],
+            "hint": "What happens when you access the first item?",
+            "id": "C00-0-3-q12"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Analyze a school notification system with respect to digital exclusion and privacy.",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "Identifies people affected",
+              "Explains concrete risks",
+              "Proposes mitigation and human review"
+            ],
+            "hint": "Not everyone has a phone or a home Internet connection.",
+            "id": "C00-0-3-q13"
+          },
+          {
+            "kind": "text",
+            "level": 5,
+            "prompt": "Critically review a procedure: assumptions, edge cases, costs, and consequences.",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 70,
+            "rubric": [
+              "States the problem and requirements",
+              "Identifies at least two counterexamples or limitations",
+              "Proposes tests and justified improvements"
+            ],
+            "hint": "Assess both correctness and the system’s impact.",
+            "id": "C00-0-3-q14"
+          }
+        ]
+      }
+    },
+    "es": {
+      "lesson": {
+        "definition": "El pensamiento computacional mejora la claridad de las soluciones, pero no elimina la incertidumbre, el juicio humano ni las limitaciones de datos, tiempo y recursos.",
+        "deep": "Entre los errores habituales están las especificaciones vagas, las generalizaciones apresuradas, las abstracciones que descartan información crítica, la confusión entre corrección y eficiencia, las pruebas insuficientes y la suposición de que automatizar siempre significa mejorar. Un análisis riguroso construye contraejemplos y revisa los requisitos considerando a las personas afectadas.",
+        "example": "Una escuela decide a quién enviar avisos. Si incluye solamente a “estudiantes con Internet en casa”, excluirá a familias sin conexión; si los datos de contacto están desactualizados, los avisos pueden no llegar. Antes de automatizar, la escuela debe aclarar los objetivos, elegir canales inclusivos y prever una revisión humana.",
+        "pitfall": "Que una solución funcione en dos ejemplos no demuestra que sea correcta en todos los casos. La retroalimentación educativa es distinta de la verificación formal.",
+        "exercise": "Evalúa la regla «atender siempre por orden de llegada». Describe dos situaciones en que funciona y dos en que hacen falta excepciones justificadas. Propón una regla revisada con prioridades explícitas y explica quién debería decidirlas.",
+        "code": "",
+        "questions": [
+          "Distingue corrección y eficiencia mediante un ejemplo.",
+          "Construye un contraejemplo para una abstracción que ignore la accesibilidad.",
+          "Explica cómo probar un bucle que podría no terminar."
+        ],
+        "reading": "Fuentes: Stanford Encyclopedia of Philosophy — Computability and Complexity (https://plato.stanford.edu/entries/computability/); ISTE — Computational Thinking (https://iste.org/computational-thinking/)."
+      },
+      "chapter": {
+        "title": "Límites, errores conceptuales y análisis crítico",
+        "sections": [
+          {
+            "title": "Problemas mal definidos",
+            "body": "«Crear el mejor sistema» no indica quién lo utilizará, cuál es el objetivo ni cómo comparar alternativas. Una especificación debe indicar usuarios, resultados esperados, condiciones y criterios de aceptación. Buscar precisión no significa eliminar la complejidad del mundo: algunas necesidades entran en conflicto y deben negociarse explícitamente."
+          },
+          {
+            "title": "Abstracciones inadecuadas",
+            "body": "Toda abstracción omite detalles. Si una ruta considera únicamente la distancia, puede ignorar la accesibilidad, la seguridad o los horarios. Si la persona tiene movilidad reducida, esos factores se convierten en requisitos fundamentales. Una abstracción es útil respecto al objetivo declarado; fuera de ese contexto puede fallar gravemente."
+          },
+          {
+            "title": "Patrones falsos y generalización",
+            "body": "Detectar semejanzas es útil, pero no permite suponer que casos diferentes siguen la misma regla. Si dos clases aprenden con un método, eso no demuestra que funcione para todas. Busca contraejemplos, cambios de contexto y variables omitidas. Generalizar exige justificar qué propiedades permanecen constantes."
+          },
+          {
+            "title": "Corrección, eficiencia y costo",
+            "body": "La corrección consiste en satisfacer una especificación dentro del dominio definido. La eficiencia se refiere al uso de recursos, como tiempo y memoria. Un algoritmo puede ser correcto, pero demasiado lento para entradas grandes; otro puede ser rápido y producir respuestas incorrectas. La calidad también implica mantenimiento, accesibilidad, privacidad y claridad: no basta con contar los pasos."
+          },
+          {
+            "title": "Entradas inesperadas y casos límite",
+            "body": "Las soluciones fallan cuando presuponen valores no garantizados. Algunos ejemplos son dividir entre cero, una lista vacía, la ausencia de un nombre o fechas inválidas. No basta con mostrar un error genérico: hay que definir qué entradas se aceptan y cómo se tratan las rechazadas. Una prueba de límite comprueba el comportamiento donde cambian las condiciones."
+          },
+          {
+            "title": "Condiciones de terminación y bucles",
+            "body": "Un procedimiento puede quedarse bloqueado si ninguna instrucción modifica la condición que controla la repetición. Por ejemplo, «mientras haya solicitudes pendientes, comprueba otra vez» no termina si ninguna solicitud se marca como atendida. El argumento de corrección debe explicar por qué disminuyen las solicitudes pendientes o por qué termina el proceso. Esto es distinto de los servicios diseñados para ejecutarse continuamente."
+          },
+          {
+            "title": "Sesgos y responsabilidad",
+            "body": "Las reglas automáticas pueden institucionalizar injusticias o amplificar datos deficientes. Antes de emplear resultados en contextos de alto impacto, identifica responsables, personas afectadas, datos utilizados, vías de impugnación y medidas de protección. El pensamiento computacional ayuda a explicitar decisiones, pero no sustituye una evaluación ética, legal o profesional."
+          },
+          {
+            "title": "Revisión mediante contraejemplos",
+            "body": "Para cada solución propuesta, pregunta: ¿hay una entrada válida con la que falla? ¿Una condición omitida? ¿Una persona excluida? ¿Un costo inaceptable? Construye un contraejemplo concreto y revisa el procedimiento. Un solo caso contrario puede refutar una afirmación universal; varias pruebas exitosas no demuestran por sí solas la corrección en todos los casos."
+          }
+        ],
+        "code": "",
+        "questions": [
+          "Diferencie correção de eficiência com exemplo.",
+          "Construa um contraexemplo para abstração que ignore acessibilidade.",
+          "Explique como testar um laço que pode não terminar."
+        ]
+      },
+      "exercise_set": {
+        "id": "curricular-C00-0-3-v1",
+        "title": "Límites, errores conceptuales y análisis crítico",
+        "course": "Pensamiento computacional y herramientas",
+        "lesson": "Lección 04 — Límites, errores conceptuales y análisis crítico",
+        "exercises": [
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "¿Qué caracteriza a una especificación insuficiente?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Criterios de aceptación y entradas explícitos."
+              },
+              {
+                "id": "b",
+                "text": "Entradas validadas y resultado esperado."
+              },
+              {
+                "id": "c",
+                "text": "Reglas de excepción definidas."
+              },
+              {
+                "id": "d",
+                "text": "Objetivos vagos sin criterios verificables."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "Una descripción vaga impide comprobar si la solución cumple su objetivo.",
+            "hint": "",
+            "id": "C00-0-3-q01"
+          },
+          {
+            "kind": "choice",
+            "level": 1,
+            "prompt": "Un algoritmo puede ser correcto y, aun así, ser:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Demasiado lento para entradas grandes."
+              },
+              {
+                "id": "b",
+                "text": "Necesariamente justo en todos los contextos."
+              },
+              {
+                "id": "c",
+                "text": "Libre de cualquier costo."
+              },
+              {
+                "id": "d",
+                "text": "Incapaz de recibir entradas."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "La corrección no implica eficiencia.",
+            "hint": "",
+            "id": "C00-0-3-q02"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "Una ruta considerada «mejor» solo por ser la más corta puede fallar porque:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Siempre existen infinitas rutas."
+              },
+              {
+                "id": "b",
+                "text": "Está prohibido usar la distancia como criterio."
+              },
+              {
+                "id": "c",
+                "text": "Puede ignorar necesidades relevantes de accesibilidad y seguridad."
+              },
+              {
+                "id": "d",
+                "text": "No existen mapas digitales."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "La abstracción adecuada depende del objetivo y de requisitos adicionales.",
+            "hint": "",
+            "id": "C00-0-3-q03"
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "prompt": "¿Cuál es un contraejemplo de «todos los números de una lista son positivos»?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Lista [1, 2]."
+              },
+              {
+                "id": "b",
+                "text": "Lista [-2, 5]."
+              },
+              {
+                "id": "c",
+                "text": "Lista [3, 7]."
+              },
+              {
+                "id": "d",
+                "text": "Lista [10]."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Un valor negativo contradice la afirmación universal.",
+            "hint": "",
+            "id": "C00-0-3-q04"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "Para prevenir un bucle infinito, es importante:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Añadir más colores."
+              },
+              {
+                "id": "b",
+                "text": "Cambiar el título de la página."
+              },
+              {
+                "id": "c",
+                "text": "Eliminar las operaciones de salida."
+              },
+              {
+                "id": "d",
+                "text": "Demostrar que el estado avanza hacia una condición de parada."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "Cuando se exige terminar, la repetición necesita avanzar hacia ese objetivo.",
+            "hint": "",
+            "id": "C00-0-3-q05"
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "prompt": "¿Por qué varias pruebas superadas no demuestran la corrección universal?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Pueden omitir entradas y condiciones no probadas."
+              },
+              {
+                "id": "b",
+                "text": "Las pruebas nunca son útiles."
+              },
+              {
+                "id": "c",
+                "text": "No existe ningún algoritmo correcto."
+              },
+              {
+                "id": "d",
+                "text": "Solo el color de la interfaz determina los errores."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Las pruebas aportan evidencia, pero quizá no cubran todos los casos.",
+            "hint": "",
+            "id": "C00-0-3-q06"
+          },
+          {
+            "kind": "choice",
+            "level": 4,
+            "prompt": "Una regla automática excluye a ciudadanos sin Internet. El mejor siguiente paso es:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Mantenerla sin examinar el impacto."
+              },
+              {
+                "id": "b",
+                "text": "Ignorar las quejas."
+              },
+              {
+                "id": "c",
+                "text": "Revisar requisitos, canales de atención y consecuencias."
+              },
+              {
+                "id": "d",
+                "text": "Borrar los registros de exclusión."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "El objetivo debe incluir la accesibilidad y medidas contra la exclusión.",
+            "hint": "",
+            "id": "C00-0-3-q07"
+          },
+          {
+            "kind": "choice",
+            "level": 5,
+            "prompt": "¿Qué respuesta compara rigurosamente dos soluciones?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Elegir la más rápida sin comprobar el resultado."
+              },
+              {
+                "id": "b",
+                "text": "Comparar corrección, costos, límites e impactos según criterios explícitos."
+              },
+              {
+                "id": "c",
+                "text": "Preferir la que tiene más pasos."
+              },
+              {
+                "id": "d",
+                "text": "Declarar ambas perfectas sin pruebas."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Una elección defendible requiere criterios explícitos y análisis de compromisos.",
+            "hint": "",
+            "id": "C00-0-3-q08"
+          },
+          {
+            "kind": "text",
+            "level": 2,
+            "prompt": "Da un ejemplo de especificación vaga y reescríbela con criterios verificables.",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Identifica ambigüedades",
+              "Define entradas y resultados",
+              "Presenta un criterio de aceptación"
+            ],
+            "hint": "Convierte «organizar mejor» en algo medible.",
+            "id": "C00-0-3-q09"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Explica la diferencia entre corrección y eficiencia usando un procedimiento concreto.",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Define ambos conceptos",
+              "Presenta un ejemplo coherente",
+              "Distingue resultados incorrectos de lentitud"
+            ],
+            "hint": "Un método puede funcionar correctamente y tardar demasiado.",
+            "id": "C00-0-3-q10"
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "prompt": "Construye un contraejemplo para una generalización apresurada entre dos situaciones similares.",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Expone la regla general",
+              "Presenta un contraejemplo válido",
+              "Explica cómo revisar la regla"
+            ],
+            "hint": "Piensa en una excepción de accesibilidad o seguridad.",
+            "id": "C00-0-3-q11"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Evalúa una rutina que supone que la entrada nunca está vacía. Muestra el fallo y una corrección.",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Muestra una entrada vacía",
+              "Describe un fallo específico",
+              "Propone un contrato de entrada y una prueba de límite"
+            ],
+            "hint": "¿Qué pasa al acceder al primer elemento?",
+            "id": "C00-0-3-q12"
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "prompt": "Analiza un sistema de avisos escolares respecto a la exclusión digital y la privacidad.",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Identifica a las personas afectadas",
+              "Explica riesgos concretos",
+              "Propone mitigación y revisión humana"
+            ],
+            "hint": "No todos tienen teléfono o Internet en casa.",
+            "id": "C00-0-3-q13"
+          },
+          {
+            "kind": "text",
+            "level": 5,
+            "prompt": "Revisa críticamente un procedimiento: supuestos, casos límite, costos y consecuencias.",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 70,
+            "rubric": [
+              "Expone el problema y sus requisitos",
+              "Identifica al menos dos contraejemplos o límites",
+              "Propone pruebas y mejoras justificadas"
+            ],
+            "hint": "Evalúa tanto la corrección como el impacto del sistema.",
+            "id": "C00-0-3-q14"
+          }
+        ]
+      }
+    }
+  }
+}

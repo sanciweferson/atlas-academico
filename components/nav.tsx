@@ -14,7 +14,6 @@ import {
   CalendarDays,
   ChevronLeft,
   ChevronRight,
-  ClipboardList,
   GraduationCap,
   Home,
   LayoutDashboard,
@@ -51,7 +50,6 @@ const navSections: NavSection[] = [
   {
     title: "APRENDIZAGEM",
     items: [
-      { href: "/exercicios", label: "Exercícios", icon: ClipboardList },
       { href: "/progresso", label: "Progresso", icon: BarChart3 },
       { href: "/agenda", label: "Agenda de estudos", icon: CalendarDays },
       { href: "/favoritos", label: "Favoritos", icon: Bookmark },

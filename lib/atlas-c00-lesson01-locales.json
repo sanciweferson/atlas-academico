@@ -1,0 +1,730 @@
+{
+  "locales": {
+    "en": {
+      "lesson": {
+        "definition": "Computational thinking is a set of ways to formulate, represent, break down, and examine problems so that solutions can be described and evaluated. It is not the same as programming.",
+        "deep": "A good solution starts with a precise question: what outcome do we want, for whom, using which data, and under which constraints? Four strategies are often discussed—decomposition, pattern recognition, abstraction, and algorithms—but they interact rather than forming a rigid recipe. The quality of a solution depends on its specification, testing, communication, and revision.",
+        "example": "A library wants to record loans. Before choosing an application, identify the inputs (book, borrower, date), rules (due date, borrowing limit), outputs (confirmed record or reason for rejection), and exceptional cases (book unavailable, borrower not registered). This is computational thinking without writing a line of code.",
+        "pitfall": "Assuming computational thinking always requires a computer: it can also be practiced with cards, paper, and everyday procedures.",
+        "exercise": "Unplugged activity: describe how to organize a numbered-ticket waiting line. Identify who receives a ticket, how the next person is chosen, and what happens when no one is waiting. Ask someone else to follow your description literally; revise any ambiguous instructions.",
+        "code": "",
+        "questions": [
+          "Define a problem, an algorithm, and a program using your own example.",
+          "Identify inputs, outputs, and one exception in an everyday routine.",
+          "Explain how to test a solution with an empty list."
+        ],
+        "reading": "Background sources: ISTE — Computational Thinking (https://iste.org/computational-thinking); CS Unplugged — Computational Thinking (https://www.csunplugged.org/en/computational-thinking/)."
+      },
+      "chapter": {
+        "title": "What is computational thinking?",
+        "sections": [
+          {
+            "title": "From problem to specification",
+            "body": "A problem is a situation or question that calls for a decision or transformation. A specification is a testable description of what a solution must do. Compare “organize books” with “sort available books by title, ignoring initial articles and keeping copies of the same title together.” The second statement makes it possible to check the outcome. A requirement should not be inferred from a single example: the valid inputs, expected result, and exceptional cases must be stated."
+          },
+          {
+            "title": "Data, inputs, outputs, and constraints",
+            "body": "An input is information received, such as a list of names, a form, or a number. An output is the result, such as a sorted list, a confirmation, or a warning. Constraints limit the solution: available time, privacy, accuracy, resources, and contextual rules. When a list is empty, a solution cannot assume that a first element exists. This case needs an explicit contract, such as returning “no results” or another predefined response."
+          },
+          {
+            "title": "Decomposition",
+            "body": "Decomposition means splitting a problem into parts that can be understood, verified, and integrated. To organize a fair, we could separate budgeting, publicity, registration, and logistics. This does not make the parts independent: the number of registrants affects logistics. Defining relationships, inputs, and outputs for each stage is as important as listing tasks."
+          },
+          {
+            "title": "Patterns and generalization",
+            "body": "Recognizing patterns means finding relevant similarities between instances of a problem. Loans of books and equipment may both require identifying a person, an item, and a due date; part of the procedure can be reused. Generalizing does not mean ignoring differences: equipment may require inspection and books may follow other rules. Always test both a similar case and a different case before reusing a solution."
+          },
+          {
+            "title": "Abstraction",
+            "body": "Abstraction means creating a representation that preserves details relevant to a goal. On a bus map, routes, stops, and connections matter; seat colors usually do not. What counts as irrelevant depends on the question: in an accessibility project, the presence of steps cannot be ignored. An abstraction should make clear what it includes and what it leaves out."
+          },
+          {
+            "title": "Algorithms and programs",
+            "body": "An algorithm describes steps and decisions for solving instances of a problem, with defined behavior and termination for inputs within the stated domain. A program implements an algorithm in a language that a system can execute. The same algorithm can be expressed in plain language, pseudocode, a flowchart, or different programming languages; an implementation can have defects even when the algorithmic idea is sound."
+          },
+          {
+            "title": "Verification and learning",
+            "body": "A plausible answer is not enough. Test an ordinary case, a boundary case, and a case that might contradict the approach. To find the largest value in a list, try [4, 9, 2], [-8, -3, -5], and []. Initializing the maximum to zero fails on the second example; assuming a first element always exists fails on the third. Explaining why these failures occur is more useful than memorizing a solution."
+          }
+        ],
+        "code": "",
+        "questions": [
+          "Define a problem, an algorithm, and a program using your own example.",
+          "Identify inputs, outputs, and one exception in an everyday routine.",
+          "Explain how to test a solution with an empty list."
+        ]
+      },
+      "exercise_set": {
+        "title": "What is computational thinking?",
+        "course": "Computational thinking and tools",
+        "lesson": "Lesson 01 — What is computational thinking?",
+        "exercises": [
+          {
+            "kind": "choice",
+            "level": 1,
+            "correctOptionId": "b",
+            "id": "C00-0-0-q01",
+            "prompt": "What distinguishes computational thinking from programming?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Computational thinking requires a specific programming language."
+              },
+              {
+                "id": "b",
+                "text": "Computational thinking can be used without writing code."
+              },
+              {
+                "id": "c",
+                "text": "Programming comes before any algorithm."
+              },
+              {
+                "id": "d",
+                "text": "Every human problem should be automated."
+              }
+            ],
+            "explanation": "Formulating, representing, and examining problems does not depend on writing programs.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 1,
+            "correctOptionId": "c",
+            "id": "C00-0-0-q02",
+            "prompt": "What is the input to a procedure?",
+            "options": [
+              {
+                "id": "a",
+                "text": "The result produced after every step."
+              },
+              {
+                "id": "b",
+                "text": "The number of errors found."
+              },
+              {
+                "id": "c",
+                "text": "The data received for processing."
+              },
+              {
+                "id": "d",
+                "text": "The language in which the algorithm was written."
+              }
+            ],
+            "explanation": "An input is information supplied to a procedure.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "correctOptionId": "a",
+            "id": "C00-0-0-q03",
+            "prompt": "Which is an appropriate decomposition of an event?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Separate the budget, registrations, and logistics, while defining dependencies."
+              },
+              {
+                "id": "b",
+                "text": "Ignore every difficult activity."
+              },
+              {
+                "id": "c",
+                "text": "Make a list without identifying responsibilities or outcomes."
+              },
+              {
+                "id": "d",
+                "text": "Choose invitation colors before understanding requirements."
+              }
+            ],
+            "explanation": "Decomposition creates manageable parts while preserving their relationships.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "correctOptionId": "d",
+            "id": "C00-0-0-q04",
+            "prompt": "On a transportation map, selecting only routes and stations to study connections is mainly an example of:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Repetition."
+              },
+              {
+                "id": "b",
+                "text": "Syntax error."
+              },
+              {
+                "id": "c",
+                "text": "Automatic execution."
+              },
+              {
+                "id": "d",
+                "text": "Abstraction."
+              }
+            ],
+            "explanation": "Abstraction selects what matters for a specific question.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "correctOptionId": "c",
+            "id": "C00-0-0-q05",
+            "prompt": "An algorithm finds the largest number but initializes “largest = 0”. Which input exposes the error?",
+            "options": [
+              {
+                "id": "a",
+                "text": "[2, 5, 1]"
+              },
+              {
+                "id": "b",
+                "text": "[0, 0]"
+              },
+              {
+                "id": "c",
+                "text": "[-9, -4, -7]"
+              },
+              {
+                "id": "d",
+                "text": "[1, 3]"
+              }
+            ],
+            "explanation": "With all-negative values, zero is an incorrect answer.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "correctOptionId": "b",
+            "id": "C00-0-0-q06",
+            "prompt": "Which question directly tests a boundary condition?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Does the title look nice?"
+              },
+              {
+                "id": "b",
+                "text": "What happens when the list is empty?"
+              },
+              {
+                "id": "c",
+                "text": "What color will the button be?"
+              },
+              {
+                "id": "d",
+                "text": "How many programming languages exist?"
+              }
+            ],
+            "explanation": "An empty list is a common boundary input for collection-processing algorithms.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 4,
+            "correctOptionId": "d",
+            "id": "C00-0-0-q07",
+            "prompt": "A shared loan rule works for books, but equipment also requires inspection. The best approach is to:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Apply the same rule without changes."
+              },
+              {
+                "id": "b",
+                "text": "Remove inspection to simplify the process."
+              },
+              {
+                "id": "c",
+                "text": "Ignore both types of items."
+              },
+              {
+                "id": "d",
+                "text": "Reuse the common procedure and specify the equipment exception."
+              }
+            ],
+            "explanation": "Generalization must preserve relevant differences.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 5,
+            "correctOptionId": "a",
+            "id": "C00-0-0-q08",
+            "prompt": "Which argument best supports the correctness of a procedure?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Compare valid inputs, expected outputs, and contract conditions."
+              },
+              {
+                "id": "b",
+                "text": "Show only one successful example."
+              },
+              {
+                "id": "c",
+                "text": "Use the most popular programming language."
+              },
+              {
+                "id": "d",
+                "text": "Run the procedure faster once."
+              }
+            ],
+            "explanation": "Correctness depends on the specification and evidence covering the problem conditions.",
+            "hint": ""
+          },
+          {
+            "kind": "text",
+            "level": 2,
+            "minCharacters": 70,
+            "id": "C00-0-0-q09",
+            "prompt": "Create an everyday example that distinguishes a problem, input, output, and algorithm.",
+            "instruction": "Answer in your own words and justify your reasoning. Use the criteria for self-assessment; your answer is not automatically graded.",
+            "rubric": [
+              "The problem has a verifiable goal",
+              "Inputs and outputs are consistent",
+              "Steps follow a clear order and conditions"
+            ],
+            "hint": "Choose a small task, such as checking an attendance list."
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "minCharacters": 70,
+            "id": "C00-0-0-q10",
+            "prompt": "Explain when recognizing patterns helps and when it may lead to an invalid generalization.",
+            "instruction": "Answer in your own words and justify your reasoning. Use the criteria for self-assessment; your answer is not automatically graded.",
+            "rubric": [
+              "Identifies relevant similarities",
+              "Notes at least one difference requiring an exception",
+              "Explains how to test the generalization"
+            ],
+            "hint": "Think of two similar tasks with partly different rules."
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "minCharacters": 70,
+            "id": "C00-0-0-q11",
+            "prompt": "Describe how to divide a school organization task into subproblems with inputs and outputs.",
+            "instruction": "Answer in your own words and justify your reasoning. Use the criteria for self-assessment; your answer is not automatically graded.",
+            "rubric": [
+              "Identifies at least three subproblems",
+              "Makes dependencies between stages explicit",
+              "Gives inputs and outputs for each part"
+            ],
+            "hint": "One stage may depend on the output of another."
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "minCharacters": 70,
+            "id": "C00-0-0-q12",
+            "prompt": "Propose tests for a procedure that calculates the largest element in a list.",
+            "instruction": "Answer in your own words and justify your reasoning. Use the criteria for self-assessment; your answer is not automatically graded.",
+            "rubric": [
+              "Includes an ordinary case",
+              "Includes negative numbers and an empty list",
+              "Explains the expected outcome of each test"
+            ],
+            "hint": "A procedure may incorrectly assume every number is positive."
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "minCharacters": 70,
+            "id": "C00-0-0-q13",
+            "prompt": "Explain why an abstraction for routes can fail in an accessibility analysis.",
+            "instruction": "Answer in your own words and justify your reasoning. Use the criteria for self-assessment; your answer is not automatically graded.",
+            "rubric": [
+              "Defines the purpose of the abstraction",
+              "Shows an omitted but relevant detail",
+              "Proposes a testable revision"
+            ],
+            "hint": "Distance is not the only consideration when selecting a route."
+          },
+          {
+            "kind": "text",
+            "level": 5,
+            "minCharacters": 70,
+            "id": "C00-0-0-q14",
+            "prompt": "Construct a counterexample for an algorithm of your choice and propose how to correct its contract.",
+            "instruction": "Answer in your own words and justify your reasoning. Use the criteria for self-assessment; your answer is not automatically graded.",
+            "rubric": [
+              "States the original procedure",
+              "Provides a concrete, valid counterexample",
+              "Justifies a revision to the contract or procedure"
+            ],
+            "hint": "Identify an implicit assumption and try to break it."
+          }
+        ],
+        "id": "curricular-C00-0-0-v1"
+      }
+    },
+    "es": {
+      "lesson": {
+        "definition": "El pensamiento computacional es un conjunto de maneras de formular, representar, descomponer y examinar problemas para que sus soluciones puedan describirse y evaluarse. No es sinónimo de programar.",
+        "deep": "Una buena solución comienza con una pregunta precisa: ¿qué resultado queremos obtener, para quién, con qué datos y bajo qué restricciones? Se suelen mencionar cuatro estrategias —descomposición, reconocimiento de patrones, abstracción y algoritmos—, pero interactúan y no constituyen una receta rígida. La calidad de una solución depende de su especificación, sus pruebas, su comunicación y su revisión.",
+        "example": "Una biblioteca quiere registrar préstamos. Antes de elegir una aplicación, identifica las entradas (libro, persona que solicita el préstamo, fecha), las reglas (plazo, límite de préstamos), las salidas (registro confirmado o motivo del rechazo) y los casos excepcionales (libro no disponible, persona no registrada). Esto es pensamiento computacional sin escribir una línea de código.",
+        "pitfall": "Confundir el pensamiento computacional con la obligación de usar computadoras: también puede practicarse con tarjetas, papel y procedimientos cotidianos.",
+        "exercise": "Actividad sin computadora: describe cómo organizar una fila de atención mediante números de turno. Identifica quién recibe un turno, cómo se elige a la siguiente persona y qué sucede cuando no hay nadie esperando. Pide a otra persona que siga literalmente tus instrucciones y corrige las ambigüedades.",
+        "code": "",
+        "questions": [
+          "Define problema, algoritmo y programa con un ejemplo propio.",
+          "Identifica entradas, salidas y una excepción en una rutina cotidiana.",
+          "Explica cómo probar una solución con una lista vacía."
+        ],
+        "reading": "Fuentes de referencia: ISTE — Computational Thinking (https://iste.org/computational-thinking); CS Unplugged — Computational Thinking (https://www.csunplugged.org/en/computational-thinking/)."
+      },
+      "chapter": {
+        "title": "¿Qué es el pensamiento computacional?",
+        "sections": [
+          {
+            "title": "Del problema a la especificación",
+            "body": "Un problema es una situación o pregunta que requiere una decisión o transformación. Una especificación es una descripción comprobable de lo que debe hacer una solución. Compara “organizar libros” con “ordenar los libros disponibles por título, ignorando los artículos iniciales y manteniendo juntas las copias del mismo título”. La segunda formulación permite comprobar el resultado. No debe deducirse un requisito a partir de un único ejemplo: hay que indicar las entradas válidas, el resultado esperado y los casos excepcionales."
+          },
+          {
+            "title": "Datos, entradas, salidas y restricciones",
+            "body": "Una entrada es la información recibida, como una lista de nombres, un formulario o un número. Una salida es el resultado, como una lista ordenada, una confirmación o un aviso. Las restricciones limitan la solución: tiempo disponible, privacidad, precisión, recursos y reglas del contexto. Si una lista está vacía, la solución no puede suponer que existe un primer elemento. Este caso necesita un contrato explícito, como devolver “sin resultados” u otra respuesta definida previamente."
+          },
+          {
+            "title": "Descomposición",
+            "body": "Descomponer significa dividir un problema en partes que puedan comprenderse, verificarse e integrarse. Para organizar una feria, podemos separar presupuesto, difusión, inscripciones y logística. Esto no significa que las partes sean independientes: la cantidad de inscritos afecta a la logística. Definir las relaciones, entradas y salidas de cada etapa es tan importante como enumerar las tareas."
+          },
+          {
+            "title": "Patrones y generalización",
+            "body": "Reconocer patrones consiste en identificar semejanzas relevantes entre casos de un problema. Los préstamos de libros y equipos pueden requerir identificar a una persona, un objeto y una fecha de devolución, por lo que parte del procedimiento puede reutilizarse. Generalizar no significa ignorar las diferencias: los equipos pueden requerir inspección y los libros pueden seguir otras reglas. Prueba siempre un caso parecido y otro diferente antes de reutilizar la solución."
+          },
+          {
+            "title": "Abstracción",
+            "body": "Abstraer significa crear una representación que conserve los detalles relevantes para un objetivo. En un mapa de autobuses importan las líneas, las paradas y las conexiones; el color de los asientos normalmente no. Lo irrelevante depende de la pregunta: en un proyecto de accesibilidad, la existencia de escalones no puede omitirse. Una abstracción debe dejar claro lo que incluye y lo que excluye."
+          },
+          {
+            "title": "Algoritmos y programas",
+            "body": "Un algoritmo describe pasos y decisiones para resolver casos de un problema, con comportamiento y terminación definidos para entradas del dominio indicado. Un programa implementa un algoritmo en un lenguaje que un sistema puede ejecutar. El mismo algoritmo puede expresarse en lenguaje natural, pseudocódigo, un diagrama de flujo o distintos lenguajes de programación; una implementación puede contener defectos aunque la idea algorítmica sea adecuada."
+          },
+          {
+            "title": "Verificación y aprendizaje",
+            "body": "Una respuesta plausible no basta. Prueba un caso habitual, un caso límite y uno que pueda contradecir la estrategia. Para encontrar el valor máximo de una lista, utiliza [4, 9, 2], [-8, -3, -5] y []. Inicializar el máximo en cero falla en el segundo ejemplo; suponer que siempre hay un primer elemento falla en el tercero. Explicar por qué ocurren estos errores ayuda más que memorizar la solución."
+          }
+        ],
+        "code": "",
+        "questions": [
+          "Define problema, algoritmo y programa con un ejemplo propio.",
+          "Identifica entradas, salidas y una excepción en una rutina cotidiana.",
+          "Explica cómo probar una solución con una lista vacía."
+        ]
+      },
+      "exercise_set": {
+        "title": "¿Qué es el pensamiento computacional?",
+        "course": "Pensamiento computacional y herramientas",
+        "lesson": "Lección 01 — ¿Qué es el pensamiento computacional?",
+        "exercises": [
+          {
+            "kind": "choice",
+            "level": 1,
+            "correctOptionId": "b",
+            "id": "C00-0-0-q01",
+            "prompt": "¿Qué afirmación diferencia el pensamiento computacional de la programación?",
+            "options": [
+              {
+                "id": "a",
+                "text": "El pensamiento computacional exige un lenguaje específico."
+              },
+              {
+                "id": "b",
+                "text": "El pensamiento computacional puede utilizarse sin escribir código."
+              },
+              {
+                "id": "c",
+                "text": "La programación precede a cualquier algoritmo."
+              },
+              {
+                "id": "d",
+                "text": "Todos los problemas humanos deben automatizarse."
+              }
+            ],
+            "explanation": "Formular, representar y examinar problemas no depende de escribir programas.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 1,
+            "correctOptionId": "c",
+            "id": "C00-0-0-q02",
+            "prompt": "¿Qué es la entrada de un procedimiento?",
+            "options": [
+              {
+                "id": "a",
+                "text": "El resultado obtenido después de todos los pasos."
+              },
+              {
+                "id": "b",
+                "text": "La cantidad de errores detectados."
+              },
+              {
+                "id": "c",
+                "text": "Los datos recibidos para procesar."
+              },
+              {
+                "id": "d",
+                "text": "El lenguaje en el que se escribió el algoritmo."
+              }
+            ],
+            "explanation": "La entrada es la información proporcionada al procedimiento.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "correctOptionId": "a",
+            "id": "C00-0-0-q03",
+            "prompt": "¿Cuál es una descomposición adecuada de un evento?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Separar presupuesto, inscripciones y logística, definiendo dependencias."
+              },
+              {
+                "id": "b",
+                "text": "Ignorar todas las actividades difíciles."
+              },
+              {
+                "id": "c",
+                "text": "Crear una lista sin identificar responsables ni resultados."
+              },
+              {
+                "id": "d",
+                "text": "Elegir el color de las invitaciones antes de comprender las necesidades."
+              }
+            ],
+            "explanation": "La descomposición crea partes manejables y conserva sus relaciones.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 2,
+            "correctOptionId": "d",
+            "id": "C00-0-0-q04",
+            "prompt": "En un mapa de transporte, seleccionar solo líneas y estaciones para estudiar conexiones es principalmente:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Repetición."
+              },
+              {
+                "id": "b",
+                "text": "Error de sintaxis."
+              },
+              {
+                "id": "c",
+                "text": "Ejecución automática."
+              },
+              {
+                "id": "d",
+                "text": "Abstracción."
+              }
+            ],
+            "explanation": "La abstracción selecciona lo relevante para una pregunta específica.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "correctOptionId": "c",
+            "id": "C00-0-0-q05",
+            "prompt": "Un algoritmo busca el número mayor, pero comienza con “mayor = 0”. ¿Qué entrada revela el error?",
+            "options": [
+              {
+                "id": "a",
+                "text": "[2, 5, 1]"
+              },
+              {
+                "id": "b",
+                "text": "[0, 0]"
+              },
+              {
+                "id": "c",
+                "text": "[-9, -4, -7]"
+              },
+              {
+                "id": "d",
+                "text": "[1, 3]"
+              }
+            ],
+            "explanation": "Cuando todos los valores son negativos, cero es una respuesta incorrecta.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 3,
+            "correctOptionId": "b",
+            "id": "C00-0-0-q06",
+            "prompt": "¿Qué pregunta comprueba directamente una condición límite?",
+            "options": [
+              {
+                "id": "a",
+                "text": "¿El título quedó bonito?"
+              },
+              {
+                "id": "b",
+                "text": "¿Qué sucede cuando la lista está vacía?"
+              },
+              {
+                "id": "c",
+                "text": "¿De qué color será el botón?"
+              },
+              {
+                "id": "d",
+                "text": "¿Cuántos lenguajes existen?"
+              }
+            ],
+            "explanation": "Una lista vacía es una entrada límite habitual en algoritmos que recorren colecciones.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 4,
+            "correctOptionId": "d",
+            "id": "C00-0-0-q07",
+            "prompt": "Una regla común de préstamos funciona para libros, pero los equipos también requieren inspección. Lo mejor es:",
+            "options": [
+              {
+                "id": "a",
+                "text": "Aplicar la misma regla sin cambios."
+              },
+              {
+                "id": "b",
+                "text": "Eliminar la inspección para simplificar."
+              },
+              {
+                "id": "c",
+                "text": "Ignorar ambos tipos de objetos."
+              },
+              {
+                "id": "d",
+                "text": "Reutilizar la base y especificar la excepción de los equipos."
+              }
+            ],
+            "explanation": "La generalización debe conservar las diferencias relevantes.",
+            "hint": ""
+          },
+          {
+            "kind": "choice",
+            "level": 5,
+            "correctOptionId": "a",
+            "id": "C00-0-0-q08",
+            "prompt": "¿Qué argumento justifica mejor la corrección de un procedimiento?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Comparar entradas válidas, salidas esperadas y condiciones del contrato."
+              },
+              {
+                "id": "b",
+                "text": "Mostrar un único ejemplo exitoso."
+              },
+              {
+                "id": "c",
+                "text": "Utilizar el lenguaje más popular."
+              },
+              {
+                "id": "d",
+                "text": "Ejecutarlo una vez con mayor rapidez."
+              }
+            ],
+            "explanation": "La corrección depende de la especificación y de pruebas que cubran las condiciones del problema.",
+            "hint": ""
+          },
+          {
+            "kind": "text",
+            "level": 2,
+            "minCharacters": 70,
+            "id": "C00-0-0-q09",
+            "prompt": "Crea un ejemplo cotidiano que distinga problema, entrada, salida y algoritmo.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Utiliza los criterios para autoevaluarte; la respuesta no se corrige automáticamente.",
+            "rubric": [
+              "Define un problema con un objetivo comprobable",
+              "Entradas y salidas coherentes",
+              "Pasos con orden y condiciones claras"
+            ],
+            "hint": "Elige una tarea pequeña, como revisar una lista de asistencia."
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "minCharacters": 70,
+            "id": "C00-0-0-q10",
+            "prompt": "Explica cuándo reconocer patrones ayuda y cuándo puede provocar una generalización indebida.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Utiliza los criterios para autoevaluarte; la respuesta no se corrige automáticamente.",
+            "rubric": [
+              "Identifica semejanzas relevantes",
+              "Señala al menos una diferencia que exige una excepción",
+              "Justifica cómo probar la generalización"
+            ],
+            "hint": "Piensa en dos tareas parecidas que siguen reglas parcialmente distintas."
+          },
+          {
+            "kind": "text",
+            "level": 3,
+            "minCharacters": 70,
+            "id": "C00-0-0-q11",
+            "prompt": "Describe cómo dividir una tarea de organización escolar en subproblemas con entradas y salidas.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Utiliza los criterios para autoevaluarte; la respuesta no se corrige automáticamente.",
+            "rubric": [
+              "Identifica al menos tres subproblemas",
+              "Explicita las dependencias entre etapas",
+              "Presenta entradas y salidas de cada parte"
+            ],
+            "hint": "Una etapa puede necesitar los resultados de otra."
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "minCharacters": 70,
+            "id": "C00-0-0-q12",
+            "prompt": "Propón pruebas para un procedimiento que calcula el elemento mayor de una lista.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Utiliza los criterios para autoevaluarte; la respuesta no se corrige automáticamente.",
+            "rubric": [
+              "Incluye un caso habitual",
+              "Incluye números negativos y una lista vacía",
+              "Explica el resultado esperado de cada prueba"
+            ],
+            "hint": "Un procedimiento puede suponer erróneamente que todos los números son positivos."
+          },
+          {
+            "kind": "text",
+            "level": 4,
+            "minCharacters": 70,
+            "id": "C00-0-0-q13",
+            "prompt": "Explica por qué una abstracción para rutas puede fallar en un análisis de accesibilidad.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Utiliza los criterios para autoevaluarte; la respuesta no se corrige automáticamente.",
+            "rubric": [
+              "Define el objetivo de la abstracción",
+              "Muestra un detalle relevante omitido",
+              "Propone una revisión comprobable"
+            ],
+            "hint": "La distancia no es el único criterio de una ruta."
+          },
+          {
+            "kind": "text",
+            "level": 5,
+            "minCharacters": 70,
+            "id": "C00-0-0-q14",
+            "prompt": "Construye un contraejemplo para un algoritmo de tu elección y propone cómo corregir su contrato.",
+            "instruction": "Responde con tus palabras y justifica tu razonamiento. Utiliza los criterios para autoevaluarte; la respuesta no se corrige automáticamente.",
+            "rubric": [
+              "Explicita el procedimiento original",
+              "Presenta un contraejemplo válido y concreto",
+              "Justifica la revisión del contrato o del procedimiento"
+            ],
+            "hint": "Identifica una suposición implícita e intenta refutarla."
+          }
+        ],
+        "id": "curricular-C00-0-0-v1"
+      }
+    }
+  }
+}

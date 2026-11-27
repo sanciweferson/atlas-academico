@@ -1,0 +1,430 @@
+{
+  "locales": {
+    "en": {
+      "lesson": {
+        "definition": "A model makes explicit the relevant elements of a problem and the rules governing changes between situations.",
+        "deep": "In computational thinking, modeling means selecting states, inputs, operations, constraints, and observable outcomes. A model is not an exhaustive copy of reality: it is a representation guided by a question. Models can be expressed as tables, state diagrams, or pseudocode, with different degrees of formality.",
+        "example": "A library models a loan using the states AVAILABLE and ON_LOAN. Borrowing is permitted only in the first state; returning only in the second. A request to borrow an item already on loan must not change its state.",
+        "pitfall": "Mistaking a convenient representation for reality itself, or forgetting what happens with invalid inputs.",
+        "exercise": "Application activity: Model three possible states of a delivery, including allowed and forbidden transitions. Record inputs, rules, and a test that could confirm your solution.",
+        "code": "state <- AVAILABLE\nif request = \"borrow\" and state = AVAILABLE:\n    state <- ON_LOAN\nelse:\n    report \"operation not permitted\"",
+        "questions": [
+          "Identify and explain formal models and assumptions.",
+          "Apply the idea to a concrete problem without consulting the answer.",
+          "Justify the solution and identify a limitation or counterexample."
+        ],
+        "reading": "Further reading: introductory materials on algorithms, problem specification, and technical documentation. Specific references for this lesson still require editorial review."
+      },
+      "chapter": {
+        "title": "Formal models and assumptions",
+        "sections": [
+          {
+            "title": "State and transition",
+            "body": "A state contains enough information to determine the next operation. In a queue, the state might be the sequence of tickets not yet called. A transition changes the state according to a rule: calling the next ticket removes the first one, provided the queue is not empty."
+          },
+          {
+            "title": "Precondition and postcondition",
+            "body": "A precondition must hold before an operation; a postcondition describes what should hold afterward. When checking out a book, the precondition includes availability; the postcondition records the loan and decreases the available stock."
+          },
+          {
+            "title": "Invariants and termination",
+            "body": "An invariant remains true throughout valid operations; for example, available stock never becomes negative. A termination criterion indicates when the procedure stops. Consider what happens if that condition is never met."
+          },
+          {
+            "title": "Precision and limitations of a model",
+            "body": "A diagram may be enough to communicate transitions but insufficient to prove every property. The choice of representation depends on the problem and the degree of rigor required."
+          }
+        ]
+      },
+      "exercise_set": {
+        "id": "curricular-C00-1-0-v1",
+        "title": "Formal models and assumptions",
+        "course": "Computational Thinking and Tools",
+        "lesson": "Lesson 01 — Formal models and assumptions",
+        "exercises": [
+          {
+            "id": "C00-1-0-q01",
+            "kind": "choice",
+            "level": 1,
+            "prompt": "What should a model of a service queue include?",
+            "instruction": "Choose an answer and explain your reasoning before checking.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A state and rules for adding and removing tickets."
+              },
+              {
+                "id": "b",
+                "text": "Only the display panel colors."
+              },
+              {
+                "id": "c",
+                "text": "The name of the programming language."
+              },
+              {
+                "id": "d",
+                "text": "The brand of the computer used."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "These elements allow the system’s changes to be described and verified.",
+            "hint": "Identify the definition, assumptions, and expected behavior."
+          },
+          {
+            "id": "C00-1-0-q02",
+            "kind": "choice",
+            "level": 2,
+            "prompt": "A withdrawal requires a sufficient balance. This is an example of:",
+            "instruction": "Choose an answer and explain your reasoning before checking.",
+            "options": [
+              {
+                "id": "a",
+                "text": "A postcondition."
+              },
+              {
+                "id": "b",
+                "text": "Output formatting."
+              },
+              {
+                "id": "c",
+                "text": "A tie-breaking criterion."
+              },
+              {
+                "id": "d",
+                "text": "A precondition."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "The condition must hold before the withdrawal is carried out.",
+            "hint": "Identify the definition, assumptions, and expected behavior."
+          },
+          {
+            "id": "C00-1-0-q03",
+            "kind": "choice",
+            "level": 3,
+            "prompt": "Which property can serve as an inventory invariant?",
+            "instruction": "Choose an answer and explain your reasoning before checking.",
+            "options": [
+              {
+                "id": "a",
+                "text": "The queue always has ten people."
+              },
+              {
+                "id": "b",
+                "text": "Every operation finishes in one second."
+              },
+              {
+                "id": "c",
+                "text": "Available quantity never becomes negative after valid operations."
+              },
+              {
+                "id": "d",
+                "text": "Every customer buys one item."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "An invariant holds in every state that the model is expected to reach.",
+            "hint": "Identify the definition, assumptions, and expected behavior."
+          },
+          {
+            "id": "C00-1-0-q04",
+            "kind": "choice",
+            "level": 4,
+            "prompt": "When does a library model need revision?",
+            "instruction": "Choose an answer and explain your reasoning before checking.",
+            "options": [
+              {
+                "id": "a",
+                "text": "Never: models are complete by definition."
+              },
+              {
+                "id": "b",
+                "text": "When relevant rules, such as reservations, are missing."
+              },
+              {
+                "id": "c",
+                "text": "Whenever the system changes color."
+              },
+              {
+                "id": "d",
+                "text": "Only after installing a compiler."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Models should state their assumptions and may need refinement.",
+            "hint": "Identify the definition, assumptions, and expected behavior."
+          },
+          {
+            "id": "C00-1-0-q05",
+            "kind": "text",
+            "level": 2,
+            "prompt": "Model three possible states of a delivery, including allowed and forbidden transitions.",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 80,
+            "rubric": [
+              "Identifies the relevant concepts and conditions",
+              "Explains steps or conclusions coherently with an original example",
+              "Recognizes a limitation, exception, or way to test the answer"
+            ],
+            "hint": "Organize your reasoning into assumptions, development, and conclusion."
+          },
+          {
+            "id": "C00-1-0-q06",
+            "kind": "text",
+            "level": 3,
+            "prompt": "Define a precondition and postcondition for canceling a reservation.",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 80,
+            "rubric": [
+              "Identifies the relevant concepts and conditions",
+              "Explains steps or conclusions coherently with an original example",
+              "Recognizes a limitation, exception, or way to test the answer"
+            ],
+            "hint": "Organize your reasoning into assumptions, development, and conclusion."
+          },
+          {
+            "id": "C00-1-0-q07",
+            "kind": "text",
+            "level": 4,
+            "prompt": "Propose an invariant for a queue and explain how to test it.",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 120,
+            "rubric": [
+              "Identifies the relevant concepts and conditions",
+              "Explains steps or conclusions coherently with an original example",
+              "Recognizes a limitation, exception, or way to test the answer"
+            ],
+            "hint": "Organize your reasoning into assumptions, development, and conclusion."
+          },
+          {
+            "id": "C00-1-0-q08",
+            "kind": "text",
+            "level": 5,
+            "prompt": "Compare a state diagram and pseudocode for the same rule: what does each reveal?",
+            "instruction": "Answer in your own words, justify your reasoning, and include an example. Use the criteria to assess your answer; it is not graded automatically.",
+            "minCharacters": 120,
+            "rubric": [
+              "Identifies the relevant concepts and conditions",
+              "Explains steps or conclusions coherently with an original example",
+              "Recognizes a limitation, exception, or way to test the answer"
+            ],
+            "hint": "Organize your reasoning into assumptions, development, and conclusion."
+          }
+        ]
+      }
+    },
+    "es": {
+      "lesson": {
+        "definition": "Un modelo explicita los elementos relevantes de un problema y las reglas que rigen los cambios entre situaciones.",
+        "deep": "En pensamiento computacional, modelar significa seleccionar estados, entradas, operaciones, restricciones y resultados observables. Un modelo no es una copia completa de la realidad: es una representación guiada por una pregunta. Podemos expresar modelos mediante tablas, diagramas de estados o pseudocódigo, con distintos grados de formalidad.",
+        "example": "Una biblioteca modela un préstamo con los estados DISPONIBLE y PRESTADO. Prestar solo está permitido en el primer estado; devolver, solo en el segundo. Una solicitud para prestar un ejemplar ya prestado no debe modificar su estado.",
+        "pitfall": "Confundir una representación conveniente con la realidad misma u olvidar qué ocurre con entradas inválidas.",
+        "exercise": "Actividad de aplicación: Modela tres estados posibles de un envío, con transiciones permitidas y prohibidas. Registra entradas, reglas y una prueba que pueda confirmar tu solución.",
+        "code": "estado <- DISPONIBLE\nsi solicitud = \"prestar\" y estado = DISPONIBLE:\n    estado <- PRESTADO\nsino:\n    informar \"operación no permitida\"",
+        "questions": [
+          "Identifica y explica los modelos formales y sus supuestos.",
+          "Aplica el concepto a un problema concreto sin consultar la respuesta.",
+          "Justifica la solución y señala una limitación o un contraejemplo."
+        ],
+        "reading": "Lecturas posteriores: materiales introductorios sobre algoritmos, especificación de problemas y documentación técnica. Las referencias específicas de esta lección aún requieren revisión editorial."
+      },
+      "chapter": {
+        "title": "Modelos formales y supuestos",
+        "sections": [
+          {
+            "title": "Estado y transición",
+            "body": "El estado reúne suficiente información para decidir la siguiente operación. En una cola, el estado puede ser la secuencia de turnos todavía no llamados. Una transición modifica el estado según una regla: llamar al siguiente turno retira el primero cuando la cola no está vacía."
+          },
+          {
+            "title": "Precondición y poscondición",
+            "body": "Una precondición debe cumplirse antes de una operación; una poscondición describe lo que debe cumplirse después. Al prestar un libro, la precondición incluye su disponibilidad; la poscondición registra el préstamo y reduce el inventario disponible."
+          },
+          {
+            "title": "Invariantes y terminación",
+            "body": "Una invariante permanece verdadera durante las operaciones válidas; por ejemplo, el inventario disponible nunca se vuelve negativo. Un criterio de terminación indica cuándo acaba el procedimiento. Considera qué ocurre si esa condición nunca se alcanza."
+          },
+          {
+            "title": "Precisión y límites del modelo",
+            "body": "Un diagrama puede bastar para comunicar transiciones, pero quizá no para demostrar todas las propiedades. La elección de la representación depende del problema y del rigor necesario."
+          }
+        ]
+      },
+      "exercise_set": {
+        "id": "curricular-C00-1-0-v1",
+        "title": "Modelos formales y supuestos",
+        "course": "Pensamiento computacional y herramientas",
+        "lesson": "Lección 01 — Modelos formales y supuestos",
+        "exercises": [
+          {
+            "id": "C00-1-0-q01",
+            "kind": "choice",
+            "level": 1,
+            "prompt": "¿Qué debe incluir un modelo de cola de atención?",
+            "instruction": "Elige una respuesta y explica tu razonamiento antes de comprobarla.",
+            "options": [
+              {
+                "id": "a",
+                "text": "Un estado y reglas para agregar y retirar turnos."
+              },
+              {
+                "id": "b",
+                "text": "Solo los colores del panel."
+              },
+              {
+                "id": "c",
+                "text": "El nombre del lenguaje de programación."
+              },
+              {
+                "id": "d",
+                "text": "La marca de la computadora utilizada."
+              }
+            ],
+            "correctOptionId": "a",
+            "explanation": "Estos elementos permiten describir y verificar los cambios del sistema.",
+            "hint": "Identifica la definición, los supuestos y el comportamiento esperado."
+          },
+          {
+            "id": "C00-1-0-q02",
+            "kind": "choice",
+            "level": 2,
+            "prompt": "Una retirada exige saldo suficiente. ¿De qué es ejemplo?",
+            "instruction": "Elige una respuesta y explica tu razonamiento antes de comprobarla.",
+            "options": [
+              {
+                "id": "a",
+                "text": "Poscondición."
+              },
+              {
+                "id": "b",
+                "text": "Formato de salida."
+              },
+              {
+                "id": "c",
+                "text": "Criterio de desempate."
+              },
+              {
+                "id": "d",
+                "text": "Precondición."
+              }
+            ],
+            "correctOptionId": "d",
+            "explanation": "La condición debe cumplirse antes de realizar la retirada.",
+            "hint": "Identifica la definición, los supuestos y el comportamiento esperado."
+          },
+          {
+            "id": "C00-1-0-q03",
+            "kind": "choice",
+            "level": 3,
+            "prompt": "¿Qué propiedad puede tratarse como invariante del inventario?",
+            "instruction": "Elige una respuesta y explica tu razonamiento antes de comprobarla.",
+            "options": [
+              {
+                "id": "a",
+                "text": "La cola siempre tiene diez personas."
+              },
+              {
+                "id": "b",
+                "text": "Todas las operaciones terminan en un segundo."
+              },
+              {
+                "id": "c",
+                "text": "La cantidad disponible nunca es negativa después de operaciones válidas."
+              },
+              {
+                "id": "d",
+                "text": "Cada cliente compra un artículo."
+              }
+            ],
+            "correctOptionId": "c",
+            "explanation": "Una invariante se cumple en todos los estados alcanzables previstos por el modelo.",
+            "hint": "Identifica la definición, los supuestos y el comportamiento esperado."
+          },
+          {
+            "id": "C00-1-0-q04",
+            "kind": "choice",
+            "level": 4,
+            "prompt": "¿Cuándo debe revisarse un modelo de biblioteca?",
+            "instruction": "Elige una respuesta y explica tu razonamiento antes de comprobarla.",
+            "options": [
+              {
+                "id": "a",
+                "text": "Nunca: los modelos son completos por definición."
+              },
+              {
+                "id": "b",
+                "text": "Cuando faltan reglas relevantes, como las reservas."
+              },
+              {
+                "id": "c",
+                "text": "Siempre que el sistema cambia de color."
+              },
+              {
+                "id": "d",
+                "text": "Solo después de instalar un compilador."
+              }
+            ],
+            "correctOptionId": "b",
+            "explanation": "Los modelos deben explicitar sus supuestos y pueden necesitar mejoras.",
+            "hint": "Identifica la definición, los supuestos y el comportamiento esperado."
+          },
+          {
+            "id": "C00-1-0-q05",
+            "kind": "text",
+            "level": 2,
+            "prompt": "Modela tres estados posibles de un envío, incluyendo transiciones permitidas y prohibidas.",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 80,
+            "rubric": [
+              "Identifica los conceptos y condiciones relevantes",
+              "Explica pasos o conclusiones coherentemente con un ejemplo propio",
+              "Reconoce un límite, una excepción o una forma de probar la respuesta"
+            ],
+            "hint": "Organiza tu razonamiento en supuestos, desarrollo y conclusión."
+          },
+          {
+            "id": "C00-1-0-q06",
+            "kind": "text",
+            "level": 3,
+            "prompt": "Define una precondición y una poscondición para cancelar una reserva.",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 80,
+            "rubric": [
+              "Identifica los conceptos y condiciones relevantes",
+              "Explica pasos o conclusiones coherentemente con un ejemplo propio",
+              "Reconoce un límite, una excepción o una forma de probar la respuesta"
+            ],
+            "hint": "Organiza tu razonamiento en supuestos, desarrollo y conclusión."
+          },
+          {
+            "id": "C00-1-0-q07",
+            "kind": "text",
+            "level": 4,
+            "prompt": "Propón una invariante para una cola y explica cómo probarla.",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 120,
+            "rubric": [
+              "Identifica los conceptos y condiciones relevantes",
+              "Explica pasos o conclusiones coherentemente con un ejemplo propio",
+              "Reconoce un límite, una excepción o una forma de probar la respuesta"
+            ],
+            "hint": "Organiza tu razonamiento en supuestos, desarrollo y conclusión."
+          },
+          {
+            "id": "C00-1-0-q08",
+            "kind": "text",
+            "level": 5,
+            "prompt": "Compara un diagrama de estados y un pseudocódigo para la misma regla: ¿qué muestra cada uno?",
+            "instruction": "Responde con tus palabras, justifica tu razonamiento e incluye un ejemplo. Utiliza los criterios para autoevaluarte; no se califica automáticamente.",
+            "minCharacters": 120,
+            "rubric": [
+              "Identifica los conceptos y condiciones relevantes",
+              "Explica pasos o conclusiones coherentemente con un ejemplo propio",
+              "Reconoce un límite, una excepción o una forma de probar la respuesta"
+            ],
+            "hint": "Organiza tu razonamiento en supuestos, desarrollo y conclusión."
+          }
+        ]
+      }
+    }
+  }
+}

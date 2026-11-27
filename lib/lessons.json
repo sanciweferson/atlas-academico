@@ -1,15 +1,17 @@
 {
   "C00-0-0": {
-    "definition": "Pensamento computacional é uma forma de formular problemas e construir procedimentos precisos para resolvê-los. Não se limita a escrever código.",
-    "deep": "Decomposição divide um problema em partes verificáveis; abstração seleciona propriedades relevantes; reconhecimento de padrões permite reutilizar estratégias; algoritmos especificam passos e condições de término. Uma solução também precisa declarar entradas, saídas e pressupostos.",
-    "example": "Ao preparar uma lista de compras, separe itens por categoria, identifique repetições e estabeleça uma ordem de verificação. O algoritmo deve tratar o caso de lista vazia.",
-    "code": "entrada: lista de itens\npara cada item da lista:\n    se ainda não foi comprado:\n        adicionar ao carrinho\nsaída: lista de itens comprados",
+    "definition": "Pensamento computacional é um conjunto de maneiras de formular, representar, decompor e examinar problemas de modo que suas soluções possam ser descritas e avaliadas. Não é sinônimo de programar.",
+    "deep": "Uma boa solução nasce de uma pergunta precisa: qual resultado queremos obter, para quem, com quais dados e sob quais restrições? É comum falar em quatro estratégias — decomposição, padrões, abstração e algoritmos —, mas elas interagem e não formam uma receita rígida. A qualidade de uma solução depende de especificação, testes, comunicação e revisão.",
+    "example": "Uma biblioteca quer registrar empréstimos. Antes de escolher um aplicativo, identifique a entrada (livro, leitor, data), as regras (prazo, quantidade permitida), a saída (registro confirmado ou motivo da recusa) e os casos especiais (livro indisponível, cadastro inexistente). Isso é pensamento computacional sem escrever uma linha de código.",
+    "pitfall": "Confundir pensamento computacional com a obrigação de usar computadores: o método também pode ser praticado com cartões, papel e procedimentos cotidianos.",
+    "exercise": "Atividade sem computador: descreva como organizar uma fila de atendimento por senha. Identifique quem recebe a senha, como o próximo é escolhido e o que acontece quando ninguém aguarda. Peça a outra pessoa que execute sua descrição literalmente; revise pontos ambíguos.",
+    "code": "",
     "questions": [
-      "Defina algoritmo com suas próprias palavras e diferencie-o de um programa.",
-      "Descreva entradas, saídas e exceções de um processo cotidiano.",
-      "Escreva um algoritmo que funcione inclusive quando a entrada estiver vazia."
+      "Defina problema, algoritmo e programa com um exemplo próprio.",
+      "Indique entradas, saídas e uma exceção numa rotina cotidiana.",
+      "Explique como testar uma solução para uma lista vazia."
     ],
-    "reading": "Livro: Computer Science: An Overview, capítulos introdutórios; materiais de pensamento computacional de universidades."
+    "reading": "Fontes de fundamentação: ISTE — Computational Thinking (https://iste.org/computational-thinking); CS Unplugged — Computational Thinking (https://www.csunplugged.org/en/computational-thinking/)."
   },
   "M02-0-0": {
     "definition": "HTML é uma linguagem de marcação usada para representar a estrutura e o significado do conteúdo de documentos da Web.",
@@ -144,43 +146,46 @@
     "reading": "ECMA-262: ECMAScript Language Types; MDN: Grammar and types."
   },
   "C00-0-1": {
-    "definition": "Computação não é sinônimo de computador eletrônico.",
-    "deep": "Computação não é sinônimo de computador eletrônico. Um procedimento computacional transforma representações de entradas em saídas segundo regras. Diferencie problema, instância, algoritmo, programa e execução.",
-    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-    "code": "Problema: ordenar números. Instância: [8, 2, 5]. Algoritmo: comparar pares e trocar posições até a sequência ficar ordenada. Programa: implementação dessas regras em uma linguagem.",
+    "definition": "A ideia de descrever procedimentos sistemáticos é muito anterior aos computadores eletrônicos. A computação moderna reuniu práticas antigas de cálculo, formalização matemática e novas máquinas para executar instruções.",
+    "deep": "História não deve ser contada como uma única invenção. Métodos para calcular existiam em muitas culturas. O termo algoritmo se relaciona ao nome de al-Khwārizmī, matemático do século IX; no século XIX, Babbage e Lovelace exploraram máquinas programáveis; no século XX, pesquisas de lógica e computabilidade ajudaram a esclarecer o que significa executar um procedimento mecânico. Pensamento computacional é hoje utilizado em educação, ciência e serviços, mas requer avaliação contextual e ética.",
+    "example": "Uma enfermeira organiza uma fila de triagem segundo regras clínicas e prioridades. Há entradas, categorias, decisões e rastreabilidade. Mas a responsabilidade humana permanece essencial: regras incompletas e dados incorretos podem causar danos, por isso esse não é um problema que se “automatiza” sem avaliação.",
+    "pitfall": "Não confunda a origem da palavra algoritmo com a invenção de todos os algoritmos; nem atribua toda a história da computação a uma única pessoa.",
+    "exercise": "Construa uma linha do tempo com quatro marcos: procedimentos manuais, al-Khwārizmī, a Máquina Analítica e os modelos de computabilidade do século XX. Para cada um, registre o que foi produzido e o que não se deve inferir desse marco.",
+    "code": "",
     "questions": [
-      "Dê dois exemplos de problemas com instâncias diferentes.",
-      "Defina condição de parada de um algoritmo de busca.",
-      "Explique por que um algoritmo pode estar correto e sua implementação conter defeitos."
+      "Explique por que algoritmos são anteriores a computadores eletrônicos.",
+      "Diferencie uma proposta de máquina de um programa em execução.",
+      "Discuta uma aplicação moderna e um risco de automatização."
     ],
-    "reading": "Computer Science: An Overview; materiais introdutórios de algoritmos.",
-    "pitfall": "Confundir uma descrição vaga, como “organize os dados”, com um algoritmo executável."
+    "reading": "Fontes: Stanford Encyclopedia of Philosophy — The Modern History of Computing (https://plato.stanford.edu/entries/computing-history/); The Philosophy of Computer Science (https://plato.stanford.edu/entries/computer-science/)."
   },
   "C00-0-2": {
-    "definition": "Decomposição reduz a complexidade ao criar subproblemas com interfaces claras.",
-    "deep": "Decomposição reduz a complexidade ao criar subproblemas com interfaces claras. Abstração ignora detalhes irrelevantes para um objetivo, mas não pode apagar requisitos. Invariantes são propriedades que permanecem verdadeiras ao longo da execução.",
-    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-    "code": "Processar pedidos: validar entrada → calcular itens → aplicar desconto → emitir resumo. Cada etapa tem pré-condições e pós-condições.",
+    "definition": "Projetar uma solução exige transformar requisitos em etapas, regras e verificações. Sequência, seleção, repetição e contratos de entrada/saída são ferramentas básicas dessa modelagem.",
+    "deep": "Comece por um caso concreto; represente as decisões; teste com exemplos e contraexemplos. Pseudocódigo pode expressar o procedimento sem depender da sintaxe de uma linguagem. Condições de parada, estados e invariantes ajudam a argumentar que o método funciona. O propósito é compreender o comportamento da solução, não decorar comandos.",
+    "example": "Para calcular o total de uma compra, receba uma lista de preços válidos, some cada item e aplique a regra de desconto explicitada. Se a lista estiver vazia, o total antes de taxas é zero; se existir preço negativo indevido, sinalize entrada inválida. Um desconto percentual deve ter base de cálculo claramente definida.",
+    "pitfall": "Uma lista de passos sem contrato, tratamento de erros ou ordem adequada pode parecer organizada, mas ainda não é uma solução confiável.",
+    "exercise": "Faça uma tabela com quatro cenários para um empréstimo: cadastro válido/item disponível, cadastro inválido, item indisponível e solicitação duplicada. Para cada cenário escreva a regra, o caminho seguido e a saída. Depois apresente um caso que ainda não foi coberto.",
+    "code": "",
     "questions": [
-      "Decomponha o cálculo de uma conta de restaurante em cinco subproblemas.",
-      "Escreva entrada e saída de cada subproblema.",
-      "Apresente um caso em que uma abstração inadequada causa erro."
+      "Modele uma seleção com duas condições claras.",
+      "Rastreie o subtotal de [3,1,4] e de [].",
+      "Explique o que torna uma condição de parada adequada."
     ],
-    "reading": "Computer Science: An Overview; materiais introdutórios de algoritmos.",
-    "pitfall": "Confundir decompor com simplesmente escrever uma lista sem definir dependências e contratos."
+    "reading": "Fontes: CS Unplugged — Computational Thinking (https://www.csunplugged.org/en/computational-thinking/); ISTE — Computational Thinking (https://iste.org/computational-thinking/)."
   },
   "C00-1-0": {
-    "definition": "Um modelo formal explicita estado, operações válidas e critérios de término.",
-    "deep": "Um modelo formal explicita estado, operações válidas e critérios de término. Uma máquina abstrata pode ser descrita por estados e transições; pseudocódigo é uma notação menos formal, porém útil para especificar algoritmos.",
-    "example": "Modelo de análise: examine pressupostos, entradas, estados e consequências antes de executar o exemplo.",
-    "code": "estado = saldo inicial; para cada lançamento válido, saldo ← saldo + valor; saída = saldo final",
+    "definition": "Um modelo explicita os elementos relevantes de um problema e as regras de transformação entre situações.",
+    "deep": "Em pensamento computacional, modelar significa selecionar estados, entradas, operações, restrições e resultados observáveis. Um modelo não é uma cópia integral da realidade: é uma representação orientada por uma pergunta. Podemos expressar modelos em tabelas, diagramas de estados ou pseudocódigo, com diferentes graus de formalidade.",
+    "example": "Uma biblioteca modela um empréstimo com estados DISPONÍVEL e EMPRESTADO. A operação emprestar só pode ocorrer no primeiro estado; devolver só no segundo. Um pedido de empréstimo de item já emprestado não deve alterar o estado.",
+    "pitfall": "Confundir uma representação conveniente com a própria realidade ou esquecer o que ocorre com entradas inválidas.",
+    "exercise": "Atividade de aplicação: Modele três estados possíveis de uma encomenda, com transições permitidas e proibidas. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "estado <- DISPONIVEL\nse pedido = \"emprestar\" e estado = DISPONIVEL:\n    estado <- EMPRESTADO\nsenao:\n    informar \"operacao nao permitida\"",
     "questions": [
-      "Descreva o estado de um caixa antes e depois de uma venda.",
-      "Defina uma pré-condição para saque.",
-      "Encontre uma entrada que invalide um algoritmo sem validação."
+      "Identificar e explicar: modelos formais e pressupostos.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
     ],
-    "reading": "Computer Science: An Overview; materiais introdutórios de algoritmos.",
-    "pitfall": "Achar que um exemplo bem-sucedido demonstra correção para todas as entradas."
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
   },
   "M02-0-2": {
     "definition": "Um documento HTML possui doctype, elemento raiz html e regiões head e body.",
@@ -495,5 +500,229 @@
     "example": "Um aplicativo de estudos pode conter uma tela inicial, uma tela de lista de aulas, um componente reutilizável de cartão e um módulo de serviço para obter dados. A interface de uma aula descreve id, título e estado da conclusão.",
     "pitfall": "Confundir a organização sugerida pelo template com uma regra fixa. Uma estrutura só é útil se for consistente, documentada e compreendida.",
     "exercise": "Proponha pastas e responsabilidades para um aplicativo com duas telas e três componentes reutilizáveis. Justifique como evitaria dependências circulares."
+  },
+  "C00-0-3": {
+    "definition": "Pensamento computacional melhora a clareza de soluções, mas não elimina incerteza, julgamento humano nem os limites de dados, tempo e recursos.",
+    "deep": "Erros frequentes incluem especificação vaga, generalização apressada, abstração que descarta informações críticas, confusão entre correção e eficiência, testes insuficientes e suposição de que automatizar equivale a melhorar. Uma análise madura formula contraexemplos e revisa requisitos à luz das pessoas afetadas.",
+    "example": "Um sistema escolar decide a quem enviar avisos. Se usar apenas “alunos com Internet em casa”, excluirá famílias sem acesso; se usar contatos desatualizados, os avisos podem falhar. Antes de automatizar, a escola precisa confirmar os objetivos, escolher canais inclusivos e prever revisão humana.",
+    "pitfall": "Uma solução que funciona para dois exemplos não está provada correta para todos os casos. Feedback pedagógico é diferente de verificação formal.",
+    "exercise": "Audite a regra “atender sempre por ordem de chegada”. Escreva dois cenários em que ela funciona e dois em que necessita de exceções justificadas. Proponha uma versão com prioridade explícita e explique quem decide as regras.",
+    "code": "",
+    "questions": [
+      "Diferencie correção de eficiência com exemplo.",
+      "Construa um contraexemplo para abstração que ignore acessibilidade.",
+      "Explique como testar um laço que pode não terminar."
+    ],
+    "reading": "Fontes: Stanford Encyclopedia of Philosophy — Computability and Complexity (https://plato.stanford.edu/entries/computability/); ISTE — Computational Thinking (https://iste.org/computational-thinking/)."
+  },
+  "C00-1-1": {
+    "definition": "Raciocinar sobre uma solução é justificar por que seus passos atendem às regras do problema.",
+    "deep": "Uma justificativa técnica liga premissas, inferências e conclusão. É diferente de relatar que o programa funcionou uma vez. Para avaliar um algoritmo, examine as condições iniciais, o que cada passo preserva e as condições finais.",
+    "example": "Um aluno afirma que um procedimento para encontrar o maior valor está correto porque encontrou 9 em [2,9,4]. Outro observa que o maior valor precisa ser inicializado com o primeiro elemento para aceitar listas só de negativos.",
+    "pitfall": "Confundir confirmação por alguns exemplos com demonstração de correção geral.",
+    "exercise": "Atividade de aplicação: Justifique, com palavras suas, por que iniciar máximo com zero pode falhar. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "se lista estiver vazia: informar \"sem maior valor\"\nmaior <- lista[0]\npara cada valor restante:\n    se valor > maior: maior <- valor\nretornar maior",
+    "questions": [
+      "Identificar e explicar: raciocínio e justificativas.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-1-2": {
+    "definition": "Casos e contraexemplos permitem testar a extensão de uma afirmação sobre algoritmos.",
+    "deep": "Um caso exemplifica um comportamento; um contraexemplo refuta uma afirmação universal. Testes de fronteira, entradas vazias e dados inesperados são especialmente úteis para identificar premissas escondidas. Um contraexemplo só é válido quando respeita o domínio afirmado.",
+    "example": "Um algoritmo ordena dois valores com uma única comparação e alguém afirma que também ordena qualquer lista. Uma lista de três valores em ordem inversa serve para questionar a extrapolação.",
+    "pitfall": "Escolher como contraexemplo uma entrada proibida pelo próprio enunciado, sem distinguir falha de uso inválido.",
+    "exercise": "Atividade de aplicação: Crie um contraexemplo mínimo para o algoritmo que inicia máximo em zero. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "entradas <- [[], [5], [-3,-1], [2,2], [9,1,4]]\npara cada entrada:\n    verificar precondicao\n    executar\n    comparar saida com resultado esperado",
+    "questions": [
+      "Identificar e explicar: análise de casos e contraexemplos.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-1-3": {
+    "definition": "Pré-requisitos são conhecimentos e condições necessários para aplicar corretamente um modelo ou método.",
+    "deep": "Um mesmo algoritmo pode depender de operações matemáticas, compreensão de estruturas de dados e regras de negócio. Mapear pré-requisitos evita usar ferramentas sem saber interpretar seus resultados. Dependência conceitual não é o mesmo que pré-condição de execução.",
+    "example": "Uma equipe usa busca binária em uma lista de protocolos organizada pela data de chegada, embora a pesquisa seja por número do protocolo. O problema não está no laço, mas na hipótese de ordenação inadequada.",
+    "pitfall": "Confundir familiaridade com a sintaxe de uma técnica com domínio dos pressupostos que a tornam correta.",
+    "exercise": "Atividade de aplicação: Desenhe uma cadeia de quatro conhecimentos necessários para compreender um laço. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "se dados nao estiverem ordenados pela chave de busca:\n    selecionar outra estrategia\nsenao:\n    executar busca_binaria",
+    "questions": [
+      "Identificar e explicar: relação com pré-requisitos.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-2-0": {
+    "definition": "Uma técnica de resolução é um procedimento escolhido em função da estrutura e das restrições de um problema.",
+    "deep": "Técnicas incluem decomposição, refinamento passo a passo, simulação manual, tabelas de decisão e elaboração de testes. Não existe uma técnica melhor para todos os problemas: a escolha depende de dados, riscos, recursos e capacidade de verificar a solução.",
+    "example": "Uma cantina precisa decidir se libera pedidos: cadastro ativo, produto disponível e pagamento confirmado. Uma tabela de decisão torna explícito quando liberar ou recusar.",
+    "pitfall": "Transformar uma técnica útil em receita rígida sem examinar a natureza do problema.",
+    "exercise": "Atividade de aplicação: Refine a tarefa \"organizar matrícula\" em cinco passos verificáveis. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "se cadastro_ativo e disponivel e pagamento_confirmado:\n    liberar_pedido\nsenao:\n    registrar_motivo_da_recusa",
+    "questions": [
+      "Identificar e explicar: técnicas e procedimentos.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-2-1": {
+    "definition": "Documentação e fontes primárias permitem verificar a definição, a finalidade e as restrições de uma técnica.",
+    "deep": "Uma fonte primária é produzida pelo responsável pela especificação, pela ferramenta ou por quem apresenta o resultado original. Ler documentação não é copiar uma solução; é identificar termos, versão, condições de uso, exemplos e limites, confrontando-os com o problema concreto.",
+    "example": "A equipe encontra um tutorial prometendo que uma operação aceita números negativos. A especificação da operação define apenas inteiros não negativos. A solução deve respeitar o contrato documentado, não a promessa informal.",
+    "pitfall": "Confundir popularidade de um tutorial ou resposta pronta com evidência suficiente de comportamento especificado.",
+    "exercise": "Atividade de aplicação: Crie um roteiro de leitura de documentação com seis perguntas. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "pergunta <- \"quais entradas sao aceitas?\"\nconsultar secao oficial de parametros\nregistrar versao e restricoes\ncriar teste minimo permitido e teste invalido",
+    "questions": [
+      "Identificar e explicar: leitura de documentação e fontes primárias.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-2-2": {
+    "definition": "Exercícios graduais desenvolvem domínio ao aumentar progressivamente a exigência conceitual e a autonomia.",
+    "deep": "Uma sequência bem construída começa com identificação e aplicação direta, avança para explicação de decisões e chega a variações, contraexemplos e transferência. A dificuldade precisa vir do raciocínio, não de enunciados obscuros.",
+    "example": "Após aprender a identificar a entrada de uma receita, o estudante analisa um procedimento para agendar atendimentos, detecta uma regra ausente e cria um teste. O conceito é o mesmo, mas a demanda aumentou.",
+    "pitfall": "Contabilizar apenas acertos sem examinar justificativas, erros recorrentes ou transferência.",
+    "exercise": "Atividade de aplicação: Crie uma progressão de cinco níveis para o conceito de entrada e saída. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "para cada atividade na trilha:\n    tentar sem consultar resposta\n    justificar os passos\n    revisar erro identificado\n    tentar nova variacao",
+    "questions": [
+      "Identificar e explicar: exercícios graduais.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-2-3": {
+    "definition": "Diagnosticar erros é localizar a divergência entre resultado esperado, regras do procedimento e execução observada.",
+    "deep": "Erros podem nascer de especificação incompleta, hipótese falsa, operação incorreta, entrada não tratada ou implementação defeituosa. A depuração eficaz reproduz o problema, reduz o caso, observa estados e verifica a causa, em vez de apenas trocar instruções ao acaso.",
+    "example": "Um procedimento soma itens de um carrinho, mas esquece o último. A investigação encontra um laço que para antes do índice final. A correção é confirmada com listas de zero, um e vários itens.",
+    "pitfall": "Corrigir sintomas de forma aleatória sem reproduzir o erro ou testar regressões.",
+    "exercise": "Atividade de aplicação: Rastreie um laço que deveria contar até cinco, mas para em quatro. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "esperado <- 6\nobservado <- somar([1,2,3])\nse esperado != observado:\n    rastrear indice e acumulador\n    corrigir limite do laco\n    repetir testes",
+    "questions": [
+      "Identificar e explicar: diagnóstico de erros.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-3-0": {
+    "definition": "Um problema integrador reúne conceitos anteriores numa situação com objetivo, restrições e validação definidos.",
+    "deep": "Um projeto de pensamento computacional começa por delimitar o problema, observar usuários, mapear entradas e saídas, escolher representação, definir critérios e testar casos. A integração não exige software sofisticado: uma solução em papel pode ser suficiente para demonstrar o raciocínio.",
+    "example": "Projeto: criar um sistema manual de senhas para uma pequena unidade de atendimento. O procedimento recebe chegadas, registra prioridades justificadas, chama pessoas e lida com desistências.",
+    "pitfall": "Iniciar a implementação sem esclarecer as regras de prioridade, duplicidade e encerramento.",
+    "exercise": "Atividade de aplicação: Defina objetivo, atores, entradas, saídas e três limites do projeto de senhas. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "fila <- []\nao_chegar(pessoa): inserir_na_fila(pessoa)\nao_chamar(): se fila vazia, informar; senao, retirar_proximo",
+    "questions": [
+      "Identificar e explicar: problema integrador.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-3-1": {
+    "definition": "Implementar ou demonstrar uma solução é tornar seu procedimento executável ou simulável de forma observável.",
+    "deep": "A implementação pode ser pseudocódigo detalhado, planilha, cartões ou programa. O importante é que outra pessoa consiga executar os passos e comparar o resultado com a especificação. Uma demonstração não substitui validação geral.",
+    "example": "Para apresentar uma fila, o estudante usa cartões numerados e uma ficha de estado. Após cada chamada, risca a senha utilizada e registra a próxima. A sequência demonstra o procedimento sem computador.",
+    "pitfall": "Confundir demonstração bem-sucedida de um único cenário com comprovação de todos os requisitos.",
+    "exercise": "Atividade de aplicação: Implemente em pseudocódigo operações de inserir e chamar na fila. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "fila <- [101,102,103]\nchamar():\n    se tamanho(fila) = 0: informar \"fila vazia\"\n    senao: retornar remover_primeiro(fila)",
+    "questions": [
+      "Identificar e explicar: implementação ou demonstração conforme a disciplina.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-3-2": {
+    "definition": "Testes e documentação fornecem evidência rastreável de que uma solução atende aos requisitos conhecidos.",
+    "deep": "Um teste precisa de entrada, procedimento e resultado esperado. A documentação associa requisito, implementação e observação; inclui decisões, limitações e instruções para reproduzir. Testar não elimina a necessidade de justificar o modelo.",
+    "example": "Uma tabela de testes da fila inclui: inserir duas senhas; chamar uma; chamar quando vazia; tentar cancelar uma senha inexistente. Cada linha indica resultado esperado e observado.",
+    "pitfall": "Escrever \"testado e aprovado\" sem mostrar quais casos e regras foram verificados.",
+    "exercise": "Atividade de aplicação: Escreva quatro casos de teste para a fila com esperado e observado simulados. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "caso <- \"chamar com fila vazia\"\nesperado <- \"informar fila vazia\"\nobservado <- chamar([])\nregistrar(caso, esperado, observado, esperado=observado)",
+    "questions": [
+      "Identificar e explicar: testes e documentação.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-3-3": {
+    "definition": "Comparar alternativas exige critérios comuns, evidências e reconhecimento de compensações.",
+    "deep": "Soluções diferentes podem atender ao mesmo requisito com custos, riscos e clareza distintos. Compare-as usando uma tabela de critérios e cenários equivalentes. Evite declarar uma ferramenta superior sem explicar contexto e pressupostos.",
+    "example": "Uma unidade com dez atendimentos diários escolhe cartões pela simplicidade. Outra com mil atendimentos precisa de sistema digital. A regra fundamental de não repetir senhas continua válida nas duas.",
+    "pitfall": "Comparar alternativas apenas por novidade, aparência ou preferência pessoal, sem critérios de uso.",
+    "exercise": "Atividade de aplicação: Construa uma matriz de comparação entre cartões, planilha e aplicativo. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "criterios <- [precisao, custo, acessibilidade, manutencao]\npara cada alternativa:\n    avaliar mesmos cenarios e criterios\nescolher e registrar justificativa",
+    "questions": [
+      "Identificar e explicar: comparação de alternativas.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-4-0": {
+    "definition": "Uma prova teórica inédita investiga compreensão sem depender da repetição literal de exercícios vistos.",
+    "deep": "Preparar-se para uma avaliação envolve sintetizar conceitos, definir condições e justificar decisões em casos novos. Esta aula oferece prática formativa: não aplica uma prova oficial, não atribui nota nem declara domínio automaticamente.",
+    "example": "Em vez de repetir a fila do projeto, o aluno analisa a distribuição de senhas em um laboratório: há dois guichês e atendimentos prioritários. Deve justificar as regras antes de propor um algoritmo.",
+    "pitfall": "Interpretar o número de exercícios respondidos como aprovação oficial na disciplina.",
+    "exercise": "Atividade de aplicação: Explique a diferença entre exemplo correto e prova de correção. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "ler enunciado\nidentificar hipoteses e restricoes\nformular resposta\njustificar com caso concreto\nrevisar limites",
+    "questions": [
+      "Identificar e explicar: prova teórica inédita.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-4-1": {
+    "definition": "Explicar um algoritmo oralmente ou por escrito exige organizar hipóteses, passos e justificativas em linguagem compreensível.",
+    "deep": "Explicações técnicas devem esclarecer para quem se fala, definir os termos necessários, apresentar um exemplo, justificar cada decisão relevante e reconhecer exceções. Uma apresentação clara não substitui a verificação do conteúdo.",
+    "example": "Um estudante apresenta a regra de uma fila em dois minutos: explica a entrada de senhas, a chamada do primeiro, a saída e a fila vazia. Um colega tenta executar os passos e aponta uma ambiguidade.",
+    "pitfall": "Confundir fala confiante com explicação correta e suficientemente especificada.",
+    "exercise": "Atividade de aplicação: Escreva uma explicação da fila para alguém que nunca programou. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "roteiro <- [problema, entradas, regras, exemplo, limite, testes]\npara cada topico do roteiro:\n    explicar com palavras proprias",
+    "questions": [
+      "Identificar e explicar: explicação oral ou escrita.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-4-2": {
+    "definition": "Transferência é aplicar princípios compreendidos a uma situação nova, identificando diferenças relevantes.",
+    "deep": "Reutilizar um algoritmo não é copiar sua forma superficial. É identificar estrutura comum, adaptar entradas e restrições, justificar o que permanece válido e testar os novos casos.",
+    "example": "Uma solução de senhas é adaptada para uma fila de impressão. Diferentemente do atendimento presencial, um documento pode falhar ao imprimir e precisar voltar ao estado pendente.",
+    "pitfall": "Presumir que duas situações com nomes semelhantes possuem os mesmos contratos e exceções.",
+    "exercise": "Atividade de aplicação: Adapte o procedimento de senhas para uma fila de impressão. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "fila <- trabalhos_pendentes\npara cada trabalho:\n    tentar_imprimir\n    se falha: registrar e definir politica_de_retentativa",
+    "questions": [
+      "Identificar e explicar: transferência para novo problema.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
+  },
+  "C00-4-3": {
+    "definition": "Revisão espaçada consiste em recuperar e reaplicar conhecimentos após intervalos, em vez de apenas reler respostas.",
+    "deep": "Uma revisão após sete e trinta dias pode revelar o que foi consolidado e o que precisa ser retomado. O objetivo é verificar recuperação independente, qualidade das justificativas e transferência. Esta aula apresenta um protocolo de estudo; não agenda lembretes nem altera aprovação oficial.",
+    "example": "No dia 7, o estudante explica estado e pré-condições num problema de reservas. No dia 30, adapta o mesmo raciocínio a uma fila de manutenção, registra falhas e cria nova tentativa.",
+    "pitfall": "Confundir reler o gabarito com recuperar o conhecimento de memória e demonstrar autonomia.",
+    "exercise": "Atividade de aplicação: Crie um protocolo pessoal de revisão no dia 7 e no dia 30. Registre entradas, regras e um teste que possa confirmar sua solução.",
+    "code": "no_dia_7: responder_sem_consulta; conferir; registrar_lacunas\nno_dia_30: resolver_caso_novo; justificar; revisar_erros",
+    "questions": [
+      "Identificar e explicar: revisão após 7 e 30 dias.",
+      "Aplicar o conceito a um problema concreto sem consultar a resposta.",
+      "Justificar a solução e apontar uma limitação ou contraexemplo."
+    ],
+    "reading": "Referências para estudo posterior: materiais de introdução a algoritmos, especificação de problemas e documentação técnica. As fontes específicas desta aula ainda requerem revisão editorial."
   }
 }
